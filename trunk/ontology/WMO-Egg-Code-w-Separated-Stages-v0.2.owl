@@ -1,0 +1,83 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:wmo="http://nsidc.org/wmo#"
+    xmlns="http://localhost/default#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:jcomm="http://nsidc.org/jcomm#"
+    xmlns:j.0="http://localhost/default#is%20associated%20"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Class rdf:about="http://localhost/default#Sd"/>
+  <owl:Class rdf:about="http://localhost/default#Sa"/>
+  <owl:Class rdf:about="http://localhost/default#So"/>
+  <owl:Class rdf:about="http://localhost/default#Sb"/>
+  <owl:Class rdf:about="http://nsidc.org/wmo#SeaIceStage"/>
+  <owl:Class rdf:about="http://nsidc.org/jcomm#EggCode"/>
+  <owl:Class rdf:about="http://nsidc.org/wmo#IceConcentration"/>
+  <owl:Class rdf:about="http://nsidc.org/wmo#SeaIceForm"/>
+  <owl:Class rdf:about="http://nsidc.org/wmo#IceCover"/>
+  <owl:Class rdf:about="http://nsidc.org/wmo#Zone"/>
+  <owl:Class rdf:about="http://localhost/default#Sc"/>
+  <owl:ObjectProperty rdf:about="http://localhost/default#contains">
+    <rdfs:range>
+      <wmo:IceConcentration rdf:about="http://nsidc.org/jcomm#Ct">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </wmo:IceConcentration>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://nsidc.org/jcomm#EggCode"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://localhost/default#describes">
+    <rdfs:range rdf:resource="http://nsidc.org/wmo#IceCover"/>
+    <rdfs:domain rdf:resource="http://nsidc.org/jcomm#EggCode"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://localhost/default#is%20thicker%20than">
+    <rdfs:range rdf:resource="http://localhost/default#Sc"/>
+    <rdfs:domain rdf:resource="http://localhost/default#Sb"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <wmo:IceConcentration rdf:about="http://nsidc.org/jcomm#Cb">
+    <j.0:with>
+      <wmo:SeaIceStage rdf:about="http://nsidc.org/jcomm#Sb">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </wmo:SeaIceStage>
+    </j.0:with>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:IceConcentration>
+  <wmo:SeaIceForm rdf:about="http://nsidc.org/jcomm#Fa">
+    <j.0:with>
+      <wmo:SeaIceStage rdf:about="http://nsidc.org/jcomm#Sa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </wmo:SeaIceStage>
+    </j.0:with>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:SeaIceForm>
+  <wmo:SeaIceForm rdf:about="http://nsidc.org/jcomm#Fc">
+    <j.0:with>
+      <wmo:SeaIceStage rdf:about="http://nsidc.org/jcomm#Sc">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </wmo:SeaIceStage>
+    </j.0:with>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:SeaIceForm>
+  <wmo:SeaIceStage rdf:about="http://nsidc.org/jcomm#So">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:SeaIceStage>
+  <wmo:SeaIceStage rdf:about="http://nsidc.org/jcomm#Sd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:SeaIceStage>
+  <wmo:IceConcentration rdf:about="http://nsidc.org/jcomm#Cc">
+    <j.0:with rdf:resource="http://nsidc.org/jcomm#Sc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:IceConcentration>
+  <wmo:IceConcentration rdf:about="http://nsidc.org/jcomm#Ca">
+    <j.0:with rdf:resource="http://nsidc.org/jcomm#Sa"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:IceConcentration>
+  <wmo:SeaIceForm rdf:about="http://nsidc.org/jcomm#Fb">
+    <j.0:with rdf:resource="http://nsidc.org/jcomm#Sb"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </wmo:SeaIceForm>
+</rdf:RDF>
