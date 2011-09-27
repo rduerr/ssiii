@@ -1,0 +1,1162 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY wmo "http://purl.org/wmo/seaice#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY muo "http://purl.oclc.org/NET/muo/muo#" >
+    <!ENTITY egg9 "http://purl.org/nsidc/jcomm/egg#1" >
+    <!ENTITY egg6 "http://purl.org/nsidc/jcomm/egg#2" >
+    <!ENTITY egg3 "http://purl.org/nsidc/jcomm/egg#7" >
+    <!ENTITY egg4 "http://purl.org/nsidc/jcomm/egg#8" >
+    <!ENTITY egg11 "http://purl.org/nsidc/jcomm/egg#9" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY egg2 "http://purl.org/nsidc/jcomm/egg#3" >
+    <!ENTITY egg7 "http://purl.org/nsidc/jcomm/egg#4" >
+    <!ENTITY egg5 "http://purl.org/nsidc/jcomm/egg#5" >
+    <!ENTITY egg "http://purl.org/nsidc/jcomm/egg#6" >
+    <!ENTITY egg8 "http://purl.org/nsidc/jcomm/egg#9+" >
+    <!ENTITY egg10 "http://purl.org/nsidc/jcomm/egg#10" >
+    <!ENTITY ssiii "http://purl.org/nsidc/ssiii/seaice#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY physical-quality "http://purl.oclc.org/NET/muo/ucum/physical-quality/" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/nsidc/jcomm/egg#"
+     xml:base="http://purl.org/nsidc/jcomm/egg"
+     xmlns:physical-quality="http://purl.oclc.org/NET/muo/ucum/physical-quality/"
+     xmlns:egg11="http://purl.org/nsidc/jcomm/egg#9"
+     xmlns:egg10="&egg9;0"
+     xmlns:egg3="http://purl.org/nsidc/jcomm/egg#7"
+     xmlns:egg="http://purl.org/nsidc/jcomm/egg#6"
+     xmlns:egg4="http://purl.org/nsidc/jcomm/egg#8"
+     xmlns:ssiii="http://purl.org/nsidc/ssiii/seaice#"
+     xmlns:muo="http://purl.oclc.org/NET/muo/muo#"
+     xmlns:egg2="http://purl.org/nsidc/jcomm/egg#3"
+     xmlns:egg8="&egg11;+"
+     xmlns:egg7="http://purl.org/nsidc/jcomm/egg#4"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:egg6="http://purl.org/nsidc/jcomm/egg#2"
+     xmlns:egg5="http://purl.org/nsidc/jcomm/egg#5"
+     xmlns:egg9="http://purl.org/nsidc/jcomm/egg#1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wmo="http://purl.org/wmo/seaice#">
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&muo;preferredUnit"/>
+    <owl:AnnotationProperty rdf:about="&muo;measuresQuality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- xsd:string -->
+
+    <rdfs:Datatype rdf:about="xsd:string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#measuresQuality -->
+
+    <owl:ObjectProperty rdf:about="&muo;measuresQuality"/>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#hasConcentrationCode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#hasFloeSize -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasFloeSize">
+        <muo:preferredUnit rdf:resource="http://purl.oclc.org/NET/muo/ucum/unit/length/meter"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#hasIceConcentration -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasIceConcentration">
+        <muo:preferredUnit rdf:resource="http://purl.org/nsidc/jcomm/egg#fractionalArea"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#hasIceFormCode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#hasIceThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasIceThickness">
+        <muo:preferredUnit rdf:resource="http://purl.oclc.org/NET/muo/ucum/unit/length/meter"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#BaseUnit -->
+
+    <owl:Class rdf:about="&muo;BaseUnit"/>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#10_10ths -->
+
+    <owl:Class rdf:about="&egg9;0_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
+                <owl:hasValue rdf:datatype="&xsd;string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">10</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#1_10th -->
+
+    <owl:Class rdf:about="&egg9;_10th">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#2_10ths -->
+
+    <owl:Class rdf:about="&egg6;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#3_10ths -->
+
+    <owl:Class rdf:about="&egg2;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">3</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#4_10ths -->
+
+    <owl:Class rdf:about="&egg7;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">4</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#5_10ths -->
+
+    <owl:Class rdf:about="&egg5;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">5</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#6_10ths -->
+
+    <owl:Class rdf:about="&egg;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">6</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#7_10ths -->
+
+    <owl:Class rdf:about="&egg3;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">7</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#8_10ths -->
+
+    <owl:Class rdf:about="&egg4;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">8</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#9+_10ths -->
+
+    <owl:Class rdf:about="&egg11;+_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">9+</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;decimal">0.9</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="&xsd;integer">1</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#9_10ths -->
+
+    <owl:Class rdf:about="&egg11;_10ths">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">9</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#PredominantForm -->
+
+    <owl:Class rdf:about="http://purl.org/nsidc/jcomm/egg#PredominantForm">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#SecondaryForm -->
+
+    <owl:Class rdf:about="http://purl.org/nsidc/jcomm/egg#SecondaryForm">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#Zone -->
+
+    <owl:Class rdf:about="http://purl.org/nsidc/jcomm/egg#Zone">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
+                <owl:onClass rdf:resource="&ssiii;ZoneComponent"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
+                <owl:onClass rdf:resource="http://purl.org/nsidc/jcomm/egg#SecondaryForm"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
+                <owl:onClass rdf:resource="http://purl.org/nsidc/jcomm/egg#PredominantForm"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#CanadaZone -->
+
+    <owl:Class rdf:about="&ssiii;CanadaZone">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
+                <owl:onClass rdf:resource="&ssiii;ZoneComponent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">5</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nsidc/jcomm/egg#Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#GrowlersIcebergsOrFloebergs -->
+
+    <owl:Class rdf:about="&ssiii;GrowlersIcebergsOrFloebergs">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wmo;Floebergs"/>
+                    <rdf:Description rdf:about="&wmo;Growlers"/>
+                    <rdf:Description rdf:about="&wmo;Icebergs"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">9</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#IceWithConcentration -->
+
+    <owl:Class rdf:about="&ssiii;IceWithConcentration">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#IceWithDevelopmentStage -->
+
+    <owl:Class rdf:about="&ssiii;IceWithDevelopmentStage"/>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#IceWithForm -->
+
+    <owl:Class rdf:about="&ssiii;IceWithForm"/>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#SmallIceCakeOrBrashIce -->
+
+    <owl:Class rdf:about="&ssiii;SmallIceCakeOrBrashIce">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wmo;BrashIce"/>
+                    <rdf:Description rdf:about="&wmo;SmallIceCake"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">1</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="&xsd;integer">2</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#UndeterminedOrUnknownForm -->
+
+    <owl:Class rdf:about="&ssiii;UndeterminedOrUnknownForm">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">x</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&wmo;UndeterminedForm"/>
+                    <rdf:Description rdf:about="&wmo;UnknownForm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nsidc/ssiii/seaice#ZoneComponent -->
+
+    <owl:Class rdf:about="&ssiii;ZoneComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#BigFloe -->
+
+    <owl:Class rdf:about="&wmo;BigFloe">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">500</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="&xsd;integer">2000</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">5</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#BrashIce -->
+
+    <owl:Class rdf:about="&wmo;BrashIce">
+        <rdfs:subClassOf rdf:resource="&ssiii;SmallIceCakeOrBrashIce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#FastIce -->
+
+    <owl:Class rdf:about="&wmo;FastIce">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">8</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#FirstStageThinFirstYearIce -->
+
+    <owl:Class rdf:about="&wmo;FirstStageThinFirstYearIce">
+        <rdfs:subClassOf rdf:resource="&wmo;ThinFirstYearIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">8</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#FirstYearIce -->
+
+    <owl:Class rdf:about="&wmo;FirstYearIce">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#Floebergs -->
+
+    <owl:Class rdf:about="&wmo;Floebergs">
+        <rdfs:subClassOf rdf:resource="&ssiii;GrowlersIcebergsOrFloebergs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#GiantFloe -->
+
+    <owl:Class rdf:about="&wmo;GiantFloe">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">7</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">10000</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#GrayIce -->
+
+    <owl:Class rdf:about="&wmo;GrayIce">
+        <rdfs:subClassOf rdf:resource="&wmo;YoungIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">4</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#GrayWhiteIce -->
+
+    <owl:Class rdf:about="&wmo;GrayWhiteIce">
+        <rdfs:subClassOf rdf:resource="&wmo;YoungIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">5</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#Growlers -->
+
+    <owl:Class rdf:about="&wmo;Growlers">
+        <rdfs:subClassOf rdf:resource="&ssiii;GrowlersIcebergsOrFloebergs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#IceCake -->
+
+    <owl:Class rdf:about="&wmo;IceCake">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="&xsd;integer">20</xsd:maxExclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">2</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#IceFree -->
+
+    <owl:Class rdf:about="&wmo;IceFree">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
+                <owl:hasValue rdf:datatype="&xsd;decimal">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                        <owl:hasValue rdf:datatype="&xsd;string"></owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#IceOfLandOrigin -->
+
+    <owl:Class rdf:about="&wmo;IceOfLandOrigin">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">▲*</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#Icebergs -->
+
+    <owl:Class rdf:about="&wmo;Icebergs">
+        <rdfs:subClassOf rdf:resource="&ssiii;GrowlersIcebergsOrFloebergs"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#MediumFirstYearIce -->
+
+    <owl:Class rdf:about="&wmo;MediumFirstYearIce">
+        <rdfs:subClassOf rdf:resource="&wmo;FirstYearIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">1*</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#MediumFloe -->
+
+    <owl:Class rdf:about="&wmo;MediumFloe">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">100</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="&xsd;integer">500</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">4</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#MultiYearIce -->
+
+    <owl:Class rdf:about="&wmo;MultiYearIce">
+        <rdfs:subClassOf rdf:resource="&wmo;OldIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">9*</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#NewIce -->
+
+    <owl:Class rdf:about="&wmo;NewIce">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#Nilas -->
+
+    <owl:Class rdf:about="&wmo;Nilas">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#NoDevelopment -->
+
+    <owl:Class rdf:about="&wmo;NoDevelopment">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#OldIce -->
+
+    <owl:Class rdf:about="&wmo;OldIce">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">7*</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#PancakeIce -->
+
+    <owl:Class rdf:about="&wmo;PancakeIce">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#SecondStageThinFirstYearIce -->
+
+    <owl:Class rdf:about="&wmo;SecondStageThinFirstYearIce">
+        <rdfs:subClassOf rdf:resource="&wmo;ThinFirstYearIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">9</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#SecondYearIce -->
+
+    <owl:Class rdf:about="&wmo;SecondYearIce">
+        <rdfs:subClassOf rdf:resource="&wmo;OldIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">8*</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#SmallFloe -->
+
+    <owl:Class rdf:about="&wmo;SmallFloe">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">3</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="&xsd;integer">100</xsd:maxExclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">2</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#SmallIceCake -->
+
+    <owl:Class rdf:about="&wmo;SmallIceCake">
+        <rdfs:subClassOf rdf:resource="&ssiii;SmallIceCakeOrBrashIce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#ThickFirstYearIce -->
+
+    <owl:Class rdf:about="&wmo;ThickFirstYearIce">
+        <rdfs:subClassOf rdf:resource="&wmo;FirstYearIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">4*</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#ThinFirstYearIce -->
+
+    <owl:Class rdf:about="&wmo;ThinFirstYearIce">
+        <rdfs:subClassOf rdf:resource="&wmo;FirstYearIce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">7</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#TraceConcentration -->
+
+    <owl:Class rdf:about="&wmo;TraceConcentration">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
+                <owl:hasValue rdf:datatype="&xsd;string">0</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="&xsd;integer">0</xsd:minExclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="&xsd;decimal">0.1</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#UndeterminedForm -->
+
+    <owl:Class rdf:about="&wmo;UndeterminedForm">
+        <rdfs:subClassOf rdf:resource="&ssiii;UndeterminedOrUnknownForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#UnknownDevelopment -->
+
+    <owl:Class rdf:about="&wmo;UnknownDevelopment">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">x</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#UnknownForm -->
+
+    <owl:Class rdf:about="&wmo;UnknownForm">
+        <rdfs:subClassOf rdf:resource="&ssiii;UndeterminedOrUnknownForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#VastFloe -->
+
+    <owl:Class rdf:about="&wmo;VastFloe">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">6</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">8</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#YoungIce -->
+
+    <owl:Class rdf:about="&wmo;YoungIce">
+        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
+                <owl:hasValue rdf:datatype="xsd:string">3</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wmo/seaice#Zone -->
+
+    <owl:Class rdf:about="&wmo;Zone">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
+                <owl:onClass rdf:resource="&ssiii;ZoneComponent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nsidc/jcomm/egg#Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/ucum/physical-quality/area -->
+
+    <owl:NamedIndividual rdf:about="&physical-quality;area"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/ucum/physical-quality/fraction -->
+
+    <owl:NamedIndividual rdf:about="&physical-quality;fraction"/>
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#fractionalArea -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/nsidc/jcomm/egg#fractionalArea">
+        <rdf:type rdf:resource="&muo;BaseUnit"/>
+        <muo:measuresQuality rdf:resource="&physical-quality;area"/>
+        <muo:measuresQuality rdf:resource="&physical-quality;fraction"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
