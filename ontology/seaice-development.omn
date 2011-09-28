@@ -1,0 +1,136 @@
+Prefix: daml: <http://www.daml.org/2001/03/daml+oil#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
+Prefix: wmo: <http://purl.org/wmo/seaice#>
+Prefix: : <http://purl.org/wmo/seaice#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+
+
+Ontology: <http://purl.org/wmo/seaice/development#>
+
+Class: wmo:Development
+   
+Class: wmo:SecondYearIce
+
+    SubClassOf: 
+        wmo:OldIce
+    
+    
+Class: wmo:NewIce
+
+    SubClassOf: 
+        wmo:Development
+    
+    
+Class: wmo:IceRind
+
+    SubClassOf: 
+        wmo:Nilas
+    
+    
+Class: wmo:Shuga
+
+    SubClassOf: 
+        wmo:NewIce
+    
+    
+Class: wmo:GrayWhiteIce
+
+    SubClassOf: 
+        wmo:YoungIce
+    
+    
+Class: wmo:ThickFirstYearIce
+
+    SubClassOf: 
+        wmo:FirstYearIce
+    
+    
+Class: wmo:Nilas
+
+    SubClassOf: 
+        wmo:Development
+    
+    
+Class: wmo:YoungIce
+
+    SubClassOf: 
+        wmo:Development
+    
+    
+Class: wmo:MediumFirstYearIce
+
+    SubClassOf: 
+        wmo:FirstYearIce
+    
+    
+Class: wmo:ResidualFirstYearIce
+
+    SubClassOf: 
+        wmo:OldIce
+    
+    
+Class: wmo:MultiYearIce
+
+    SubClassOf: 
+        wmo:OldIce
+    
+    
+Class: wmo:FirstYearIce
+
+    SubClassOf: 
+        wmo:Development
+    
+    
+Class: wmo:GreaseIce
+
+    SubClassOf: 
+        wmo:NewIce
+    
+    
+Class: wmo:OldIce
+
+    SubClassOf: 
+        wmo:Development
+    
+    
+Class: wmo:Slush
+
+    SubClassOf: 
+        wmo:NewIce
+    
+    
+Class: wmo:FrazilIce
+
+    SubClassOf: 
+        wmo:NewIce
+    
+    
+Class: wmo:GrayIce
+
+    SubClassOf: 
+        wmo:YoungIce
+    
+    
+Class: wmo:DarkNilas
+
+    SubClassOf: 
+        wmo:Nilas
+    
+    
+Class: wmo:ThinFirstYearIce
+
+    SubClassOf: 
+        wmo:FirstYearIce
+    
+    
+Class: wmo:LightNilas
+
+    SubClassOf: 
+        wmo:Nilas
+    
+    
