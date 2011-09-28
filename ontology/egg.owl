@@ -1,1183 +1,1369 @@
 <?xml version="1.0"?>
 
 
-<!DOCTYPE rdf:RDF [
-    <!ENTITY wmo "http://purl.org/wmo/seaice#" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY muo "http://purl.oclc.org/NET/muo/muo#" >
-    <!ENTITY egg6 "http://purl.org/nsidc/jcomm/egg#1" >
-    <!ENTITY egg7 "http://purl.org/nsidc/jcomm/egg#2" >
-    <!ENTITY egg3 "http://purl.org/nsidc/jcomm/egg#7" >
-    <!ENTITY egg4 "http://purl.org/nsidc/jcomm/egg#8" >
-    <!ENTITY egg11 "http://purl.org/nsidc/jcomm/egg#9" >
+<!DOCTYPE Ontology [
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY egg2 "http://purl.org/nsidc/jcomm/egg#3" >
-    <!ENTITY egg8 "http://purl.org/nsidc/jcomm/egg#4" >
-    <!ENTITY egg5 "http://purl.org/nsidc/jcomm/egg#5" >
-    <!ENTITY egg "http://purl.org/nsidc/jcomm/egg#6" >
-    <!ENTITY egg9 "http://purl.org/nsidc/jcomm/egg#9+" >
-    <!ENTITY egg10 "http://purl.org/nsidc/jcomm/egg#10" >
-    <!ENTITY ssiii "http://purl.org/nsidc/ssiii/seaice#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY physical-quality "http://purl.oclc.org/NET/muo/ucum/physical-quality/" >
 ]>
 
 
-<rdf:RDF xmlns="http://purl.org/nsidc/jcomm/egg#"
-     xml:base="http://purl.org/nsidc/jcomm/egg"
-     xmlns:physical-quality="http://purl.oclc.org/NET/muo/ucum/physical-quality/"
-     xmlns:egg11="http://purl.org/nsidc/jcomm/egg#9"
-     xmlns:egg10="&egg6;0"
-     xmlns:egg3="http://purl.org/nsidc/jcomm/egg#7"
-     xmlns:egg="http://purl.org/nsidc/jcomm/egg#6"
-     xmlns:egg4="http://purl.org/nsidc/jcomm/egg#8"
-     xmlns:ssiii="http://purl.org/nsidc/ssiii/seaice#"
-     xmlns:muo="http://purl.oclc.org/NET/muo/muo#"
-     xmlns:egg2="http://purl.org/nsidc/jcomm/egg#3"
-     xmlns:egg8="http://purl.org/nsidc/jcomm/egg#4"
-     xmlns:egg7="http://purl.org/nsidc/jcomm/egg#2"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/nsidc/jcomm/egg#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:egg6="http://purl.org/nsidc/jcomm/egg#1"
-     xmlns:egg5="http://purl.org/nsidc/jcomm/egg#5"
-     xmlns:egg9="&egg11;+"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:wmo="http://purl.org/wmo/seaice#">
-    
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/nsidc/jcomm/egg#">
+    <Prefix name="ssiii" IRI="http://purl.org/nsidc/ssiii/seaice#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="wmo" IRI="http://purl.org/wmo/seaice#"/>
+    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
+    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
+    <Prefix name="" IRI="http://purl.org/nsidc/jcomm/egg#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice conditions codes</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="muo:BaseUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="1_10th"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="1_2_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="1_3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="2_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="2_3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="2_4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="3_4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="3_5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4_5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4_6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="5_6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="5_7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="6_7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="6_8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="7_8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="7_9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="8_10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="8_9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="9+_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="9_10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PredominantForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SecondaryForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Zone"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:CanadaZone"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:ZoneComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:BigFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:BrashIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:FastIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:FirstStageThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:FirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Floebergs"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:GiantFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:GrayIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:GrayWhiteIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Growlers"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:IceFree"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Icebergs"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:MediumFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:MultiYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:NewIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Nilas"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:NoDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:OldIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:PancakeIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:SecondStageThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:SecondYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:SmallFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:SmallIceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:ThickFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:TraceConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:UndeterminedForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:UnknownDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:UnknownForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:VastFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:YoungIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Zone"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="fractionalArea"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="xsd:string"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceConcentration"/>
+            <Literal datatypeIRI="&xsd;string">1</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_10th"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">1</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_2_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="1_10th"/>
+            <Class IRI="2_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_2_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">1-2</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_3_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="1_10th"/>
+            <Class IRI="2_10ths"/>
+            <Class IRI="3_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">1-3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">2</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_3_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="2_10ths"/>
+            <Class IRI="3_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">2-3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_4_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="2_10ths"/>
+            <Class IRI="3_10ths"/>
+            <Class IRI="4_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">2-4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_4_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="3_10ths"/>
+            <Class IRI="4_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">3-4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_5_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="3_10ths"/>
+            <Class IRI="4_10ths"/>
+            <Class IRI="5_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">3-5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_5_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="4_10ths"/>
+            <Class IRI="5_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">4-5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_6_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="4_10ths"/>
+            <Class IRI="5_10ths"/>
+            <Class IRI="6_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">4-6</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_6_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="5_10ths"/>
+            <Class IRI="6_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">5-6</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_7_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="5_10ths"/>
+            <Class IRI="6_10ths"/>
+            <Class IRI="7_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">5-7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">6</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_7_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="6_10ths"/>
+            <Class IRI="7_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">6-7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_8_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="6_10ths"/>
+            <Class IRI="7_10ths"/>
+            <Class IRI="8_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">6-8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_8_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="7_10ths"/>
+            <Class IRI="8_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">7-8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_9_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="7_10ths"/>
+            <Class IRI="8_10ths"/>
+            <Class IRI="9_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">7-9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_10_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="10_10ths"/>
+            <Class IRI="8_10ths"/>
+            <Class IRI="9_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">8-10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="xsd:string">8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_9_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="8_10ths"/>
+            <Class IRI="9_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">8-9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9+_10ths"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasIceConcentration"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.9</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9+_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">9+</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9_10_10ths"/>
+        <ObjectUnionOf>
+            <Class IRI="10_10ths"/>
+            <Class IRI="9_10ths"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9_10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">9-10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Zone"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class abbreviatedIRI="ssiii:ZoneComponent"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:CanadaZone"/>
+        <ObjectMaxCardinality cardinality="5">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class abbreviatedIRI="ssiii:ZoneComponent"/>
+        </ObjectMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="wmo:Floebergs"/>
+            <Class abbreviatedIRI="wmo:Growlers"/>
+            <Class abbreviatedIRI="wmo:Icebergs"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="wmo:BrashIce"/>
+            <Class abbreviatedIRI="wmo:SmallIceCake"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">1</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="wmo:UndeterminedForm"/>
+            <Class abbreviatedIRI="wmo:UnknownForm"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">x</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:ZoneComponent"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="hasDevelopmentStageCode"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="hasConcentrationCode"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="hasIceFormCode"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">2000</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">500</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:FastIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">10000</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">20</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">2</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:IceFree"/>
+        <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="hasConcentrationCode"/>
+                <Literal datatypeIRI="&xsd;string"></Literal>
+            </DataHasValue>
+            <DataMaxCardinality cardinality="0">
+                <DataProperty IRI="hasConcentrationCode"/>
+            </DataMaxCardinality>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:IceFree"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceConcentration"/>
+            <Literal datatypeIRI="&xsd;decimal">0</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:MediumFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">500</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">100</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:MediumFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:PancakeIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">0</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:SmallFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">100</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:SmallFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:TraceConcentration"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="hasIceConcentration"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minExclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:TraceConcentration"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">0</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:Zone"/>
+        <ObjectMaxCardinality cardinality="3">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class abbreviatedIRI="ssiii:ZoneComponent"/>
+        </ObjectMaxCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="10_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="1_10th"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="1_2_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="1_3_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="2_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="2_3_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="2_4_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="3_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="3_4_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="3_5_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="4_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="4_5_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="4_6_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="5_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="5_6_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="5_7_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="6_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="6_7_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="6_8_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="7_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="7_8_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="7_9_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="8_10_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="8_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="8_9_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="9+_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="9_10_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="9_10ths"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PredominantForm"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SecondaryForm"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class IRI="PredominantForm"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class IRI="SecondaryForm"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssiii:CanadaZone"/>
+        <Class IRI="Zone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:BrashIce"/>
+        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:FastIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:FirstStageThinFirstYearIce"/>
+        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:FirstStageThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">8</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:FirstYearIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:FirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">6</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Floebergs"/>
+        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:GrayIce"/>
+        <Class abbreviatedIRI="wmo:YoungIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:GrayIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">4</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:GrayWhiteIce"/>
+        <Class abbreviatedIRI="wmo:YoungIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:GrayWhiteIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">5</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Growlers"/>
+        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceFree"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">▲*</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Icebergs"/>
+        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
+        <Class abbreviatedIRI="wmo:FirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">1*</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:MediumFloe"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:MultiYearIce"/>
+        <Class abbreviatedIRI="wmo:OldIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:MultiYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">9*</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:NewIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:NewIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">1</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Nilas"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Nilas"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">2</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:NoDevelopment"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:NoDevelopment"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:OldIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:OldIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">7*</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:PancakeIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SecondStageThinFirstYearIce"/>
+        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SecondStageThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">9</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SecondYearIce"/>
+        <Class abbreviatedIRI="wmo:OldIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SecondYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">8*</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SmallFloe"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SmallIceCake"/>
+        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:ThickFirstYearIce"/>
+        <Class abbreviatedIRI="wmo:FirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:ThickFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">4*</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
+        <Class abbreviatedIRI="wmo:FirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">7</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:TraceConcentration"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:UndeterminedForm"/>
+        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:UnknownDevelopment"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:UnknownDevelopment"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">x</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:UnknownForm"/>
+        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:VastFloe"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:VastFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="xsd:string">6</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:VastFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="xsd:string">8</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:YoungIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:YoungIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="xsd:string">3</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Zone"/>
+        <Class IRI="Zone"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="muo:BaseUnit"/>
+        <NamedIndividual IRI="fractionalArea"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+        <NamedIndividual IRI="fractionalArea"/>
+        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+        <NamedIndividual IRI="fractionalArea"/>
+        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+        <IRI>hasFloeSize</IRI>
+        <IRI>http://purl.oclc.org/NET/muo/ucum/unit/length/meter</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+        <IRI>hasIceConcentration</IRI>
+        <IRI>fractionalArea</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+        <IRI>hasIceThickness</IRI>
+        <IRI>http://purl.oclc.org/NET/muo/ucum/unit/length/meter</IRI>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
 
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <owl:AnnotationProperty rdf:about="&muo;preferredUnit"/>
-    <owl:AnnotationProperty rdf:about="&muo;measuresQuality"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- xsd:string -->
-
-    <rdfs:Datatype rdf:about="xsd:string"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.oclc.org/NET/muo/muo#measuresQuality -->
-
-    <owl:ObjectProperty rdf:about="&muo;measuresQuality"/>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#hasComponent -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#hasConcentrationCode -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#hasFloeSize -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasFloeSize">
-        <muo:preferredUnit rdf:resource="http://purl.oclc.org/NET/muo/ucum/unit/length/meter"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#hasIceConcentration -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasIceConcentration">
-        <muo:preferredUnit rdf:resource="http://purl.org/nsidc/jcomm/egg#fractionalArea"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#hasIceFormCode -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#hasIceThickness -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/nsidc/jcomm/egg#hasIceThickness">
-        <muo:preferredUnit rdf:resource="http://purl.oclc.org/NET/muo/ucum/unit/length/meter"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.oclc.org/NET/muo/muo#BaseUnit -->
-
-    <owl:Class rdf:about="&muo;BaseUnit"/>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#10_10ths -->
-
-    <owl:Class rdf:about="&egg6;0_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
-                <owl:hasValue rdf:datatype="&xsd;string">1</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">10</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#1_10th -->
-
-    <owl:Class rdf:about="&egg6;_10th">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">1</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#1_2_10ths -->
-
-    <owl:Class rdf:about="&egg6;_2_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">1-2</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&egg6;_10th"/>
-                    <rdf:Description rdf:about="&egg7;_10ths"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#2_10ths -->
-
-    <owl:Class rdf:about="&egg7;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">2</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#3_10ths -->
-
-    <owl:Class rdf:about="&egg2;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">3</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#4_10ths -->
-
-    <owl:Class rdf:about="&egg8;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">4</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#5_10ths -->
-
-    <owl:Class rdf:about="&egg5;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">5</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#6_10ths -->
-
-    <owl:Class rdf:about="&egg;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">6</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#7_10ths -->
-
-    <owl:Class rdf:about="&egg3;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">7</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#8_10ths -->
-
-    <owl:Class rdf:about="&egg4;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">8</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#9+_10ths -->
-
-    <owl:Class rdf:about="&egg11;+_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">9+</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="&xsd;decimal">0.9</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="&xsd;integer">1</xsd:maxExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#9_10ths -->
-
-    <owl:Class rdf:about="&egg11;_10ths">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">9</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#PredominantForm -->
-
-    <owl:Class rdf:about="http://purl.org/nsidc/jcomm/egg#PredominantForm">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#SecondaryForm -->
-
-    <owl:Class rdf:about="http://purl.org/nsidc/jcomm/egg#SecondaryForm">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#Zone -->
-
-    <owl:Class rdf:about="http://purl.org/nsidc/jcomm/egg#Zone">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
-                <owl:onClass rdf:resource="&ssiii;ZoneComponent"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
-                <owl:onClass rdf:resource="http://purl.org/nsidc/jcomm/egg#SecondaryForm"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
-                <owl:onClass rdf:resource="http://purl.org/nsidc/jcomm/egg#PredominantForm"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#CanadaZone -->
-
-    <owl:Class rdf:about="&ssiii;CanadaZone">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
-                <owl:onClass rdf:resource="&ssiii;ZoneComponent"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">5</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/nsidc/jcomm/egg#Zone"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#GrowlersIcebergsOrFloebergs -->
-
-    <owl:Class rdf:about="&ssiii;GrowlersIcebergsOrFloebergs">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&wmo;Floebergs"/>
-                    <rdf:Description rdf:about="&wmo;Growlers"/>
-                    <rdf:Description rdf:about="&wmo;Icebergs"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">9</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#IceWithConcentration -->
-
-    <owl:Class rdf:about="&ssiii;IceWithConcentration">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#IceWithDevelopmentStage -->
-
-    <owl:Class rdf:about="&ssiii;IceWithDevelopmentStage"/>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#IceWithForm -->
-
-    <owl:Class rdf:about="&ssiii;IceWithForm"/>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#SmallIceCakeOrBrashIce -->
-
-    <owl:Class rdf:about="&ssiii;SmallIceCakeOrBrashIce">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&wmo;BrashIce"/>
-                    <rdf:Description rdf:about="&wmo;SmallIceCake"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">1</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="&xsd;integer">2</xsd:maxExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#UndeterminedOrUnknownForm -->
-
-    <owl:Class rdf:about="&ssiii;UndeterminedOrUnknownForm">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">x</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&wmo;UndeterminedForm"/>
-                    <rdf:Description rdf:about="&wmo;UnknownForm"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/nsidc/ssiii/seaice#ZoneComponent -->
-
-    <owl:Class rdf:about="&ssiii;ZoneComponent">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="&xsd;string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onDataRange rdf:resource="&xsd;string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onDataRange rdf:resource="&xsd;string"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#BigFloe -->
-
-    <owl:Class rdf:about="&wmo;BigFloe">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="&xsd;integer">500</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="&xsd;integer">2000</xsd:maxExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">5</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#BrashIce -->
-
-    <owl:Class rdf:about="&wmo;BrashIce">
-        <rdfs:subClassOf rdf:resource="&ssiii;SmallIceCakeOrBrashIce"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#FastIce -->
-
-    <owl:Class rdf:about="&wmo;FastIce">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">8</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#FirstStageThinFirstYearIce -->
-
-    <owl:Class rdf:about="&wmo;FirstStageThinFirstYearIce">
-        <rdfs:subClassOf rdf:resource="&wmo;ThinFirstYearIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">8</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#FirstYearIce -->
-
-    <owl:Class rdf:about="&wmo;FirstYearIce">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">6</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#Floebergs -->
-
-    <owl:Class rdf:about="&wmo;Floebergs">
-        <rdfs:subClassOf rdf:resource="&ssiii;GrowlersIcebergsOrFloebergs"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#GiantFloe -->
-
-    <owl:Class rdf:about="&wmo;GiantFloe">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">7</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="&xsd;integer">10000</xsd:minInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#GrayIce -->
-
-    <owl:Class rdf:about="&wmo;GrayIce">
-        <rdfs:subClassOf rdf:resource="&wmo;YoungIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">4</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#GrayWhiteIce -->
-
-    <owl:Class rdf:about="&wmo;GrayWhiteIce">
-        <rdfs:subClassOf rdf:resource="&wmo;YoungIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">5</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#Growlers -->
-
-    <owl:Class rdf:about="&wmo;Growlers">
-        <rdfs:subClassOf rdf:resource="&ssiii;GrowlersIcebergsOrFloebergs"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#IceCake -->
-
-    <owl:Class rdf:about="&wmo;IceCake">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">2</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="&xsd;integer">20</xsd:maxExclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="&xsd;integer">2</xsd:minInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#IceFree -->
-
-    <owl:Class rdf:about="&wmo;IceFree">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
-                <owl:hasValue rdf:datatype="&xsd;decimal">0</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                        <owl:hasValue rdf:datatype="&xsd;string"></owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:maxCardinality>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#IceOfLandOrigin -->
-
-    <owl:Class rdf:about="&wmo;IceOfLandOrigin">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">▲*</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#Icebergs -->
-
-    <owl:Class rdf:about="&wmo;Icebergs">
-        <rdfs:subClassOf rdf:resource="&ssiii;GrowlersIcebergsOrFloebergs"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#MediumFirstYearIce -->
-
-    <owl:Class rdf:about="&wmo;MediumFirstYearIce">
-        <rdfs:subClassOf rdf:resource="&wmo;FirstYearIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">1*</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#MediumFloe -->
-
-    <owl:Class rdf:about="&wmo;MediumFloe">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="&xsd;integer">100</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="&xsd;integer">500</xsd:maxExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">4</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#MultiYearIce -->
-
-    <owl:Class rdf:about="&wmo;MultiYearIce">
-        <rdfs:subClassOf rdf:resource="&wmo;OldIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">9*</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#NewIce -->
-
-    <owl:Class rdf:about="&wmo;NewIce">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">1</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#Nilas -->
-
-    <owl:Class rdf:about="&wmo;Nilas">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">2</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#NoDevelopment -->
-
-    <owl:Class rdf:about="&wmo;NoDevelopment">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">0</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#OldIce -->
-
-    <owl:Class rdf:about="&wmo;OldIce">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">7*</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#PancakeIce -->
-
-    <owl:Class rdf:about="&wmo;PancakeIce">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">0</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#SecondStageThinFirstYearIce -->
-
-    <owl:Class rdf:about="&wmo;SecondStageThinFirstYearIce">
-        <rdfs:subClassOf rdf:resource="&wmo;ThinFirstYearIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">9</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#SecondYearIce -->
-
-    <owl:Class rdf:about="&wmo;SecondYearIce">
-        <rdfs:subClassOf rdf:resource="&wmo;OldIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">8*</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#SmallFloe -->
-
-    <owl:Class rdf:about="&wmo;SmallFloe">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">3</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasFloeSize"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="&xsd;integer">100</xsd:maxExclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="&xsd;integer">2</xsd:minInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#SmallIceCake -->
-
-    <owl:Class rdf:about="&wmo;SmallIceCake">
-        <rdfs:subClassOf rdf:resource="&ssiii;SmallIceCakeOrBrashIce"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#ThickFirstYearIce -->
-
-    <owl:Class rdf:about="&wmo;ThickFirstYearIce">
-        <rdfs:subClassOf rdf:resource="&wmo;FirstYearIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">4*</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#ThinFirstYearIce -->
-
-    <owl:Class rdf:about="&wmo;ThinFirstYearIce">
-        <rdfs:subClassOf rdf:resource="&wmo;FirstYearIce"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">7</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#TraceConcentration -->
-
-    <owl:Class rdf:about="&wmo;TraceConcentration">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasConcentrationCode"/>
-                <owl:hasValue rdf:datatype="&xsd;string">0</owl:hasValue>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceConcentration"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="&xsd;decimal"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minExclusive rdf:datatype="&xsd;integer">0</xsd:minExclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="&xsd;decimal">0.1</xsd:maxExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithConcentration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#UndeterminedForm -->
-
-    <owl:Class rdf:about="&wmo;UndeterminedForm">
-        <rdfs:subClassOf rdf:resource="&ssiii;UndeterminedOrUnknownForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#UnknownDevelopment -->
-
-    <owl:Class rdf:about="&wmo;UnknownDevelopment">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">x</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#UnknownForm -->
-
-    <owl:Class rdf:about="&wmo;UnknownForm">
-        <rdfs:subClassOf rdf:resource="&ssiii;UndeterminedOrUnknownForm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#VastFloe -->
-
-    <owl:Class rdf:about="&wmo;VastFloe">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithForm"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">6</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasIceFormCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">8</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#YoungIce -->
-
-    <owl:Class rdf:about="&wmo;YoungIce">
-        <rdfs:subClassOf rdf:resource="&ssiii;IceWithDevelopmentStage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasDevelopmentStageCode"/>
-                <owl:hasValue rdf:datatype="xsd:string">3</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/wmo/seaice#Zone -->
-
-    <owl:Class rdf:about="&wmo;Zone">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/nsidc/jcomm/egg#hasComponent"/>
-                <owl:onClass rdf:resource="&ssiii;ZoneComponent"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/nsidc/jcomm/egg#Zone"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.oclc.org/NET/muo/ucum/physical-quality/area -->
-
-    <owl:NamedIndividual rdf:about="&physical-quality;area"/>
-    
-
-
-    <!-- http://purl.oclc.org/NET/muo/ucum/physical-quality/fraction -->
-
-    <owl:NamedIndividual rdf:about="&physical-quality;fraction"/>
-    
-
-
-    <!-- http://purl.org/nsidc/jcomm/egg#fractionalArea -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/nsidc/jcomm/egg#fractionalArea">
-        <rdf:type rdf:resource="&muo;BaseUnit"/>
-        <muo:measuresQuality rdf:resource="&physical-quality;area"/>
-        <muo:measuresQuality rdf:resource="&physical-quality;fraction"/>
-    </owl:NamedIndividual>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
