@@ -1,0 +1,725 @@
+Prefix: ssiii: <http://purl.org/nsidc/ssiii/seaice#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: wmo: <http://purl.org/wmo/seaice#>
+Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
+Prefix: : <http://purl.org/nsidc/jcomm/egg#>
+Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+Ontology: <http://purl.org/nsidc/jcomm/egg#>
+
+Annotations: 
+    rdfs:label "Ice conditions codes"
+
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: muo:preferredUnit
+
+    
+AnnotationProperty: muo:measuresQuality
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:string
+
+    
+Datatype: <xsd:string>
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: rdfs:Literal
+
+    
+ObjectProperty: hasComponent
+
+    
+ObjectProperty: muo:measuresQuality
+
+    
+DataProperty: hasFloeSize
+
+    Annotations: 
+        muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
+    
+    
+DataProperty: hasDevelopmentStageCode
+
+    
+DataProperty: hasIceThickness
+
+    Annotations: 
+        muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
+    
+    
+DataProperty: hasConcentrationCode
+
+    
+DataProperty: hasIceFormCode
+
+    
+DataProperty: hasIceConcentration
+
+    Annotations: 
+        muo:preferredUnit <http://purl.org/nsidc/jcomm/egg#fractionalArea>
+    
+    
+Class: 6_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "6"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: wmo:Zone
+
+    EquivalentTo: 
+        hasComponent max 3 ssiii:ZoneComponent
+    
+    SubClassOf: 
+        Zone
+    
+    
+Class: muo:BaseUnit
+
+    
+Class: wmo:BigFloe
+
+    EquivalentTo: 
+        hasFloeSize only xsd:decimal[>= 500 , < 2000],
+        hasIceFormCode value "5"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:FirstStageThinFirstYearIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "8"^^<xsd:string>,
+        wmo:ThinFirstYearIce
+    
+    
+Class: ssiii:ZoneComponent
+
+    EquivalentTo: 
+        (hasDevelopmentStageCode exactly 1 xsd:string)
+         and (hasConcentrationCode max 1 xsd:string)
+         and (hasIceFormCode max 1 xsd:string)
+    
+    
+Class: PredominantForm
+
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: 3_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "3"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 7_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "7"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: Zone
+
+    EquivalentTo: 
+        hasComponent min 1 ssiii:ZoneComponent
+    
+    SubClassOf: 
+        hasComponent max 1 SecondaryForm,
+        hasComponent max 1 PredominantForm,
+        hasConcentrationCode exactly 1 xsd:string
+    
+    
+Class: wmo:BrashIce
+
+    SubClassOf: 
+        ssiii:SmallIceCakeOrBrashIce
+    
+    
+Class: ssiii:GrowlersIcebergsOrFloebergs
+
+    EquivalentTo: 
+        hasIceFormCode value "9"^^xsd:string,
+        wmo:Floebergs
+         or wmo:Growlers
+         or wmo:Icebergs
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:SmallFloe
+
+    EquivalentTo: 
+        hasFloeSize only xsd:decimal[>= 2 , < 100],
+        hasIceFormCode value "3"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:Growlers
+
+    SubClassOf: 
+        ssiii:GrowlersIcebergsOrFloebergs
+    
+    
+Class: wmo:IceOfLandOrigin
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "▲*"^^<xsd:string>,
+        ssiii:IceWithDevelopmentStage
+    
+    
+Class: ssiii:UndeterminedOrUnknownForm
+
+    EquivalentTo: 
+        hasIceFormCode value "x"^^xsd:string,
+        wmo:UndeterminedForm
+         or wmo:UnknownForm
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: 8_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "8"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 5_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "5"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: ssiii:IceWithConcentration
+
+    EquivalentTo: 
+        hasConcentrationCode some xsd:string
+    
+    
+Class: 1_2_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "1-2"^^xsd:string,
+        1_10th
+         or 2_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 1_3_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "1-3"^^xsd:string,
+        1_10th
+         or 2_10ths
+         or 3_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 2_3_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "2-3"^^xsd:string,
+        2_10ths
+         or 3_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 2_4_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "2-4"^^xsd:string,
+        2_10ths
+         or 3_10ths
+         or 4_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 3_4_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "3-4"^^xsd:string,
+        3_10ths
+         or 4_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 3_5_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "3-5"^^xsd:string,
+        3_10ths
+         or 4_10ths
+         or 5_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+
+Class: 4_5_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "4-5"^^xsd:string,
+        4_10ths
+         or 5_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 4_6_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "4-6"^^xsd:string,
+        4_10ths
+         or 5_10ths
+         or 6_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+
+Class: 5_6_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "5-6"^^xsd:string,
+        5_10ths
+         or 6_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 5_7_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "5-7"^^xsd:string,
+        5_10ths
+         or 6_10ths
+         or 7_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+
+Class: 6_7_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "6-7"^^xsd:string,
+        6_10ths
+         or 7_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 6_8_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "6-8"^^xsd:string,
+        6_10ths
+         or 7_10ths
+         or 8_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+
+Class: 7_8_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "7-8"^^xsd:string,
+        7_10ths
+         or 8_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 7_9_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "7-9"^^xsd:string,
+        7_10ths
+         or 8_10ths
+         or 9_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+
+Class: 8_9_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "8-9"^^xsd:string,
+        8_10ths
+         or 9_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: 8_10_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "8-10"^^xsd:string,
+        8_10ths
+         or 9_10ths
+         or 10_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+
+Class: 9_10_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "9-10"^^xsd:string,
+        9_10ths
+         or 10_10ths
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+Class: wmo:TraceConcentration
+
+    EquivalentTo: 
+        hasConcentrationCode value "0"^^xsd:string,
+        hasIceConcentration only xsd:decimal[> 0 , < "0.1"^^xsd:decimal]
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: wmo:FastIce
+
+    EquivalentTo: 
+        hasIceFormCode value "8"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: 2_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "2"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 4_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "4"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: ssiii:IceWithForm
+
+    
+Class: wmo:GiantFloe
+
+    EquivalentTo: 
+        hasFloeSize only xsd:decimal[>= 10000],
+        hasIceFormCode value "7"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:FirstYearIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "6"^^<xsd:string>,
+        ssiii:IceWithDevelopmentStage
+    
+    
+Class: SecondaryForm
+
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: 9+_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "9+"^^xsd:string,
+        hasIceConcentration only xsd:decimal[>= "0.9"^^xsd:decimal , < 1]
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: wmo:OldIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "7*"^^<xsd:string>,
+        ssiii:IceWithDevelopmentStage
+    
+    
+Class: wmo:MediumFirstYearIce
+
+    SubClassOf: 
+        wmo:FirstYearIce,
+        hasDevelopmentStageCode value "1*"^^<xsd:string>
+    
+    
+Class: wmo:UndeterminedForm
+
+    SubClassOf: 
+        ssiii:UndeterminedOrUnknownForm
+    
+    
+Class: wmo:MultiYearIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "9*"^^<xsd:string>,
+        wmo:OldIce
+    
+    
+Class: wmo:ThickFirstYearIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "4*"^^<xsd:string>,
+        wmo:FirstYearIce
+    
+    
+Class: wmo:VastFloe
+
+    SubClassOf: 
+        ssiii:IceWithForm,
+        hasIceFormCode value "6"^^<xsd:string>,
+        hasIceFormCode value "8"^^<xsd:string>
+    
+    
+Class: wmo:UnknownDevelopment
+
+    SubClassOf: 
+        ssiii:IceWithDevelopmentStage,
+        hasDevelopmentStageCode value "x"^^<xsd:string>
+    
+    
+Class: ssiii:CanadaZone
+
+    EquivalentTo: 
+        hasComponent max 5 ssiii:ZoneComponent
+    
+    SubClassOf: 
+        Zone
+    
+    
+Class: wmo:YoungIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "3"^^<xsd:string>,
+        ssiii:IceWithDevelopmentStage
+    
+    
+Class: wmo:UnknownForm
+
+    SubClassOf: 
+        ssiii:UndeterminedOrUnknownForm
+    
+    
+Class: wmo:SecondYearIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "8*"^^<xsd:string>,
+        wmo:OldIce
+    
+    
+Class: wmo:NewIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "1"^^<xsd:string>,
+        ssiii:IceWithDevelopmentStage
+    
+    
+Class: wmo:ThinFirstYearIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "7"^^<xsd:string>,
+        wmo:FirstYearIce
+    
+    
+Class: wmo:Nilas
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "2"^^<xsd:string>,
+        ssiii:IceWithDevelopmentStage
+    
+    
+Class: wmo:IceCake
+
+    EquivalentTo: 
+        hasIceFormCode value "2"^^xsd:string,
+        hasFloeSize only xsd:decimal[>= 2 , < 20]
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: 1_10th
+
+    EquivalentTo: 
+        hasConcentrationCode value "1"^^<xsd:string>
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 10_10ths
+
+    EquivalentTo: 
+        hasIceConcentration value "1"^^xsd:string,
+        hasConcentrationCode value "10"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: ssiii:SmallIceCakeOrBrashIce
+
+    EquivalentTo: 
+        hasIceFormCode value "1"^^xsd:string,
+        hasFloeSize only xsd:decimal[< 2],
+        wmo:BrashIce
+         or wmo:SmallIceCake
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:SecondStageThinFirstYearIce
+
+    SubClassOf: 
+        wmo:ThinFirstYearIce,
+        hasDevelopmentStageCode value "9"^^<xsd:string>
+    
+    
+Class: wmo:SmallIceCake
+
+    SubClassOf: 
+        ssiii:SmallIceCakeOrBrashIce
+    
+    
+Class: 9_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "9"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: wmo:MediumFloe
+
+    EquivalentTo: 
+        hasFloeSize only xsd:decimal[>= 100 , < 500],
+        hasIceFormCode value "4"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:IceFree
+
+    EquivalentTo: 
+        hasIceConcentration value "0"^^xsd:decimal,
+        (hasConcentrationCode value ""^^xsd:string)
+         or (hasConcentrationCode max 0 rdfs:Literal)
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: wmo:Icebergs
+
+    SubClassOf: 
+        ssiii:GrowlersIcebergsOrFloebergs
+    
+    
+Class: wmo:NoDevelopment
+
+    SubClassOf: 
+        ssiii:IceWithDevelopmentStage,
+        hasDevelopmentStageCode value "0"^^<xsd:string>
+    
+    
+Class: wmo:GrayIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "4"^^<xsd:string>,
+        wmo:YoungIce
+    
+    
+Class: wmo:PancakeIce
+
+    EquivalentTo: 
+        hasIceFormCode value "0"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:Floebergs
+
+    SubClassOf: 
+        ssiii:GrowlersIcebergsOrFloebergs
+    
+    
+Class: ssiii:IceWithDevelopmentStage
+
+    
+Class: wmo:GrayWhiteIce
+
+    SubClassOf: 
+        hasDevelopmentStageCode value "5"^^<xsd:string>,
+        wmo:YoungIce
+    
+    
+Individual: physical-quality:area
+
+    
+Individual: physical-quality:fraction
+
+    
+Individual: fractionalArea
+
+    Types: 
+        muo:BaseUnit
+    
+    Facts:  
+     muo:measuresQuality  physical-quality:fraction,
+     muo:measuresQuality  physical-quality:area
+    
+    
