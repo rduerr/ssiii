@@ -31,7 +31,7 @@
         <Class abbreviatedIRI=":DarkNilas"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":Development"/>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":FirstYearIce"/>
@@ -50,6 +50,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":IceRind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":LightNilas"/>
@@ -90,13 +93,69 @@
     <Declaration>
         <Class abbreviatedIRI=":YoungIce"/>
     </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI=":DarkNilas"/>
+            <Class abbreviatedIRI=":IceRind"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class abbreviatedIRI=":DarkNilas"/>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DarkNilas"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
         <Class abbreviatedIRI=":Nilas"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.05</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI=":FirstYearIce"/>
-        <Class abbreviatedIRI=":Development"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":FirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":FrazilIce"/>
@@ -107,8 +166,38 @@
         <Class abbreviatedIRI=":YoungIce"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI=":GrayIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI=":GrayWhiteIce"/>
         <Class abbreviatedIRI=":YoungIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":GrayWhiteIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":GreaseIce"/>
@@ -116,15 +205,42 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":IceRind"/>
-        <Class abbreviatedIRI=":Nilas"/>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":LightNilas"/>
         <Class abbreviatedIRI=":Nilas"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI=":LightNilas"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.05</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI=":MediumFirstYearIce"/>
         <Class abbreviatedIRI=":FirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MediumFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.2</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.7</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":MultiYearIce"/>
@@ -132,23 +248,62 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":NewIce"/>
-        <Class abbreviatedIRI=":Development"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":Nilas"/>
-        <Class abbreviatedIRI=":Development"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Nilas"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":OldIce"/>
-        <Class abbreviatedIRI=":Development"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":ResidualFirstYearIce"/>
         <Class abbreviatedIRI=":OldIce"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI=":ResidualFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.8</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.8</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI=":SecondYearIce"/>
         <Class abbreviatedIRI=":OldIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SecondYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":Shuga"/>
@@ -163,12 +318,57 @@
         <Class abbreviatedIRI=":FirstYearIce"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI=":ThickFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.2</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI=":ThinFirstYearIce"/>
         <Class abbreviatedIRI=":FirstYearIce"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI=":ThinFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.7</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI=":YoungIce"/>
-        <Class abbreviatedIRI=":Development"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":YoungIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
     </SubClassOf>
 </Ontology>
 

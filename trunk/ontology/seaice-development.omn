@@ -6,96 +6,33 @@ Prefix: wmo: <http://purl.org/wmo/seaice#>
 Prefix: : <http://purl.org/wmo/seaice#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
 
 
+
 Ontology: <http://purl.org/wmo/seaice/development#>
 
-Class: wmo:Development
-   
-Class: wmo:SecondYearIce
 
-    SubClassOf: 
-        wmo:OldIce
-    
-    
-Class: wmo:NewIce
+Datatype: xsd:decimal
 
-    SubClassOf: 
-        wmo:Development
     
-    
-Class: wmo:IceRind
+DataProperty: wmo:hasIceThickness
 
-    SubClassOf: 
-        wmo:Nilas
-    
-    
-Class: wmo:Shuga
-
-    SubClassOf: 
-        wmo:NewIce
-    
-    
-Class: wmo:GrayWhiteIce
-
-    SubClassOf: 
-        wmo:YoungIce
-    
     
 Class: wmo:ThickFirstYearIce
 
     SubClassOf: 
-        wmo:FirstYearIce
-    
-    
-Class: wmo:Nilas
-
-    SubClassOf: 
-        wmo:Development
-    
-    
-Class: wmo:YoungIce
-
-    SubClassOf: 
-        wmo:Development
-    
-    
-Class: wmo:MediumFirstYearIce
-
-    SubClassOf: 
-        wmo:FirstYearIce
-    
-    
-Class: wmo:ResidualFirstYearIce
-
-    SubClassOf: 
-        wmo:OldIce
-    
-    
-Class: wmo:MultiYearIce
-
-    SubClassOf: 
-        wmo:OldIce
+        wmo:FirstYearIce,
+        wmo:hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal]
     
     
 Class: wmo:FirstYearIce
 
     SubClassOf: 
-        wmo:Development
-    
-    
-Class: wmo:GreaseIce
-
-    SubClassOf: 
-        wmo:NewIce
-    
-    
-Class: wmo:OldIce
-
-    SubClassOf: 
-        wmo:Development
+        wmo:IceWithDevelopmentStage,
+        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "2"^^xsd:decimal]
     
     
 Class: wmo:Slush
@@ -104,7 +41,46 @@ Class: wmo:Slush
         wmo:NewIce
     
     
+Class: wmo:YoungIce
+
+    SubClassOf: 
+        wmo:IceWithDevelopmentStage,
+        wmo:hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.3"^^xsd:decimal]
+
+    
+Class: wmo:DarkNilasOrIceRind
+
+    EquivalentTo: 
+        wmo:DarkNilas
+         or wmo:IceRind
+    
+    SubClassOf: 
+        wmo:Nilas,
+        wmo:hasIceThickness only xsd:decimal[< "0.05"^^xsd:decimal]
+    
+    
 Class: wmo:FrazilIce
+
+    SubClassOf: 
+        wmo:NewIce
+    
+    
+Class: wmo:LightNilas
+
+     
+    
+    SubClassOf: 
+        wmo:Nilas,
+        wmo:hasIceThickness only xsd:decimal[> "0.05"^^xsd:decimal]
+    
+    
+Class: wmo:IceRind
+
+    SubClassOf: 
+        wmo:DarkNilasOrIceRind
+    
+    
+Class: wmo:Shuga
 
     SubClassOf: 
         wmo:NewIce
@@ -112,25 +88,95 @@ Class: wmo:FrazilIce
     
 Class: wmo:GrayIce
 
+     
+    
     SubClassOf: 
-        wmo:YoungIce
+        wmo:YoungIce,
+        wmo:hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.15"^^xsd:decimal]
+    
+    
+Class: wmo:IceWithDevelopmentStage
+
+    
+Class: wmo:GreaseIce
+
+    SubClassOf: 
+        wmo:NewIce
+    
+    
+Class: wmo:NewIce
+
+    SubClassOf: 
+        wmo:IceWithDevelopmentStage
+    
+    
+Class: wmo:SecondYearIce
+
+    SubClassOf: 
+        wmo:OldIce,
+        wmo:hasIceThickness only xsd:decimal[>= "2"^^xsd:decimal]
+    
+    
+Class: wmo:ThinFirstYearIce
+
+     
+    
+    SubClassOf: 
+        wmo:FirstYearIce,
+        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "0.7"^^xsd:decimal]
+    
+    
+Class: wmo:Nilas
+
+     
+    
+    SubClassOf: 
+        wmo:IceWithDevelopmentStage,
+        wmo:hasIceThickness only xsd:decimal[< "0.1"^^xsd:decimal]
+    
+    
+Class: wmo:OldIce
+
+    SubClassOf: 
+        wmo:IceWithDevelopmentStage
+    
+    
+Class: wmo:MediumFirstYearIce
+
+     
+    
+    SubClassOf: 
+        wmo:FirstYearIce,
+        wmo:hasIceThickness only xsd:decimal[>= "0.7"^^xsd:decimal , < "1.2"^^xsd:decimal]
+    
+    
+Class: wmo:GrayWhiteIce
+
+     
+    
+    SubClassOf: 
+        wmo:YoungIce,
+        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal]
+    
+    
+Class: wmo:MultiYearIce
+
+    SubClassOf: 
+        wmo:OldIce,
+        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal]
+    
+    
+Class: wmo:ResidualFirstYearIce
+
+    SubClassOf: 
+        wmo:OldIce,
+        wmo:hasIceThickness only xsd:decimal[>= "1.8"^^xsd:decimal , < "1.8"^^xsd:decimal]
     
     
 Class: wmo:DarkNilas
 
     SubClassOf: 
-        wmo:Nilas
-    
-    
-Class: wmo:ThinFirstYearIce
-
-    SubClassOf: 
-        wmo:FirstYearIce
-    
-    
-Class: wmo:LightNilas
-
-    SubClassOf: 
-        wmo:Nilas
+        wmo:DarkNilasOrIceRind,
+        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal]
     
     
