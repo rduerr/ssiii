@@ -1,0 +1,66 @@
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: geo-gml: <http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: geo: <http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/>
+
+
+
+Ontology: <http://purl.org/wmo/seaice#>
+
+Import: <http://purl.org/wmo/seaice/form#>
+Import: <http://purl.org/wmo/seaice/concentration#>
+Import: <http://purl.org/wmo/seaice/development#>
+
+Datatype: geo-gml:GMLLiteral
+
+    
+ObjectProperty: geo:hasGeometry
+
+    Domain: 
+        geo:Feature
+    
+    Range: 
+        geo:Geometry
+    
+    
+DataProperty: geo:asGML
+
+    Domain: 
+        geo:Geometry
+    
+    Range: 
+        geo-gml:GMLLiteral
+    
+    
+Class: owl:Thing
+
+    
+Class: geo:Geometry
+
+    SubClassOf: 
+        geo:SpatialObject
+    
+    
+Class: <http://purl.org/wmo/seaice#Zone>
+
+    SubClassOf: 
+        geo:Feature
+    
+    
+Class: geo:Feature
+
+    SubClassOf: 
+        geo:hasGeometry some geo:Geometry,
+        geo:SpatialObject
+    
+    
+Class: geo:SpatialObject
+
+    SubClassOf: 
+        owl:Thing
+    
+    
