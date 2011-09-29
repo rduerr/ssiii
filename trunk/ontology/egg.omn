@@ -14,6 +14,8 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 Ontology: <http://purl.org/nsidc/jcomm/egg#>
 
+Import: <http://purl.org/wmo/seaice/form#>
+Import: <http://purl.org/wmo/seaice/development#>
 
 Annotations: 
     rdfs:label "Ice conditions codes"
@@ -24,10 +26,10 @@ AnnotationProperty: rdfs:seeAlso
 AnnotationProperty: rdfs:label
 
     
-AnnotationProperty: muo:measuresQuality
+AnnotationProperty: muo:preferredUnit
 
     
-AnnotationProperty: muo:preferredUnit
+AnnotationProperty: muo:measuresQuality
 
     
 Datatype: xsd:decimal
@@ -39,10 +41,10 @@ Datatype: xsd:string
 Datatype: xsd:double
 
     
-Datatype: rdfs:Literal
+Datatype: xsd:integer
 
     
-Datatype: xsd:integer
+Datatype: rdfs:Literal
 
     
 ObjectProperty: hasComponent
@@ -84,15 +86,15 @@ Class: 6_10ths
         ssiii:IceWithConcentration
     
     
+Class: muo:BaseUnit
+
+    
 Class: wmo:Zone
 
     SubClassOf: 
         hasComponent max 3 ssiii:ZoneComponent,
         Zone
     
-    
-Class: muo:BaseUnit
-
     
 Class: 3_4_10ths
 
@@ -110,9 +112,6 @@ Class: wmo:BigFloe
     EquivalentTo: 
         hasIceFormCode value "5"^^xsd:string
     
-    SubClassOf: 
-        ssiii:IceWithForm
-    
     
 Class: wmo:FirstStageThinFirstYearIce
 
@@ -123,18 +122,18 @@ Class: wmo:FirstStageThinFirstYearIce
         wmo:ThinFirstYearIce
     
     
+Class: PredominantForm
+
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
 Class: ssiii:ZoneComponent
 
     EquivalentTo: 
         (hasDevelopmentStageCode exactly 1 xsd:string)
          and (hasConcentrationCode max 1 xsd:string)
          and (hasIceFormCode max 1 xsd:string)
-    
-    
-Class: PredominantForm
-
-    SubClassOf: 
-        ssiii:IceWithForm
     
     
 Class: 7_10ths
@@ -170,9 +169,6 @@ Class: Zone
     
 Class: wmo:BrashIce
 
-    SubClassOf: 
-        ssiii:IceWithForm
-    
     
 Class: 6_7_10ths
 
@@ -220,9 +216,6 @@ Class: wmo:SmallFloe
 
     EquivalentTo: 
         hasIceFormCode value "3"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithForm
     
     
 Class: wmo:Growler
@@ -303,15 +296,6 @@ Class: 1_2_10ths
         ssiii:IceWithConcentration
     
     
-Class: wmo:FastIce
-
-    EquivalentTo: 
-        hasIceFormCode value "8"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithForm
-    
-    
 Class: wmo:TraceConcentration
 
     EquivalentTo: 
@@ -321,6 +305,12 @@ Class: wmo:TraceConcentration
     
     SubClassOf: 
         ssiii:IceWithConcentration
+    
+    
+Class: wmo:FastIce
+
+    EquivalentTo: 
+        hasIceFormCode value "8"^^xsd:string
     
     
 Class: 5_7_10ths
@@ -361,9 +351,6 @@ Class: wmo:GiantFloe
     EquivalentTo: 
         hasIceFormCode value "7"^^xsd:string
     
-    SubClassOf: 
-        ssiii:IceWithForm
-    
     
 Class: ssiii:IceWithForm
 
@@ -372,9 +359,6 @@ Class: wmo:FirstYearIce
 
     EquivalentTo: 
         hasDevelopmentStageCode value "6"^^xsd:string
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
     
     
 Class: SecondaryForm
@@ -398,9 +382,6 @@ Class: wmo:OldIce
 
     EquivalentTo: 
         hasDevelopmentStageCode value "7*"^^xsd:string
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
     
     
 Class: 8_9_10ths
@@ -434,12 +415,6 @@ Class: 4_6_10ths
         ssiii:IceWithConcentration
     
     
-Class: wmo:UndeterminedForm
-
-    SubClassOf: 
-        ssiii:UndeterminedOrUnknownForm
-    
-    
 Class: wmo:MultiYearIce
 
     EquivalentTo: 
@@ -447,6 +422,12 @@ Class: wmo:MultiYearIce
     
     SubClassOf: 
         wmo:OldIce
+    
+    
+Class: wmo:UndeterminedForm
+
+    SubClassOf: 
+        ssiii:UndeterminedOrUnknownForm
     
     
 Class: wmo:ThickFirstYearIce
@@ -461,7 +442,6 @@ Class: wmo:ThickFirstYearIce
 Class: wmo:VastFloe
 
     SubClassOf: 
-        ssiii:IceWithForm,
         hasIceFormCode value "6"^^xsd:string
     
     
@@ -486,14 +466,17 @@ Class: 9_10_10ths
 Class: wmo:YoungIce
 
     EquivalentTo: 
-        hasDevelopmentStageCode value "x"^^xsd:string
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
+        hasDevelopmentStageCode value "3"^^xsd:string
     
     
 Class: wmo:IceWithDevelopmentStage
 
+    
+Class: wmo:UnknownForm
+
+    SubClassOf: 
+        ssiii:UndeterminedOrUnknownForm
+    
     
 Class: wmo:SecondYearIce
 
@@ -504,19 +487,10 @@ Class: wmo:SecondYearIce
         wmo:OldIce
     
     
-Class: wmo:UnknownForm
-
-    SubClassOf: 
-        ssiii:UndeterminedOrUnknownForm
-    
-    
 Class: wmo:NewIce
 
     EquivalentTo: 
         hasDevelopmentStageCode value "1"^^xsd:string
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
     
     
 Class: wmo:ThinFirstYearIce
@@ -533,17 +507,11 @@ Class: wmo:Nilas
     EquivalentTo: 
         hasDevelopmentStageCode value "2"^^xsd:string
     
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
-    
     
 Class: wmo:IceCake
 
     EquivalentTo: 
         hasIceFormCode value "2"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithForm
     
     
 Class: 1_10th
@@ -588,19 +556,15 @@ Class: 2_4_10ths
         ssiii:IceWithConcentration
     
     
-Class: wmo:Iceberg
-
-    SubClassOf: 
-        ssiii:IceWithForm
-    
-    
-Class: wmo:MediumFloe
+Class: 9_10ths
 
     EquivalentTo: 
-        hasIceFormCode value "4"^^xsd:string
+        (wmo:hasMeanIceConcentration value 0.9)
+         and (wmo:hasStdDevIceConcentration value 0.025),
+        hasConcentrationCode value "9"^^xsd:string
     
     SubClassOf: 
-        ssiii:IceWithForm
+        ssiii:IceWithConcentration
     
     
 Class: 7_9_10ths
@@ -616,20 +580,15 @@ Class: 7_9_10ths
     
 Class: wmo:SmallIceCake
 
-    SubClassOf: 
-        ssiii:IceWithForm
     
-    
-Class: 9_10ths
+Class: wmo:MediumFloe
 
     EquivalentTo: 
-        (wmo:hasMeanIceConcentration value 0.9)
-         and (wmo:hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "9"^^xsd:string
+        hasIceFormCode value "4"^^xsd:string
     
-    SubClassOf: 
-        ssiii:IceWithConcentration
     
+Class: wmo:Iceberg
+
     
 Class: wmo:Floeberg
 
@@ -704,9 +663,6 @@ Class: wmo:PancakeIce
 
     EquivalentTo: 
         hasIceFormCode value "0"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithForm
     
     
 Class: UnknownDevelopment

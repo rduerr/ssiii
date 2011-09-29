@@ -27,6 +27,8 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/wmo/seaice/form#</Import>
+    <Import>http://purl.org/wmo/seaice/development#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice conditions codes</Literal>
@@ -134,16 +136,10 @@
         <Class abbreviatedIRI="ssiii:CanadaZone"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
@@ -167,7 +163,7 @@
         <Class abbreviatedIRI="wmo:FirstYearIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:Floebergs"/>
+        <Class abbreviatedIRI="wmo:Floeberg"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="wmo:GiantFloe"/>
@@ -179,7 +175,7 @@
         <Class abbreviatedIRI="wmo:GrayWhiteIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:Growlers"/>
+        <Class abbreviatedIRI="wmo:Growler"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="wmo:IceCake"/>
@@ -194,7 +190,7 @@
         <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:Icebergs"/>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
@@ -302,11 +298,11 @@
         <Class IRI="10_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;integer">1</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.001</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -322,11 +318,11 @@
         <Class IRI="1_10th"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.1</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -342,11 +338,11 @@
         <Class IRI="1_2_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.15</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -362,11 +358,11 @@
         <Class IRI="1_3_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.2</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -382,11 +378,11 @@
         <Class IRI="2_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.2</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -402,11 +398,11 @@
         <Class IRI="2_3_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.25</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -422,11 +418,11 @@
         <Class IRI="2_4_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.3</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -442,11 +438,11 @@
         <Class IRI="3_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.3</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -462,11 +458,11 @@
         <Class IRI="3_4_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.35</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -482,11 +478,11 @@
         <Class IRI="3_5_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.4</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -502,11 +498,11 @@
         <Class IRI="4_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.4</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -522,11 +518,11 @@
         <Class IRI="4_5_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.45</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -542,11 +538,11 @@
         <Class IRI="4_6_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.5</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -562,11 +558,11 @@
         <Class IRI="5_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.5</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -582,11 +578,11 @@
         <Class IRI="5_6_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.55</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -602,11 +598,11 @@
         <Class IRI="5_7_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.6</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -622,11 +618,11 @@
         <Class IRI="6_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.6</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -642,11 +638,11 @@
         <Class IRI="6_7_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.65</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -662,11 +658,11 @@
         <Class IRI="6_8_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.7</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -682,11 +678,11 @@
         <Class IRI="7_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.7</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -702,11 +698,11 @@
         <Class IRI="7_8_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.75</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -722,11 +718,11 @@
         <Class IRI="7_9_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.8</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -742,11 +738,11 @@
         <Class IRI="8_10_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.9</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -762,11 +758,11 @@
         <Class IRI="8_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.8</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -782,11 +778,11 @@
         <Class IRI="8_9_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.85</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -802,11 +798,11 @@
         <Class IRI="9+_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.95</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.0125</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -822,11 +818,11 @@
         <Class IRI="9_10_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.95</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -842,11 +838,11 @@
         <Class IRI="9_10ths"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.9</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -866,52 +862,11 @@
         </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
-        <ObjectUnionOf>
-            <Class abbreviatedIRI="wmo:Floebergs"/>
-            <Class abbreviatedIRI="wmo:Growlers"/>
-            <Class abbreviatedIRI="wmo:Icebergs"/>
-        </ObjectUnionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">9</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="hasConcentrationCode"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
-        <ObjectUnionOf>
-            <Class abbreviatedIRI="wmo:BrashIce"/>
-            <Class abbreviatedIRI="wmo:SmallIceCake"/>
-        </ObjectUnionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="hasFloeSize"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;maxExclusive">
-                    <Literal datatypeIRI="&xsd;integer">2</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">1</Literal>
-        </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
@@ -946,21 +901,6 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="wmo:BigFloe"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="hasFloeSize"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;maxExclusive">
-                    <Literal datatypeIRI="&xsd;integer">2000</Literal>
-                </FacetRestriction>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">500</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:BigFloe"/>
         <DataHasValue>
             <DataProperty IRI="hasIceFormCode"/>
             <Literal datatypeIRI="&xsd;string">5</Literal>
@@ -989,18 +929,6 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="wmo:GiantFloe"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="hasFloeSize"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">10000</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:GiantFloe"/>
         <DataHasValue>
             <DataProperty IRI="hasIceFormCode"/>
             <Literal datatypeIRI="&xsd;string">7</Literal>
@@ -1022,21 +950,6 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="wmo:IceCake"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="hasFloeSize"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">2</Literal>
-                </FacetRestriction>
-                <FacetRestriction facet="&xsd;maxExclusive">
-                    <Literal datatypeIRI="&xsd;integer">20</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:IceCake"/>
         <DataHasValue>
             <DataProperty IRI="hasIceFormCode"/>
             <Literal datatypeIRI="&xsd;string">2</Literal>
@@ -1046,11 +959,11 @@
         <Class abbreviatedIRI="wmo:IceFree"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.0</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.001</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -1080,21 +993,6 @@
             <DataProperty IRI="hasDevelopmentStageCode"/>
             <Literal datatypeIRI="&xsd;string">1*</Literal>
         </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:MediumFloe"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="hasFloeSize"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">100</Literal>
-                </FacetRestriction>
-                <FacetRestriction facet="&xsd;maxExclusive">
-                    <Literal datatypeIRI="&xsd;integer">500</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="wmo:MediumFloe"/>
@@ -1161,21 +1059,6 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="wmo:SmallFloe"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="hasFloeSize"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">2</Literal>
-                </FacetRestriction>
-                <FacetRestriction facet="&xsd;maxExclusive">
-                    <Literal datatypeIRI="&xsd;integer">100</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:SmallFloe"/>
         <DataHasValue>
             <DataProperty IRI="hasIceFormCode"/>
             <Literal datatypeIRI="&xsd;string">3</Literal>
@@ -1199,11 +1082,11 @@
         <Class abbreviatedIRI="wmo:TraceConcentration"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
@@ -1219,7 +1102,7 @@
         <Class abbreviatedIRI="wmo:YoungIce"/>
         <DataHasValue>
             <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">x</Literal>
+            <Literal datatypeIRI="&xsd;string">3</Literal>
         </DataHasValue>
     </EquivalentClasses>
     <SubClassOf>
@@ -1386,27 +1269,7 @@
         </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:BigFloe"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:BrashIce"/>
-        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:FastIce"/>
         <Class abbreviatedIRI="ssiii:IceWithForm"/>
     </SubClassOf>
     <SubClassOf>
@@ -1414,16 +1277,8 @@
         <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:FirstYearIce"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:Floebergs"/>
-        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:GiantFloe"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+        <Class abbreviatedIRI="wmo:Floeberg"/>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="wmo:GrayIce"/>
@@ -1434,12 +1289,8 @@
         <Class abbreviatedIRI="wmo:YoungIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:Growlers"/>
-        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:IceCake"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+        <Class abbreviatedIRI="wmo:Growler"/>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="wmo:IceFree"/>
@@ -1450,40 +1301,16 @@
         <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:Icebergs"/>
-        <Class abbreviatedIRI="ssiii:GrowlersIcebergsOrFloebergs"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
         <Class abbreviatedIRI="wmo:FirstYearIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:MediumFloe"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="wmo:MultiYearIce"/>
         <Class abbreviatedIRI="wmo:OldIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:NewIce"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:Nilas"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="wmo:NoDevelopment"/>
         <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:OldIce"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:PancakeIce"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="wmo:SecondStageThinFirstYearIce"/>
@@ -1492,14 +1319,6 @@
     <SubClassOf>
         <Class abbreviatedIRI="wmo:SecondYearIce"/>
         <Class abbreviatedIRI="wmo:OldIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:SmallFloe"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:SmallIceCake"/>
-        <Class abbreviatedIRI="ssiii:SmallIceCakeOrBrashIce"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="wmo:ThickFirstYearIce"/>
@@ -1523,25 +1342,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="wmo:VastFloe"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:VastFloe"/>
         <DataHasValue>
             <DataProperty IRI="hasIceFormCode"/>
             <Literal datatypeIRI="&xsd;string">6</Literal>
         </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:VastFloe"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">8</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:YoungIce"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="wmo:Zone"/>
@@ -1570,22 +1374,17 @@
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-        <IRI>hasFloeSize</IRI>
-        <IRI>http://purl.oclc.org/NET/muo/ucum/unit/length/meter</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-        <IRI>hasMeanIceConcentration</IRI>
+        <AbbreviatedIRI>wmo:hasMeanIceConcentration</AbbreviatedIRI>
         <IRI>fractionalArea</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-        <IRI>hasStdDevIceConcentration</IRI>
+        <AbbreviatedIRI>wmo:hasStdDevIceConcentration</AbbreviatedIRI>
         <IRI>fractionalArea</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <IRI>hasStdDevIceConcentration</IRI>
+        <AbbreviatedIRI>wmo:hasStdDevIceConcentration</AbbreviatedIRI>
         <IRI>http://dbpedia.org/page/Standard_deviation</IRI>
     </AnnotationAssertion>
 </Ontology>
