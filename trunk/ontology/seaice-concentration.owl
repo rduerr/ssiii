@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/wmo/seaice/concentration#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/wmo/seaice/concentration#">
+    <Prefix name="ssiii" IRI="http://purl.org/nsidc/ssiii/seaice#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://purl.org/wmo/seaice#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="geo" IRI="http://opengis.net/ont/OGC-GeoSPARQL/1.0/#"/>
+    <Import>http://purl.org/wmo/seaice/form#</Import>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ClosePackIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CompactPackIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ConsolidatedIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":FastIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":OpenPackIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":OpenWater"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PackIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VeryClosePackIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VeryOpenPackIce"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":ClosePackIce"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.75</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":CompactPackIce"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <Class abbreviatedIRI=":ConsolidatedIce"/>
+            </ObjectComplementOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">1.0</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.01</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":ConsolidatedIce"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">1.0</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.001</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":OpenPackIce"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.5</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":OpenWater"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <Class abbreviatedIRI=":IceOfLandOrigin"/>
+            </ObjectComplementOf>
+            <DataAllValuesFrom>
+                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="&xsd;minInclusive">
+                        <Literal datatypeIRI="&xsd;double">0.0</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="&xsd;maxExclusive">
+                        <Literal datatypeIRI="&xsd;double">0.1</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":VeryClosePackIce"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.95</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":VeryOpenPackIce"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.2</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ClosePackIce"/>
+        <Class abbreviatedIRI=":PackIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":CompactPackIce"/>
+        <Class abbreviatedIRI=":PackIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ConsolidatedIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":FastIce"/>
+        <Class abbreviatedIRI=":ConsolidatedIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":OpenPackIce"/>
+        <Class abbreviatedIRI=":PackIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":OpenWater"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PackIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VeryClosePackIce"/>
+        <Class abbreviatedIRI=":PackIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VeryOpenPackIce"/>
+        <Class abbreviatedIRI=":PackIce"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ssiii:IceWithConcentration</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The ratio of the area of ice features to the total area of a sea part (zone) delineated on the chart, expressed in tenths. The total concentration includes all stages of development and the partial concentration includes areas of ice of specific age or arrangement which comprise only part of the total concentration. Concentrations within 0-1/10 and 9/10 ñ 10/10 from instrumental observations can be expressed in hundredths (4.2 Ed.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ssiii:IceWithConcentration</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Concentration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ClosePackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 7/10 to 8/10, composed of floes mostly in contact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ClosePackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Close pack ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:CompactPackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 10/10 and no water is visible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:CompactPackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Compact pack ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ConsolidatedIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 10/10 and the floes are frozen together.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ConsolidatedIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Consolidated ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:OpenPackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:OpenPackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Open pack ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:OpenWater</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A large area of freely navigable water in which sea ice is present in concentrations less than 1/10 and ice of land origin is absent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:OpenWater</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Open water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:VeryClosePackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 9/10 and more, but less than 10/10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:VeryClosePackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Very close pack ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:VeryOpenPackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 1/10 to 3/10 and water preponderates over ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:VeryOpenPackIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Very open pack ice</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

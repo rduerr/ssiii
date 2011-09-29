@@ -1,0 +1,167 @@
+Prefix: ssiii: <http://purl.org/nsidc/ssiii/seaice#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: : <http://purl.org/wmo/seaice#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: geo: <http://opengis.net/ont/OGC-GeoSPARQL/1.0/#>
+
+
+
+Ontology: <http://purl.org/wmo/seaice/concentration#>
+
+Import: <http://purl.org/wmo/seaice/form#>
+
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:double
+
+    
+Datatype: xsd:integer
+
+    
+DataProperty: hasMeanIceConcentration
+
+    
+DataProperty: hasStdDevIceConcentration
+
+    
+Class: VeryClosePackIce
+
+    Annotations: 
+        rdfs:comment "Floating ice in which the concentration is 9/10 and more, but less than 10/10",
+        rdfs:label "Very close pack ice"
+    
+    EquivalentTo: 
+        (hasMeanIceConcentration value 0.95)
+         and (hasStdDevIceConcentration value 0.05)
+    
+    SubClassOf: 
+        PackIce
+    
+    
+Class: ssiii:IceWithConcentration
+
+    Annotations: 
+        rdfs:comment "The ratio of the area of ice features to the total area of a sea part (zone) delineated on the chart, expressed in tenths. The total concentration includes all stages of development and the partial concentration includes areas of ice of specific age or arrangement which comprise only part of the total concentration. Concentrations within 0-1/10 and 9/10 ñ 10/10 from instrumental observations can be expressed in hundredths (4.2 Ed.).",
+        rdfs:label "Concentration"
+    
+    EquivalentTo: 
+        hasMeanIceConcentration min 1 xsd:decimal
+    
+    SubClassOf: 
+        hasMeanIceConcentration only xsd:decimal[>= 0 , <= 1]
+    
+    
+Class: OpenPackIce
+
+    Annotations: 
+        rdfs:label "Open pack ice",
+        rdfs:comment "Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another"
+    
+    EquivalentTo: 
+        (hasMeanIceConcentration value 0.5)
+         and (hasStdDevIceConcentration value 0.075)
+    
+    SubClassOf: 
+        PackIce
+    
+    
+Class: PackIce
+
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: FastIce
+
+    SubClassOf: 
+        ConsolidatedIce
+    
+    
+Class: IceOfLandOrigin
+
+    
+Class: OpenWater
+
+    Annotations: 
+        rdfs:comment "A large area of freely navigable water in which sea ice is present in concentrations less than 1/10 and ice of land origin is absent.",
+        rdfs:label "Open water"
+    
+    EquivalentTo: 
+        (not (IceOfLandOrigin))
+         and (hasMeanIceConcentration only xsd:decimal[>= 0.0 , < 0.1])
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: CompactPackIce
+
+    Annotations: 
+        rdfs:label "Compact pack ice",
+        rdfs:comment "Floating ice in which the concentration is 10/10 and no water is visible"
+    
+    EquivalentTo: 
+        (not (ConsolidatedIce))
+         and (hasMeanIceConcentration value 1.0)
+         and (hasStdDevIceConcentration value 0.01)
+    
+    SubClassOf: 
+        PackIce
+    
+    
+Class: ConsolidatedIce
+
+    Annotations: 
+        rdfs:label "Consolidated ice",
+        rdfs:comment "Floating ice in which the concentration is 10/10 and the floes are frozen together."
+    
+    EquivalentTo: 
+        (hasMeanIceConcentration value 1.0)
+         and (hasStdDevIceConcentration value 0.001)
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: VeryOpenPackIce
+
+    Annotations: 
+        rdfs:label "Very open pack ice",
+        rdfs:comment "Floating ice in which the concentration is 1/10 to 3/10 and water preponderates over ice"
+    
+    EquivalentTo: 
+        (hasMeanIceConcentration value 0.2)
+         and (hasStdDevIceConcentration value 0.075)
+    
+    SubClassOf: 
+        PackIce
+    
+    
+Class: ClosePackIce
+
+    Annotations: 
+        rdfs:comment "Floating ice in which the concentration is 7/10 to 8/10, composed of floes mostly in contact",
+        rdfs:label "Close pack ice"
+    
+    EquivalentTo: 
+        (hasMeanIceConcentration value 0.75)
+         and (hasStdDevIceConcentration value 0.05)
+    
+    SubClassOf: 
+        PackIce
+    
+    
