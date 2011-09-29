@@ -1,0 +1,39 @@
+@prefix :        <http://localhost/default#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix jcomm:   <http://purl.org/nsidc/jcomm/egg#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wmo:     <http://localhost/wmo#> .
+@prefix daml:    <http://www.daml.org/2001/03/daml+oil#> .
+
+:zone_xyz
+      :a      jcomm:5_10ths ;
+      :hasComponent :zone_xyz_b , :zone_xyz_a ;
+      :hasConcentrationCode "5" ;
+      geo:hasGeometry [ a geo:Geometry;
+          geo:asGML '''
+     <gml:Polygon>
+         <gml:outerBoundaryIs>
+                 <gml:LinearRing>
+                         <gml:posList>0,0 100,0 100,100 0,100 0,0</gml:posList>
+                 </gml:LinearRing>
+        </gml:outerBoundaryIs>
+     </gml:Polygon>
+'''^^geo-gml:GMLLiteral.
+      ].
+:zone_xyz_b
+      :a      jcomm:3_10ths , wmo:BigFloe , wmo:YoungIce ;
+      :hasConcentrationCode
+              "3" ;
+      :hasDevelopmentStageCode
+              "3" ;
+      :hasFormCode "5" .
+:zone_xyz_a
+      :a      jcomm:2_10ths , wmo:MediumFirstYearIce , wmo:MediumFloe ;
+      :hasConcentrationCode
+              "2" ;
+      :hasDevelopmentStageCode
+              "1*" ;
+      :hasFormCode "4" .
+
