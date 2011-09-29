@@ -1,0 +1,221 @@
+Prefix: ssiii: <http://purl.org/nsidc/ssiii/seaice#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: wmo: <http://purl.org/wmo/seaice#>
+Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
+Prefix: : <http://purl.org/nsidc/jcomm/egg#>
+Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://purl.org/wmo/seaice/form#>
+
+
+Annotations: 
+    rdfs:label "Ice conditions codes"
+
+AnnotationProperty: rdfs:seeAlso
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: muo:preferredUnit
+
+    
+AnnotationProperty: muo:measuresQuality
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:string
+
+    
+Datatype: xsd:double
+
+    
+Datatype: rdfs:Literal
+
+    
+Datatype: xsd:integer
+
+    
+ObjectProperty: hasComponent
+
+    
+ObjectProperty: muo:measuresQuality
+
+    
+DataProperty: wmo:hasFloeSize
+
+    Annotations: 
+        muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
+    
+    
+Class: wmo:IceShelf
+
+    SubClassOf: 
+        wmo:IceOfLandOrigin
+    
+    
+Class: wmo:VastFloe
+
+    SubClassOf: 
+        wmo:Floe
+    
+    
+Class: wmo:BergyBit
+
+    SubClassOf: 
+        wmo:Iceberg
+    
+    
+Class: wmo:FastIce
+
+    SubClassOf: 
+        wmo:SeaIce
+    
+    
+Class: wmo:MediumFloe
+
+    EquivalentTo: 
+        wmo:hasFloeSize only xsd:decimal[>= 100 , < 500]
+    
+    SubClassOf: 
+        wmo:Floe
+    
+    
+Class: wmo:Iceberg
+
+    SubClassOf: 
+        wmo:IceOfLandOrigin
+    
+    
+Class: wmo:SmallIceCake
+
+    SubClassOf: 
+        wmo:hasFloeSize only xsd:decimal[< 2],
+        wmo:IceCake
+    
+    
+Class: wmo:BigFloe
+
+    EquivalentTo: 
+        wmo:hasFloeSize only xsd:decimal[>= 500 , < 2000]
+    
+    SubClassOf: 
+        wmo:Floe
+    
+    
+Class: wmo:Floeberg
+
+    SubClassOf: 
+        wmo:Iceberg
+    
+    
+Class: ssiii:IceWithForm
+
+    
+Class: wmo:Glacier
+
+    SubClassOf: 
+        wmo:IceOfLandOrigin
+    
+    
+Class: wmo:GiantFloe
+
+    EquivalentTo: 
+        wmo:hasFloeSize only xsd:decimal[>= 10000]
+    
+    SubClassOf: 
+        wmo:Floe
+    
+    
+Class: wmo:IceBreccia
+
+    SubClassOf: 
+        wmo:SeaIce
+    
+    
+Class: wmo:BrashIce
+
+    SubClassOf: 
+        wmo:hasFloeSize only xsd:decimal[< 2],
+        wmo:IceCake
+    
+    
+Class: wmo:Floe
+
+    SubClassOf: 
+        wmo:SeaIce
+    
+    
+Class: wmo:SeaIce
+
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:TabularBerg
+
+    SubClassOf: 
+        wmo:Iceberg
+    
+    
+Class: wmo:PancakeIce
+
+    SubClassOf: 
+        (not (wmo:IceCake))
+         and (wmo:hasFloeSize only xsd:decimal[>= "0.3"^^xsd:decimal , < 3]),
+        wmo:SeaIce
+    
+    
+Class: wmo:IceCake
+
+    EquivalentTo: 
+        (not (wmo:PancakeIce))
+         and (wmo:hasFloeSize only xsd:decimal[< 20])
+    
+    SubClassOf: 
+        wmo:SeaIce
+    
+    
+Class: wmo:SmallFloe
+
+    EquivalentTo: 
+        wmo:hasFloeSize only xsd:decimal[>= 2 , < 100]
+    
+    SubClassOf: 
+        wmo:Floe
+    
+    
+Class: wmo:IceOfLandOrigin
+
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:Growler
+
+    SubClassOf: 
+        wmo:Iceberg
+    
+    
+Individual: physical-quality:area
+
+    
+Individual: fractionalArea
+
+    Facts:  
+     muo:measuresQuality  physical-quality:fraction,
+     muo:measuresQuality  physical-quality:area
+    
+    
+Individual: physical-quality:fraction
+
+    
