@@ -1,0 +1,737 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/nsidc/jcomm/sigrid3#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/nsidc/jcomm/sigrid3#">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="egg" IRI="http://purl.org/nsidc/jcomm/egg#"/>
+    <Prefix name="" IRI="http://purl.org/nsidc/jcomm/sigrid3#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/nsidc/jcomm/egg#</Import>
+    <Declaration>
+        <Class abbreviatedIRI="egg:10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:1_10th"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:1_2_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:1_3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:2_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:2_3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:2_4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:3_4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:3_5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:4_5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:4_6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:5_6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:5_7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:6_7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:6_8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:7_8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:7_9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:8_10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:8_9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:9_10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="egg:UnknownDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Floebit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GrowlerFloebergOrFloebit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IceFree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LevelIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Shuga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ShugaSmallIceCakeOrBrashIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="StripsAndPatches"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="StripsAndPatches1_10"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nsidc/ssiii/seaice#UndeterminedOrUnknownForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#BigFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#BrashIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#FastIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#FirstStageThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#FirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#Floeberg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#GiantFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#Glacier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#GrayIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#GrayWhiteIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#Growler"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#IceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#IceFree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#IceWithDevelopmentStage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#Iceberg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#MediumFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#MediumFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#MultiYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#NewIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#Nilas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#NoDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#OldIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#PancakeIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#SeaIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#SecondStageThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#SecondYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#SmallFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#SmallIceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#ThickFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#ThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#TraceConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#VastFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/wmo/seaice#YoungIce"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">92</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:1_10th"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:1_2_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">12</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:1_3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">13</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:2_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">20</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:2_3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">23</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:2_4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">24</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">30</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:3_4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">34</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:3_5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">35</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">40</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:4_5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">45</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:4_6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">46</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">50</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:5_6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">56</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:5_7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">57</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">60</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:6_7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">67</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:6_8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">68</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">70</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:7_8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">78</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:7_9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">79</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:8_10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">81</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">80</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:8_9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">89</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:9_10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">91</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">90</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="egg:UnknownDevelopment"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">99</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="GrowlerFloebergOrFloebit"/>
+        <ObjectUnionOf>
+            <Class IRI="Floebit"/>
+            <Class IRI="http://purl.org/wmo/seaice#Floeberg"/>
+            <Class IRI="http://purl.org/wmo/seaice#Growler"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="IceFree"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">00</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="IceFree"/>
+        <DataMaxCardinality cardinality="0">
+            <DataProperty IRI="http://purl.org/wmo/seaice#hasIceThickness"/>
+        </DataMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="LevelIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">21</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="ShugaSmallIceCakeOrBrashIce"/>
+        <ObjectUnionOf>
+            <Class IRI="Shuga"/>
+            <Class IRI="http://purl.org/wmo/seaice#BrashIce"/>
+            <Class IRI="http://purl.org/wmo/seaice#SmallIceCake"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="ShugaSmallIceCakeOrBrashIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">01</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="StripsAndPatches1_10"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">11</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/nsidc/ssiii/seaice#UndeterminedOrUnknownForm"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">99</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#BigFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">05</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#FastIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">08</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#FirstStageThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">88</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#FirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">86</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#GiantFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">07</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#Glacier"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">98</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#GrayIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">84</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#GrayWhiteIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">85</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#IceCake"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">02</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#IceFree"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">00</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#Iceberg"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">02</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#Iceberg"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#MediumFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">91</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#MediumFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">04</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#MultiYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">97</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#NewIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">81</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#Nilas"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">82</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#NoDevelopment"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">80</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#OldIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">95</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#PancakeIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">00</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#SecondStageThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">89</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#SecondYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">96</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#SmallFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">03</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#ThickFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">92</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#ThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">87</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#TraceConcentration"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3ConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">01</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#VastFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3IceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">06</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/wmo/seaice#YoungIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasSigrid3DevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">83</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Floebit"/>
+        <Class IRI="GrowlerFloebergOrFloebit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="GrowlerFloebergOrFloebit"/>
+        <Class IRI="http://purl.org/wmo/seaice#Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IceFree"/>
+        <Class IRI="http://purl.org/wmo/seaice#IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="LevelIce"/>
+        <Class IRI="http://purl.org/nsidc/ssiii/seaice#IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Shuga"/>
+        <Class IRI="ShugaSmallIceCakeOrBrashIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ShugaSmallIceCakeOrBrashIce"/>
+        <Class IRI="http://purl.org/wmo/seaice#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StripsAndPatches"/>
+        <Class IRI="http://purl.org/wmo/seaice#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StripsAndPatches1_10"/>
+        <Class abbreviatedIRI="egg:1_10th"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="StripsAndPatches1_10"/>
+        <Class IRI="StripsAndPatches"/>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
