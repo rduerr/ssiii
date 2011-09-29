@@ -24,10 +24,10 @@ AnnotationProperty: rdfs:seeAlso
 AnnotationProperty: rdfs:label
 
     
-AnnotationProperty: muo:preferredUnit
+AnnotationProperty: muo:measuresQuality
 
     
-AnnotationProperty: muo:measuresQuality
+AnnotationProperty: muo:preferredUnit
 
     
 Datatype: xsd:decimal
@@ -51,22 +51,16 @@ ObjectProperty: hasComponent
 ObjectProperty: muo:measuresQuality
 
     
-DataProperty: hasFloeSize
+DataProperty: wmo:hasMeanIceConcentration
 
     Annotations: 
-        muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
-    
-    
-DataProperty: hasStdDevIceConcentration
-
-    Annotations: 
-        rdfs:seeAlso <http://dbpedia.org/page/Standard_deviation>,
         muo:preferredUnit <http://purl.org/nsidc/jcomm/egg#fractionalArea>
     
     
-DataProperty: hasMeanIceConcentration
+DataProperty: wmo:hasStdDevIceConcentration
 
     Annotations: 
+        rdfs:seeAlso <http://dbpedia.org/page/Standard_deviation>,
         muo:preferredUnit <http://purl.org/nsidc/jcomm/egg#fractionalArea>
     
     
@@ -82,8 +76,8 @@ DataProperty: hasIceFormCode
 Class: 6_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.6)
-         and (hasStdDevIceConcentration value 0.025),
+        (wmo:hasMeanIceConcentration value 0.6)
+         and (wmo:hasStdDevIceConcentration value 0.025),
         hasConcentrationCode value "6"^^xsd:string
     
     SubClassOf: 
@@ -103,8 +97,8 @@ Class: muo:BaseUnit
 Class: 3_4_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.35)
-         and (hasStdDevIceConcentration value 0.05),
+        (wmo:hasMeanIceConcentration value 0.35)
+         and (wmo:hasStdDevIceConcentration value 0.05),
         hasConcentrationCode value "3-4"^^xsd:string
     
     SubClassOf: 
@@ -114,7 +108,6 @@ Class: 3_4_10ths
 Class: wmo:BigFloe
 
     EquivalentTo: 
-        hasFloeSize only xsd:decimal[>= 500 , < 2000],
         hasIceFormCode value "5"^^xsd:string
     
     SubClassOf: 
@@ -130,12 +123,6 @@ Class: wmo:FirstStageThinFirstYearIce
         wmo:ThinFirstYearIce
     
     
-Class: PredominantForm
-
-    SubClassOf: 
-        ssiii:IceWithForm
-    
-    
 Class: ssiii:ZoneComponent
 
     EquivalentTo: 
@@ -144,23 +131,29 @@ Class: ssiii:ZoneComponent
          and (hasIceFormCode max 1 xsd:string)
     
     
-Class: 3_10ths
+Class: PredominantForm
 
-    EquivalentTo: 
-        hasConcentrationCode value "3"^^xsd:string,
-        (hasMeanIceConcentration value 0.3)
-         and (hasStdDevIceConcentration value 0.025)
-    
     SubClassOf: 
-        ssiii:IceWithConcentration
+        ssiii:IceWithForm
     
     
 Class: 7_10ths
 
     EquivalentTo: 
-        hasConcentrationCode value "7"^^xsd:string,
-        (hasMeanIceConcentration value 0.7)
-         and (hasStdDevIceConcentration value 0.025)
+        (wmo:hasMeanIceConcentration value 0.7)
+         and (wmo:hasStdDevIceConcentration value 0.025),
+        hasConcentrationCode value "7"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 3_10ths
+
+    EquivalentTo: 
+        hasConcentrationCode value "3"^^xsd:string,
+        (wmo:hasMeanIceConcentration value 0.3)
+         and (wmo:hasStdDevIceConcentration value 0.025)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -178,14 +171,14 @@ Class: Zone
 Class: wmo:BrashIce
 
     SubClassOf: 
-        ssiii:SmallIceCakeOrBrashIce
+        ssiii:IceWithForm
     
     
 Class: 6_7_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.65)
-         and (hasStdDevIceConcentration value 0.05),
+        (wmo:hasMeanIceConcentration value 0.65)
+         and (wmo:hasStdDevIceConcentration value 0.05),
         hasConcentrationCode value "6-7"^^xsd:string
     
     SubClassOf: 
@@ -196,44 +189,22 @@ Class: 7_8_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "7-8"^^xsd:string,
-        (hasMeanIceConcentration value 0.75)
-         and (hasStdDevIceConcentration value 0.05)
+        (wmo:hasMeanIceConcentration value 0.75)
+         and (wmo:hasStdDevIceConcentration value 0.05)
     
     SubClassOf: 
         ssiii:IceWithConcentration
-    
-    
-Class: ssiii:GrowlersIcebergsOrFloebergs
-
-    EquivalentTo: 
-        hasIceFormCode value "9"^^xsd:string,
-        wmo:Floebergs
-         or wmo:Growlers
-         or wmo:Icebergs
-    
-    SubClassOf: 
-        ssiii:IceWithForm
     
     
 Class: 4_5_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.45)
-         and (hasStdDevIceConcentration value 0.05),
+        (wmo:hasMeanIceConcentration value 0.45)
+         and (wmo:hasStdDevIceConcentration value 0.05),
         hasConcentrationCode value "4-5"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
-    
-    
-Class: wmo:SmallFloe
-
-    EquivalentTo: 
-        hasFloeSize only xsd:decimal[>= 2 , < 100],
-        hasIceFormCode value "3"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithForm
     
     
 Class: wmo:IceOfLandOrigin
@@ -245,10 +216,19 @@ Class: wmo:IceOfLandOrigin
         wmo:IceWithDevelopmentStage
     
     
-Class: wmo:Growlers
+Class: wmo:SmallFloe
+
+    EquivalentTo: 
+        hasIceFormCode value "3"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: wmo:Growler
 
     SubClassOf: 
-        ssiii:GrowlersIcebergsOrFloebergs
+        wmo:Iceberg
     
     
 Class: ssiii:UndeterminedOrUnknownForm
@@ -265,8 +245,8 @@ Class: ssiii:UndeterminedOrUnknownForm
 Class: 8_10_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.9)
-         and (hasStdDevIceConcentration value 0.075),
+        (wmo:hasMeanIceConcentration value 0.9)
+         and (wmo:hasStdDevIceConcentration value 0.075),
         hasConcentrationCode value "8-10"^^xsd:string
     
     SubClassOf: 
@@ -276,9 +256,9 @@ Class: 8_10_10ths
 Class: 3_5_10ths
 
     EquivalentTo: 
-        hasConcentrationCode value "3-5"^^xsd:string,
-        (hasMeanIceConcentration value 0.4)
-         and (hasStdDevIceConcentration value 0.075)
+        (wmo:hasMeanIceConcentration value 0.4)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "3-5"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -287,8 +267,8 @@ Class: 3_5_10ths
 Class: 8_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.8)
-         and (hasStdDevIceConcentration value 0.025),
+        (wmo:hasMeanIceConcentration value 0.8)
+         and (wmo:hasStdDevIceConcentration value 0.025),
         hasConcentrationCode value "8"^^xsd:string
     
     SubClassOf: 
@@ -298,9 +278,9 @@ Class: 8_10ths
 Class: 5_10ths
 
     EquivalentTo: 
-        hasConcentrationCode value "5"^^xsd:string,
-        (hasMeanIceConcentration value 0.5)
-         and (hasStdDevIceConcentration value 0.025)
+        (wmo:hasMeanIceConcentration value 0.5)
+         and (wmo:hasStdDevIceConcentration value 0.025),
+        hasConcentrationCode value "5"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -316,8 +296,8 @@ Class: 1_2_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "1-2"^^xsd:string,
-        (hasMeanIceConcentration value 0.15)
-         and (hasStdDevIceConcentration value 0.05)
+        (wmo:hasMeanIceConcentration value 0.15)
+         and (wmo:hasStdDevIceConcentration value 0.05)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -335,9 +315,20 @@ Class: wmo:FastIce
 Class: wmo:TraceConcentration
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.05)
-         and (hasStdDevIceConcentration value 0.025),
+        (wmo:hasMeanIceConcentration value 0.05)
+         and (wmo:hasStdDevIceConcentration value 0.025),
         hasConcentrationCode value "0"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 5_7_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.6)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "5-7"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -347,19 +338,8 @@ Class: 2_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "2"^^xsd:string,
-        (hasMeanIceConcentration value 0.2)
-         and (hasStdDevIceConcentration value 0.025)
-    
-    SubClassOf: 
-        ssiii:IceWithConcentration
-    
-    
-Class: 5_7_10ths
-
-    EquivalentTo: 
-        (hasMeanIceConcentration value 0.6)
-         and (hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "5-7"^^xsd:string
+        (wmo:hasMeanIceConcentration value 0.2)
+         and (wmo:hasStdDevIceConcentration value 0.025)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -369,8 +349,8 @@ Class: 4_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "4"^^xsd:string,
-        (hasMeanIceConcentration value 0.4)
-         and (hasStdDevIceConcentration value 0.025)
+        (wmo:hasMeanIceConcentration value 0.4)
+         and (wmo:hasStdDevIceConcentration value 0.025)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -379,7 +359,6 @@ Class: 4_10ths
 Class: wmo:GiantFloe
 
     EquivalentTo: 
-        hasFloeSize only xsd:decimal[>= 10000],
         hasIceFormCode value "7"^^xsd:string
     
     SubClassOf: 
@@ -408,8 +387,8 @@ Class: 9+_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "9+"^^xsd:string,
-        (hasMeanIceConcentration value 0.95)
-         and (hasStdDevIceConcentration value 0.0125)
+        (wmo:hasMeanIceConcentration value 0.95)
+         and (wmo:hasStdDevIceConcentration value 0.0125)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -428,8 +407,8 @@ Class: 8_9_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "8-9"^^xsd:string,
-        (hasMeanIceConcentration value 0.85)
-         and (hasStdDevIceConcentration value 0.05)
+        (wmo:hasMeanIceConcentration value 0.85)
+         and (wmo:hasStdDevIceConcentration value 0.05)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -448,8 +427,8 @@ Class: 4_6_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "4-6"^^xsd:string,
-        (hasMeanIceConcentration value 0.5)
-         and (hasStdDevIceConcentration value 0.075)
+        (wmo:hasMeanIceConcentration value 0.5)
+         and (wmo:hasStdDevIceConcentration value 0.075)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -483,7 +462,6 @@ Class: wmo:VastFloe
 
     SubClassOf: 
         ssiii:IceWithForm,
-        hasIceFormCode value "8"^^xsd:string,
         hasIceFormCode value "6"^^xsd:string
     
     
@@ -498,8 +476,8 @@ Class: 9_10_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "9-10"^^xsd:string,
-        (hasMeanIceConcentration value 0.95)
-         and (hasStdDevIceConcentration value 0.05)
+        (wmo:hasMeanIceConcentration value 0.95)
+         and (wmo:hasStdDevIceConcentration value 0.05)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -517,15 +495,6 @@ Class: wmo:YoungIce
 Class: wmo:IceWithDevelopmentStage
 
     
-Class: wmo:NewIce
-
-    EquivalentTo: 
-        hasDevelopmentStageCode value "1"^^xsd:string
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
-    
-    
 Class: wmo:SecondYearIce
 
     EquivalentTo: 
@@ -539,6 +508,15 @@ Class: wmo:UnknownForm
 
     SubClassOf: 
         ssiii:UndeterminedOrUnknownForm
+    
+    
+Class: wmo:NewIce
+
+    EquivalentTo: 
+        hasDevelopmentStageCode value "1"^^xsd:string
+    
+    SubClassOf: 
+        wmo:IceWithDevelopmentStage
     
     
 Class: wmo:ThinFirstYearIce
@@ -562,8 +540,7 @@ Class: wmo:Nilas
 Class: wmo:IceCake
 
     EquivalentTo: 
-        hasIceFormCode value "2"^^xsd:string,
-        hasFloeSize only xsd:decimal[>= 2 , < 20]
+        hasIceFormCode value "2"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithForm
@@ -573,8 +550,8 @@ Class: 1_10th
 
     EquivalentTo: 
         hasConcentrationCode value "1"^^xsd:string,
-        (hasMeanIceConcentration value 0.1)
-         and (hasStdDevIceConcentration value 0.025)
+        (wmo:hasMeanIceConcentration value 0.1)
+         and (wmo:hasStdDevIceConcentration value 0.025)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -583,9 +560,9 @@ Class: 1_10th
 Class: 10_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 1)
-         and (hasStdDevIceConcentration value 0.001),
-        hasConcentrationCode value "10"^^xsd:string
+        hasConcentrationCode value "10"^^xsd:string,
+        (wmo:hasMeanIceConcentration value 1)
+         and (wmo:hasStdDevIceConcentration value 0.001)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -600,50 +577,26 @@ Class: wmo:SecondStageThinFirstYearIce
         wmo:ThinFirstYearIce
     
     
-Class: ssiii:SmallIceCakeOrBrashIce
-
-    EquivalentTo: 
-        hasIceFormCode value "1"^^xsd:string,
-        wmo:BrashIce
-         or wmo:SmallIceCake,
-        hasFloeSize only xsd:decimal[< 2]
-    
-    SubClassOf: 
-        ssiii:IceWithForm
-    
-    
 Class: 2_4_10ths
 
     EquivalentTo: 
-        hasConcentrationCode value "2-4"^^xsd:string,
-        (hasMeanIceConcentration value 0.3)
-         and (hasStdDevIceConcentration value 0.075)
+        (wmo:hasMeanIceConcentration value 0.3)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "2-4"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
     
     
-Class: wmo:SmallIceCake
+Class: wmo:Iceberg
 
     SubClassOf: 
-        ssiii:SmallIceCakeOrBrashIce
-    
-    
-Class: 9_10ths
-
-    EquivalentTo: 
-        (hasMeanIceConcentration value 0.9)
-         and (hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "9"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithConcentration
+        ssiii:IceWithForm
     
     
 Class: wmo:MediumFloe
 
     EquivalentTo: 
-        hasFloeSize only xsd:decimal[>= 100 , < 500],
         hasIceFormCode value "4"^^xsd:string
     
     SubClassOf: 
@@ -653,19 +606,42 @@ Class: wmo:MediumFloe
 Class: 7_9_10ths
 
     EquivalentTo: 
-        hasConcentrationCode value "7-9"^^xsd:string,
-        (hasMeanIceConcentration value 0.8)
-         and (hasStdDevIceConcentration value 0.075)
+        (wmo:hasMeanIceConcentration value 0.8)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "7-9"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
     
     
+Class: wmo:SmallIceCake
+
+    SubClassOf: 
+        ssiii:IceWithForm
+    
+    
+Class: 9_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.9)
+         and (wmo:hasStdDevIceConcentration value 0.025),
+        hasConcentrationCode value "9"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: wmo:Floeberg
+
+    SubClassOf: 
+        wmo:Iceberg
+    
+    
 Class: wmo:IceFree
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.0)
-         and (hasStdDevIceConcentration value 0.001),
+        (wmo:hasMeanIceConcentration value 0.0)
+         and (wmo:hasStdDevIceConcentration value 0.001),
         (hasConcentrationCode value ""^^xsd:string)
          or (hasConcentrationCode max 0 rdfs:Literal)
     
@@ -677,8 +653,8 @@ Class: 2_3_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "2-3"^^xsd:string,
-        (hasMeanIceConcentration value 0.25)
-         and (hasStdDevIceConcentration value 0.05)
+        (wmo:hasMeanIceConcentration value 0.25)
+         and (wmo:hasStdDevIceConcentration value 0.05)
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -688,24 +664,18 @@ Class: 1_3_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "1-3"^^xsd:string,
-        (hasMeanIceConcentration value 0.2)
-         and (hasStdDevIceConcentration value 0.075)
+        (wmo:hasMeanIceConcentration value 0.2)
+         and (wmo:hasStdDevIceConcentration value 0.075)
     
     SubClassOf: 
         ssiii:IceWithConcentration
     
     
-Class: wmo:Icebergs
-
-    SubClassOf: 
-        ssiii:GrowlersIcebergsOrFloebergs
-    
-    
 Class: 5_6_10ths
 
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.55)
-         and (hasStdDevIceConcentration value 0.05),
+        (wmo:hasMeanIceConcentration value 0.55)
+         and (wmo:hasStdDevIceConcentration value 0.05),
         hasConcentrationCode value "5-6"^^xsd:string
     
     SubClassOf: 
@@ -739,12 +709,6 @@ Class: wmo:PancakeIce
         ssiii:IceWithForm
     
     
-Class: wmo:Floebergs
-
-    SubClassOf: 
-        ssiii:GrowlersIcebergsOrFloebergs
-    
-    
 Class: UnknownDevelopment
 
     EquivalentTo: 
@@ -754,6 +718,17 @@ Class: UnknownDevelopment
         wmo:IceWithDevelopmentStage
     
     
+Class: 6_8_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.7)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "6-8"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
 Class: wmo:GrayWhiteIce
 
     EquivalentTo: 
@@ -761,17 +736,6 @@ Class: wmo:GrayWhiteIce
     
     SubClassOf: 
         wmo:YoungIce
-    
-    
-Class: 6_8_10ths
-
-    EquivalentTo: 
-        (hasMeanIceConcentration value 0.7)
-         and (hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "6-8"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithConcentration
     
     
 Individual: physical-quality:area

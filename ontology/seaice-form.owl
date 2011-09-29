@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/wmo/seaice/form#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/wmo/seaice/form#">
+    <Prefix name="ssiii" IRI="http://purl.org/nsidc/ssiii/seaice#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="wmo" IRI="http://purl.org/wmo/seaice#"/>
+    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
+    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
+    <Prefix name="" IRI="http://purl.org/nsidc/jcomm/egg#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice conditions codes</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:BergyBit"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:BigFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:BrashIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:FastIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Floe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Floeberg"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:GiantFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Glacier"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Growler"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:IceBreccia"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:IceShelf"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:MediumFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:PancakeIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:SeaIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:SmallFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:SmallIceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:TabularBerg"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wmo:VastFloe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":fractionalArea"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">500</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">2000</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">10000</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <Class abbreviatedIRI="wmo:PancakeIce"/>
+            </ObjectComplementOf>
+            <DataAllValuesFrom>
+                <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="&xsd;maxExclusive">
+                        <Literal datatypeIRI="&xsd;integer">20</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:MediumFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">500</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">100</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="wmo:SmallFloe"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">100</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:BergyBit"/>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <Class abbreviatedIRI="wmo:Floe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:BrashIce"/>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:BrashIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:FastIce"/>
+        <Class abbreviatedIRI="wmo:SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class abbreviatedIRI="wmo:SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Floeberg"/>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <Class abbreviatedIRI="wmo:Floe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Glacier"/>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Growler"/>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceBreccia"/>
+        <Class abbreviatedIRI="wmo:SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+        <Class abbreviatedIRI="wmo:SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:IceShelf"/>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
+        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:MediumFloe"/>
+        <Class abbreviatedIRI="wmo:Floe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:PancakeIce"/>
+        <Class abbreviatedIRI="wmo:SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:PancakeIce"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <Class abbreviatedIRI="wmo:IceCake"/>
+            </ObjectComplementOf>
+            <DataAllValuesFrom>
+                <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:decimal"/>
+                    <FacetRestriction facet="&xsd;minInclusive">
+                        <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="&xsd;maxExclusive">
+                        <Literal datatypeIRI="&xsd;integer">3</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SeaIce"/>
+        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SmallFloe"/>
+        <Class abbreviatedIRI="wmo:Floe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SmallIceCake"/>
+        <Class abbreviatedIRI="wmo:IceCake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:SmallIceCake"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;integer">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:TabularBerg"/>
+        <Class abbreviatedIRI="wmo:Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo:VastFloe"/>
+        <Class abbreviatedIRI="wmo:Floe"/>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+        <NamedIndividual abbreviatedIRI=":fractionalArea"/>
+        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+        <NamedIndividual abbreviatedIRI=":fractionalArea"/>
+        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+        <AbbreviatedIRI>wmo:hasFloeSize</AbbreviatedIRI>
+        <IRI>http://purl.oclc.org/NET/muo/ucum/unit/length/meter</IRI>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
