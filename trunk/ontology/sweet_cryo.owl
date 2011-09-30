@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://sweet.jpl.nasa.gov/2.3/realmCryo.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://sweet.jpl.nasa.gov/2.3/realmCryo.owl">
+    <Prefix name="pstate" IRI="http://sweet.jpl.nasa.gov/2.3/statePhysical.owl"/>
+    <Prefix name="rela" IRI="http://sweet.jpl.nasa.gov/2.3/rela.owl"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="planet" IRI="http://sweet.jpl.nasa.gov/2.3/realm.owl"/>
+    <Prefix name="water" IRI="http://sweet.jpl.nasa.gov/2.3/matrWater.owl"/>
+    <Prefix name="srela" IRI="http://sweet.jpl.nasa.gov/2.3/relaSpace.owl"/>
+    <Prefix name="res" IRI="http://sweet.jpl.nasa.gov/2.3/humanResearch.owl"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="realm" IRI="http://sweet.jpl.nasa.gov/2.3/realm.owl#"/>
+    <Prefix name="matrWater" IRI="http://sweet.jpl.nasa.gov/2.3/matrWater.owl#"/>
+    <Prefix name="statePhysical" IRI="http://sweet.jpl.nasa.gov/2.3/statePhysical.owl#"/>
+    <Prefix name="realmCryo" IRI="http://sweet.jpl.nasa.gov/2.3/realmCryo.owl#"/>
+    <Prefix name="cryo" IRI="http://sweet.jpl.nasa.gov/2.3/realmCryo.owl"/>
+    <Prefix name="" IRI="http://sweet.jpl.nasa.gov/2.3/realmCryo.owl#"/>
+    <Prefix name="state" IRI="http://sweet.jpl.nasa.gov/2.3/state.owl"/>
+    <Prefix name="humanResearch" IRI="http://sweet.jpl.nasa.gov/2.3/humanResearch.owl#"/>
+    <Prefix name="relaSpace" IRI="http://sweet.jpl.nasa.gov/2.3/relaSpace.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="rela2" IRI="http://sweet.jpl.nasa.gov/2.3/rela.owl#"/>
+    <Import>http://sweet.jpl.nasa.gov/2.3/matrWater.owl</Import>
+    <Import>http://sweet.jpl.nasa.gov/2.3/rela.owl</Import>
+    <Import>http://sweet.jpl.nasa.gov/2.3/state.owl</Import>
+    <Import>http://sweet.jpl.nasa.gov/2.3/humanResearch.owl</Import>
+    <Import>http://sweet.jpl.nasa.gov/2.3/realm.owl</Import>
+    <Import>http://sweet.jpl.nasa.gov/2.3/statePhysical.owl</Import>
+    <Import>http://sweet.jpl.nasa.gov/2.3/relaSpace.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2.3</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SWEET Ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AblationZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AccumulationZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AlpineTundra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Calf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CongelationIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DriftIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FastIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Floe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrazilIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrozenGround"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GlacialRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glacier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GlacierTerminus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceBase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceCap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceCore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceField"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceSheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceShelf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceSnowInterface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceStream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceSurface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Iceberg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LandIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lead"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OpeningInTheIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PackIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeaIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeasonalIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Snout"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TabularIceberg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tundra"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pstate:#Frozen"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Floe"/>
+        <Class IRI="#IceFloe"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GlacierTerminus"/>
+        <Class IRI="#Snout"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AblationZone"/>
+        <Class IRI="#GlacialRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AccumulationZone"/>
+        <Class IRI="#GlacialRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlpineTundra"/>
+        <Class IRI="#Tundra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Calf"/>
+        <Class IRI="#Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CongelationIce"/>
+        <Class IRI="#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DriftIce"/>
+        <Class IRI="#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FastIce"/>
+        <Class IRI="#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Floe"/>
+        <Class IRI="#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrazilIce"/>
+        <Class IRI="#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrozenGround"/>
+        <Class abbreviatedIRI="planet:#Land"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrozenGround"/>
+        <ObjectHasValue>
+            <ObjectProperty abbreviatedIRI="rela:#hasState"/>
+            <NamedIndividual abbreviatedIRI="pstate:#Frozen"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GlacialRegion"/>
+        <Class abbreviatedIRI="planet:#PlanetaryRealm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glacier"/>
+        <Class IRI="#LandIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GlacierTerminus"/>
+        <Class IRI="#GlacialRegion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceBase"/>
+        <Class abbreviatedIRI="planet:#PlanetaryBoundary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCap"/>
+        <Class abbreviatedIRI="planet:#PlanetaryRealm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCore"/>
+        <Class abbreviatedIRI="res:#Sample"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCore"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="srela:#inside"/>
+            <Class abbreviatedIRI="water:#Ice"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceField"/>
+        <Class IRI="#LandIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceSheet"/>
+        <Class IRI="#Glacier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceShelf"/>
+        <Class IRI="#LandIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceSnowInterface"/>
+        <Class abbreviatedIRI="planet:#PlanetaryBoundary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceStream"/>
+        <Class IRI="#Glacier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceSurface"/>
+        <Class abbreviatedIRI="planet:#PlanetaryBoundary"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Iceberg"/>
+        <Class IRI="#LandIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Iceberg"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="rela:#hasRealm"/>
+            <Class abbreviatedIRI="planet:#Ocean"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LandIce"/>
+        <Class abbreviatedIRI="water:#Ice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LandIce"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="rela:#hasRealm"/>
+            <Class abbreviatedIRI="planet:#Land"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lead"/>
+        <Class IRI="#OpeningInTheIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OpeningInTheIce"/>
+        <Class IRI="#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PackIce"/>
+        <Class IRI="#DriftIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeaIce"/>
+        <Class abbreviatedIRI="water:#Ice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeaIce"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="rela:#hasRealm"/>
+            <Class abbreviatedIRI="planet:#Ocean"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeasonalIce"/>
+        <Class IRI="#SeaIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TabularIceberg"/>
+        <Class IRI="#Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tundra"/>
+        <Class abbreviatedIRI="planet:#Land"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tundra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="rela:#hasRealm"/>
+            <Class IRI="#FrozenGround"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#DriftIce"/>
+        <Class IRI="#FastIce"/>
+    </DisjointClasses>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AlpineTundra</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alpine tundra is an ecozone that does not contain trees because it has high altitude. Alpine tundra occurs at high enough altitude at any latitude on Earth. Alpine tundra also lacks trees, but the lower part does not have permafrost, and alpine soils are generally better drained than permafrost soils. Alpine tundra transitions to subalpine forests below the tree line; stunted forests occurring at the forest-tundra ecotone are known as Krummholz. Alpine tundra occurs in an alpine zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FrozenGround</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Soil within which the moisture has predominantly changed to ice, the unfrozen portion being in vapor phase. Ice within the soil bonds (adfreezes) adjacent soil particles and renders frozen ground very hard. Permanently frozen ground is called permafrost. Dry frozen ground is relatively loose and crumbly because of the lack of bonding ice. Frozen ground is sometimes inadvisedly called frost or ground frost. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IceSheet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An ice sheet is a mass of glacier ice that covers surrounding terrain and is greater than 50,000 square km (19,305 square mile).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SeaIce</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Specifically, ice formed by the freezing of seawater; as opposed, principally, to land ice.  Generally, any ice floating in the sea.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tundra</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">In physical geography, tundra is an area where the tree growth is hindered by low temperatures and short growing seasons. There are two types of tundra: Arctic tundra (which also occurs in Antarctica), and alpine tundra. In tundra, the vegetation is composed of dwarf shrubs, sedges and grasses, mosses, and lichens. Scattered trees grow in some tundra. The ecotone (or ecological boundary region) between the tundra and the forest is known as the tree line or timberline.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+
