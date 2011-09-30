@@ -49,21 +49,15 @@ The following naming conventions are being used for ontologies created in the SS
 
 *Individual:*  Lower case separated by spaces.  E.g. trapped air bubbles
 
-h2.  CMap
+==  CMap ==
 
-Coming back to this project after a couple of months on other projects and being a newbie in regards to cmap-coe and trying to make sense of the variety of cmaps in the RPI-TWC -> SSIII site, I (and Siri Jodha) decided a few rules of the road to help folks like me make sense of things would be a good idea.  So here are my suggestions (mostly common sense and things I think Peter Fox has said before; but, still...).  I'd like the team to come to a consensus on them within a week or so.  Let me know if you find anything you'd like changed.
-
-Thanks,
-
-Ruth
-
-h3. Folders
+=== Folders ===
 
 * Please do your work in the RPI-TWC -> SSIII shared space where if something either really good (like winning the lottery) or bad (the proverbial getting run over by a bus) happens to you, your knowledge isn't lost to the project.  
 * Saving cmaps on your own computer is frowned upon.  Instead, please start your own folder or folders under the IHMC Public Cmaps (3) -> Users -> RPI-TWC -> SSIII site.  Since you can save the site in your favorites you really only have to go through the major hassle of finding the site once.
 * Please remember to edit the folder description to let folks know what is in the folder.  For example, while I can guess what is in the "Workshop drafts" folder, I haven't a clue what the "Sketches" folder is about.
 
-h3. Files
+=== Files ===
 
 * Try to pick good file names that will be understandable to the rest of the team not just yourself!
 * Please append version numbers to file names - v1, v2, v3, etc. works fine; but it is also fine to use the v0.x form for works in progress.
@@ -71,11 +65,11 @@ h3. Files
 * If you've created a folder for stuff you are in the middle of working on and aren't ready to share yet, please save any results that you do want others to look at out to the main level.  It isn't fair to point people to the inside of a folder that has a description indicating that it is a private work space.
 
 
-h2.  Protege
+==  Protege ==
 
 
 
-h1.  List of Tools
+= List of Tools =
 
 *Conceptualization/Ontology Development Tools (Imp. tools for SSIII)*
 
@@ -129,7 +123,7 @@ SPARQL endpoint joseki
 
 "Open Biological and Biomedical Ontologies":http://www.obofoundry.org/ro/
 
-h1.  Important Resources and Reference Documents
+=  Important Resources and Reference Documents =
 
 * "Google Calendar of possible communication events":http://www.google.com/calendar/embed?src=bjfuas7j14g12pihkldh5vs9ks%40group.calendar.google.com&ctz=America/Denver
 
