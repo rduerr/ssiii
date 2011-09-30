@@ -145,17 +145,17 @@ E.g. http://tw.rpi.edu/portal/INAK_Working_Groups
 
 See also the "ESIP Semantic Web Cluster":http://wiki.esipfed.org/index.php/Semantic_Web
 
-h1.  Ontology Links In Use
+= Ontology Links In Use =
 
 Please use this section to record links to all of the external ontologies that we've agreed to use on this project.  Please annotate the list with the reason for use and if there are any parts we are not using (or are only using).
 
-h2. SWEET  ("OWL":http://sweet.jpl.nasa.gov/2.2/sweetAll.owl)
+== SWEET  ("OWL":http://sweet.jpl.nasa.gov/2.2/sweetAll.owl) ==
 * Has SeaIce (a type of substance) and a half dozen subclasses like _SeasonalIce_ and _FastIce_
 * Has extensive treatment of measurables (under "Quantity" -> "Property" -> "Measure" and "Spatial Measure"
 * Has concept of vertical profile
 * Treatment of time is probably incomplete, but it tries
 
-h2. BFO  ("OWL":http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl)
+== [http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.ow Basic Formal Ontology (BFO) OWL] ==
 * Has concepts such as "material entity", "quantity", "temporal instant","temporal interval","site" and "object boundary"
 
 h2. SKOS ("URI":http://www.w3.org/2009/08/skos-reference/skos.html)
