@@ -1,0 +1,42 @@
+#Background, instructions, procedures, and resources for the Semantic Sea Ice Interoperability Initiative
+
+= Introduction =
+
+_This document is intended to provide a detailed resource that documents the working conventions, tools, definitions, and reference materials being used in the SSIII project.  Materials from a number of previous documents will be aggregated here for convenience._
+
+
+= Background and Definitions =
+
+*ONTOLOGY*
+
+In philosophy, ontology refers to presuppositions about what constitutes reality, and may also focus on philosophical and cognitive questions related to how we conceptualize and categorize phenomena.  In the context of information science, ontology refers to an explicit (machine-readable) and formal representation of concepts and the relationships between concepts in a given domain.
+
+Guarino and Poli (1995) succinctly define ontology as:  'a formal conceptualization of a specific domain that attempts to capture and constrain a set of conceptualizations'
+
+Noy and McGuinness (2001) define an ontology as a:  'Formal explicit description of concepts in a domain of discourse'
+
+A fundamental rationale for using an ontology is to avoid the ambiguity and vagueness of natural language (Ciocoiu et al. 2001).  Thus, in an ontology the meaning associated with data are well-defined using markup that facilitates disambiguation and defines structure.  
+
+The use of ontology contributes to a larger movement towards a 'Semantic Web' (Berners-Lee et al. 2001) that allows computers to process the meaning of data.  For example, a Semantic Web approach can ensure, in a given context, that the  term 'concentration' is referring to the number of molecules of a substance in a given volume rather than a person's level of attentiveness.  Moreover, an ontology can capture important connections between data resources such as parent-child, whole-part, or disjoint ('not equal to') relationships to name a few.  An ontology is based on computational logic and can be reasoned with by computer programs either to verify the consistency of that knowledge or to make implicit knowledge explicit (http://www.w3.org/2001/sw/wiki/OWL).
+
+The Semantic Web approach exposes, shares, and connects pieces of data through the use of unique identifiers and standardized protocols for describing data.  This 'linked data' approach is combined with knowledge models formalized in ontologies to develop sophisticated applications that can improve our ability to find, process, integrate, and analyze information resources.
+
+At a practical level, the Semantic Web is being built using a suite of [specifications and increasingly mature and powerful technologies] [hyperlink to  http://www.w3.org/2001/sw/].
+
+References:
+
+Berners-Lee, T., Hendler, J., & Lassila, O. (2001). The Semantic Web. Scientific American, 284(5), 34-44.
+
+Ciocoiu, M., Gruninger, M., & Nau, D. S. (2001). Ontologies for Integrating Engineering Applications. Journal of Computing and Information Science in Engineering, 1(1), 12-22.
+
+Guarino, N., & Poli, R. (1995). The Role of Formal Ontology in the Information Technology. International Journal of Human-Computer Studies, 43, 623-624.
+
+Noy, N. F., & McGuinness, D. L. (2001). Ontology Development 101: A Guide to Creating Your First Ontology. Available at http://protege.stanford.edu/publications/ontology_development/ontology101-noy- mcguinness.html
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
