@@ -27,8 +27,7 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://purl.org/wmo/seaice/form#</Import>
-    <Import>http://purl.org/wmo/seaice/development#</Import>
+    <Import>http://purl.org/wmo/seaice#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice conditions codes</Literal>
@@ -251,6 +250,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="wmo:Zone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Feature"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
@@ -1228,6 +1230,10 @@
     <SubClassOf>
         <Class IRI="UnknownDevelopment"/>
         <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <Class IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Feature"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Zone"/>

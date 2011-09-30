@@ -42,6 +42,9 @@
         <Class abbreviatedIRI=":FastIce"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI=":IceOfLandOrigin"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI=":OpenPackIce"/>
     </Declaration>
     <Declaration>
@@ -57,13 +60,22 @@
         <Class abbreviatedIRI=":VeryOpenPackIce"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:decimal"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:double"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:integer"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
@@ -138,10 +150,10 @@
                 <DatatypeRestriction>
                     <Datatype abbreviatedIRI="xsd:decimal"/>
                     <FacetRestriction facet="&xsd;minInclusive">
-                        <Literal datatypeIRI="&xsd;double">0.0</Literal>
+                        <Literal datatypeIRI="&xsd;integer">0</Literal>
                     </FacetRestriction>
                     <FacetRestriction facet="&xsd;maxExclusive">
-                        <Literal datatypeIRI="&xsd;double">0.1</Literal>
+                        <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
                     </FacetRestriction>
                 </DatatypeRestriction>
             </DataAllValuesFrom>
@@ -179,11 +191,11 @@
             <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">1</Literal>
-                </FacetRestriction>
                 <FacetRestriction facet="&xsd;minInclusive">
                     <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">1</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
