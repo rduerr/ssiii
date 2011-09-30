@@ -35,11 +35,11 @@ Noy, N. F., & McGuinness, D. L. (2001). Ontology Development 101: A Guide to Cre
 
 
 
-h1.  Working conventions
+=  Working conventions =
 
-h2.  General
+== General ==
 
-h3.  Naming conventions
+===  Naming conventions ===
 
 The following naming conventions are being used for ontologies created in the SSIII project.
 
