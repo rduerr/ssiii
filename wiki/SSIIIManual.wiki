@@ -251,23 +251,23 @@ GEO "Task AR-09-01d: Ontology and Taxonomy Development":AR-09-01d: Ontology and 
 
 
 = To be integrated =
-* Prefix: ssiii: 
-* Prefix: xsd: 
-* Prefix: owl: 
-* Prefix: wmo: 
-* Prefix: muo: 
-* Prefix: : 
-* Prefix: physical-quality: 
-* Prefix: xml: 
-* Prefix: rdf: 
-* Prefix: rdfs:
+ * Prefix: ssiii: 
+ * Prefix: xsd: 
+ * Prefix: owl: 
+ * Prefix: wmo: 
+ * Prefix: muo: 
+ * Prefix: : 
+ * Prefix: physical-quality: 
+ * Prefix: xml: 
+ * Prefix: rdf: 
+ * Prefix: rdfs:
 
-* http://www.opengeospatial.org/standards/requests/80
-* http://www.semantic-web-journal.net/content/linking-geospatial-data-geosparql
-* Prefix: geo: <http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/>
-* Prefix: geof: <http://www.opengis.net/def/queryLanguage/OGC-GeoSPARQL/1.0/function/>
-* Prefix: geo-sf: <http://www.opengis.net/def/dataType/OGC-SF/1.0/>
-* Prefix: geo-gml: <http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral>
+ * http://www.opengeospatial.org/standards/requests/80
+ * http://www.semantic-web-journal.net/content/linking-geospatial-data-geosparql
+ * Prefix: geo: <http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/>
+ * Prefix: geof: <http://www.opengis.net/def/queryLanguage/OGC-GeoSPARQL/1.0/function/>
+ * Prefix: geo-sf: <http://www.opengis.net/def/dataType/OGC-SF/1.0/>
+ * Prefix: geo-gml: <http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral>
 
 = Details =
 
