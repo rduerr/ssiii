@@ -1,5 +1,5 @@
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: geo-gml: <http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral>
+Prefix: geo-gml: <http://www.opengis.net/def/dataType/OGC-GML/3.0/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
