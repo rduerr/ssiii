@@ -1,0 +1,299 @@
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="http://www.fgdc.gov/FGDC_V2.xsl"?>
+<metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin>National Ice Center Naval Ice Center</origin>
+<pubdate>20030324</pubdate>
+<title>arctic030317</title>
+</citeinfo>
+</citation>
+<descript>
+<abstract>The files contained in this data set were produced at the National Ice Center and derived from remote sensed data, and observations.  RADARSAT, DMSP/OLS, NOAA/TIROS, and DMSP/SSM-I sensors comprised the majority of the sensors used in the analysis.  The charts contain information pertaining to the concentration of sea ice in the Arctic Ocean and its marginal sea.  The data also contains estimations on the thickness of the ice through the use of satellite data and theoretical thickness measurements.  </abstract>
+<purpose>MANDATORY:PURPOSE.</purpose>
+<supplinf></supplinf>
+</descript>
+<timeperd>
+<timeinfo>
+<rngdates>
+<begdate>20030317</begdate>
+<enddate>20030321</enddate>
+</rngdates>
+</timeinfo>
+<current>Current as of end date.</current>
+</timeperd>
+<status>
+<progress>Data set is complete.</progress>
+<update>No changes or additions are made to the data set after the data set is distributed.</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-179.99</westbc>
+<eastbc>180.00</eastbc>
+<northbc>90.00</northbc>
+<southbc>32.81</southbc>
+</bounding>
+<lboundng>
+<leftbc>-4082154.056810</leftbc>
+<rightbc>4582366.500000</rightbc>
+<bottombc>-4595464.131294</bottombc>
+<topbc>3838659.750000</topbc>
+</lboundng>
+</spdom>
+<keywords>
+<theme>
+<themekt>none</themekt>
+<themekey>Sea Ice</themekey>
+<themekey>Sea Ice Maps</themekey>
+<themekey>Pack Ice</themekey>
+<themekey>Fast Ice</themekey>
+<themekey>Marginal Ice Zone</themekey>
+<themekey>Ice Thickness</themekey>
+<themekey>Ice Concentrations</themekey>
+<themekey>Ice Extent</themekey>
+<themekey>Polynya</themekey>>
+</theme>
+<place>
+<placekt>None</placekt>
+<placekey>Northern Hemisphere</placekey>
+<placekey>Arctic Ocean</placekey>
+<placekey>Arctic</placekey>
+</place>
+</keywords>
+<accconst>Unclassified, unlimited distribution</accconst>
+<useconst>Unclassified, unlimited distribution</useconst>
+</idinfo>
+<dataqual>
+<logic>SIGIRD-3 values are valdated for consistancy with WMO standards for reporting ice conditions.  The chart is manually quality controlled.</logic>
+<complete>20030321</complete><lineage><srcinfo> <srccite><citeinfo><origin>NOAA (National Oceanic and Atmosphric Administration)</origin><pubdate>various</pubdate><title>AVHRR (Advanced Very High Resolution Radar)</title></citeinfo></srccite><typesrc>Electronic (satillite)</typesrc> <srctime><timeinfo><rngdates><begdate> 1832003</begdate><enddate>1832003</enddate></rngdates></timeinfo> <srccurr>ground conditions at time of Source</srccurr></srctime></srcinfo><procstep><procdesc>Numerous data sources generally within the range of dates for the chart are used.  The chart then is manually generated in RemoteView and ArcInfo.</procdesc><procdate>Various</procdate></procstep></lineage><lineage><srcinfo> <srccite><citeinfo><origin>Department of Defense</origin><pubdate>various</pubdate><title>OLS (Operational Linescan System)</title></citeinfo></srccite><typesrc>Electronic (satillite)</typesrc> <srctime><timeinfo><rngdates><begdate> 1832003</begdate><enddate>1832003</enddate></rngdates></timeinfo> <srccurr>ground conditions at time of Source</srccurr></srctime></srcinfo><procstep><procdesc>Numerous data sources generally within the range of dates for the chart are used.  The chart then is manually generated in RemoteView and ArcInfo.</procdesc><procdate>Various</procdate></procstep></lineage><lineage><srcinfo> <srccite><citeinfo><origin>NASA (National Aeronautics and Space Administration)</origin><pubdate>various</pubdate><title>QuikScat</title></citeinfo></srccite><typesrc>Electronic Microwave Radar (satillite)</typesrc> <srctime><timeinfo><rngdates><begdate> 1832003</begdate><enddate>1832003</enddate></rngdates></timeinfo> <srccurr>ground conditions at time of Source</srccurr></srctime></srcinfo><procstep><procdesc>Numerous data sources generally within the range of dates for the chart are used.  The chart then is manually generated in RemoteView and ArcInfo.</procdesc><procdate>Various</procdate></procstep></lineage><lineage><srcinfo> <srccite><citeinfo><origin>Canadian Space Agency</origin><pubdate>various</pubdate><title>RADARSAT</title></citeinfo></srccite><typesrc>Electronic (satillite)</typesrc> <srctime><timeinfo><rngdates><begdate> 1832003</begdate><enddate>1832003</enddate></rngdates></timeinfo> <srccurr>ground conditions at time of Source</srccurr></srctime></srcinfo><procstep><procdesc>Numerous data sources generally within the range of dates for the chart are used.  The chart then is manually generated in RemoteView and ArcInfo.</procdesc><procdate>Various</procdate></procstep></lineage><lineage><srcinfo> <srccite><citeinfo><origin>NOAA</origin><pubdate>various</pubdate><title>SSMI</title></citeinfo></srccite><typesrc>Electronic (satillite)</typesrc> <srctime><timeinfo><rngdates><begdate> 1832003</begdate><enddate>1832003</enddate></rngdates></timeinfo> <srccurr>ground conditions at time of Source</srccurr></srctime></srcinfo><procstep><procdesc>Numerous data sources generally within the range of dates for the chart are used.  The chart then is manually generated in RemoteView and ArcInfo.</procdesc><procdate>Various</procdate></procstep></lineage>
+</dataqual>
+<eainfo>
+<detailed>
+			<enttyp>
+				<enttypl>Mandatory Fields</enttypl>
+				<enttypd>These are the mandatory fields in the dBase file</enttypd>
+				<enttypds>WMO JCOMM ETSI</enttypds>
+			</enttyp>
+			<attr>
+				<attrlabl>AREA</attrlabl>
+				<attrdef>Area of polygon</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>PERIMETER</attrlabl>
+				<attrdef>Perimeter of polygon</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+<attr>
+				<attrlabl>CT</attrlabl>
+				<attrdef>Total concentration of all ice in the area</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CA</attrlabl>
+				<attrdef>Partial concentration of thickest ice</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CB</attrlabl>
+				<attrdef>Partial concentration of second thickest ice</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CC</attrlabl>
+				<attrdef>Partial concentration of third thickest ice</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SA</attrlabl>
+				<attrdef>Stage of development of thickest ice</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SB</attrlabl>
+				<attrdef>Stage of development of second thickest ice</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>SC</attrlabl>
+				<attrdef>Stage of development of third thickest ice</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FA</attrlabl>
+				<attrdef>Form of ice corresponding to SA</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FB</attrlabl>
+				<attrdef>Form of ice corresponding to SB</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>FC</attrlabl>
+				<attrdef>Form of ice corresponding to SC</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CN</attrlabl>
+				<attrdef>Stage of development of ice thicker than SA but with concentration less than 1/10</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CD</attrlabl>
+				<attrdef>Stage of development of any remaining ice class of ice not reported by SA, SB, SC or CN</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>CF</attrlabl>
+				<attrdef>Predominant and secondary form of ice</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+			<attr>
+				<attrlabl>POLY_TYPE</attrlabl>
+				<attrdef>Area Type</attrdef>
+				<attrdefs>WMO JCOMM ETSI</attrdefs>
+				<attrdomv>
+					<codesetd>
+						<codesetn>SIGRID-3</codesetn>
+						<codesets>WMO JCOMM ETSI</codesets>
+					</codesetd>
+				</attrdomv>
+			</attr>
+</detailed>
+</eainfo>
+<spref>
+<horizsys>
+<planar>
+<mapproj>
+<mapprojn>Polar Stereographic</mapprojn>
+<polarst>
+<svlong>180.000000</svlong>
+<stdparll>60.000000</stdparll>
+<feast>0.000000</feast>
+<fnorth>0.000000</fnorth>
+</polarst>
+</mapproj>
+<planci>
+<plandu>meters</plandu>
+</planci>
+</planar>
+<geodetic>
+<horizdn>WGS 1984</horizdn>
+<ellips> WGS 1984</ellips>
+</geodetic>
+</horizsys>
+</spref>
+<metainfo>
+<metd>20020802</metd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>National Naval Ice Center</cntorg>
+</cntorgp>
+<cntaddr>
+<addrtype>mailing address</addrtype>
+<addrtype>Liaison Officer</addrtype>
+<addrtype>4251 Suitland Rd</addrtype>
+<addrtype>FOB #4</addrtype>
+<city>Washington</city>
+<state>DC</state>
+<postal>20395</postal>
+</cntaddr>
+<cntvoice>(301)-394-3100</cntvoice>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+</metainfo>
+</metadata>
