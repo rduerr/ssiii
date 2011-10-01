@@ -17,7 +17,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://purl.org/wmo/seaice#">
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="geo-gml" IRI="http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral"/>
+    <Prefix name="geo-gml" IRI="http://www.opengis.net/def/dataType/OGC-GML/3.0/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
