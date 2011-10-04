@@ -205,39 +205,44 @@ Includes "ELOKA":http://eloka-arctic.org and the "ArcticNet Inuit Knowledge and 
 
 The Data Conservancy (DC) has semantics as part of its overall goal, but hasn't made a lot of progress yet.  One area of great interest is in a model of an observation since it is something that may be able to integrate across all of the discipline areas that the DC covers (currently earth sciences, astronomy, life sciences, and social sciences).  DC folks, notably Carl Lagoze, are working with the SONET project.  SJ should find out more about this at the upcoming DC meeting he is attending on the 27th this month. 
 
-h2. NASA ESDSWG-- Peter F.
+== NASA ESDSWG ==
 
-Peter co-leads the ESDSWG technology infusion subgroup on the semantic web
+Peter Fox is the project liaison as he co-leads the ESDSWG technology infusion subgroup on the semantic web
 
 http://www.sciencedatasystems.org/infusion/Semantic%20Web%20Documents/Forms/AllItems.aspx and http://tiwg.wik.is/Semantic_Web
 
-h2. SONET--Deborah
+== SONET ==
 
-h2. ESIP Semantic Cluster--Peter F
+https://sonet.ecoinformatics.org/
+Deborah McGuinness liaison.
+
+== ESIP Semantic Cluster ==
 
 http://wiki.esipfed.org/index.php/Semantic_Web
+Peter Fox  liaison
 
-h2. Integrated Ecosystems Assessments 
+== Integrated Ecosystems Assessments == 
 
 (ECO-OP; Peter Fox PI with WHOI - INTEROP) http://tw.rpi.edu/portal/ECO-OP
 
-h2. "WMO Information System":http://www.wmo.int/pages/prog/www/WIS/index_en.html
+== "WMO Information System":http://www.wmo.int/pages/prog/www/WIS/index_en.html ==
 
-h2. International Ice Charting Working Group (IICWG)--Mark
+== International Ice Charting Working Group (IICWG) ==
 
-h2. ICSU ad hoc Strategic Coordinating Committee for Information and Data (SCCID)--Peter F.
+== ICSU ad hoc Strategic Coordinating Committee for Information and Data (SCCID) ==
+Peter Fox liaison
 
 http://www.icsu.org/1_icsuinscience/DATA_SCCID_1.html
 
-h2. International Union for Geodesy and Geophysics (IUGG) Union Commission on Data and Information (UCDI)--Peter F.
+== International Union for Geodesy and Geophysics (IUGG) Union Commission on Data and Information == 
+(UCDI)--Peter F.
 
 http://www.iugg-ucdi.org
 
-h2. SeaDataNet--?
+== SeaDataNet ==
 
-h1. "MMI":http://marinemetadata.org/
-
-h1. GEOSS
+== "MMI":http://marinemetadata.org/ ==
+== GEOSS ==
 
 GEO "Task AR-09-01d: Ontology and Taxonomy Development":AR-09-01d: Ontology and Taxonomy Development
 
