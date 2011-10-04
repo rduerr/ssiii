@@ -158,22 +158,22 @@ Please use this section to record links to all of the external ontologies that w
 == [http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.ow Basic Formal Ontology (BFO) OWL] ==
 * Has concepts such as "material entity", "quantity", "temporal instant","temporal interval","site" and "object boundary"
 
-h2. SKOS ("URI":http://www.w3.org/2009/08/skos-reference/skos.html)
+== SKOS ("URI":http://www.w3.org/2009/08/skos-reference/skos.html) ==
 * Use for mapping relations?
 
-h2. RDFS ("RDF Semantics Document":http://www.w3.org/TR/rdf-schema/#ref-rdf-semantics)
+== RDFS ("RDF Semantics Document":http://www.w3.org/TR/rdf-schema/#ref-rdf-semantics) ==
 
-h2. CF conventions ("XML":http://cf-pcmdi.llnl.gov/documents/cf-standard-names/standard-name-table/18/cf-standard-name-table.xml)
+== CF conventions ("XML":http://cf-pcmdi.llnl.gov/documents/cf-standard-names/standard-name-table/18/cf-standard-name-table.xml) ==
 * Not an ontology, but a controlled vocabulary with quite a few terms related to sea ice
 
 
-h1.  Semantics in other Groups/Networks/Systems
+==  Semantics in other Groups/Networks/Systems==
 
 This is a place for us to record initial groups we want to collaborate with and their current level of semantic activity. As this evolves we may want to move it to the external wiki for broader community input.
 
 For now, I have listed some known networks and which one of us is the lead in working with those networks. I would like you to each add to the list and make some notes on the current state of semantic activity in the groups you are associated with..
 
-h2. Arctic Spatial Data Infrastructure (ASDI)--Mark
+== Arctic Spatial Data Infrastructure (ASDI) ==
 
 I understand Wenwen Li, working with Doug Nebert at USGS, has done some work in uniting geospatial and semantic approaches in the Arctic. I'm sure this has not penetrated into the overall development of the ASDI. To date, ASDI activity has been focussed on getting the various Arctic national mapping agencies to buy in and to define an initial set of base layers to share through OGC protocols.
 
@@ -181,27 +181,27 @@ There will be a GeoNorth III meeting in Tromsø, Norway this summer that will be
 
 A semantically enabled prototype system can be accessed here:  http://eie.cos.gmu.edu/VASDI/
 
-h2. "Sustained Arctic Observing Network (SAON)":http://arcticobserving.org --Mark
+== "Sustained Arctic Observing Network (SAON)":http://arcticobserving.org ==
 
 There is no SAON data system and SAON in general is evolving in fits and starts. There is an interested group of practitioners working with the Antarctic community to develop a polar profile. Chris is compiling an inventory of vocabularies used in the Arctic esp. in SAON.
 
-h2. "Polar Information Commons (PIC)":http;//polarcommons.org--Mark
+== "Polar Information Commons (PIC)":http;//polarcommons.org ==
 
 There has been no significant discussion of interoperability so far. The PIC badge does include some RDF.
 
-h2. CADIS/OPERA--Mark
+== CADIS/OPERA ==
 
-h2. ELOKA and other LTK--Peter P.
+== ELOKA and other Local and Traditional Knowledge ==
 
 Includes "ELOKA":http://eloka-arctic.org and the "ArcticNet Inuit Knowledge and Geospatial Ontologies in Nunatsiavut project":http://www.arcticnet.ulaval.ca/research/summary.php?project_id=72
 
-h2. International Polar Year Data and Information Service--Mark
+== International Polar Year Data and Information Service ==
 
-h2. SAON International Polar Metadata Profile (need link to their website/wiki) --Mark, Peter
+== SAON International Polar Metadata Profile (need link to their website/wiki) ==
 
-h2. GEOSS (esp. the GCI and the Compusult GeoPortal)--Siri Jodha
+== GEOSS (esp. the GCI and the Compusult GeoPortal)  ==
 
-h2. "DataNet (esp. DC)":http://dataconservancy.org --Ruth
+== "DataNet (esp. DC)":http://dataconservancy.org ==
 
 The Data Conservancy (DC) has semantics as part of its overall goal, but hasn't made a lot of progress yet.  One area of great interest is in a model of an observation since it is something that may be able to integrate across all of the discipline areas that the DC covers (currently earth sciences, astronomy, life sciences, and social sciences).  DC folks, notably Carl Lagoze, are working with the SONET project.  SJ should find out more about this at the upcoming DC meeting he is attending on the 27th this month. 
 
