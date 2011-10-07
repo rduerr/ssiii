@@ -101,39 +101,31 @@ The following naming conventions are being used for ontologies created in the SS
 
 *Sample Applications and Application Frameworks*
 
-SPARQL endpoint joseki
+[http://www.joseki.org/Joseki SPARQL endpoint joseki]
 
-"Linking Open Government Data":http://logd.tw.rpi.edu/
+[http://logd.tw.rpi.edu Linking Open Government Data]
 
-"PopSci Grid":http://logd.tw.rpi.edu/project/PopSciGrid 
-(Jim is working on this one)
+[http://logd.tw.rpi.edu/project/PopSciGrid/ PopSci Grid]
 
-"OntoWiki":http://ontowiki.net/Projects/OntoWiki
+[http://ontowiki.net/Projects/OntoWiki OntoWiki]
 
-"Semantic Media Wiki":http://semantic-mediawiki.org/wiki/Semantic_MediaWiki
+[http://semantic-mediawiki.org/wiki/Semantic_MediaWiki Semantic Media Wiki]
 
 *Visualization*
 
-"Visualization Tool Kit":http://www.vtk.org/
+[http://www.vtk.org/ Visualization Tool Kit]
 
-"Processing":http://www.processing.org
+[http://www.processing.org Processing]
 
 *Related Research Projects*
 
-"CA Big":https://cabig.nci.nih.gov/
+[https://cabig.nci.nih.gov/ CA Big]
 
-"Open Biological and Biomedical Ontologies":http://www.obofoundry.org/ro/
+[http://www.obofoundry.org/ro/ Open Biological and Biomedical Ontologies]
 
 =  Important Resources and Reference Documents =
 
-* "Google Calendar of possible communication events":http://www.google.com/calendar/embed?src=bjfuas7j14g12pihkldh5vs9ks%40group.calendar.google.com&ctz=America/Denver
-
-* "RPI wiki":http://tw.rpi.edu/portal/INAK 
-E.g. http://tw.rpi.edu/portal/INAK_Working_Groups
-
-* "Architecture Diagram":http://www.gliffy.com/publish/2485420/
-
-*  "Manchester OWL Syntax - CO-ODE":http://www.co-ode.org/resources/reference/manchester_syntax/
+[http://www.co-ode.org/resources/reference/manchester_syntax/ Manchester OWL Syntax - CO-ODE]
 
 
 * CMap Guidance
