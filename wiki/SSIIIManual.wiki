@@ -83,22 +83,21 @@ The following naming conventions are being used for ontologies created in the SS
 
 *Serving and Working with Semantic Data: SPARQL endpoints/ RDF Triple Stores /Reasoners etc.*
 
-"Sesame":http://www.openrdf.org/ - this is an opens source Java framework for storing and querying RDF data - in other words it is the middleware our programmer's could use to query an RDF store of data.  It supports several types of API's including both a JBDC-like API and a RESTful HTTP interface supporting SPARQL and SeRQL protocols.
+[http://www.openrdf.org/ Sesame:]  This is an opens source Java framework for storing and querying RDF data - in other words it is the middleware our programmer's could use to query an RDF store of data.  It supports several types of API's including both a JBDC-like API and a RESTful HTTP interface supporting SPARQL and SeRQL protocols.
 
-"4Store":http://4store.org/ - a very easy to install (on a Mac) RDF data store with built in web interface for SPARQL queries and pretty easy-to-use data import tools.  Advertised as being very scalable, secure, fast, and efficient.  Configured to run on a cluster it advertises good performance on queries of databases of 15GT and web applications involving thousands of users.  Single node installations can only handle small databases.  Doesn't have good documentation and seems to want you to hire them (UK business hours @ L 750 /machine/yr) to configure a cluster.
+[http://4store.org/ 4Store:] - a very easy to install (on a Mac) RDF data store with built in web interface for SPARQL queries and pretty easy-to-use data import tools.  Advertised as being very scalable, secure, fast, and efficient.  Configured to run on a cluster it advertises good performance on queries of databases of 15GT and web applications involving thousands of users.  Single node installations can only handle small databases.  Doesn't have good documentation and seems to want you to hire them (UK business hours @ L 750 /machine/yr) to configure a cluster.
 
-"Jena":http://jena.sourceforge.net/ 
+[http://jena.sourceforge.net/ Jena]
 
-"TDB":http://openjena.org/TDB/
-(Jena is Jim's preferred environment including TDB)
+[http://openjena.org/TDB/ "TDB  Jena including TDB is a common combination]
 
-"Pellet":http://clarkparsia.com/pellet
+[http://clarkparsia.com/pellet Pellet]
 
-"Virtuoso":http://virtuoso.openlinksw.com/
+[http://virtuoso.openlinksw.com/ Virtuoso]
 
-"Simile project":http://simile.mit.edu/
+[http://simile.mit.edu/ Simile project]
 
-"RDFLib":http://www.rdflib.net/
+[http://www.rdflib.net/ RDFLib]
 
 *Sample Applications and Application Frameworks*
 
