@@ -35,8 +35,6 @@ Guarino, N., & Poli, R. (1995). The Role of Formal Ontology in the Information T
 
 Noy, N. F., & McGuinness, D. L. (2001). Ontology Development 101: A Guide to Creating Your First Ontology. Available at http://protege.stanford.edu/publications/ontology_development/ontology101-noy- mcguinness.html
 
-
-
 =  Working conventions =
 
 == General ==
@@ -128,10 +126,13 @@ The following naming conventions are being used for ontologies created in the SS
 [http://www.co-ode.org/resources/reference/manchester_syntax/ Manchester OWL Syntax - CO-ODE]
 
 
-* CMap Guidance
-** "The Theory Underlying Concept Maps and How to Construct and Use Them":http://www.ihmc.us/sandbox/groups/coe/wiki/welcome/attachments/d2a1b/COEmanual06.pdf -- The definitive concept map reference paper
-** "COE Manual":http://www.ihmc.us/sandbox/groups/coe/wiki/welcome/attachments/d2a1b/COEmanual06.pdf -- somewhat of style guide
-** "Overview Presentation on using concept maps to make ontologies":https://ipydata.basecamphq.com/projects/5358949/file/69605558/COE-KCAP.ppt
+* [http://www.ihmc.us/sandbox/groups/coe/wiki/welcome/attachments/d2a1b/COEmanual06.pdf CMap Guidance]
+"The Theory Underlying Concept Maps and How to Construct and Use Them": -- The definitive concept map reference paper
+ 
+[http://www.ihmc.us/sandbox/groups/coe/wiki/welcome/attachments/d2a1b/COEmanual06.pdf CMap Ontology Edition Manual]  Includes a _style guide_ of sorts.
+
+Overview [https://ipydata.basecamphq.com/projects/5358949/file/69605558/COE-KCAP.ppt Presentation] on using concept maps to make ontologies. 
+:
 ** SSIII CMaps at IHMC Public Cmaps (3)/Users/RPI-TWC/SSIII/
 
 * "IAAI paper showing some benefits and evaluation of a semantically enabled science informatics effort "the Virtual Solar Terrestrial Observatory":http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html Deborah McGuinness, Peter Fox, Luca Cinquini, Patrick West, Jose Garcia, James L. Benedict, and Don Middleton. The Virtual Solar-Terrestrial Observatory: A Deployed Semantic Web Application Case Study for Scientific Research. In the Proceedings of the Nineteenth Conference on Innovative Applications of Artificial Intelligence (IAAI-07). Vancouver, British Columbia, Canada, July 22-26, 2007. [http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html]
