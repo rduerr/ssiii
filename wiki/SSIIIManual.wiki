@@ -75,11 +75,11 @@ The following naming conventions are being used for ontologies created in the SS
 
 *Conceptualization/Ontology Development Tools (Imp. tools for SSIII)*
 
-"CMap":http://cmap.ihmc.us/
+[http://cmap.ihmc.us CMap]
 
-"CMap Ontology Edition":http://www.ihmc.us/groups/coe/
+[http://www.ihmc.us/groups/coe/ CMap Ontology Edition]
 
-"Protege":http://protege.stanford.edu/
+[http://protege.stanford.edu/ Protege]
 
 *Serving and Working with Semantic Data: SPARQL endpoints/ RDF Triple Stores /Reasoners etc.*
 
