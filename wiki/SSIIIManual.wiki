@@ -1,3 +1,5 @@
+<wiki:toc max_depth="1" />
+
 #Background, instructions, procedures, and resources for the Semantic Sea Ice Interoperability Initiative
 
 = Introduction =
