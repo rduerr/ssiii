@@ -1,0 +1,10 @@
+#summary This page captures the issues that came up and decisions made in developing these ontologies.
+
+= Introduction =
+
+== Seaice-form Ontology Notes ==
+
+ * The definitions under "Ice of land origin" are complex and inter-related.  Only where there was a clear non-overlapping distinction of a class hierarchy were sub-class relationships used.  Otherwise, all terms were just entered at the same level.  
+    * For example, Iceberg Tongues held together by fast ice would consist not only of "Ice of land origin" but also "sea ice."  However, the WMO nomenclature puts Iceberg Tongues under "Ice of land origin" and so did I.  
+    * On the other hand it was pretty clear from the definition that "Glacier Ice" includes glaciers and icebergs, so I did make "Glacier Ice" a superclass of those two items.
+    * 
