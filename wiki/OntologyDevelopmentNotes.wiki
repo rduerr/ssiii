@@ -2,7 +2,7 @@
 
 = Introduction =
 
-* The WMO document used is the Version 1.0 Draft which clearly is not a final draft as it is full of editorial notes.  We will have to revisit these ontologies as the document is updated.
+  * The WMO document used is the Version 1.0 Draft which clearly is not a final draft as it is full of editorial notes.  We will have to revisit these ontologies as the document is updated.
 
 == Seaice-form Ontology Notes ==
 
