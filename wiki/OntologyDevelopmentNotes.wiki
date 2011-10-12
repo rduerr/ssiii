@@ -11,4 +11,4 @@
     * On the other hand it was pretty clear from the definition that "Glacier Ice" includes glaciers and icebergs, so I did make "Glacier Ice" a superclass of those two items.
     * Similarly, "Ice Island" really has two definitions depending on hemisphere; but at this point we have no need to separate the two classes and the WMO doesn't (yet) so I left it as a single class.
     * In some cases, there isn't really a good definition of a term in the WMO documentation.  In these cases, see for example "Tabular Berg," and additional comment with a suggested definition was added to the ontology.
-    * It looks like growlers and bergy bits will end up with floe sizes - such is proposed in the definition, so I gave them both hasFloeSize 
+    * It looks like growlers and bergy bits will end up with floe sizes - such is proposed in the definition, so I gave them both hasFloeSize.  This may be a bit odd, since hasFloeSize for "Sea ice" only goes down to 20 m, which these items suspiciously have floe sizes smaller than that, indicating that while they are put in "ice of land origin" they might also be sea ice...?
