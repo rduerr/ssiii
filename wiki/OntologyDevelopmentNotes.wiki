@@ -12,6 +12,10 @@
     * Similarly, "Ice Island" really has two definitions depending on hemisphere; but at this point we have no need to separate the two classes and the WMO doesn't (yet) so I left it as a single class.
     * In some cases, there isn't really a good definition of a term in the WMO documentation.  In these cases, see for example "Tabular Berg," and additional comment with a suggested definition was added to the ontology.
 
+== Seaice-development Ontology Notes ==
+
+ * The big issue here is whether to try to assign thicknesses to sea ice stages older than one year.   Neither the WMO nomenclature nor the egg code actually assign thicknesses to these types (beyond terms like "typically").  Should we?  It is a bit confusing since these "stages" are actually about ice age and while thickness is a good proxy for young ice, color and other attributes are better proxies for older ice.  Left these as they were at the end of the sprint for the moment.
+
 == General Notes ==
 
  * Inferencing can be tricky - for example, bergy bits and growlers actually are small chunks of "ice of land origin" that have size definitions that fit nicely into the "sea ice" floe size definitions.  And actually they are chunks of ice smaller than the smallest sea ice floe.  You'd think that you could simply reuse the hasFloeSize data property to associate their sizes; but if you do then they end up being inferred as "sea ice."  In other words, if you want to capture floe sizes for these types of ice, you would either have to define another kind of floe size hasLandIceFloeSize or accept that ice in this category might be sea ice...
