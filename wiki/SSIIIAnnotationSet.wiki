@@ -15,8 +15,6 @@ A versioning narrative will be added as an rdfs:comment in the form of a change 
 
 We can establish a version URI/IRI to specific version tag in Subversion.  Create a version PURL that will point to the SVN repository to a particular tag.  Come up with a current version tag for current distribution but does not include latest, work version.
 
-Check reference:  http://obi-ontology.org/page/MIREOT
-
 == Required ==
 
 === Ontology Level ===
@@ -70,3 +68,6 @@ reference form http://    .pdf#WMO nomeclature section $
 [http://dublincore.org/2010/10/11/dcelements.rdf#identifier Identifier]:  An unambiguous reference to the resource within a given context.
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#relation Relation]: A related resource.
+
+
+Check reference:  http://obi-ontology.org/page/MIREOT
