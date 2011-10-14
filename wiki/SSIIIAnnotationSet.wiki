@@ -45,6 +45,10 @@ owl:deprecated
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level)
 
+For example"
+
+reference form http://    .pdf#WMO nomeclature section $
+
 == Recommended ==
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#coverage Coverage]: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.
