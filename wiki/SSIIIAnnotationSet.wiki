@@ -36,7 +36,7 @@ We can establish a version URI/IRI to specific version tag in Subversion.  Creat
 
 rdfs:comment:  An account of the resource.
 
-owl:versionInfo : A major and minor version will be 
+owl:versionInfo : A major and minor version will be established.
 
 Minor version: Significant collection of individual changes deemed important enough to replace the current release. For example, adding new information (classes, properties), significant changes to annotation, or other useful features. 
 
