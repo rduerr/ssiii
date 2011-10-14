@@ -13,11 +13,12 @@ These elements would be in addition to available RDF/OWL annotations, including:
 
 == Required ==
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#creator Creator]: An entity primarily responsible for making the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#creator Creator]: An entity primarily responsible for making the resource. (Ontology level)
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#creator Rights]: Information about rights held in and over the resource.
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.
+[http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level)
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#date Date]: A point or period of time associated with an event in the lifecycle of the resource. {{{(Note: this information could be inferred using owl:versionInfo contstructs) }}}
 
