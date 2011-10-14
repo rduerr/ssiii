@@ -19,7 +19,7 @@ These elements would be in addition to available RDF/OWL annotations, including:
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#date Source]: A point or period of time associated with an event in the lifecycle of the resource.{{{Note: this information could be inferred using owl:versionInfo contstructs }}}
+[http://dublincore.org/2010/10/11/dcelements.rdf#date Source]: A point or period of time associated with an event in the lifecycle of the resource. {{{(Note: this information could be inferred using owl:versionInfo contstructs) }}}
 
 
 == Recommended ==
