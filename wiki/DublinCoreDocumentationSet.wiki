@@ -27,6 +27,14 @@ A versioning narrative will be added as an rdfs:comment (change log).  Detailed 
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#language Language]: A language of the resource. (Ontology level)
 
+[http://dublincore.org/2010/10/11/dcelements.rdf#title Title]: A name given to the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#subject Subject]: The topic of the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#publisher Publisher]: An entity responsible for making the resource available.
+
+rdfs:comment
+
 === Class, Property, Individual Level ===
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level)
@@ -38,13 +46,7 @@ A versioning narrative will be added as an rdfs:comment (change log).  Detailed 
 
 == Optional ==
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#title Title]: A name given to the resource.
-
-[http://dublincore.org/2010/10/11/dcelements.rdf#subject Subject]: The topic of the resource.
-
 [http://dublincore.org/2010/10/11/dcelements.rdf#description Desrcription]: An account of the resource.
-
-[http://dublincore.org/2010/10/11/dcelements.rdf#publisher Publisher]: An entity responsible for making the resource available.
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#contributor Contributor]: An entity responsible for making contributions to the resource.
 
