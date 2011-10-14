@@ -6,7 +6,7 @@
 
 [http://dublincore.org/2010/10/11/dcelements.rdf# Dublin Core RDF (DC-RDF) document]
 
-=  RDF/OWL Reference Documents -
+=  RDF/OWL Reference Documents =
 
 [www.w3.org/TR/rdf-schema/ RDF Schema]
 
@@ -14,11 +14,7 @@
 
 = SSIII Annotation Element Set =
 
-These elements are required, recommended, or optional for ontologies developed by the SSIII community.    rdfs:comment, owl:deprecated, owl:incompatibleWith, rdfs:isDefinedBy, rdfs:label, owl:priorVersion, rdfs:seeaAlso, owl:versionInfo
-
-A versioning narrative will be added as an rdfs:comment in the form of a change log.  Detailed versioning information will be captured at the ontology level using owl versioning constructs.
-
-We can establish a version URI/IRI to specific version tag in Subversion.  Create a version PURL that will point to the SVN repository to a particular tag.  Come up with a current version tag for current distribution but does not include latest, work version.
+These elements are required, recommended, or optional for ontologies developed by the SSIII community.
 
 == Required ==
 
@@ -44,15 +40,20 @@ We can establish a version URI/IRI to specific version tag in Subversion.  Creat
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#publisher Publisher]: An entity responsible for making the resource available.
 
-rdfs:comment:  An account of the resource.
 
-rdfs:label: 
+=== Ontology Versioning ===
 
-[http://www.w3.org/TR/owl-ref/#Annotations owl:versionInfo] : A major and minor version will be established.
+For each version of an ontology, a versioning narrative will be added as an rdfs:comment in the form of a change log.  Detailed versioning information will be captured at the ontology level using owl versioning constructs.
+
+A major and minor version will be established.
 
 Minor version: Significant collection of individual changes deemed important enough to replace the current release. For example, adding new information (classes, properties), significant changes to annotation, or other useful features. 
 
 Major version: Major changes to the entire ontology, changes that have an impact on the inference model. 
+We can establish a version URI/IRI to specific version tag in Subversion.  Create a version PURL that will point to the SVN repository to a particular tag.  Come up with a current version tag for current distribution but does not include latest, work version.
+[http://www.w3.org/TR/owl-ref/#Annotations owl:versionInfo] : 
+
+owl:versionInfo
 
 owl:priorVersion
 
