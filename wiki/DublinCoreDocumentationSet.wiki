@@ -11,6 +11,9 @@
 
 These elements would be in addition to available RDF/OWL annotations, including:  rdfs:comment, owl:deprecated, owl:incompatibleWith, rdfs:isDefinedBy, rdfs:label, owl:priorVersion, rdfs:seeaAlso, owl:versionInfo
 
+A versioning narrative will be added as an rdfs:comment (change log).  Detailed versioning information will be captured at the ontology level using owl versioning constructs.
+
+
 == Required ==
 
 
@@ -22,7 +25,9 @@ These elements would be in addition to available RDF/OWL annotations, including:
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#date Date]: A point or period of time associated with an event in the lifecycle of the resource. {{{(Note: this information could be inferred using owl:versionInfo contstructs) }}}
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#language Language]: A language of the resource.
+[http://dublincore.org/2010/10/11/dcelements.rdf#language Language]: A language of the resource. (Ontology level)
+
+
 
 == Recommended ==
 
