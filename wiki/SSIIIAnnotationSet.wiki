@@ -13,6 +13,7 @@ These elements would be in addition to available RDF/OWL annotations, including:
 
 A versioning narrative will be added as an rdfs:comment in the form of a change log.  Detailed versioning information will be captured at the ontology level using owl versioning constructs.
 
+We can establish a version URI/IRI to specific version tag in Subversion.  Create a version PURL that will point to the SVN repository to a particular tag.
 
 == Required ==
 
