@@ -8,7 +8,7 @@
 
 =  RDF/OWL Reference Documents =
 
-[www.w3.org/TR/rdf-schema/ RDF Schema]
+[http://www.w3.org/TR/rdf-schema/ RDF Schema]
 
 [http://www.w3.org/TR/owl-ref/ OWL]
 
