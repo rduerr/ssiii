@@ -41,7 +41,7 @@ These elements are required, recommended, or optional for ontologies developed b
 [http://dublincore.org/2010/10/11/dcelements.rdf#publisher dc:publisher]: An entity responsible for making the resource available.
 
 
-=== Ontology Versioning ===
+==== Ontology Versioning ====
 
 For each version of an ontology, a versioning narrative will be added as an rdfs:comment in the form of a change log.  Detailed versioning information will be captured at the ontology level using owl versioning constructs.
 
