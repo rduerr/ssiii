@@ -15,6 +15,8 @@ A versioning narrative will be added as an rdfs:comment in the form of a change 
 
 We can establish a version URI/IRI to specific version tag in Subversion.  Create a version PURL that will point to the SVN repository to a particular tag.  Come up with a current version tag for current distribution but does not include latest, work version.
 
+Check reference:  http://obi-ontology.org/page/MIREOT
+
 == Required ==
 
 === Ontology Level ===
