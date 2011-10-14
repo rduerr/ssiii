@@ -1,0 +1,15 @@
+#A draft set of required, recommended, and optional Dublin Core metadata elements to be used to annotate SSIII ontologies
+
+= Dublin Core Reference Documents =
+
+[http://dublincore.org/ Dublin Core Metadata Initiative Home Page]
+
+[http://dublincore.org/2010/10/11/dcelements.rdf# Dublin Core RDF (DC-RDF) document]
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
