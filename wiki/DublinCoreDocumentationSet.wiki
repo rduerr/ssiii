@@ -19,10 +19,31 @@ These elements would be in addition to available RDF/OWL annotations, including:
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#date Source]: A point or period of time associated with an event in the lifecycle of the resource. {{{(Note: this information could be inferred using owl:versionInfo contstructs) }}}
+[http://dublincore.org/2010/10/11/dcelements.rdf#date Date]: A point or period of time associated with an event in the lifecycle of the resource. {{{(Note: this information could be inferred using owl:versionInfo contstructs) }}}
 
+[http://dublincore.org/2010/10/11/dcelements.rdf#language Language]: A language of the resource.
 
 == Recommended ==
 
+[http://dublincore.org/2010/10/11/dcelements.rdf#coverage Coverage]: The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.
+{{{ To be discussed.  Selection from items in Optional set }}}
 
 == Optional ==
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#title Title]: A name given to the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#subject Subject]: The topic of the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#description Desrcription]: An account of the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#publisher Publisher]: An entity responsible for making the resource available.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#contributor Contributor]: An entity responsible for making contributions to the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#type Type]: The nature or genre of the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#format Format]: The file format, physical medium, or dimensions of the resource.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#identifier Identifier]:  An unambiguous reference to the resource within a given context.
+
+[http://dublincore.org/2010/10/11/dcelements.rdf#relation Relation]: A related resource.
