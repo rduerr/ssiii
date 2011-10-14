@@ -16,10 +16,10 @@ A versioning narrative will be added as an rdfs:comment (change log).  Detailed 
 
 == Required ==
 
-
+=== Ontology Level ===
 [http://dublincore.org/2010/10/11/dcelements.rdf#creator Creator]: An entity primarily responsible for making the resource. (Ontology level)
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#creator Rights]: Information about rights held in and over the resource.
+[http://dublincore.org/2010/10/11/dcelements.rdf#rights Rights]: Information about rights held in and over the resource.
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level)
 
@@ -27,7 +27,9 @@ A versioning narrative will be added as an rdfs:comment (change log).  Detailed 
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#language Language]: A language of the resource. (Ontology level)
 
+=== Class, Property, Individual Level ===
 
+[http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level)
 
 == Recommended ==
 
