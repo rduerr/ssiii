@@ -257,12 +257,19 @@ GEO "Task AR-09-01d: Ontology and Taxonomy Development":AR-09-01d: Ontology and 
 For geospatial data objects, to support geospatial queries
  * geo: http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/
  * geo-gml: http://www.opengis.net/def/dataType/OGC-GML/3.0/
-
-=== what about these?: ===
- * geof: http://www.opengis.net/def/queryLanguage/OGC-GeoSPARQL/1.0/function/>
- * geo-sf: http://www.opengis.net/def/dataType/OGC-SF/1.0/
+or
  * geo-gml: http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral
+
+=== what about the following?  don't we need geometry types?: ===
+ * geoot: http://www.opengis.net/def/objectType/OGC-GeoSPARQL/1.0/
+ * geoft: http://www.opengis.net/def/featureType/OGC-GeoSPARQL/1.0/
+ * geogt: http://www.opengis.net/def/geometryType/OGC-GeoSPARQL/1.0/
+ * geop: http://www.opengis.net/def/property/OGC-GeoSPARQL/1.0/
+ * geof: http://www.opengis.net /def/queryLanguage/OGC-GeoSPARQL/1.0/function/
+ * geor: http://www.opengis.net /def/queryLanguage/OGC-GeoSPARQL/1.0/rule/
+ * geo-sf: http://www.opengis.net/def/dataType/OGC-SF/1.0/
  
 == Info on Geospatial Ontologies ==
+* The OGC GeoSPARQL standard provides the foundational geospatial vocabulary for linked data involving location, and defines extensions to SPARQL for processing geospatial data:  
  * vocabulary for geosparql:  http://www.opengeospatial.org/standards/requests/80
  * Linking Geospatial Data With GeoSPARQL:  http://www.semantic-web-journal.net/content/linking-geospatial-data-geosparql
