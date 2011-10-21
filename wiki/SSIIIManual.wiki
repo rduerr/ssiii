@@ -264,6 +264,5 @@ For geospatial data objects, to support geospatial queries
  * geo-gml: http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral
  
 == Info on Geospatial Ontologies ==
-
- * http://www.opengeospatial.org/standards/requests/80
- * http://www.semantic-web-journal.net/content/linking-
+ * vocabulary for geosparql:  http://www.opengeospatial.org/standards/requests/80
+ * Linking Geospatial Data With GeoSPARQL:  http://www.semantic-web-journal.net/content/linking-
