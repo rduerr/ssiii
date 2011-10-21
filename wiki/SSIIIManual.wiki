@@ -265,4 +265,4 @@ For geospatial data objects, to support geospatial queries
  
 == Info on Geospatial Ontologies ==
  * vocabulary for geosparql:  http://www.opengeospatial.org/standards/requests/80
- * Linking Geospatial Data With GeoSPARQL:  http://www.semantic-web-journal.net/content/linking-
+ * Linking Geospatial Data With GeoSPARQL:  http://www.semantic-web-journal.net/content/linking-geospatial-data-geosparql
