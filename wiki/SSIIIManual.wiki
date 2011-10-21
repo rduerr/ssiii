@@ -243,28 +243,27 @@ GEO "Task AR-09-01d: Ontology and Taxonomy Development":AR-09-01d: Ontology and 
 "DIAS (data integration and analytical system)":http://babel.csis.u-tokyo.ac.jp/op/en/
 
 
-= To be integrated =
- * Prefix: ssiii: 
- * Prefix: xsd: 
- * Prefix: owl: 
- * Prefix: wmo: 
- * Prefix: muo: 
- * Prefix: : 
- * Prefix: physical-quality: 
- * Prefix: xml: 
- * Prefix: rdf: 
- * Prefix: rdfs:
+== Ontology Prefixes Used in SSIII Ontologies ==
+ * ssiii: http://purl.org/nsidc/ssiii/seaice#
+ * wmo: http://purl.org/wmo/seaice#
+ * dc: http://purl.org/dc/elements/1.1/
+ * muo: http://purl.oclc.org/NET/muo/muo#
+ * owl: http://www.w3.org/2002/07/owl#
+ * xsd: http://www.w3.org/2001/XMLSchema#
+ * xml: http://www.w3.org/XML/1998/namespace
+ * rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+ * rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+For geospatial data objects, to support geospatial queries
+ * geo: http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/
+ * geo-gml: http://www.opengis.net/def/dataType/OGC-GML/3.0/
+
+=== what about these?: ===
+ * geof: http://www.opengis.net/def/queryLanguage/OGC-GeoSPARQL/1.0/function/>
+ * geo-sf: http://www.opengis.net/def/dataType/OGC-SF/1.0/
+ * geo-gml: http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral
+ 
+== Info on Geospatial Ontologies ==
 
  * http://www.opengeospatial.org/standards/requests/80
- * http://www.semantic-web-journal.net/content/linking-geospatial-data-geosparql
- * Prefix: geo: <http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/>
- * Prefix: geof: <http://www.opengis.net/def/queryLanguage/OGC-GeoSPARQL/1.0/function/>
- * Prefix: geo-sf: <http://www.opengis.net/def/dataType/OGC-SF/1.0/>
- * Prefix: geo-gml: <http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral>
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ * http://www.semantic-web-journal.net/content/linking-
