@@ -35,7 +35,17 @@ Guarino, N., & Poli, R. (1995). The Role of Formal Ontology in the Information T
 
 Noy, N. F., & McGuinness, D. L. (2001). Ontology Development 101: A Guide to Creating Your First Ontology. Available at http://protege.stanford.edu/publications/ontology_development/ontology101-noy- mcguinness.html
 
-=  Working conventions =
+= Working conventions =
+
+== High-level approach ==
+ # develop concepts w/ COE (optional step, can do in protege directly) – use RDF are/is-a and hasProperties relationships – don’t do numerical restrictions here
+ # Export to OWL, check in to google code
+ # Open via URI in Protege
+ # add xsd facets for things like numerical ranges, if known – as Manchester Owl Notation – use superclass for equivalence (necessary and sufficient)
+ # run reasoner – pellet is quick – look for error messages – look for occurrences of equivalence to “nothing” – inspect for invalid/unwanted inferences – fix as needed
+ # save as both OWL XML (.owl) and Manchester OWL (.omn)
+ # when complete create PURL for new ontology – point to google code owl soure – replace local references with PURL
+ # verify the PURL redirects to the source OWL
 
 == General ==
 
