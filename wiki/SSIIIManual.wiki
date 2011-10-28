@@ -257,6 +257,7 @@ GEO "Task AR-09-01d: Ontology and Taxonomy Development":AR-09-01d: Ontology and 
 
 == Ontology Prefixes Used in SSIII Ontologies ==
  * ssiii: http://purl.org/nsidc/ssiii/seaice#
+ * annotations: http://purl.org/nsidc/ssiii/annotations#
  * wmo: http://purl.org/wmo/seaice#
  * dc: http://purl.org/dc/elements/1.1/
  * muo: http://purl.oclc.org/NET/muo/muo#
