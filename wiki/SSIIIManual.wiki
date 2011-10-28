@@ -93,7 +93,7 @@ The following naming conventions are being used for ontologies created in the SS
 
 [http://www.openrdf.org/ Sesame:]  This is an opens source Java framework for storing and querying RDF data - in other words it is the middleware our programmer's could use to query an RDF store of data.  It supports several types of API's including both a JBDC-like API and a RESTful HTTP interface supporting SPARQL and SeRQL protocols.
 
-[http://4store.org/ 4Store:] - a very easy to install (on a Mac) RDF data store with built in web interface for SPARQL queries and pretty easy-to-use data import tools.  Advertised as being very scalable, secure, fast, and efficient.  Configured to run on a cluster it advertises good performance on queries of databases of 15GT and web applications involving thousands of users.  Single node installations can only handle small databases.  Doesn't have good documentation and seems to want you to hire them (UK business hours @ L 750 /machine/yr) to configure a cluster.
+[http://4store.org/ 4Store:] - A very easy to install (on a Mac) RDF data store with built in web interface for SPARQL queries and pretty easy-to-use data import tools.  Advertised as being very scalable, secure, fast, and efficient.  Configured to run on a cluster it advertises good performance on queries of databases of 15GT and web applications involving thousands of users.  Single node installations can only handle small databases.  Doesn't have good documentation and seems to want you to hire them (UK business hours @ L 750 /machine/yr) to configure a cluster.
 
 [http://jena.sourceforge.net/ Jena]
 
@@ -135,9 +135,7 @@ The following naming conventions are being used for ontologies created in the SS
 
 [http://www.co-ode.org/resources/reference/manchester_syntax/ Manchester OWL Syntax - CO-ODE]
 
-
-* [http://www.ihmc.us/sandbox/groups/coe/wiki/welcome/attachments/d2a1b/COEmanual06.pdf CMap Guidance]
-"The Theory Underlying Concept Maps and How to Construct and Use Them": -- The definitive concept map reference paper
+* [http://www.ihmc.us/sandbox/groups/coe/wiki/welcome/attachments/d2a1b/COEmanual06.pdf CMap Guidance] "The Theory Underlying Concept Maps and How to Construct and Use Them": -- The definitive concept map reference paper.
  
 [http://www.ihmc.us/sandbox/groups/coe/wiki/welcome/attachments/d2a1b/COEmanual06.pdf CMap Ontology Edition Manual]  Includes a _style guide_ of sorts.
 
@@ -145,7 +143,7 @@ Overview [https://ipydata.basecamphq.com/projects/5358949/file/69605558/COE-KCAP
 :
 ** SSIII CMaps at IHMC Public Cmaps (3)/Users/RPI-TWC/SSIII/
 
-* "IAAI paper showing some benefits and evaluation of a semantically enabled science informatics effort "the Virtual Solar Terrestrial Observatory":http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html Deborah McGuinness, Peter Fox, Luca Cinquini, Patrick West, Jose Garcia, James L. Benedict, and Don Middleton. The Virtual Solar-Terrestrial Observatory: A Deployed Semantic Web Application Case Study for Scientific Research. In the Proceedings of the Nineteenth Conference on Innovative Applications of Artificial Intelligence (IAAI-07). Vancouver, British Columbia, Canada, July 22-26, 2007. [http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html]
+[http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html IAAI paper] showing some benefits and evaluation of a semantically enabled science informatics effort "the Virtual Solar Terrestrial Observatory": Deborah McGuinness, Peter Fox, Luca Cinquini, Patrick West, Jose Garcia, James L. Benedict, and Don Middleton. The Virtual Solar-Terrestrial Observatory: A Deployed Semantic Web Application Case Study for Scientific Research. In the Proceedings of the Nineteenth Conference on Innovative Applications of Artificial Intelligence (IAAI-07). Vancouver, British Columbia, Canada, July 22-26, 2007. [http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html]
 
 See also the "ESIP Semantic Web Cluster":http://wiki.esipfed.org/index.php/Semantic_Web
 
