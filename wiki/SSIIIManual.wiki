@@ -78,7 +78,6 @@ The following naming conventions are being used for ontologies created in the SS
 ==  Protege ==
 
 
-
 = List of Tools =
 
 *Conceptualization/Ontology Development Tools (Imp. tools for SSIII)*
@@ -143,27 +142,32 @@ Overview [https://ipydata.basecamphq.com/projects/5358949/file/69605558/COE-KCAP
 :
 ** SSIII CMaps at IHMC Public Cmaps (3)/Users/RPI-TWC/SSIII/
 
-[http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html IAAI paper] showing some benefits and evaluation of a semantically enabled science informatics effort "the Virtual Solar Terrestrial Observatory": Deborah McGuinness, Peter Fox, Luca Cinquini, Patrick West, Jose Garcia, James L. Benedict, and Don Middleton. The Virtual Solar-Terrestrial Observatory: A Deployed Semantic Web Application Case Study for Scientific Research. In the Proceedings of the Nineteenth Conference on Innovative Applications of Artificial Intelligence (IAAI-07). Vancouver, British Columbia, Canada, July 22-26, 2007. [http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html]
+[http://www.ksl.stanford.edu/KSL_Abstracts/KSL-07-01.html IAAI paper] showing some benefits and evaluation of a semantically enabled science informatics effort "the Virtual Solar Terrestrial Observatory": Deborah McGuinness, Peter Fox, Luca Cinquini, Patrick West, Jose Garcia, James L. Benedict, and Don Middleton. The Virtual Solar-Terrestrial Observatory: A Deployed Semantic Web Application Case Study for Scientific Research. In the Proceedings of the Nineteenth Conference on Innovative Applications of Artificial Intelligence (IAAI-07). Vancouver, British Columbia, Canada, July 22-26, 2007. 
 
-See also the "ESIP Semantic Web Cluster":http://wiki.esipfed.org/index.php/Semantic_Web
+See also the [http://wiki.esipfed.org/index.php/Semantic_Web ESIP Semantic Web Cluster]
 
 = Ontology Links In Use =
 
 Please use this section to record links to all of the external ontologies that we've agreed to use on this project.  Please annotate the list with the reason for use and if there are any parts we are not using (or are only using).
 
-== SWEET  ("OWL":http://sweet.jpl.nasa.gov/2.2/sweetAll.owl) ==
+[http://www.w3.org/TR/rdf-schema/#ref-rdf-semantics RDF Schema]
+*  Foundational element of semantic web
+
+
+[http://www.w3.org/2009/08/skos-reference/skos.html Simple Knowledge Organization System (SKOS)]
+* Useful for mapping taxonomies and hierarchical relations
+
+
+[http://sweet.jpl.nasa.gov/2.2/sweetAll.owl SWEET (OWL)]
 * Has SeaIce (a type of substance) and a half dozen subclasses like _SeasonalIce_ and _FastIce_
 * Has extensive treatment of measurables (under "Quantity" -> "Property" -> "Measure" and "Spatial Measure"
 * Has concept of vertical profile
 * Treatment of time is probably incomplete, but it tries
 
-== [http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.ow Basic Formal Ontology (BFO) OWL] ==
+[http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.ow Basic Formal Ontology (BFO) OWL]
 * Has concepts such as "material entity", "quantity", "temporal instant","temporal interval","site" and "object boundary"
 
-== SKOS ("URI":http://www.w3.org/2009/08/skos-reference/skos.html) ==
-* Use for mapping relations?
 
-== RDFS ("RDF Semantics Document":http://www.w3.org/TR/rdf-schema/#ref-rdf-semantics) ==
 
 == CF conventions ("XML":http://cf-pcmdi.llnl.gov/documents/cf-standard-names/standard-name-table/18/cf-standard-name-table.xml) ==
 * Not an ontology, but a controlled vocabulary with quite a few terms related to sea ice
