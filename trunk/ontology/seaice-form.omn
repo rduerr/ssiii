@@ -1,5 +1,5 @@
-Prefix: ssiii: <http://purl.org/nsidc/ssiii/seaice#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: ssiii: <http://purl.org/nsidc/ssiii/seaice#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: wmo: <http://purl.org/wmo/seaice#>
 Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
@@ -9,16 +9,23 @@ Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: annotations: <http://purl.org/nsidc/ssiii/annotations#>
 
 
 
 Ontology: <http://purl.org/wmo/seaice/form#>
 
+Import: <http://purl.org/nsidc/ssiii/annotations.owl>
 
 Annotations: 
-    rdfs:label "Ice conditions codes"
+    rdfs:label "Ice conditions codes",
+    rdfs:comment "This ontology describes the forms of floating ice.",
+    dc:creator ""
 
 AnnotationProperty: rdfs:seeAlso
+
+    
+AnnotationProperty: dc:creator
 
     
 AnnotationProperty: rdfs:label
@@ -27,10 +34,10 @@ AnnotationProperty: rdfs:label
 AnnotationProperty: rdfs:comment
 
     
-AnnotationProperty: muo:preferredUnit
+AnnotationProperty: muo:measuresQuality
 
     
-AnnotationProperty: muo:measuresQuality
+AnnotationProperty: muo:preferredUnit
 
     
 Datatype: xsd:decimal
@@ -93,17 +100,14 @@ Class: wmo:BergyBit
         wmo:Iceberg
     
     
-Class: wmo:MediumFloe
+Class: wmo:FastIce
 
     Annotations: 
-        rdfs:comment "Over 10 km across.",
-        rdfs:label "Medium floe"
-    
-    EquivalentTo: 
-        wmo:hasFloeSize only xsd:decimal[>= 100 , < 500]
+        rdfs:comment "Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition",
+        rdfs:label "Fast ice"
     
     SubClassOf: 
-        wmo:Floe
+        wmo:SeaIce
     
     
 Class: wmo:Iceberg
@@ -117,6 +121,19 @@ Class: wmo:Iceberg
         wmo:IceOfLandOrigin
     
     
+Class: wmo:MediumFloe
+
+    Annotations: 
+        rdfs:comment "Over 10 km across.",
+        rdfs:label "Medium floe"
+    
+    EquivalentTo: 
+        wmo:hasFloeSize only xsd:decimal[>= 100 , < 500]
+    
+    SubClassOf: 
+        wmo:Floe
+    
+    
 Class: wmo:SmallIceCake
 
     Annotations: 
@@ -126,28 +143,6 @@ Class: wmo:SmallIceCake
     SubClassOf: 
         wmo:hasFloeSize only xsd:decimal[< 2],
         wmo:IceCake
-    
-    
-Class: wmo:FastIce
-
-    Annotations: 
-        rdfs:comment "Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition",
-        rdfs:label "Fast ice"
-    
-    SubClassOf: 
-        wmo:SeaIce
-    
-    
-Class: wmo:Floeberg
-
-    Annotations: 
-        rdfs:comment "OK, this should not be under Iceberg.  It's WMO definition is:
-
-A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level",
-        rdfs:label "Floeberg"
-    
-    SubClassOf: 
-        wmo:Iceberg
     
     
 Class: wmo:BigFloe
@@ -163,14 +158,14 @@ Class: wmo:BigFloe
         wmo:Floe
     
     
-Class: wmo:Glacier
+Class: wmo:Floeberg
 
     Annotations: 
-        rdfs:label "Glacier",
-        rdfs:comment "A mass of ice predominantly of atmospheric origin, usually moving from higher to lower ground. A seaward margin of a glacier that is aground, the rock basement being at or below sea-level, is termed an ice wall. The projecting seaward extension of a glacier, which is usually afloat, is termed a glacier tongue. In the Antarctic, glacier tongues may extend over many tens of kilometers."
+        rdfs:comment "A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level",
+        rdfs:label "Floeberg"
     
     SubClassOf: 
-        wmo:IceOfLandOrigin
+        wmo:SeaIce
     
     
 Class: ssiii:IceWithForm
@@ -189,6 +184,16 @@ Class: wmo:GiantFloe
         wmo:Floe
     
     
+Class: wmo:Glacier
+
+    Annotations: 
+        rdfs:label "Glacier",
+        rdfs:comment "A mass of ice predominantly of atmospheric origin, usually moving from higher to lower ground. A seaward margin of a glacier that is aground, the rock basement being at or below sea-level, is termed an ice wall. The projecting seaward extension of a glacier, which is usually afloat, is termed a glacier tongue. In the Antarctic, glacier tongues may extend over many tens of kilometers."
+    
+    SubClassOf: 
+        wmo:IceOfLandOrigin
+    
+    
 Class: wmo:IceBreccia
 
     Annotations: 
@@ -202,8 +207,8 @@ Class: wmo:IceBreccia
 Class: wmo:BrashIce
 
     Annotations: 
-        rdfs:comment "Accumulations of floating ice made up of fragments not more than 2 m across, the wreckage of other forms of ice as a result of melting (4.3.6 Ed.) [Note: BAS usage is normally that brash is small fragments of glacier ice. We also use the term porridge to refer to a mass of fragments, often under slight pressure, through which navigation is difficult.]",
-        rdfs:label "Brash ice"
+        rdfs:label "Brash ice",
+        rdfs:comment "Accumulations of floating ice made up of fragments not more than 2 m across, the wreckage of other forms of ice as a result of melting. [Note: BAS usage is normally that brash is small fragments of glacier ice. We also use the term porridge to refer to a mass of fragments, often under slight pressure, through which navigation is difficult.]"
     
     SubClassOf: 
         wmo:hasFloeSize only xsd:decimal[< 2],
@@ -248,7 +253,11 @@ Class: wmo:PancakeIce
     
     SubClassOf: 
         wmo:SeaIce,
-        (not (wmo:IceCake))
+        ((not (wmo:FastIce))
+         and (not (wmo:Floe))
+         and (not (wmo:Floeberg))
+         and (not (wmo:IceBreccia))
+         and (not (wmo:IceCake)))
          and (wmo:hasFloeSize only xsd:decimal[>= "0.3"^^xsd:decimal , < 3])
     
     
