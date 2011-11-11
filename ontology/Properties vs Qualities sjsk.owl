@@ -1,0 +1,141 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://localhost/default#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:skos="http://localhost/skos#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Class rdf:about="http://localhost/default#Snow">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://localhost/default#Entity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#MeltPondFraction">
+    <a>
+      <owl:Class rdf:about="http://localhost/default#SurfaceProperty"/>
+    </a>
+    <hasPreferredUnitOfMeasure>
+      <rdf:Description rdf:about="http://localhost/default#Percentage">
+        <a>
+          <owl:Class rdf:about="http://localhost/default#UnitOfMeasure"/>
+        </a>
+      </rdf:Description>
+    </hasPreferredUnitOfMeasure>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Meter">
+    <a>
+      <owl:Class rdf:about="http://localhost/default#UnitOfMeasure"/>
+    </a>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#CompositeFraction"/>
+  <owl:Class rdf:about="http://localhost/default#Water">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#SeaIce">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#MeltPond">
+    <hasPart rdf:resource="http://localhost/default#Water"/>
+    <hasPart rdf:resource="http://localhost/default#SeaIce"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://localhost/default#CompositeEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/skos#Concept"/>
+  <owl:Class rdf:about="http://localhost/default#UnitOfMeasure">
+    <rdfs:subClassOf rdf:resource="http://localhost/skos#Concept"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#ProfileProperty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://localhost/default#Property"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Datum"/>
+  <owl:Class rdf:about="http://localhost/default#Thickness">
+    <a>
+      <owl:Class rdf:about="http://localhost/default#BulkProperty"/>
+    </a>
+    <hasPreferredUnitOfMeasure rdf:resource="http://localhost/default#Meter"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#BulkProperty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://localhost/default#Property"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#CompositeEntity">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Location"/>
+  <owl:Class rdf:about="http://localhost/default#Property">
+    <rdfs:subClassOf rdf:resource="http://localhost/skos#Concept"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#SurfaceProperty">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Property"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <owl:ObjectProperty rdf:about="http://localhost/default#measuresProperty">
+    <rdfs:range rdf:resource="http://localhost/default#Property"/>
+    <rdfs:domain rdf:resource="http://localhost/default#Datum"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://localhost/default#hasLocation">
+    <rdfs:range rdf:resource="http://localhost/default#Location"/>
+    <rdfs:domain rdf:resource="http://localhost/default#Datum"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://localhost/default#isAbout">
+    <rdfs:range rdf:resource="http://localhost/default#Entity"/>
+    <rdfs:domain rdf:resource="http://localhost/default#Datum"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://localhost/default#hasFraction">
+    <rdfs:range rdf:resource="http://localhost/default#CompositeFraction"/>
+    <rdfs:domain rdf:resource="http://localhost/default#CompositeEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://localhost/default#hasPart">
+    <rdfs:range rdf:resource="http://localhost/default#Entity"/>
+    <rdfs:domain rdf:resource="http://localhost/default#CompositeFraction"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://localhost/default#hasUnitOfMeasure">
+    <rdfs:range rdf:resource="http://localhost/default#UnitOfMeasure"/>
+    <rdfs:domain rdf:resource="http://localhost/default#Datum"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://localhost/default#hasPercentage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://localhost/default#CompositeFraction"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://localhost/default#hasValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://localhost/default#Datum"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <rdf:Description rdf:about="http://localhost/default#MetersCubed">
+    <a rdf:resource="http://localhost/default#UnitOfMeasure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost/default#Salinity">
+    <a rdf:resource="http://localhost/default#ProfileProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost/default#OpenWater">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Water"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost/default#Volume">
+    <a rdf:resource="http://localhost/default#BulkProperty"/>
+    <hasPreferredUnitOfMeasure rdf:resource="http://localhost/default#MetersCubed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost/default#SurfaceTemperature">
+    <a rdf:resource="http://localhost/default#SurfaceProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost/default#SeaIceConcentration">
+    <a rdf:resource="http://localhost/default#SurfaceProperty"/>
+    <hasPreferredUnitOfMeasure rdf:resource="http://localhost/default#Percentage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost/default#Albedo">
+    <a rdf:resource="http://localhost/default#SurfaceProperty"/>
+    <hasPreferredUnitOfMeasure rdf:resource="http://localhost/default#Percentage"/>
+  </rdf:Description>
+</rdf:RDF>
