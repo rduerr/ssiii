@@ -22,15 +22,50 @@ Import: <http://purl.org/nsidc/ssiii/annotations.owl>
 Annotations: 
     dc:title "Terminology for the stages of development of sea ice",
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    dc:rights "Need value here",
+    dc:rights "<result>
+  <license-uri>http://creativecommons.org/publicdomain/zero/1.0/</license-uri>
+  <license-name>CC0 1.0 Universal</license-name>
+  <deprecated>false</deprecated>
+  <rdf>
+    <rdf:RDF xmlns=\"http://creativecommons.org/ns#\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">
+  <Work xmlns:dc=\"http://purl.org/dc/elements/1.1/\" rdf:about=\"\"><dc:title>\"Terminology for the stages of development of sea ice\"</dc:title><dc:creator>SSIII Project Team</dc:creator><license rdf:resource=\"http://creativecommons.org/publicdomain/zero/1.0/\"/></Work><License rdf:about=\"http://creativecommons.org/publicdomain/zero/1.0/\">
+    <permits rdf:resource=\"http://creativecommons.org/ns#DerivativeWorks\"/>
+    <permits rdf:resource=\"http://creativecommons.org/ns#Distribution\"/>
+    <permits rdf:resource=\"http://creativecommons.org/ns#Reproduction\"/>
+  </License>
+</rdf:RDF>
+  </rdf>
+  <licenserdf>
+    <rdf:RDF xmlns=\"http://creativecommons.org/ns#\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">
+  <License rdf:about=\"http://creativecommons.org/publicdomain/zero/1.0/\">
+    <permits rdf:resource=\"http://creativecommons.org/ns#DerivativeWorks\"/>
+    <permits rdf:resource=\"http://creativecommons.org/ns#Distribution\"/>
+    <permits rdf:resource=\"http://creativecommons.org/ns#Reproduction\"/>
+  </License>
+</rdf:RDF>
+  <rdf:Description xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns=\"http://creativecommons.org/ns#\" rdf:about=\"dc:contributor\"><requires rdf:resource=\"http://www.polarcommons.org/ethics-and-norms-of-data-sharing.php\"/></rdf:Description><rdf:Description xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns=\"http://creativecommons.org/ns#\" rdf:about=\"dc:audience\"><requires rdf:resource=\"http://www.polarcommons.org/ethics-and-norms-of-data-sharing.php\"/></rdf:Description></licenserdf>
+  <html>
+    <p xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:vcard=\"http://www.w3.org/2001/vcard-rdf/3.0#\">
+  <a href=\"http://polarcommons.org/ethics-and-norms-of-data-sharing.php\"><img src=\"http://polarcommons.org/images/PIC_print_small.png\" alt=\"Polar Information Commons's PICCC0 waver.\"/></a><a rel=\"license\" href=\"http://creativecommons.org/publicdomain/zero/1.0/\">
+    <img src=\"http://i.creativecommons.org/p/zero/1.0/88x31.png\" style=\"border-style: none;\" alt=\"CC0\"/>
+  </a>
+  <br/>
+  To the extent possible under law,
+  <a rel=\"dct:publisher\" href=\"http://purl.org/wmo/seaice/development\">
+    <span property=\"dct:title\">SSIII Project Team</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span property=\"dct:title\">\"Terminology for the stages of development of sea ice\"</span>.
+ <span>SSIII Project Team expects that users will follow the <a rel=\"cc:useGuidelines\" href=\"http://polarcommons.org/ethics-and-norms-of-data-sharing.php\">Polar Information Commons Ethics and Norms of Data Sharing</a>.</span>  <span>This work is published from <span property=\"vcard:Country\" datatype=\"dct:ISO3166\" content=\"US\" about=\"http://purl.org/wmo/seaice/development\">
+  United States</span>.</span></p></html>
+</result>",
     rdfs:label "Sea ice development stages",
-    dc:creator "Need value here",
     dc:publisher "National Snow and Ice Data Center",
     owl:priorVersion "None",
     dc:subject "Sea ice development stages",
     owl:versionInfo "0.9",
     dc:language "english",
     dc:date "October 28, 2011",
+    dc:creator "SSIII Project Team",
     rdfs:comment "This ontology encodes the stages of development of sea ice from the 2010 version of the WMO Sea Ice nomenclature."
 
 AnnotationProperty: dc:creator
@@ -63,10 +98,10 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
-AnnotationProperty: dc:title
+AnnotationProperty: muo:preferredUnit
 
     
-AnnotationProperty: muo:preferredUnit
+AnnotationProperty: dc:title
 
     
 AnnotationProperty: dc:rights
@@ -94,8 +129,8 @@ Class: wmo:ThickFirstYearIce
         rdfs:comment "First-year ice over 120 cm thick."
     
     SubClassOf: 
-        wmo:FirstYearIce,
-        wmo:hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal]
+        wmo:hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal],
+        wmo:FirstYearIce
     
     
 Class: wmo:Slush
@@ -126,8 +161,8 @@ Class: wmo:YoungIce
         rdfs:comment "Ice in the transition stage between nilas and first-year ice, 10-30 cm in thickness. May be subdivided into grey ice and grey-white ice."
     
     SubClassOf: 
-        wmo:IceWithDevelopmentStage,
-        wmo:hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.3"^^xsd:decimal]
+        wmo:hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.3"^^xsd:decimal],
+        wmo:IceWithDevelopmentStage
     
     
 Class: wmo:DarkNilasOrIceRind
@@ -137,19 +172,18 @@ Class: wmo:DarkNilasOrIceRind
          or wmo:IceRind
     
     SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[< "0.05"^^xsd:decimal],
-        wmo:Nilas
+        wmo:Nilas,
+        wmo:hasIceThickness only xsd:decimal[< "0.05"^^xsd:decimal]
     
     
-Class: wmo:LightNilas
+Class: wmo:IceRind
 
     Annotations: 
-        rdfs:comment "Nilas which is more than 5 cm in thickness and rather lighter in colour than dark nilas",
-        rdfs:label "Light nilas"
+        rdfs:label "Ice rind",
+        rdfs:comment "A brittle shiny crust of ice formed on a calm surface by direct freezing, or from grease ice, usually in water of low salinity. Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in rectangular pieces."
     
     SubClassOf: 
-        wmo:Nilas,
-        wmo:hasIceThickness only xsd:decimal[> "0.05"^^xsd:decimal]
+        wmo:DarkNilasOrIceRind
     
     
 Class: wmo:FrazilIce
@@ -162,14 +196,15 @@ Class: wmo:FrazilIce
         wmo:NewIce
     
     
-Class: wmo:IceRind
+Class: wmo:LightNilas
 
     Annotations: 
-        rdfs:label "Ice rind",
-        rdfs:comment "A brittle shiny crust of ice formed on a calm surface by direct freezing, or from grease ice, usually in water of low salinity. Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in rectangular pieces."
+        rdfs:comment "Nilas which is more than 5 cm in thickness and rather lighter in colour than dark nilas",
+        rdfs:label "Light nilas"
     
     SubClassOf: 
-        wmo:DarkNilasOrIceRind
+        wmo:hasIceThickness only xsd:decimal[> "0.05"^^xsd:decimal],
+        wmo:Nilas
     
     
 Class: wmo:Shuga
@@ -196,6 +231,16 @@ Class: wmo:GrayIce
 Class: wmo:IceWithDevelopmentStage
 
     
+Class: wmo:NewIce
+
+    Annotations: 
+        rdfs:label "New ice",
+        rdfs:comment "A general term for recently formed ice which includes frazil ice, grease ice, slush and shuga. These types of ice are composed of ice crystals which are only weakly frozen together (if at all) and have a definite form only while they are afloat."
+    
+    SubClassOf: 
+        wmo:IceWithDevelopmentStage
+    
+    
 Class: wmo:GreaseIce
 
     Annotations: 
@@ -213,18 +258,8 @@ Class: wmo:SecondYearIce
         rdfs:label "Second-year ice"
     
     SubClassOf: 
-        wmo:OldIce,
-        wmo:hasIceThickness only xsd:decimal[>= "2"^^xsd:decimal]
-    
-    
-Class: wmo:NewIce
-
-    Annotations: 
-        rdfs:label "New ice",
-        rdfs:comment "A general term for recently formed ice which includes frazil ice, grease ice, slush and shuga. These types of ice are composed of ice crystals which are only weakly frozen together (if at all) and have a definite form only while they are afloat."
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
+        wmo:hasIceThickness only xsd:decimal[>= "2"^^xsd:decimal],
+        wmo:OldIce
     
     
 Class: wmo:ThinFirstYearIce
@@ -266,8 +301,8 @@ Class: wmo:MediumFirstYearIce
         rdfs:comment "First-year ice 70-120 cm thick."
     
     SubClassOf: 
-        wmo:FirstYearIce,
-        wmo:hasIceThickness only xsd:decimal[>= "0.7"^^xsd:decimal , < "1.2"^^xsd:decimal]
+        wmo:hasIceThickness only xsd:decimal[>= "0.7"^^xsd:decimal , < "1.2"^^xsd:decimal],
+        wmo:FirstYearIce
     
     
 Class: wmo:GrayWhiteIce
@@ -288,7 +323,18 @@ Class: wmo:MultiYearIce
         rdfs:label "Multi-year ice"
     
     SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal],
+        wmo:OldIce,
+        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal]
+    
+    
+Class: wmo:ResidualFirstYearIce
+
+    Annotations: 
+        rdfs:comment "First-year ice that has survived the summers melt and is now in the new cycle of growth. It is 30 to 180 cm thick depending on the region where it was in summer. After 1 January (in the Southern hemisphere after 1 July), this ice is called second-year ice.",
+        rdfs:label "Residual first-year ice"
+    
+    SubClassOf: 
+        wmo:hasIceThickness only xsd:decimal[>= "1.8"^^xsd:decimal , < "1.8"^^xsd:decimal],
         wmo:OldIce
     
     
@@ -301,16 +347,5 @@ Class: wmo:DarkNilas
     SubClassOf: 
         wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal],
         wmo:DarkNilasOrIceRind
-    
-    
-Class: wmo:ResidualFirstYearIce
-
-    Annotations: 
-        rdfs:comment "First-year ice that has survived the summers melt and is now in the new cycle of growth. It is 30 to 180 cm thick depending on the region where it was in summer. After 1 January (in the Southern hemisphere after 1 July), this ice is called second-year ice.",
-        rdfs:label "Residual first-year ice"
-    
-    SubClassOf: 
-        wmo:OldIce,
-        wmo:hasIceThickness only xsd:decimal[>= "1.8"^^xsd:decimal , < "1.8"^^xsd:decimal]
     
     
