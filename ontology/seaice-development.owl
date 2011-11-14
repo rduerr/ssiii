@@ -7,8 +7,8 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
-Prefix: : <http://purl.org/wmo/seaice#>
 Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
+Prefix: : <http://purl.org/wmo/seaice#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
