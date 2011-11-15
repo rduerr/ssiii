@@ -33,6 +33,10 @@
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Import>http://purl.org/nsidc/ssiii/annotations.owl</Import>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Terminology for the stages of development of sea ice</Literal>
     </Annotation>
@@ -45,6 +49,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice development stages</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:publisher"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">National Snow and Ice Data Center</Literal>
     </Annotation>
@@ -53,12 +65,12 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">None</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice development stages</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">0.9</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:language"/>
