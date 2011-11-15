@@ -1,328 +1,777 @@
-Prefix: daml: <http://www.daml.org/2001/03/daml+oil#>
-Prefix: wmo: <http://purl.org/wmo/seaice#>
-Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
-Prefix: xml: <http://www.w3.org/XML/1998/namespace>
-Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
-Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
-Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
-Prefix: : <http://purl.org/wmo/seaice#>
-Prefix: dc: <http://purl.org/dc/elements/1.1/>
-Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/wmo/seaice/development#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/wmo/seaice/development#">
+    <Prefix name="daml" IRI="http://www.daml.org/2001/03/daml+oil#"/>
+    <Prefix name="wmo" IRI="http://purl.org/wmo/seaice#"/>
+    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="p0" IRI="http://purl.org/nsidc/ssiii/annotations#"/>
+    <Prefix name="bfo2" IRI="http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#"/>
+    <Prefix name="" IRI="http://purl.org/wmo/seaice#"/>
+    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Import>http://purl.org/nsidc/ssiii/annotations.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Terminology for the stages of development of sea ice</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice development stages</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">National Snow and Ice Data Center</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">None</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice development stages</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0.9</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">english</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">October 28, 2011</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SSIII Project Team</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">&lt;html&gt; 
+&lt;p xmlns:dct=&quot;http://purl.org/dc/terms/&quot;  xmlns:vcard=&quot;http://www.w3.org/2001/vcard-rdf/3.0#&quot;&gt; 
+&lt;a href=&quot;http://polarcommons.org/ethics-and-norms-of-data-sharing.php&quot;&gt;&lt;img src=&quot;http://polarcommons.org/images/PIC_print_small.png&quot; alt=&quot;Polar Information Commons&#39;s PICCC0 waver.&quot;/&gt;
+&lt;/a&gt;
+&lt;a rel=&quot;license&quot;
+     href=&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;&gt; 
+&lt;img src=&quot;http://i.creativecommons.org/p/zero/1.0/88x31.png&quot;
+            style=&quot;border-style: none;&quot; alt=&quot;CC0&quot;/&gt; 
+&lt;/a&gt; 
+&lt;br/&gt; To the extent possible under law, &lt;a rel=&quot;dct:publisher&quot; href=&quot;http://purl.org/wmo/seaice/development&quot;&gt; &lt;span property=&quot;dct:title&quot;&gt;SSIII Project Team&lt;/span&gt;&lt;/a&gt; has waived all copyright and related or neighboring rights to &lt;span property=&quot;dct:title&quot;&gt;&quot;Terminology for the stages of development of sea ice&quot;&lt;/span&gt;. &lt;span&gt;SSIII Project Team expects that users will follow the &lt;a rel=&quot;cc:useGuidelines&quot; href=&quot;http://polarcommons.org/ethics-and-norms-of-data-sharing.php&quot;&gt;Polar Information Commons Ethics and Norms of Data Sharing&lt;/a&gt;.&lt;/span&gt; &lt;span&gt;This work is published from &lt;span property=&quot;vcard:Country&quot; datatype=&quot;dct:ISO3166&quot; content=&quot;US&quot; about=&quot;http://purl.org/wmo/seaice/development&quot;&gt; United States&lt;/span&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;/html&gt;</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology encodes the stages of development of sea ice from the 2010 version of the WMO Sea Ice nomenclature.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI=":DarkNilas"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":FirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":FrazilIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":GrayIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":GrayWhiteIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":GreaseIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":IceRind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":LightNilas"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MediumFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MultiYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":NewIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Nilas"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":OldIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ResidualFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SecondYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Shuga"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Slush"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ThickFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":YoungIce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI=":DarkNilas"/>
+            <Class abbreviatedIRI=":IceRind"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DarkNilas"/>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DarkNilas"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+        <Class abbreviatedIRI=":Nilas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.05</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":FirstYearIce"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":FirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":FrazilIce"/>
+        <Class abbreviatedIRI=":NewIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":GrayIce"/>
+        <Class abbreviatedIRI=":YoungIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":GrayIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":GrayWhiteIce"/>
+        <Class abbreviatedIRI=":YoungIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":GrayWhiteIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":GreaseIce"/>
+        <Class abbreviatedIRI=":NewIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":IceRind"/>
+        <Class abbreviatedIRI=":DarkNilasOrIceRind"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":LightNilas"/>
+        <Class abbreviatedIRI=":Nilas"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":LightNilas"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.05</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MediumFirstYearIce"/>
+        <Class abbreviatedIRI=":FirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MediumFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.2</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.7</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MultiYearIce"/>
+        <Class abbreviatedIRI=":OldIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MultiYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":NewIce"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Nilas"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Nilas"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":OldIce"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ResidualFirstYearIce"/>
+        <Class abbreviatedIRI=":OldIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ResidualFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.8</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.8</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SecondYearIce"/>
+        <Class abbreviatedIRI=":OldIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SecondYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Shuga"/>
+        <Class abbreviatedIRI=":NewIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Slush"/>
+        <Class abbreviatedIRI=":NewIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ThickFirstYearIce"/>
+        <Class abbreviatedIRI=":FirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ThickFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.2</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">2</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ThinFirstYearIce"/>
+        <Class abbreviatedIRI=":FirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ThinFirstYearIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.7</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":YoungIce"/>
+        <Class abbreviatedIRI=":IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":YoungIce"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI=":hasIceThickness"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;maxExclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cc:License"/>
+        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="cc:Work"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cc:permits"/>
+        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+        <NamedIndividual abbreviatedIRI=":Distribution"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cc:permits"/>
+        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+        <NamedIndividual abbreviatedIRI=":Reproduction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cc:permits"/>
+        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+        <NamedIndividual abbreviatedIRI=":DerivativeWorks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cc:license"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:DarkNilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nilas which is under 5 cm in thickness and is very
+            dark in color</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DarkNilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Dark nilas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:FirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice of not more than one winter’s growth,
+            developing from young ice; thickness 30 cm - 2 m, and sometimes slightly more. May be
+            subdivided into thin first-year ice/white ice, medium first-year ice and thick
+            first-year ice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:FirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:FrazilIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Fine spicules or plates of ice, suspended in
+            water.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:FrazilIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Frazil ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:GrayIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Young ice 10-15 cm thick. Less elastic than nilas
+            and breaks in swell. Usually rafts under pressure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:GrayIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Grey ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:GrayWhiteIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Young ice 15-30 cm thick. Under pressure it is more
+            likely to ridge than to raft.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:GrayWhiteIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Grey-white ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:GreaseIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A later stage of freezing than frazil ice when the
+            crystals have coagulated to form a soupy layer on the surface. Grease ice reflects
+            little light, giving the sea a matt appearance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:GreaseIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Grease ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:IceRind</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A brittle shiny crust of ice formed on a calm
+            surface by direct freezing, or from grease ice, usually in water of low salinity.
+            Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in
+            rectangular pieces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:IceRind</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice rind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:LightNilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nilas which is more than 5 cm in thickness and
+            rather lighter in colour than dark nilas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:LightNilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Light nilas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:MediumFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice 70-120 cm thick.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MediumFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Medium first-year ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:MultiYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Old ice up to 3 m or more thick that has survived
+            at least two summers’ melt. Hummocks are even smoother than in second-year ice and
+            attain a look of mounds and hills. The surface of multiyear ice fields in places not
+            subject to deformations is also hillocky due to non-uniform multiple melting. The ice is
+            almost salt-free. Its color, where bare, is usually blue. As a result of melting, round
+            puddles appear at its surface in summer and a well-developed drainage system is
+            formed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MultiYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Multi-year ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:NewIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A general term for recently formed ice which
+            includes frazil ice, grease ice, slush and shuga. These types of ice are composed of ice
+            crystals which are only weakly frozen together (if at all) and have a definite form only
+            while they are afloat.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:NewIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">New ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Nilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A thin elastic crust of ice, easily bending on
+            waves and swell and under pressure, thrusting in a pattern of interlocking ’fingers’
+            (finger rafting). Has a matt surface and is up to 10 cm in thickness. May be subdivided
+            into dark nilas and light nilas.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Nilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nilas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:OldIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice which has survived at least one summer’s
+            melt; typical thickness up to 3m or more. It is subdivided into residual first-year ice,
+            second-year ice and multi-year ice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:OldIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Old ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ResidualFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice that has survived the summers melt
+            and is now in the new cycle of growth. It is 30 to 180 cm thick depending on the region
+            where it was in summer. After 1 January (in the Southern hemisphere after 1 July), this
+            ice is called second-year ice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ResidualFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Residual first-year ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:SecondYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Old ice which has survived only one summer’s melt;
+            typical thickness up to 2.5 m and sometimes more. Because it is thicker than first-year
+            ice, it stands higher out of the water. Ridged features as a result of melting during
+            the preceding summer attain a smoothed rounded shape. In summer, numerous puddles of
+            extended irregular shape form on its surface. Bare ice patches and puddles аrе usually
+            greenish-blue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SecondYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Second-year ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Shuga</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An accumulation of spongy white ice lumps, a few
+            centimeters across; they are formed from grease ice or slush and sometimes from anchor
+            ice rising to the surface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Shuga</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Shuga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Slush</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Snow which is saturated and mixed with water on
+            land or ice surfaces, or as a viscous floating mass in water after a heavy
+            snowfall.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Slush</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Slush</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ThickFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice over 120 cm thick.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ThickFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Thick first-year ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ThinFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice 30-70 cm thick. May be subdivided
+            into thin first-year ice of the first stage 30 to 50 cm thick and thin first-year ice of
+            the second stage 50 to 70 cm.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ThinFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Thin first year ice/white ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:YoungIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice in the transition stage between nilas and
+            first-year ice, 10-30 cm in thickness. May be subdivided into grey ice and grey-white
+            ice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:YoungIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Young ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+        <AbbreviatedIRI>:hasIceThickness</AbbreviatedIRI>
+        <IRI>http://purl.oclc.org/NET/muo/ucum/unit/length/meter</IRI>
+    </AnnotationAssertion>
+</Ontology>
 
 
 
-Ontology: <http://purl.org/wmo/seaice/development#>
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
-Import: <http://purl.org/nsidc/ssiii/annotations.owl>
-
-Annotations: 
-    dc:title "Terminology for the stages of development of sea ice",
-    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    rdfs:label "Sea ice development stages",
-    dc:publisher "National Snow and Ice Data Center",
-    owl:priorVersion "None",
-    dc:subject "Sea ice development stages",
-    owl:versionInfo "0.9",
-    dc:language "english",
-    dc:date "October 28, 2011",
-    dc:creator "SSIII Project Team",
-    dc:rights "<html>
-    <p xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:vcard=\"http://www.w3.org/2001/vcard-rdf/3.0#\">
-  <a href=\"http://polarcommons.org/ethics-and-norms-of-data-sharing.php\"><img src=\"http://polarcommons.org/images/PIC_print_small.png\" alt=\"Polar Information Commons's PICCC0 waver.\"/></a><a rel=\"license\" href=\"http://creativecommons.org/publicdomain/zero/1.0/\">
-    <img src=\"http://i.creativecommons.org/p/zero/1.0/88x31.png\" style=\"border-style: none;\" alt=\"CC0\"/>
-  </a>
-  <br/>
-  To the extent possible under law,
-  <a rel=\"dct:publisher\" href=\"http://purl.org/wmo/seaice/development\">
-    <span property=\"dct:title\">SSIII Project Team</span></a>
-  has waived all copyright and related or neighboring rights to
-  <span property=\"dct:title\">\"Terminology for the stages of development of sea ice\"</span>.
- <span>SSIII Project Team expects that users will follow the <a rel=\"cc:useGuidelines\" href=\"http://polarcommons.org/ethics-and-norms-of-data-sharing.php\">Polar Information Commons Ethics and Norms of Data Sharing</a>.</span>  <span>This work is published from <span property=\"vcard:Country\" datatype=\"dct:ISO3166\" content=\"US\" about=\"http://purl.org/wmo/seaice/development\">
-  United States</span>.</span></p></html>",
-    rdfs:comment "This ontology encodes the stages of development of sea ice from the 2010 version of the WMO Sea Ice nomenclature."
-
-AnnotationProperty: dc:creator
-
-    
-AnnotationProperty: dc:publisher
-
-    
-AnnotationProperty: owl:priorVersion
-
-    
-AnnotationProperty: dc:subject
-
-    
-AnnotationProperty: rdfs:label
-
-    
-AnnotationProperty: rdfs:comment
-
-    
-AnnotationProperty: owl:versionInfo
-
-    
-AnnotationProperty: dc:language
-
-    
-AnnotationProperty: dc:date
-
-    
-AnnotationProperty: dc:source
-
-    
-AnnotationProperty: dc:title
-
-    
-AnnotationProperty: muo:preferredUnit
-
-    
-AnnotationProperty: dc:rights
-
-    
-Datatype: xsd:decimal
-
-    
-Datatype: rdf:PlainLiteral
-
-    
-ObjectProperty: muo:measuresQuality
-
-    
-DataProperty: wmo:hasIceThickness
-
-    Annotations: 
-        muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
-    
-    
-Class: wmo:ThickFirstYearIce
-
-    Annotations: 
-        rdfs:label "Thick first-year ice",
-        rdfs:comment "First-year ice over 120 cm thick."
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal],
-        wmo:FirstYearIce
-    
-    
-Class: wmo:Slush
-
-    Annotations: 
-        rdfs:label "Slush",
-        rdfs:comment "Snow which is saturated and mixed with water on land or ice surfaces, or as a viscous floating mass in water after a heavy snowfall."
-    
-    SubClassOf: 
-        wmo:NewIce
-    
-    
-Class: wmo:FirstYearIce
-
-    Annotations: 
-        rdfs:label "First-year ice",
-        rdfs:comment "Sea ice of not more than one winter’s growth, developing from young ice; thickness 30 cm - 2 m, and sometimes slightly more. May be subdivided into thin first-year ice/white ice, medium first-year ice and thick first-year ice."
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage,
-        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "2"^^xsd:decimal]
-    
-    
-Class: wmo:YoungIce
-
-    Annotations: 
-        rdfs:label "Young ice",
-        rdfs:comment "Ice in the transition stage between nilas and first-year ice, 10-30 cm in thickness. May be subdivided into grey ice and grey-white ice."
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.3"^^xsd:decimal],
-        wmo:IceWithDevelopmentStage
-    
-    
-Class: wmo:DarkNilasOrIceRind
-
-    EquivalentTo: 
-        wmo:DarkNilas
-         or wmo:IceRind
-    
-    SubClassOf: 
-        wmo:Nilas,
-        wmo:hasIceThickness only xsd:decimal[< "0.05"^^xsd:decimal]
-    
-    
-Class: wmo:IceRind
-
-    Annotations: 
-        rdfs:label "Ice rind",
-        rdfs:comment "A brittle shiny crust of ice formed on a calm surface by direct freezing, or from grease ice, usually in water of low salinity. Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in rectangular pieces."
-    
-    SubClassOf: 
-        wmo:DarkNilasOrIceRind
-    
-    
-Class: wmo:FrazilIce
-
-    Annotations: 
-        rdfs:comment "Fine spicules or plates of ice, suspended in water.",
-        rdfs:label "Frazil ice"
-    
-    SubClassOf: 
-        wmo:NewIce
-    
-    
-Class: wmo:LightNilas
-
-    Annotations: 
-        rdfs:comment "Nilas which is more than 5 cm in thickness and rather lighter in colour than dark nilas",
-        rdfs:label "Light nilas"
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[> "0.05"^^xsd:decimal],
-        wmo:Nilas
-    
-    
-Class: wmo:Shuga
-
-    Annotations: 
-        rdfs:comment "An accumulation of spongy white ice lumps, a few centimeters across; they are formed from grease ice or slush and sometimes from anchor ice rising to the surface.",
-        rdfs:label "Shuga"
-    
-    SubClassOf: 
-        wmo:NewIce
-    
-    
-Class: wmo:GrayIce
-
-    Annotations: 
-        rdfs:label "Grey ice",
-        rdfs:comment "Young ice 10-15 cm thick. Less elastic than nilas and breaks in swell. Usually rafts under pressure."
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.15"^^xsd:decimal],
-        wmo:YoungIce
-    
-    
-Class: wmo:IceWithDevelopmentStage
-
-    
-Class: wmo:NewIce
-
-    Annotations: 
-        rdfs:label "New ice",
-        rdfs:comment "A general term for recently formed ice which includes frazil ice, grease ice, slush and shuga. These types of ice are composed of ice crystals which are only weakly frozen together (if at all) and have a definite form only while they are afloat."
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
-    
-    
-Class: wmo:SecondYearIce
-
-    Annotations: 
-        rdfs:comment "Old ice which has survived only one summer’s melt; typical thickness up to 2.5 m and sometimes more. Because it is thicker than first-year ice, it stands higher out of the water. Ridged features as a result of melting during the preceding summer attain a smoothed rounded shape. In summer, numerous puddles of extended irregular shape form on its surface. Bare ice patches and puddles аrе usually greenish-blue.",
-        rdfs:label "Second-year ice"
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "2"^^xsd:decimal],
-        wmo:OldIce
-    
-    
-Class: wmo:GreaseIce
-
-    Annotations: 
-        rdfs:comment "A later stage of freezing than frazil ice when the crystals have coagulated to form a soupy layer on the surface. Grease ice reflects little light, giving the sea a matt appearance.",
-        rdfs:label "Grease ice"
-    
-    SubClassOf: 
-        wmo:NewIce
-    
-    
-Class: wmo:ThinFirstYearIce
-
-    Annotations: 
-        rdfs:label "Thin first year ice/white ice",
-        rdfs:comment "First-year ice 30-70 cm thick. May be subdivided into thin first-year ice of the first stage 30 to 50 cm thick and thin first-year ice of the second stage 50 to 70 cm."
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "0.7"^^xsd:decimal],
-        wmo:FirstYearIce
-    
-    
-Class: wmo:OldIce
-
-    Annotations: 
-        rdfs:comment "Sea ice which has survived at least one summer’s melt; typical thickness up to 3m or more. It is subdivided into residual first-year ice, second-year ice and multi-year ice.",
-        rdfs:label "Old ice"
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage
-    
-    
-Class: wmo:Nilas
-
-    Annotations: 
-        rdfs:label "Nilas",
-        rdfs:comment "A thin elastic crust of ice, easily bending on waves and swell and under pressure, thrusting in a pattern of interlocking ’fingers’ (finger rafting). Has a matt surface and is up to 10 cm in thickness. May be subdivided into dark nilas and light nilas."
-    
-    SubClassOf: 
-        wmo:IceWithDevelopmentStage,
-        wmo:hasIceThickness only xsd:decimal[< "0.1"^^xsd:decimal]
-    
-    
-Class: wmo:MediumFirstYearIce
-
-    Annotations: 
-        rdfs:label "Medium first-year ice",
-        rdfs:comment "First-year ice 70-120 cm thick."
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.7"^^xsd:decimal , < "1.2"^^xsd:decimal],
-        wmo:FirstYearIce
-    
-    
-Class: wmo:GrayWhiteIce
-
-    Annotations: 
-        rdfs:label "Grey-white ice",
-        rdfs:comment "Young ice 15-30 cm thick. Under pressure it is more likely to ridge than to raft."
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal],
-        wmo:YoungIce
-    
-    
-Class: wmo:MultiYearIce
-
-    Annotations: 
-        rdfs:comment "Old ice up to 3 m or more thick that has survived at least two summers’ melt. Hummocks are even smoother than in second-year ice and attain a look of mounds and hills. The surface of multiyear ice fields in places not subject to deformations is also hillocky due to non-uniform multiple melting. The ice is almost salt-free. Its color, where bare, is usually blue. As a result of melting, round puddles appear at its surface in summer and a well-developed drainage system is formed.",
-        rdfs:label "Multi-year ice"
-    
-    SubClassOf: 
-        wmo:OldIce,
-        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal]
-    
-    
-Class: wmo:ResidualFirstYearIce
-
-    Annotations: 
-        rdfs:comment "First-year ice that has survived the summers melt and is now in the new cycle of growth. It is 30 to 180 cm thick depending on the region where it was in summer. After 1 January (in the Southern hemisphere after 1 July), this ice is called second-year ice.",
-        rdfs:label "Residual first-year ice"
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "1.8"^^xsd:decimal , < "1.8"^^xsd:decimal],
-        wmo:OldIce
-    
-    
-Class: wmo:DarkNilas
-
-    Annotations: 
-        rdfs:comment "Nilas which is under 5 cm in thickness and is very dark in color",
-        rdfs:label "Dark nilas"
-    
-    SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal],
-        wmo:DarkNilasOrIceRind
-    
-    
