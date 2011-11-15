@@ -157,6 +157,8 @@ Please use this section to record links to all of the external ontologies that w
 [http://www.w3.org/2009/08/skos-reference/skos.html Simple Knowledge Organization System (SKOS)]
 * Useful for mapping taxonomies and hierarchical relations
 
+[http://dataportal.ucar.edu/schemas/gcmd.owl GCMD science keywords in an ontology]
+* We agreed to use this copy for terms in our dc:subject annotations
 
 [http://sweet.jpl.nasa.gov/2.2/sweetAll.owl SWEET (OWL)]
 * Has SeaIce (a type of substance) and a half dozen subclasses like _SeasonalIce_ and _FastIce_
