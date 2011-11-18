@@ -23,11 +23,11 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="p0" IRI="http://purl.org/nsidc/ssiii/annotations#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="p0" IRI="http://purl.org/nsidc/ssiii/annotations#"/>
     <Prefix name="bfo2" IRI="http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#"/>
-    <Prefix name="" IRI="http://purl.org/wmo/seaice#"/>
     <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
+    <Prefix name="" IRI="http://purl.org/wmo/seaice#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
@@ -69,12 +69,12 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Terminology for the stages of development of sea ice&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">0.9</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0.9</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:language"/>
@@ -551,10 +551,14 @@
         <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:DarkNilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:DarkNilas</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Nilas which is under 5 cm in thickness and is very
-            dark in color</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nilas which is under 5 cm in thickness and is very dark in color</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -562,12 +566,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Dark nilas</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:FirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:FirstYearIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice of not more than one winter’s growth,
-            developing from young ice; thickness 30 cm - 2 m, and sometimes slightly more. May be
-            subdivided into thin first-year ice/white ice, medium first-year ice and thick
-            first-year ice.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice of not more than one winter’s growth, developing from young ice; thickness 30 cm - 2 m, and sometimes slightly more. May be subdivided into thin first-year ice/white ice, medium first-year ice and thick first-year ice.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -575,10 +581,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:FrazilIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:FrazilIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fine spicules or plates of ice, suspended in
-            water.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Fine spicules or plates of ice, suspended in water.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -586,10 +596,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Frazil ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:GrayIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:GrayIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Young ice 10-15 cm thick. Less elastic than nilas
-            and breaks in swell. Usually rafts under pressure.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Young ice 10-15 cm thick. Less elastic than nilas and breaks in swell. Usually rafts under pressure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -597,10 +611,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Grey ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:GrayWhiteIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:GrayWhiteIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Young ice 15-30 cm thick. Under pressure it is more
-            likely to ridge than to raft.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Young ice 15-30 cm thick. Under pressure it is more likely to ridge than to raft.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -608,11 +626,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Grey-white ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:GreaseIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:GreaseIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A later stage of freezing than frazil ice when the
-            crystals have coagulated to form a soupy layer on the surface. Grease ice reflects
-            little light, giving the sea a matt appearance.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A later stage of freezing than frazil ice when the crystals have coagulated to form a soupy layer on the surface. Grease ice reflects little light, giving the sea a matt appearance.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -620,12 +641,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Grease ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:IceRind</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:IceRind</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A brittle shiny crust of ice formed on a calm
-            surface by direct freezing, or from grease ice, usually in water of low salinity.
-            Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in
-            rectangular pieces.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A brittle shiny crust of ice formed on a calm surface by direct freezing, or from grease ice, usually in water of low salinity. Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in rectangular pieces.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -633,15 +656,34 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice rind</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:IceWithDevelopmentStage</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:IceWithDevelopmentStage</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice with Development Stage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:LightNilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:LightNilas</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Nilas which is more than 5 cm in thickness and
-            rather lighter in colour than dark nilas</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nilas which is more than 5 cm in thickness and rather lighter in colour than dark nilas</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:LightNilas</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Light nilas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:MediumFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -654,15 +696,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Medium first-year ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:MultiYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:MultiYearIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Old ice up to 3 m or more thick that has survived
-            at least two summers’ melt. Hummocks are even smoother than in second-year ice and
-            attain a look of mounds and hills. The surface of multiyear ice fields in places not
-            subject to deformations is also hillocky due to non-uniform multiple melting. The ice is
-            almost salt-free. Its color, where bare, is usually blue. As a result of melting, round
-            puddles appear at its surface in summer and a well-developed drainage system is
-            formed.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Old ice up to 3 m or more thick that has survived at least two summers’ melt. Hummocks are even smoother than in second-year ice and attain a look of mounds and hills. The surface of multiyear ice fields in places not subject to deformations is also hillocky due to non-uniform multiple melting. The ice is almost salt-free. Its color, where bare, is usually blue. As a result of melting, round puddles appear at its surface in summer and a well-developed drainage system is formed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -670,12 +711,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Multi-year ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:NewIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:NewIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A general term for recently formed ice which
-            includes frazil ice, grease ice, slush and shuga. These types of ice are composed of ice
-            crystals which are only weakly frozen together (if at all) and have a definite form only
-            while they are afloat.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A general term for recently formed ice which includes frazil ice, grease ice, slush and shuga. These types of ice are composed of ice crystals which are only weakly frozen together (if at all) and have a definite form only while they are afloat.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -683,12 +726,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">New ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:Nilas</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:Nilas</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A thin elastic crust of ice, easily bending on
-            waves and swell and under pressure, thrusting in a pattern of interlocking ’fingers’
-            (finger rafting). Has a matt surface and is up to 10 cm in thickness. May be subdivided
-            into dark nilas and light nilas.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A thin elastic crust of ice, easily bending on waves and swell and under pressure, thrusting in a pattern of interlocking ’fingers’ (finger rafting). Has a matt surface and is up to 10 cm in thickness. May be subdivided into dark nilas and light nilas.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -696,11 +741,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Nilas</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:OldIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:OldIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice which has survived at least one summer’s
-            melt; typical thickness up to 3m or more. It is subdivided into residual first-year ice,
-            second-year ice and multi-year ice.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice which has survived at least one summer’s melt; typical thickness up to 3m or more. It is subdivided into residual first-year ice, second-year ice and multi-year ice.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -708,12 +756,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Old ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:ResidualFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:ResidualFirstYearIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice that has survived the summers melt
-            and is now in the new cycle of growth. It is 30 to 180 cm thick depending on the region
-            where it was in summer. After 1 January (in the Southern hemisphere after 1 July), this
-            ice is called second-year ice.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice that has survived the summer&#39;s melt and is now in the new cycle of growth. It is 30 to 180 cm thick depending on the region where it was in summer. After 1 January (in the Southern hemisphere after 1 July), this ice is called second-year ice.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -721,14 +771,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Residual first-year ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:SecondYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:SecondYearIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Old ice which has survived only one summer’s melt;
-            typical thickness up to 2.5 m and sometimes more. Because it is thicker than first-year
-            ice, it stands higher out of the water. Ridged features as a result of melting during
-            the preceding summer attain a smoothed rounded shape. In summer, numerous puddles of
-            extended irregular shape form on its surface. Bare ice patches and puddles аrе usually
-            greenish-blue.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Old ice which has survived only one summer’s melt; typical thickness up to 2.5 m and sometimes more. Because it is thicker than first-year ice, it stands higher out of the water. Ridged features as a result of melting during the preceding summer attain a smoothed rounded shape. In summer, numerous puddles of extended irregular shape form on its surface. Bare ice patches and puddles аrе usually greenish-blue.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -736,11 +786,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Second-year ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:Shuga</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:Shuga</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">An accumulation of spongy white ice lumps, a few
-            centimeters across; they are formed from grease ice or slush and sometimes from anchor
-            ice rising to the surface.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An accumulation of spongy white ice lumps, a few centimeters across; they are formed from grease ice or slush and sometimes from anchor ice rising to the surface.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -748,16 +801,24 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Shuga</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:Slush</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:Slush</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Snow which is saturated and mixed with water on
-            land or ice surfaces, or as a viscous floating mass in water after a heavy
-            snowfall.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Snow which is saturated and mixed with water on land or ice surfaces, or as a viscous floating mass in water after a heavy snowfall.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:Slush</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Slush</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:ThickFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.3</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -770,11 +831,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Thick first-year ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:ThinFirstYearIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:ThinFirstYearIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice 30-70 cm thick. May be subdivided
-            into thin first-year ice of the first stage 30 to 50 cm thick and thin first-year ice of
-            the second stage 50 to 70 cm.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">First-year ice 30-70 cm thick. May be subdivided into thin first-year ice of the first stage 30 to 50 cm thick and thin first-year ice of the second stage 50 to 70 cm.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -782,11 +846,14 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Thin first year ice/white ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <AbbreviatedIRI>:YoungIce</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>:YoungIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice in the transition stage between nilas and
-            first-year ice, 10-30 cm in thickness. May be subdivided into grey ice and grey-white
-            ice.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice in the transition stage between nilas and first-year ice, 10-30 cm in thickness. May be subdivided into grey ice and grey-white ice.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
