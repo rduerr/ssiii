@@ -64,7 +64,7 @@ owl:deprecated
 
 For example
 
-reference form http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section $
+reference form http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf #Section $
 
 == Recommended ==
 
