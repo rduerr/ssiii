@@ -28,7 +28,7 @@ These elements are required, recommended, or optional for ontologies developed b
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#rights dc:rights]: Information about rights held in and over the resource.  We agreed to use the CC0 version of the PIC badge, translating the rights information from RDF to OWL and the html to text.
 
-[http://dublincore.org/2010/10/11/dcelements.rdf#source dc:source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level)
+[http://dublincore.org/2010/10/11/dcelements.rdf#source dc:source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level). 
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#date dc:date]: A point or period of time associated with an event in the lifecycle of the resource. {{{(Note: this information could be inferred using owl:versionInfo contstructs) }}}
 
@@ -51,9 +51,8 @@ Minor version: Significant collection of individual changes deemed important eno
 
 Major version: Major changes to the entire ontology, changes that have an impact on the inference model. 
 We can establish a version URI/IRI to specific version tag in Subversion.  Create a version PURL that will point to the SVN repository to a particular tag.  Come up with a current version tag for current distribution but does not include latest, work version.
-[http://www.w3.org/TR/owl-ref/#Annotations owl:versionInfo] : 
 
-owl:versionInfo
+[http://www.w3.org/TR/owl-ref/#Annotations owl:versionInfo] : 
 
 owl:priorVersion
 
@@ -63,9 +62,9 @@ owl:deprecated
 
 [http://dublincore.org/2010/10/11/dcelements.rdf#source Source]: The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. (Class Level)
 
-For example"
+For example
 
-reference form http://    .pdf#WMO nomeclature section $
+reference form http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section $
 
 == Recommended ==
 
