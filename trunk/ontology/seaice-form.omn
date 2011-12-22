@@ -1,31 +1,45 @@
-Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: ssiii: <http://purl.org/nsidc/ssiii/seaice#>
-Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: wmo: <http://purl.org/wmo/seaice#>
 Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
-Prefix: : <http://purl.org/nsidc/jcomm/egg#>
-Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: cc: <http://creativecommons.org/ns#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
+Prefix: : <http://purl.org/wmo/seaice/form#>
+Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: annotations: <http://purl.org/nsidc/ssiii/annotations#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
 
 
 
 Ontology: <http://purl.org/wmo/seaice/form#>
 
+Import: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 Import: <http://purl.org/nsidc/ssiii/annotations.owl>
 
 Annotations: 
-    rdfs:label "Ice conditions codes",
-    rdfs:comment "This ontology describes the forms of floating ice.",
-    dc:creator ""
+    owl:priorVersion "None",
+    rdfs:label "Sea ice forms",
+    rdfs:comment "This ontology describes the forms of floating sea ice.",
+    dc:title "Terminology for the forms of sea ice",
+    owl:versionInfo "0.9",
+    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
+    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the forms of sea ice\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
+    dc:language "english",
+    dc:date "December 21, 2011",
+    dc:creator "SSIII Project Team",
+    dc:publisher "National Snow and Ice Data Center"
 
-AnnotationProperty: rdfs:seeAlso
+AnnotationProperty: dc:creator
 
     
-AnnotationProperty: dc:creator
+AnnotationProperty: dc:publisher
+
+    
+AnnotationProperty: owl:priorVersion
 
     
 AnnotationProperty: rdfs:label
@@ -34,10 +48,31 @@ AnnotationProperty: rdfs:label
 AnnotationProperty: rdfs:comment
 
     
-AnnotationProperty: muo:measuresQuality
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: rdfs:seeAlso
+
+    
+AnnotationProperty: dc:language
+
+    
+AnnotationProperty: dc:date
+
+    
+AnnotationProperty: dc:source
+
+    
+AnnotationProperty: dc:title
 
     
 AnnotationProperty: muo:preferredUnit
+
+    
+AnnotationProperty: muo:measuresQuality
+
+    
+AnnotationProperty: dc:rights
 
     
 Datatype: xsd:decimal
@@ -70,16 +105,6 @@ DataProperty: wmo:hasFloeSize
         muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
     
     
-Class: wmo:IceShelf
-
-    Annotations: 
-        rdfs:label "Ice shelf",
-        rdfs:comment "A floating ice sheet of considerable thickness showing 2-50 m or more above sea-level, attached to the coast or a glacier. Usually of great horizontal extent and with a level or gently undulating surface. Nourished by annual snow accumulation at the surface and often also by the seaward extension of land glaciers. Limited areas may be aground. The seaward edge is termed an ice front."
-    
-    SubClassOf: 
-        wmo:IceOfLandOrigin
-    
-    
 Class: wmo:VastFloe
 
     Annotations: 
@@ -90,35 +115,15 @@ Class: wmo:VastFloe
         wmo:Floe
     
     
-Class: wmo:BergyBit
-
-    Annotations: 
-        rdfs:label "Bergy bit",
-        rdfs:comment "A large piece of floating ice of land origin, showing less than 5 m above sea-level and 100-300 m2 in area (10.4.4 Ed.) [Note: it might be better to say no more than 20 metres long, rather than give an area]"
-    
-    SubClassOf: 
-        wmo:Iceberg
-    
-    
 Class: wmo:FastIce
 
     Annotations: 
         rdfs:comment "Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition",
-        rdfs:label "Fast ice"
+        rdfs:label "Fast ice",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.3"
     
     SubClassOf: 
         wmo:SeaIce
-    
-    
-Class: wmo:Iceberg
-
-    Annotations: 
-        rdfs:label "Iceberg",
-        rdfs:comment "A massive piece of ice of varying shape, protruding more than 5 m above sea-level, which has broken away from a glacier or an ice shelf, and which may be afloat or aground. Icebergs by their external look may be subdivided into tabular, dome-shaped, sloping and rounded bergs.",
-        rdfs:comment "OK, so the terms in the draft 1.0 specification for ice berg are different from what is in this section.  Why is this?  Should that be true?"
-    
-    SubClassOf: 
-        wmo:IceOfLandOrigin
     
     
 Class: wmo:MediumFloe
@@ -168,9 +173,6 @@ Class: wmo:Floeberg
         wmo:SeaIce
     
     
-Class: ssiii:IceWithForm
-
-    
 Class: wmo:GiantFloe
 
     Annotations: 
@@ -184,22 +186,18 @@ Class: wmo:GiantFloe
         wmo:Floe
     
     
-Class: wmo:Glacier
-
-    Annotations: 
-        rdfs:label "Glacier",
-        rdfs:comment "A mass of ice predominantly of atmospheric origin, usually moving from higher to lower ground. A seaward margin of a glacier that is aground, the rock basement being at or below sea-level, is termed an ice wall. The projecting seaward extension of a glacier, which is usually afloat, is termed a glacier tongue. In the Antarctic, glacier tongues may extend over many tens of kilometers."
-    
-    SubClassOf: 
-        wmo:IceOfLandOrigin
-    
-    
 Class: wmo:IceBreccia
 
     Annotations: 
         rdfs:label "Ice breccia",
         rdfs:comment "Ice of different stages of development frozen together"
     
+    SubClassOf: 
+        wmo:SeaIce
+    
+    
+Class: SeaIce
+
     SubClassOf: 
         wmo:SeaIce
     
@@ -228,21 +226,9 @@ Class: wmo:Floe
 Class: wmo:SeaIce
 
     Annotations: 
-        rdfs:label "Sea ice",
-        rdfs:comment "Ice, which has originated from the freezing of sea water. It presents the main kind of floating ice encountered at sea."
-    
-    SubClassOf: 
-        ssiii:IceWithForm
-    
-    
-Class: wmo:TabularBerg
-
-    Annotations: 
-        rdfs:comment "Most flat-topped icebergs form by calving from an ice shelf and show horizontal banding (cf. ice island).",
-        rdfs:label "Tabular berg"
-    
-    SubClassOf: 
-        wmo:Iceberg
+        rdfs:label "Forms of floating ice",
+        rdfs:comment "Any form of ice floating in water. The principal kinds of floating ice at the sea surface are sea ice which is formed by the freezing of sea water at the surface, lake ice and river ice formed on rivers or lakes and glacier ice (ice of land origin). The concept also includes ice that is grounded.",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.1"
     
     
 Class: wmo:PancakeIce
@@ -259,6 +245,12 @@ Class: wmo:PancakeIce
          and (not (wmo:IceBreccia))
          and (not (wmo:IceCake)))
          and (wmo:hasFloeSize only xsd:decimal[>= "0.3"^^xsd:decimal , < 3])
+    
+    
+Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#IceOfLandOrigin>
+
+    SubClassOf: 
+        wmo:SeaIce
     
     
 Class: wmo:IceCake
@@ -288,26 +280,10 @@ Class: wmo:SmallFloe
         wmo:Floe
     
     
-Class: wmo:IceOfLandOrigin
-
-    Annotations: 
-        rdfs:label "Ice of land origin"
-    
-    SubClassOf: 
-        ssiii:IceWithForm
-    
-    
-Class: wmo:Growler
-
-    Annotations: 
-        rdfs:comment "A smaller piece of ice of land origin than a bergy bit. The color is usually white, but sometimes transparent or blue-green or nearly black, normally occupying an area of about 20 m2. Growlers are distinguished with difficulty when they are surrounded by ice and also in heavy swell. (10.4.5 Ed.) [Note it might be better to say no more than 5 metres long]",
-        rdfs:label "Growler"
-    
-    SubClassOf: 
-        wmo:Iceberg
-    
-    
 Individual: physical-quality:area
+
+    
+Individual: physical-quality:fraction
 
     
 Individual: fractionalArea
@@ -316,7 +292,4 @@ Individual: fractionalArea
      muo:measuresQuality  physical-quality:fraction,
      muo:measuresQuality  physical-quality:area
     
-    
-Individual: physical-quality:fraction
-
     

@@ -31,9 +31,9 @@ Annotations:
     owl:priorVersion "None",
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the stages of development of sea ice\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types",
-    owl:versionInfo "0.9",
     dc:language "english",
-    dc:date "October 28, 2011",
+    dc:date "December 15, 2011",
+    owl:versionInfo "0.91",
     dc:creator "SSIII Project Team",
     rdfs:comment "This ontology encodes the stages of development of sea ice from the 2010 version of the WMO Sea Ice nomenclature."
 
@@ -85,16 +85,23 @@ Datatype: rdf:PlainLiteral
 ObjectProperty: cc:license
 
     
-ObjectProperty: muo:measuresQuality
+ObjectProperty: cc:permits
 
     
-ObjectProperty: cc:permits
+ObjectProperty: muo:measuresQuality
 
     
 DataProperty: wmo:hasIceThickness
 
     Annotations: 
         muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
+    
+    
+DataProperty: wmo:hasIceAge
+
+    Annotations: 
+        rdfs:comment "The sea ice terms that this measure is based on are a bit misleading.  The terms themselves (e.g., first-year ice, second-year ice, etc.) refer to years; but actually what the terms are based on are consecutive ice melt and ice growth seasons.  These seasonal concepts are loosely coupled to time in the sense that every year has them; but saying that something is for example first-year ice only indicates that it developed during one ice growth season and hasn't lasted through a ice melt season yet.",
+        muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/time/year>
     
     
 Class: wmo:ThickFirstYearIce
@@ -105,8 +112,8 @@ Class: wmo:ThickFirstYearIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.3"
     
     SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal],
-        wmo:FirstYearIce
+        wmo:FirstYearIce,
+        wmo:hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal]
     
     
 Class: wmo:YoungIce
@@ -117,6 +124,7 @@ Class: wmo:YoungIce
         rdfs:comment "Ice in the transition stage between nilas and first-year ice, 10-30 cm in thickness. May be subdivided into grey ice and grey-white ice."
     
     SubClassOf: 
+        wmo:hasIceAge only xsd:decimal[< "1.0"^^xsd:decimal],
         wmo:IceWithDevelopmentStage,
         wmo:hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.3"^^xsd:decimal]
     
@@ -165,12 +173,14 @@ Class: wmo:SecondYearIce
 
     Annotations: 
         rdfs:comment "Old ice which has survived only one summer’s melt; typical thickness up to 2.5 m and sometimes more. Because it is thicker than first-year ice, it stands higher out of the water. Ridged features as a result of melting during the preceding summer attain a smoothed rounded shape. In summer, numerous puddles of extended irregular shape form on its surface. Bare ice patches and puddles аrе usually greenish-blue.",
+        rdfs:comment "We are ignoring the factor that the ice might be thicker than 2.5 m in the Ice thickness parameter.",
         rdfs:label "Second-year ice",
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.2"
     
     SubClassOf: 
         wmo:OldIce,
-        wmo:hasIceThickness only xsd:decimal[>= "2"^^xsd:decimal]
+        wmo:hasIceAge only xsd:decimal[< "2"^^xsd:decimal],
+        wmo:hasIceThickness only xsd:decimal[< "2.5"^^xsd:decimal]
     
     
 Class: wmo:NewIce
@@ -181,6 +191,7 @@ Class: wmo:NewIce
         rdfs:comment "A general term for recently formed ice which includes frazil ice, grease ice, slush and shuga. These types of ice are composed of ice crystals which are only weakly frozen together (if at all) and have a definite form only while they are afloat."
     
     SubClassOf: 
+        wmo:hasIceAge only xsd:decimal[< "1.0"^^xsd:decimal],
         wmo:IceWithDevelopmentStage
     
     
@@ -192,8 +203,8 @@ Class: wmo:ThinFirstYearIce
         rdfs:comment "First-year ice 30-70 cm thick. May be subdivided into thin first-year ice of the first stage 30 to 50 cm thick and thin first-year ice of the second stage 50 to 70 cm."
     
     SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "0.7"^^xsd:decimal],
-        wmo:FirstYearIce
+        wmo:FirstYearIce,
+        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "0.7"^^xsd:decimal]
     
     
 Class: wmo:Nilas
@@ -204,6 +215,7 @@ Class: wmo:Nilas
         rdfs:comment "A thin elastic crust of ice, easily bending on waves and swell and under pressure, thrusting in a pattern of interlocking ’fingers’ (finger rafting). Has a matt surface and is up to 10 cm in thickness. May be subdivided into dark nilas and light nilas."
     
     SubClassOf: 
+        wmo:hasIceAge only xsd:decimal[< "1.0"^^xsd:decimal],
         wmo:IceWithDevelopmentStage,
         wmo:hasIceThickness only xsd:decimal[< "0.1"^^xsd:decimal]
     
@@ -216,7 +228,6 @@ Class: wmo:DarkNilas
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.1"
     
     SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal],
         wmo:DarkNilasOrIceRind
     
     
@@ -228,12 +239,27 @@ Class: wmo:ResidualFirstYearIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.1"
     
     SubClassOf: 
-        wmo:hasIceThickness only xsd:decimal[>= "1.8"^^xsd:decimal , < "1.8"^^xsd:decimal],
-        wmo:OldIce
+        wmo:hasIceThickness only xsd:decimal[>= ".3"^^xsd:decimal , < "1.8"^^xsd:decimal],
+        wmo:OldIce,
+        wmo:hasIceAge only xsd:decimal[< "2"^^xsd:decimal]
     
     
 Class: cc:Work
 
+    
+Class: wmo:FirstYearIce
+
+    Annotations: 
+        rdfs:label "First-year ice",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4",
+        rdfs:comment "Sea ice of not more than one winter’s growth, developing from young ice; thickness 30 cm - 2 m, and sometimes slightly more. May be subdivided into thin first-year ice/white ice, medium first-year ice and thick first-year ice.",
+        rdfs:comment "Note: The ice thickness property strictly assumes the stated 30 cm - 2 m thickness and ignores the possibility that it might sometimes be slightly more thick than that."
+    
+    SubClassOf: 
+        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "2"^^xsd:decimal],
+        wmo:IceWithDevelopmentStage,
+        wmo:hasIceAge only xsd:decimal[< "1"^^xsd:decimal]
+    
     
 Class: wmo:Slush
 
@@ -246,16 +272,15 @@ Class: wmo:Slush
         wmo:NewIce
     
     
-Class: wmo:FirstYearIce
+Class: wmo:IceRind
 
     Annotations: 
-        rdfs:label "First-year ice",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4",
-        rdfs:comment "Sea ice of not more than one winter’s growth, developing from young ice; thickness 30 cm - 2 m, and sometimes slightly more. May be subdivided into thin first-year ice/white ice, medium first-year ice and thick first-year ice."
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.3",
+        rdfs:label "Ice rind",
+        rdfs:comment "A brittle shiny crust of ice formed on a calm surface by direct freezing, or from grease ice, usually in water of low salinity. Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in rectangular pieces."
     
     SubClassOf: 
-        wmo:IceWithDevelopmentStage,
-        wmo:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "2"^^xsd:decimal]
+        wmo:DarkNilasOrIceRind
     
     
 Class: wmo:LightNilas
@@ -281,17 +306,6 @@ Class: wmo:FrazilIce
         wmo:NewIce
     
     
-Class: wmo:IceRind
-
-    Annotations: 
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.3",
-        rdfs:label "Ice rind",
-        rdfs:comment "A brittle shiny crust of ice formed on a calm surface by direct freezing, or from grease ice, usually in water of low salinity. Thickness to about 5 cm. Easily broken by wind or swell, commonly breaking in rectangular pieces."
-    
-    SubClassOf: 
-        wmo:DarkNilasOrIceRind
-    
-    
 Class: wmo:GrayIce
 
     Annotations: 
@@ -315,7 +329,8 @@ Class: wmo:OldIce
         rdfs:label "Old ice"
     
     SubClassOf: 
-        wmo:IceWithDevelopmentStage
+        wmo:IceWithDevelopmentStage,
+        wmo:hasIceAge only xsd:decimal[>= "1"^^xsd:decimal]
     
     
 Class: wmo:MediumFirstYearIce
@@ -347,11 +362,13 @@ Class: wmo:MultiYearIce
     Annotations: 
         rdfs:comment "Old ice up to 3 m or more thick that has survived at least two summers’ melt. Hummocks are even smoother than in second-year ice and attain a look of mounds and hills. The surface of multiyear ice fields in places not subject to deformations is also hillocky due to non-uniform multiple melting. The ice is almost salt-free. Its color, where bare, is usually blue. As a result of melting, round puddles appear at its surface in summer and a well-developed drainage system is formed.",
         rdfs:label "Multi-year ice",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.3"
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.3",
+        rdfs:comment "We are ignoring the possibility that the ice might be more than 3 m thick in the ice thickness parameter."
     
     SubClassOf: 
+        wmo:hasIceThickness only xsd:decimal[< "3"^^xsd:decimal],
         wmo:OldIce,
-        wmo:hasIceThickness only xsd:decimal[>= "0.15"^^xsd:decimal , < "0.3"^^xsd:decimal]
+        wmo:hasIceAge only xsd:decimal[>= "2"^^xsd:decimal]
     
     
 Individual: wmo:Reproduction
