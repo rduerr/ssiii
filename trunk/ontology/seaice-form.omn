@@ -23,10 +23,10 @@ Import: <http://purl.org/nsidc/ssiii/annotations.owl>
 Annotations: 
     owl:priorVersion "None",
     rdfs:label "Sea ice forms",
-    dc:title "Terminology for the forms of sea ice",
-    rdfs:comment "This ontology describes the forms of floating sea ice.",
+    dc:title "Terminology for the forms of ice found floating in the ocean",
+    rdfs:comment "This ontology describes the forms of ice found floating in the ocean.",
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the forms of sea ice\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
+    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the forms of ice found in the ocean\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     owl:versionInfo "0.9",
     dc:date "December 21, 2011",
     dc:language "english",
