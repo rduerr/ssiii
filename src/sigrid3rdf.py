@@ -31,29 +31,26 @@ def Usage():
     print('')
     sys.exit(1)
 
-def openInputFile(infile):
-    return ogr.Open( infile, update = 0 )
-
-def getLayer(ds, layer_name=None):
-    if layer_name is not None:
-        in_layer = ds.GetLayerByName( layer_name )
+def convert(infile, layer_name=None):
+    ds = ogr.Open( infile, update = 0 )
+    store = store = Store(reader="rdflib", writer="rdflib",
+                          rdflib_store='IOMemory')
+    if layer_name == None:
+        for i in range(ds.GetLayerCount()):
+            layerToRDF(ds.GetLayer(i),store)
     else:
-        in_layer = ds.GetLayer( 0 )
-    return in_layer
+        layerToRDF(ds.GetLayerByName(layer_name),store)
+    ds.Destroy()
 
-def convert(infile, outfile, layer_name=None):
-    in_ds = openInputFile(infile)
-    in_layer = getLayer(in_ds, layer_name)
-    model = layerToRDF(in_layer)
-    in_ds.Destroy()
-
+    model = store.reader.graph
     bindPrefixes(model)
-    model.serialize(outfile,format="turtle")
+    return model
 
-def layerToRDF(layer):
+def layerToRDF(layer, store = None):
     layerName = layer.GetName()
-    store = Store(reader="rdflib", writer="rdflib",
-                  rdflib_store='IOMemory')
+    if store == None:
+        store = Store(reader="rdflib", writer="rdflib",
+                      rdflib_store='IOMemory')
     session = Session(store)
     Zone = session.get_class(ns.EGG['Zone'])
     ZoneComponent = session.get_class(ns.SSIII['ZoneComponent'])
@@ -105,7 +102,6 @@ def layerToRDF(layer):
         
         feature.Destroy()
         feature = layer.GetNextFeature()
-    return store.reader.graph
 
 if __name__ == '__main__':
     infile = None
@@ -129,4 +125,6 @@ if __name__ == '__main__':
     if outfile is None:
         Usage()
     else:
-        convert(infile, outfile, layer_name)
+        model = convert(infile, layer_name)
+        model.serialize(outfile,format="turtle")
+
