@@ -26,8 +26,8 @@
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="p0" IRI="http://purl.org/nsidc/ssiii/annotations#"/>
     <Prefix name="bfo2" IRI="http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#"/>
-    <Prefix name="" IRI="http://purl.org/wmo/seaice/development#"/>
     <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
+    <Prefix name="" IRI="http://purl.org/wmo/seaice/development#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
@@ -177,9 +177,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Reproduction"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="|EOF|"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
