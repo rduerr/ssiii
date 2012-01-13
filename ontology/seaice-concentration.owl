@@ -16,48 +16,125 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://purl.org/wmo/seaice/concentration#">
-    <Prefix name="ssiii" IRI="http://purl.org/nsidc/ssiii/seaice#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="" IRI="http://purl.org/wmo/seaice#"/>
+    <Prefix name="daml" IRI="http://www.daml.org/2001/03/daml+oil#"/>
+    <Prefix name="wmo" IRI="http://purl.org/wmo/seaice#"/>
+    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="wmo-iolo" IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="p0" IRI="http://purl.org/nsidc/ssiii/annotations#"/>
+    <Prefix name="wmo-sif" IRI="http://purl.org/wmo/seaice/form#"/>
+    <Prefix name="" IRI="http://purl.org/wmo/seaice/concentration#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="xhv" IRI="http://www.w3.org/1999/xhtml/vocab#"/>
     <Prefix name="geo" IRI="http://opengis.net/ont/OGC-GeoSPARQL/1.0/#"/>
-    <Import>http://purl.org/wmo/seaice/form#</Import>
+    <Import>http://purl.org/nsidc/ssiii/annotations.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Terminology related to the concentration of ice in the ocean&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">none</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">January 13, 2012</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Terminology related to the concentration of ice in the ocean</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">National Snow and Ice Data Center</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology describes terms that denote the concentration of ice in a region of ocean.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">english</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SSIII Project Team</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Concentration</Literal>
+    </Annotation>
     <Declaration>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <Class IRI="BergyWater"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":ClosePackIce"/>
+        <Class IRI="ClosePackIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":CompactPackIce"/>
+        <Class IRI="CompactPackIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":ConsolidatedIce"/>
+        <Class IRI="ConsolidatedIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":FastIce"/>
+        <Class IRI="FastIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":IceOfLandOrigin"/>
+        <Class IRI="Ice-free"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":OpenPackIce"/>
+        <Class IRI="IceWithConcentration"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":OpenWater"/>
+        <Class IRI="OpenPackIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":PackIce"/>
+        <Class IRI="OpenWater"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":VeryClosePackIce"/>
+        <Class IRI="PackIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":VeryOpenPackIce"/>
+        <Class IRI="VeryClosePackIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VeryOpenPackIce"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -69,6 +146,9 @@
         <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </Declaration>
     <Declaration>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </Declaration>
+    <Declaration>
         <Datatype abbreviatedIRI="xsd:decimal"/>
     </Declaration>
     <Declaration>
@@ -78,242 +158,367 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </Declaration>
     <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-        <DataMinCardinality cardinality="1">
-            <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
-            <Datatype abbreviatedIRI="xsd:decimal"/>
-        </DataMinCardinality>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI=":ClosePackIce"/>
+        <Class IRI="BergyWater"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceOfLandOrigin"/>
+                <Literal datatypeIRI="&xsd;boolean">true</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasSeaIce"/>
+                <Literal datatypeIRI="&xsd;boolean">false</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="ClosePackIce"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty IRI="hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.75</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI=":CompactPackIce"/>
+        <Class IRI="CompactPackIce"/>
         <ObjectIntersectionOf>
             <ObjectComplementOf>
-                <Class abbreviatedIRI=":ConsolidatedIce"/>
+                <Class IRI="ConsolidatedIce"/>
             </ObjectComplementOf>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <DataProperty IRI="hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">1.0</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.01</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI=":ConsolidatedIce"/>
+        <Class IRI="ConsolidatedIce"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <DataProperty IRI="hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">1.0</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.001</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI=":OpenPackIce"/>
+        <Class IRI="Ice-free"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceOfLandOrigin"/>
+                <Literal datatypeIRI="&xsd;boolean">false</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasSeaIce"/>
+                <Literal datatypeIRI="&xsd;boolean">false</Literal>
+            </DataHasValue>
+            <DataMaxCardinality cardinality="0">
+                <DataProperty IRI="hasMeanIceConcentration"/>
+                <Datatype abbreviatedIRI="xsd:decimal"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="OpenPackIce"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty IRI="hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.5</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI=":OpenWater"/>
+        <Class IRI="OpenWater"/>
         <ObjectIntersectionOf>
-            <ObjectComplementOf>
-                <Class abbreviatedIRI=":IceOfLandOrigin"/>
-            </ObjectComplementOf>
-            <DataAllValuesFrom>
-                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
-                <DatatypeRestriction>
-                    <Datatype abbreviatedIRI="xsd:decimal"/>
-                    <FacetRestriction facet="&xsd;minInclusive">
-                        <Literal datatypeIRI="&xsd;integer">0</Literal>
-                    </FacetRestriction>
-                    <FacetRestriction facet="&xsd;maxExclusive">
-                        <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
-                    </FacetRestriction>
-                </DatatypeRestriction>
-            </DataAllValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="hasIceOfLandOrigin"/>
+                <Literal datatypeIRI="&xsd;boolean">false</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasSeaIce"/>
+                <Literal datatypeIRI="&xsd;boolean">true</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+            </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI=":VeryClosePackIce"/>
+        <Class IRI="VeryClosePackIce"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <DataProperty IRI="hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.95</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI=":VeryOpenPackIce"/>
+        <Class IRI="VeryOpenPackIce"/>
         <ObjectIntersectionOf>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
+                <DataProperty IRI="hasMeanIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.2</Literal>
             </DataHasValue>
             <DataHasValue>
-                <DataProperty abbreviatedIRI=":hasStdDevIceConcentration"/>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-        <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI=":hasMeanIceConcentration"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">1</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
+        <Class IRI="BergyWater"/>
+        <Class IRI="IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":ClosePackIce"/>
-        <Class abbreviatedIRI=":PackIce"/>
+        <Class IRI="ClosePackIce"/>
+        <Class IRI="PackIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":CompactPackIce"/>
-        <Class abbreviatedIRI=":PackIce"/>
+        <Class IRI="CompactPackIce"/>
+        <Class IRI="PackIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":ConsolidatedIce"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <Class IRI="ConsolidatedIce"/>
+        <Class IRI="IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":FastIce"/>
-        <Class abbreviatedIRI=":ConsolidatedIce"/>
+        <Class IRI="FastIce"/>
+        <Class IRI="ConsolidatedIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":OpenPackIce"/>
-        <Class abbreviatedIRI=":PackIce"/>
+        <Class IRI="Ice-free"/>
+        <Class IRI="IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":OpenWater"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <Class IRI="OpenPackIce"/>
+        <Class IRI="PackIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":PackIce"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <Class IRI="OpenWater"/>
+        <Class IRI="IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":VeryClosePackIce"/>
-        <Class abbreviatedIRI=":PackIce"/>
+        <Class IRI="PackIce"/>
+        <Class IRI="IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":VeryOpenPackIce"/>
-        <Class abbreviatedIRI=":PackIce"/>
+        <Class IRI="VeryClosePackIce"/>
+        <Class IRI="PackIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VeryOpenPackIce"/>
+        <Class IRI="PackIce"/>
     </SubClassOf>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>BergyWater</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>ssiii:IceWithConcentration</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The ratio of the area of ice features to the total area of a sea part (zone) delineated on the chart, expressed in tenths. The total concentration includes all stages of development and the partial concentration includes areas of ice of specific age or arrangement which comprise only part of the total concentration. Concentrations within 0-1/10 and 9/10 ñ 10/10 from instrumental observations can be expressed in hundredths (4.2 Ed.).</Literal>
+        <IRI>BergyWater</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A large area of navigable water in which ice of land origin is present or possible at a total concentration less than 1/10. Such zones do not usually have a clearly expressed edge or boundary with ice-free water. A characterization of ice conditions in such areas can be made both on the basis of data from direct observations, data from previous observations or from climatic data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>ssiii:IceWithConcentration</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Concentration</Literal>
+        <IRI>BergyWater</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Bergy water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>ClosePackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.3</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:ClosePackIce</AbbreviatedIRI>
+        <IRI>ClosePackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 7/10 to 8/10, composed of floes mostly in contact</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:ClosePackIce</AbbreviatedIRI>
+        <IRI>ClosePackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Close pack ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>CompactPackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:CompactPackIce</AbbreviatedIRI>
+        <IRI>CompactPackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 10/10 and no water is visible</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:CompactPackIce</AbbreviatedIRI>
+        <IRI>CompactPackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Compact pack ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>ConsolidatedIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:ConsolidatedIce</AbbreviatedIRI>
+        <IRI>ConsolidatedIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 10/10 and the floes are frozen together.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:ConsolidatedIce</AbbreviatedIRI>
+        <IRI>ConsolidatedIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Consolidated ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>FastIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OpenPackIce</AbbreviatedIRI>
+        <IRI>FastIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FastIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Fast ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>Ice-free</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Ice-free</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">No ice is present. If ice of any kind is present this term shall not be used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Ice-free</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice-free</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>IceWithConcentration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceWithConcentration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The ratio of the area of ice features to the total area of a sea part (zone) delineated on the chart, expressed in tenths. The total concentration includes all stages of development and the partial concentration includes areas of ice of specific age or arrangement which comprise only part of the total concentration. Concentrations within 0-1/10 and 9/10 - 10/10 from instrumental observations can be expressed in hundredths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceWithConcentration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Concentration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>OpenPackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OpenPackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OpenPackIce</AbbreviatedIRI>
+        <IRI>OpenPackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Open pack ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>OpenWater</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OpenWater</AbbreviatedIRI>
+        <IRI>OpenWater</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">A large area of freely navigable water in which sea ice is present in concentrations less than 1/10 and ice of land origin is absent.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OpenWater</AbbreviatedIRI>
+        <IRI>OpenWater</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Open water</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>PackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:VeryClosePackIce</AbbreviatedIRI>
+        <IRI>PackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Any ice at the sea surface except for fast ice and stamukhas regardless of its age, form, origin and other characteristics that has a possibility of movement (drift) under the action of winds, currents and tides. As a result of the dynamic processes (drift, divergence, convergance), the total and partial concentrations of drifting ice constantly change.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pack ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>VeryClosePackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>VeryClosePackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 9/10 and more, but less than 10/10</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:VeryClosePackIce</AbbreviatedIRI>
+        <IRI>VeryClosePackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Very close pack ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>VeryOpenPackIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:VeryOpenPackIce</AbbreviatedIRI>
+        <IRI>VeryOpenPackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floating ice in which the concentration is 1/10 to 3/10 and water preponderates over ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:VeryOpenPackIce</AbbreviatedIRI>
+        <IRI>VeryOpenPackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Very open pack ice</Literal>
     </AnnotationAssertion>
 </Ontology>

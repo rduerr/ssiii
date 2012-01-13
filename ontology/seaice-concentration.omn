@@ -1,29 +1,90 @@
-Prefix: ssiii: <http://purl.org/nsidc/ssiii/seaice#>
-Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: : <http://purl.org/wmo/seaice#>
+Prefix: daml: <http://www.daml.org/2001/03/daml+oil#>
+Prefix: wmo: <http://purl.org/wmo/seaice#>
+Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: cc: <http://creativecommons.org/ns#>
+Prefix: wmo-iolo: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: wmo-sif: <http://purl.org/wmo/seaice/form#>
+Prefix: : <http://purl.org/wmo/seaice/concentration#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: geo: <http://opengis.net/ont/OGC-GeoSPARQL/1.0/#>
+Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 
 
 Ontology: <http://purl.org/wmo/seaice/concentration#>
 
-Import: <http://purl.org/wmo/seaice/form#>
+Import: <http://purl.org/nsidc/ssiii/annotations.owl>
 
+Annotations: 
+    xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology related to the concentration of ice in the ocean\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
+    owl:versionInfo "1.0",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration",
+    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
+    owl:priorVersion "none",
+    dc:date "January 13, 2012",
+    dc:title "Terminology related to the concentration of ice in the ocean",
+    dc:publisher "National Snow and Ice Data Center",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice",
+    rdfs:comment "This ontology describes terms that denote the concentration of ice in a region of ocean.",
+    dc:language "english",
+    dc:creator "SSIII Project Team",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice",
+    rdfs:label "Concentration"
+
+AnnotationProperty: dc:creator
+
+    
+AnnotationProperty: dc:publisher
+
+    
+AnnotationProperty: owl:priorVersion
+
+    
+AnnotationProperty: xhv:license
+
+    
+AnnotationProperty: dc:subject
+
+    
 AnnotationProperty: rdfs:label
 
     
 AnnotationProperty: rdfs:comment
 
     
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: dc:language
+
+    
+AnnotationProperty: dc:date
+
+    
+AnnotationProperty: dc:source
+
+    
+AnnotationProperty: dc:title
+
+    
+AnnotationProperty: dc:rights
+
+    
 Datatype: xsd:decimal
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
 
     
 Datatype: xsd:double
@@ -35,12 +96,19 @@ Datatype: xsd:integer
 DataProperty: hasMeanIceConcentration
 
     
+DataProperty: hasSeaIce
+
+    
+DataProperty: hasIceOfLandOrigin
+
+    
 DataProperty: hasStdDevIceConcentration
 
     
 Class: VeryClosePackIce
 
     Annotations: 
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.2",
         rdfs:comment "Floating ice in which the concentration is 9/10 and more, but less than 10/10",
         rdfs:label "Very close pack ice"
     
@@ -52,79 +120,46 @@ Class: VeryClosePackIce
         PackIce
     
     
-Class: ssiii:IceWithConcentration
+Class: IceWithConcentration
 
     Annotations: 
-        rdfs:comment "The ratio of the area of ice features to the total area of a sea part (zone) delineated on the chart, expressed in tenths. The total concentration includes all stages of development and the partial concentration includes areas of ice of specific age or arrangement which comprise only part of the total concentration. Concentrations within 0-1/10 and 9/10 ñ 10/10 from instrumental observations can be expressed in hundredths (4.2 Ed.).",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2",
+        rdfs:comment "The ratio of the area of ice features to the total area of a sea part (zone) delineated on the chart, expressed in tenths. The total concentration includes all stages of development and the partial concentration includes areas of ice of specific age or arrangement which comprise only part of the total concentration. Concentrations within 0-1/10 and 9/10 - 10/10 from instrumental observations can be expressed in hundredths.",
         rdfs:label "Concentration"
     
-    EquivalentTo: 
-        hasMeanIceConcentration min 1 xsd:decimal
-    
-    SubClassOf: 
-        hasMeanIceConcentration only xsd:decimal[>= 0 , <= 1]
-    
-    
-Class: OpenPackIce
-
-    Annotations: 
-        rdfs:label "Open pack ice",
-        rdfs:comment "Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another"
-    
-    EquivalentTo: 
-        (hasMeanIceConcentration value 0.5)
-         and (hasStdDevIceConcentration value 0.075)
-    
-    SubClassOf: 
-        PackIce
-    
-    
-Class: PackIce
-
-    SubClassOf: 
-        ssiii:IceWithConcentration
-    
-    
-Class: FastIce
-
-    SubClassOf: 
-        ConsolidatedIce
-    
-    
-Class: IceOfLandOrigin
-
     
 Class: OpenWater
 
     Annotations: 
         rdfs:comment "A large area of freely navigable water in which sea ice is present in concentrations less than 1/10 and ice of land origin is absent.",
-        rdfs:label "Open water"
+        rdfs:label "Open water",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.6"
     
     EquivalentTo: 
-        (not (IceOfLandOrigin))
-         and (hasMeanIceConcentration only xsd:decimal[>= 0 , < "0.1"^^xsd:decimal])
+        (hasIceOfLandOrigin value false)
+         and (hasMeanIceConcentration value 0.05)
+         and (hasSeaIce value true)
+         and (hasStdDevIceConcentration value 0.025)
     
     SubClassOf: 
-        ssiii:IceWithConcentration
+        IceWithConcentration
     
     
-Class: ConsolidatedIce
+Class: PackIce
 
     Annotations: 
-        rdfs:label "Consolidated ice",
-        rdfs:comment "Floating ice in which the concentration is 10/10 and the floes are frozen together."
-    
-    EquivalentTo: 
-        (hasMeanIceConcentration value 1.0)
-         and (hasStdDevIceConcentration value 0.001)
+        rdfs:label "Pack ice",
+        rdfs:comment "Any ice at the sea surface except for fast ice and stamukhas regardless of its age, form, origin and other characteristics that has a possibility of movement (drift) under the action of winds, currents and tides. As a result of the dynamic processes (drift, divergence, convergance), the total and partial concentrations of drifting ice constantly change.",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.4"
     
     SubClassOf: 
-        ssiii:IceWithConcentration
+        IceWithConcentration
     
     
 Class: CompactPackIce
 
     Annotations: 
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1",
         rdfs:label "Compact pack ice",
         rdfs:comment "Floating ice in which the concentration is 10/10 and no water is visible"
     
@@ -141,7 +176,8 @@ Class: VeryOpenPackIce
 
     Annotations: 
         rdfs:label "Very open pack ice",
-        rdfs:comment "Floating ice in which the concentration is 1/10 to 3/10 and water preponderates over ice"
+        rdfs:comment "Floating ice in which the concentration is 1/10 to 3/10 and water preponderates over ice",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.5"
     
     EquivalentTo: 
         (hasMeanIceConcentration value 0.2)
@@ -151,9 +187,52 @@ Class: VeryOpenPackIce
         PackIce
     
     
+Class: ConsolidatedIce
+
+    Annotations: 
+        rdfs:label "Consolidated ice",
+        rdfs:comment "Floating ice in which the concentration is 10/10 and the floes are frozen together.",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1.1"
+    
+    EquivalentTo: 
+        (hasMeanIceConcentration value 1.0)
+         and (hasStdDevIceConcentration value 0.001)
+    
+    SubClassOf: 
+        IceWithConcentration
+    
+    
+Class: FastIce
+
+    Annotations: 
+        rdfs:comment "Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition.",
+        rdfs:label "Fast ice",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.3"
+    
+    SubClassOf: 
+        ConsolidatedIce
+    
+    
+Class: Ice-free
+
+    Annotations: 
+        rdfs:comment "No ice is present. If ice of any kind is present this term shall not be used.",
+        rdfs:label "Ice-free",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.6"
+    
+    EquivalentTo: 
+        (hasIceOfLandOrigin value false)
+         and (hasSeaIce value false)
+         and (hasMeanIceConcentration max 0 xsd:decimal)
+    
+    SubClassOf: 
+        IceWithConcentration
+    
+    
 Class: ClosePackIce
 
     Annotations: 
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.3",
         rdfs:comment "Floating ice in which the concentration is 7/10 to 8/10, composed of floes mostly in contact",
         rdfs:label "Close pack ice"
     
@@ -163,5 +242,37 @@ Class: ClosePackIce
     
     SubClassOf: 
         PackIce
+    
+    
+Class: OpenPackIce
+
+    Annotations: 
+        rdfs:label "Open pack ice",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.4",
+        rdfs:comment "Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another"
+    
+    EquivalentTo: 
+        (hasMeanIceConcentration value 0.5)
+         and (hasStdDevIceConcentration value 0.075)
+    
+    SubClassOf: 
+        PackIce
+    
+    
+Class: BergyWater
+
+    Annotations: 
+        rdfs:comment "A large area of navigable water in which ice of land origin is present or possible at a total concentration less than 1/10. Such zones do not usually have a clearly expressed edge or boundary with ice-free water. A characterization of ice conditions in such areas can be made both on the basis of data from direct observations, data from previous observations or from climatic data.",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.5",
+        rdfs:label "Bergy water"
+    
+    EquivalentTo: 
+        (hasIceOfLandOrigin value true)
+         and (hasMeanIceConcentration value 0.05)
+         and (hasSeaIce value false)
+         and (hasStdDevIceConcentration value 0.025)
+    
+    SubClassOf: 
+        IceWithConcentration
     
     
