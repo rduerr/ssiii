@@ -328,7 +328,7 @@ Class: wmo:SmallFloe
     Annotations: 
         rdfs:label "Small floe",
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.5",
-        rdfs:comment "20 - 100 m across"
+        rdfs:comment "20  100 m across"
     
     EquivalentTo: 
         wmo:hasFloeSize only xsd:decimal[>= 2 , < 100]
@@ -350,4 +350,3 @@ Individual: fractionalArea
      muo:measuresQuality  physical-quality:area
     
     
-
