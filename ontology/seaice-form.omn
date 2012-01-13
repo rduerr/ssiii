@@ -12,26 +12,35 @@ Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 
 
 Ontology: <http://purl.org/wmo/seaice/form#>
 
-Import: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 Import: <http://purl.org/nsidc/ssiii/annotations.owl>
 
 Annotations: 
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs",
+    dc:title "Terminology for the forms of sea ice",
+    owl:versionInfo "1.0",
+    rdfs:comment "This ontology describes the forms of floating sea ice.",
+    xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice",
+    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs",
+    dc:date "January 12, 2012",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes",
+    dc:publisher "National Snow and Ice Data Center",
     owl:priorVersion "None",
     rdfs:label "Sea ice forms",
-    dc:title "Terminology for the forms of ice found floating in the ocean",
-    rdfs:comment "This ontology describes the forms of ice found floating in the ocean.",
-    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the forms of ice found in the ocean\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
-    owl:versionInfo "0.9",
-    dc:date "December 21, 2011",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice",
+    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the forms of sea ice\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     dc:language "english",
     dc:creator "SSIII Project Team",
-    dc:publisher "National Snow and Ice Data Center"
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes"
 
 AnnotationProperty: dc:creator
 
@@ -40,6 +49,12 @@ AnnotationProperty: dc:publisher
 
     
 AnnotationProperty: owl:priorVersion
+
+    
+AnnotationProperty: xhv:license
+
+    
+AnnotationProperty: dc:subject
 
     
 AnnotationProperty: rdfs:label
@@ -63,13 +78,13 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
+AnnotationProperty: muo:measuresQuality
+
+    
 AnnotationProperty: muo:preferredUnit
 
     
 AnnotationProperty: dc:title
-
-    
-AnnotationProperty: muo:measuresQuality
 
     
 AnnotationProperty: dc:rights
@@ -87,10 +102,10 @@ Datatype: xsd:string
 Datatype: xsd:double
 
     
-Datatype: rdfs:Literal
+Datatype: xsd:integer
 
     
-Datatype: xsd:integer
+Datatype: rdfs:Literal
 
     
 ObjectProperty: hasComponent
@@ -116,17 +131,6 @@ Class: wmo:VastFloe
         wmo:Floe
     
     
-Class: RiverOrLakeIce
-
-    Annotations: 
-        rdfs:comment "Ice formed on a river or on a lake and which may be exported to sea. River ice fields are depicted on radar images as similar to old fields. Fresh water ice differs significantly in its mechanical and electro-magnetic characteristics from sea ice of the same age.",
-        rdfs:label "River, lake ice",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.1.3"
-    
-    SubClassOf: 
-        IceFragment
-    
-    
 Class: wmo:FastIce
 
     Annotations: 
@@ -136,6 +140,17 @@ Class: wmo:FastIce
     
     SubClassOf: 
         SeaIce
+    
+    
+Class: RiverOrLakeIce
+
+    Annotations: 
+        rdfs:comment "Ice formed on a river or on a lake and which may be exported to sea. River ice fields are depicted on radar images as similar to old fields. Fresh water ice differs significantly in its mechanical and electro-magnetic characteristics from sea ice of the same age.",
+        rdfs:label "River, lake ice",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.1.3"
+    
+    SubClassOf: 
+        IceFragment
     
     
 Class: wmo:MediumFloe
@@ -160,19 +175,8 @@ Class: wmo:SmallIceCake
         rdfs:comment "An ice cake less than 2 m across"
     
     SubClassOf: 
-        wmo:hasFloeSize only xsd:decimal[< 2],
-        wmo:IceCake
-    
-    
-Class: wmo:Floeberg
-
-    Annotations: 
-        rdfs:comment "A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level",
-        rdfs:label "Floeberg",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section7.5"
-    
-    SubClassOf: 
-        SeaIce
+        wmo:IceCake,
+        wmo:hasFloeSize only xsd:decimal[< 2]
     
     
 Class: wmo:BigFloe
@@ -187,6 +191,17 @@ Class: wmo:BigFloe
     
     SubClassOf: 
         wmo:Floe
+    
+    
+Class: wmo:Floeberg
+
+    Annotations: 
+        rdfs:comment "A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level",
+        rdfs:label "Floeberg",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section7.5"
+    
+    SubClassOf: 
+        SeaIce
     
     
 Class: wmo:GiantFloe
@@ -233,8 +248,8 @@ Class: wmo:BrashIce
         rdfs:comment "Accumulations of floating ice made up of fragments not more than 2 m across, the wreckage of other forms of ice as a result of melting. [Note: BAS usage is normally that brash is small fragments of glacier ice. We also use the term porridge to refer to a mass of fragments, often under slight pressure, through which navigation is difficult.]"
     
     SubClassOf: 
-        wmo:hasFloeSize only xsd:decimal[< 2],
-        wmo:IceCake
+        wmo:IceCake,
+        wmo:hasFloeSize only xsd:decimal[< 2]
     
     
 Class: wmo:Floe
@@ -287,12 +302,6 @@ Class: wmo:PancakeIce
         SeaIce
     
     
-Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#IceOfLandOrigin>
-
-    SubClassOf: 
-        wmo:SeaIce
-    
-    
 Class: wmo:IceCake
 
     Annotations: 
@@ -308,12 +317,18 @@ Class: wmo:IceCake
         SeaIce
     
     
+Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#IceOfLandOrigin>
+
+    SubClassOf: 
+        wmo:SeaIce
+    
+    
 Class: wmo:SmallFloe
 
     Annotations: 
         rdfs:label "Small floe",
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.5",
-        rdfs:comment "20  100 m across"
+        rdfs:comment "20 - 100 m across"
     
     EquivalentTo: 
         wmo:hasFloeSize only xsd:decimal[>= 2 , < 100]
@@ -335,3 +350,4 @@ Individual: fractionalArea
      muo:measuresQuality  physical-quality:area
     
     
+
