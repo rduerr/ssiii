@@ -1,17 +1,19 @@
+Prefix: daml: <http://www.daml.org/2001/03/daml+oil#>
 Prefix: wmo: <http://purl.org/wmo/seaice#>
 Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: cc: <http://creativecommons.org/ns#>
-Prefix: iolo: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
+Prefix: : <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 
 
@@ -22,19 +24,20 @@ Import: <http://purl.org/nsidc/ssiii/annotations.owl>
 Annotations: 
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers",
+    xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    owl:versionInfo "1.0",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers",
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs",
+    dc:date "January 13, 2012",
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the types of ice of land origin found floating in the sea\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_icebergs",
     dc:publisher "National Snow and Ice Data Center",
     owl:priorVersion "None",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types",
-    owl:versionInfo "0.9",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_ice_sheets",
-    dc:date "December 15, 2011",
     dc:language "english",
     dc:creator "SSIII Project Team",
     rdfs:comment "This ontology describes the types of ice of land origin found floating in the sea.",
@@ -50,6 +53,9 @@ AnnotationProperty: dc:publisher
 AnnotationProperty: owl:priorVersion
 
     
+AnnotationProperty: xhv:license
+
+    
 AnnotationProperty: dc:subject
 
     
@@ -62,9 +68,6 @@ AnnotationProperty: rdfs:comment
 AnnotationProperty: owl:versionInfo
 
     
-AnnotationProperty: rdfs:seeAlso
-
-    
 AnnotationProperty: dc:language
 
     
@@ -74,13 +77,13 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
-AnnotationProperty: dc:title
-
-    
 AnnotationProperty: muo:measuresQuality
 
     
 AnnotationProperty: muo:preferredUnit
+
+    
+AnnotationProperty: dc:title
 
     
 AnnotationProperty: dc:rights
@@ -107,17 +110,17 @@ Datatype: rdfs:Literal
 ObjectProperty: muo:measuresQuality
 
     
-Class: iolo:IceIsland
+Class: IceIsland
 
     Annotations: 
         rdfs:comment "A large piece of floating ice protruding about 5 m above sea-level, which has broken away from an Arctic ice shelf, having a thickness of 15-30 m and an area of from a few thousand square meters to 500 km2 or more, and usually characterized by a regularly undulating surface which gives it a ribbed appearance from the air. (10.4.3) [Note: Antarctic use is slightly different and refers to a grounded part of a floating ice sheet which rises significantly higher than its surroundings, eg Butler Island. There are also more substantial features, eg the Lyddan Ice Rise.]",
         rdfs:label "Ice island"
     
     SubClassOf: 
-        iolo:IceOfLandOrigin
+        IceOfLandOrigin
     
     
-Class: iolo:GlacierBerg
+Class: GlacierBerg
 
     Annotations: 
         rdfs:label "Glacier berg",
@@ -125,10 +128,10 @@ Class: iolo:GlacierBerg
         rdfs:comment "An irregularly shaped iceberg"
     
     SubClassOf: 
-        iolo:Iceberg
+        Iceberg
     
     
-Class: iolo:Iceberg
+Class: Iceberg
 
     Annotations: 
         rdfs:label "Iceberg",
@@ -136,10 +139,10 @@ Class: iolo:Iceberg
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4"
     
     SubClassOf: 
-        iolo:IceOfLandOrigin
+        GlacierIce
     
     
-Class: iolo:Glacier
+Class: Glacier
 
     Annotations: 
         rdfs:label "Glacier",
@@ -147,21 +150,10 @@ Class: iolo:Glacier
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.2"
     
     SubClassOf: 
-        iolo:IceOfLandOrigin
+        IceOfLandOrigin
     
     
-Class: iolo:BergyBit
-
-    Annotations: 
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.3",
-        rdfs:label "Bergy bit",
-        rdfs:comment "A large piece of floating ice of land origin, showing less than 5 m above sea-level and 100-300 m2 in area (10.4.4 Ed.) [Note: it might be better to say no more than 20 metres long, rather than give an area]"
-    
-    SubClassOf: 
-        iolo:Iceberg
-    
-    
-Class: iolo:IceShelf
+Class: IceShelf
 
     Annotations: 
         rdfs:label "Ice shelf",
@@ -169,10 +161,21 @@ Class: iolo:IceShelf
         rdfs:comment "A floating ice sheet of considerable thickness showing 2-50 m or more above sea-level, attached to the coast or a glacier. Usually of great horizontal extent and with a level or gently undulating surface. Nourished by annual snow accumulation at the surface and often also by the seaward extension of land glaciers. Limited areas may be aground. The seaward edge is termed an ice front."
     
     SubClassOf: 
-        iolo:IceOfLandOrigin
+        IceOfLandOrigin
     
     
-Class: iolo:IceOfLandOrigin
+Class: BergyBit
+
+    Annotations: 
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.3",
+        rdfs:label "Bergy bit",
+        rdfs:comment "A large piece of floating ice of land origin, showing less than 5 m above sea-level and 100-300 m2 in area (10.4.4 Ed.) [Note: it might be better to say no more than 20 metres long, rather than give an area]"
+    
+    SubClassOf: 
+        GlacierIce
+    
+    
+Class: IceOfLandOrigin
 
     Annotations: 
         rdfs:comment "Ice formed on land or in an ice shelf, found floating in water.",
@@ -180,7 +183,7 @@ Class: iolo:IceOfLandOrigin
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.1.2"
     
     
-Class: iolo:GlacierIce
+Class: GlacierIce
 
     Annotations: 
         rdfs:label "Glacier ice",
@@ -188,10 +191,10 @@ Class: iolo:GlacierIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.1"
     
     SubClassOf: 
-        iolo:IceOfLandOrigin
+        IceOfLandOrigin
     
     
-Class: iolo:IcebergTonque
+Class: IcebergTonque
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.5",
@@ -199,10 +202,10 @@ Class: iolo:IcebergTonque
         rdfs:comment "A major accumulation of icebergs, bergy bits and growlers projecting from the coast, held in place by grounding or joined together by fast ice"
     
     SubClassOf: 
-        iolo:IceOfLandOrigin
+        IceOfLandOrigin
     
     
-Class: iolo:TabularBerg
+Class: TabularBerg
 
     Annotations: 
         rdfs:comment "Most flat-topped icebergs form by calving from an ice shelf and show horizontal banding (cf. ice island).",
@@ -210,10 +213,10 @@ Class: iolo:TabularBerg
         rdfs:label "Tabular berg"
     
     SubClassOf: 
-        iolo:Iceberg
+        Iceberg
     
     
-Class: iolo:Growler
+Class: Growler
 
     Annotations: 
         rdfs:comment "A smaller piece of ice of land origin than a bergy bit. The color is usually white, but sometimes transparent or blue-green or nearly black, normally occupying an area of about 20 m2. Growlers are distinguished with difficulty when they are surrounded by ice and also in heavy swell. ",
@@ -221,18 +224,21 @@ Class: iolo:Growler
         rdfs:label "Growler"
     
     SubClassOf: 
-        iolo:Iceberg
+        GlacierIce
     
     
 Individual: physical-quality:area
 
     
-Individual: iolo:fractionalArea
+Individual: fractionalArea
 
     Facts:  
      muo:measuresQuality  physical-quality:fraction,
      muo:measuresQuality  physical-quality:area
     
+    
+Individual: <http://creativecommons.org/publicdomain/zero/1.0/>
+
     
 Individual: physical-quality:fraction
 
