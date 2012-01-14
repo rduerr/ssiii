@@ -31,10 +31,14 @@
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="xhv" IRI="http://www.w3.org/1999/xhtml/vocab#"/>
-    <Import>http://purl.org/nsidc/ssiii/annotations.owl</Import>
+    <Import>http://purl.org/nsidc/ssiii/annotations</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology describes the forms of floating sea ice.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
@@ -45,10 +49,6 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology describes the forms of floating sea ice.</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="xhv:license"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
     </Annotation>
@@ -57,12 +57,12 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -113,55 +113,55 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes</Literal>
     </Annotation>
     <Declaration>
-        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <Class IRI="BigFloe"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:BrashIce"/>
+        <Class IRI="BrashIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:FastIce"/>
+        <Class IRI="FastIce"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class IRI="Floe"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:Floeberg"/>
+        <Class IRI="Floeberg"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <Class IRI="GiantFloe"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:IceBreccia"/>
+        <Class IRI="IceBreccia"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:IceCake"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:MediumFloe"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:PancakeIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:SeaIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:SmallFloe"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:SmallIceCake"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:VastFloe"/>
+        <Class IRI="IceCake"/>
     </Declaration>
     <Declaration>
         <Class IRI="IceFragment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IceWithForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MediumFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PancakeIce"/>
     </Declaration>
     <Declaration>
         <Class IRI="RiverOrLakeIce"/>
     </Declaration>
     <Declaration>
         <Class IRI="SeaIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SmallFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SmallIceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VastFloe"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#IceOfLandOrigin"/>
@@ -212,6 +212,9 @@
         <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     </Declaration>
     <Declaration>
@@ -245,9 +248,9 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </Declaration>
     <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <Class IRI="BigFloe"/>
         <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DataProperty IRI="hasFloeSize"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
                 <FacetRestriction facet="&xsd;minInclusive">
@@ -260,9 +263,9 @@
         </DataAllValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class IRI="Floe"/>
         <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DataProperty IRI="hasFloeSize"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
                 <FacetRestriction facet="&xsd;minInclusive">
@@ -272,9 +275,9 @@
         </DataAllValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <Class IRI="GiantFloe"/>
         <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DataProperty IRI="hasFloeSize"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
                 <FacetRestriction facet="&xsd;minInclusive">
@@ -284,13 +287,13 @@
         </DataAllValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:IceCake"/>
+        <Class IRI="IceCake"/>
         <ObjectIntersectionOf>
             <ObjectComplementOf>
-                <Class abbreviatedIRI="wmo:PancakeIce"/>
+                <Class IRI="PancakeIce"/>
             </ObjectComplementOf>
             <DataAllValuesFrom>
-                <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+                <DataProperty IRI="hasFloeSize"/>
                 <DatatypeRestriction>
                     <Datatype abbreviatedIRI="xsd:decimal"/>
                     <FacetRestriction facet="&xsd;maxExclusive">
@@ -301,9 +304,9 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:MediumFloe"/>
+        <Class IRI="MediumFloe"/>
         <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DataProperty IRI="hasFloeSize"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
                 <FacetRestriction facet="&xsd;maxExclusive">
@@ -316,9 +319,9 @@
         </DataAllValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:SmallFloe"/>
+        <Class IRI="SmallFloe"/>
         <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DataProperty IRI="hasFloeSize"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
                 <FacetRestriction facet="&xsd;minInclusive">
@@ -331,17 +334,17 @@
         </DataAllValuesFrom>
     </EquivalentClasses>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:BigFloe"/>
-        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class IRI="BigFloe"/>
+        <Class IRI="Floe"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:BrashIce"/>
-        <Class abbreviatedIRI="wmo:IceCake"/>
+        <Class IRI="BrashIce"/>
+        <Class IRI="IceCake"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:BrashIce"/>
+        <Class IRI="BrashIce"/>
         <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DataProperty IRI="hasFloeSize"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
                 <FacetRestriction facet="&xsd;maxExclusive">
@@ -351,59 +354,63 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:FastIce"/>
+        <Class IRI="FastIce"/>
         <Class IRI="SeaIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class IRI="Floe"/>
         <Class IRI="SeaIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:Floeberg"/>
+        <Class IRI="Floeberg"/>
         <Class IRI="SeaIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:GiantFloe"/>
-        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class IRI="GiantFloe"/>
+        <Class IRI="Floe"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:IceBreccia"/>
+        <Class IRI="IceBreccia"/>
         <Class IRI="SeaIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:IceCake"/>
+        <Class IRI="IceCake"/>
         <Class IRI="SeaIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:MediumFloe"/>
-        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class IRI="IceFragment"/>
+        <Class IRI="IceWithForm"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:PancakeIce"/>
+        <Class IRI="MediumFloe"/>
+        <Class IRI="Floe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PancakeIce"/>
         <Class IRI="SeaIce"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:PancakeIce"/>
+        <Class IRI="PancakeIce"/>
         <ObjectIntersectionOf>
             <ObjectIntersectionOf>
                 <ObjectComplementOf>
-                    <Class abbreviatedIRI="wmo:FastIce"/>
+                    <Class IRI="FastIce"/>
                 </ObjectComplementOf>
                 <ObjectComplementOf>
-                    <Class abbreviatedIRI="wmo:Floe"/>
+                    <Class IRI="Floe"/>
                 </ObjectComplementOf>
                 <ObjectComplementOf>
-                    <Class abbreviatedIRI="wmo:Floeberg"/>
+                    <Class IRI="Floeberg"/>
                 </ObjectComplementOf>
                 <ObjectComplementOf>
-                    <Class abbreviatedIRI="wmo:IceBreccia"/>
+                    <Class IRI="IceBreccia"/>
                 </ObjectComplementOf>
                 <ObjectComplementOf>
-                    <Class abbreviatedIRI="wmo:IceCake"/>
+                    <Class IRI="IceCake"/>
                 </ObjectComplementOf>
             </ObjectIntersectionOf>
             <DataAllValuesFrom>
-                <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+                <DataProperty IRI="hasFloeSize"/>
                 <DatatypeRestriction>
                     <Datatype abbreviatedIRI="xsd:decimal"/>
                     <FacetRestriction facet="&xsd;minInclusive">
@@ -417,17 +424,25 @@
         </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:SmallFloe"/>
-        <Class abbreviatedIRI="wmo:Floe"/>
+        <Class IRI="RiverOrLakeIce"/>
+        <Class IRI="IceFragment"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:SmallIceCake"/>
-        <Class abbreviatedIRI="wmo:IceCake"/>
+        <Class IRI="SeaIce"/>
+        <Class IRI="IceFragment"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:SmallIceCake"/>
+        <Class IRI="SmallFloe"/>
+        <Class IRI="Floe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SmallIceCake"/>
+        <Class IRI="IceCake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SmallIceCake"/>
         <DataAllValuesFrom>
-            <DataProperty abbreviatedIRI="wmo:hasFloeSize"/>
+            <DataProperty IRI="hasFloeSize"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
                 <FacetRestriction facet="&xsd;maxExclusive">
@@ -437,24 +452,12 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="wmo:VastFloe"/>
-        <Class abbreviatedIRI="wmo:Floe"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IceFragment"/>
-        <Class abbreviatedIRI="wmo:SeaIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="RiverOrLakeIce"/>
-        <Class IRI="IceFragment"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SeaIce"/>
-        <Class IRI="IceFragment"/>
+        <Class IRI="VastFloe"/>
+        <Class IRI="Floe"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#IceOfLandOrigin"/>
-        <Class abbreviatedIRI="wmo:SeaIce"/>
+        <Class IRI="IceWithForm"/>
     </SubClassOf>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
@@ -468,218 +471,123 @@
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:BigFloe</AbbreviatedIRI>
+        <IRI>BigFloe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:BigFloe</AbbreviatedIRI>
+        <IRI>BigFloe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">500  2000 m across</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:BigFloe</AbbreviatedIRI>
+        <IRI>BigFloe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Big floe</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:BrashIce</AbbreviatedIRI>
+        <IRI>BrashIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.3.2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:BrashIce</AbbreviatedIRI>
+        <IRI>BrashIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Accumulations of floating ice made up of fragments not more than 2 m across, the wreckage of other forms of ice as a result of melting. [Note: BAS usage is normally that brash is small fragments of glacier ice. We also use the term porridge to refer to a mass of fragments, often under slight pressure, through which navigation is difficult.]</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:BrashIce</AbbreviatedIRI>
+        <IRI>BrashIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Brash ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:FastIce</AbbreviatedIRI>
+        <IRI>FastIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.3</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:FastIce</AbbreviatedIRI>
+        <IRI>FastIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:FastIce</AbbreviatedIRI>
+        <IRI>FastIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Fast ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:Floe</AbbreviatedIRI>
+        <IRI>Floe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:Floe</AbbreviatedIRI>
+        <IRI>Floe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Any relatively flat piece of sea ice 20 m or more across. Floes are subdivided according to horizontal extent.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:Floe</AbbreviatedIRI>
+        <IRI>Floe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floe</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:Floeberg</AbbreviatedIRI>
+        <IRI>Floeberg</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section7.5</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:Floeberg</AbbreviatedIRI>
+        <IRI>Floeberg</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:Floeberg</AbbreviatedIRI>
+        <IRI>Floeberg</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Floeberg</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:GiantFloe</AbbreviatedIRI>
+        <IRI>GiantFloe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:GiantFloe</AbbreviatedIRI>
+        <IRI>GiantFloe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Over 10 km across.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:GiantFloe</AbbreviatedIRI>
+        <IRI>GiantFloe</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Giant floe</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:IceBreccia</AbbreviatedIRI>
+        <IRI>IceBreccia</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.5</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:IceBreccia</AbbreviatedIRI>
+        <IRI>IceBreccia</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice of different stages of development frozen together</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:IceBreccia</AbbreviatedIRI>
+        <IRI>IceBreccia</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice breccia</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:IceCake</AbbreviatedIRI>
+        <IRI>IceCake</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.3</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:IceCake</AbbreviatedIRI>
+        <IRI>IceCake</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Any relatively flat piece of sea ice less than 20 m across</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:IceCake</AbbreviatedIRI>
+        <IRI>IceCake</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice cake</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:MediumFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.4</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:MediumFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Over 10 km across.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:MediumFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Medium floe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:PancakeIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.4</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:PancakeIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Predominantly circular plates of ice from 30 cm to 3 m in diameter, and up to about 10 cm in thickness, with raised rims due to the pieces striking against one another. It may be formed on a slight swell from grease ice, shuga or slush or as a result of the breaking of ice rind, nilas or, under heavy swell, of grey ice.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:PancakeIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Pancake ice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:SeaIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.1</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:SeaIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Any form of ice floating in water. The principal kinds of floating ice at the sea surface are sea ice which is formed by the freezing of sea water at the surface, lake ice and river ice formed on rivers or lakes and glacier ice (ice of land origin). The concept also includes ice that is grounded.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:SeaIce</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Forms of floating ice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:SmallFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.5</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:SmallFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">20  100 m across</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:SmallFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Small floe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:SmallIceCake</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.3.1</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:SmallIceCake</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">An ice cake less than 2 m across</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:SmallIceCake</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Small ice cake</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <AbbreviatedIRI>wmo:VastFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.2</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>wmo:VastFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2 to 10 km across</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>wmo:VastFloe</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Vast floe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-        <AbbreviatedIRI>wmo:hasFloeSize</AbbreviatedIRI>
-        <IRI>http://purl.oclc.org/NET/muo/ucum/unit/length/meter</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -695,6 +603,51 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IceFragment</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice fragment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>IceWithForm</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceWithForm</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Any form of ice floating in water. The principal kinds of floating ice at the sea surface are sea ice which is formed by the freezing of sea water at the surface, lake ice and river ice formed on rivers or lakes and glacier ice (ice of land origin). The concept also includes ice that is grounded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceWithForm</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Forms of floating ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>MediumFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>MediumFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Over 10 km across.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MediumFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Medium floe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>PancakeIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PancakeIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Predominantly circular plates of ice from 30 cm to 3 m in diameter, and up to about 10 cm in thickness, with raised rims due to the pieces striking against one another. It may be formed on a slight swell from grease ice, shuga or slush or as a result of the breaking of ice rind, nilas or, under heavy swell, of grey ice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PancakeIce</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pancake ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -725,6 +678,56 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>SeaIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>SmallFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SmallFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">20  100 m across</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SmallFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Small floe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>SmallIceCake</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.3.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SmallIceCake</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An ice cake less than 2 m across</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SmallIceCake</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Small ice cake</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>VastFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>VastFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2 to 10 km across</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>VastFloe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Vast floe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+        <IRI>hasFloeSize</IRI>
+        <IRI>http://purl.oclc.org/NET/muo/ucum/unit/length/meter</IRI>
     </AnnotationAssertion>
 </Ontology>
 
