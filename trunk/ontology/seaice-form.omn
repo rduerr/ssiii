@@ -18,7 +18,7 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 Ontology: <http://purl.org/wmo/seaice/form#>
 
-Import: <http://purl.org/nsidc/ssiii/annotations.owl>
+Import: <http://purl.org/nsidc/ssiii/annotations>
 
 Annotations: 
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs",
@@ -114,13 +114,13 @@ ObjectProperty: hasComponent
 ObjectProperty: muo:measuresQuality
 
     
-DataProperty: wmo:hasFloeSize
+DataProperty: hasFloeSize
 
     Annotations: 
         muo:preferredUnit <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>
     
     
-Class: wmo:VastFloe
+Class: VastFloe
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.2",
@@ -128,10 +128,10 @@ Class: wmo:VastFloe
         rdfs:comment "2 to 10 km across"
     
     SubClassOf: 
-        wmo:Floe
+        Floe
     
     
-Class: wmo:FastIce
+Class: FastIce
 
     Annotations: 
         rdfs:comment "Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition",
@@ -153,7 +153,7 @@ Class: RiverOrLakeIce
         IceFragment
     
     
-Class: wmo:MediumFloe
+Class: MediumFloe
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.4",
@@ -161,13 +161,13 @@ Class: wmo:MediumFloe
         rdfs:label "Medium floe"
     
     EquivalentTo: 
-        wmo:hasFloeSize only xsd:decimal[>= 100 , < 500]
+        hasFloeSize only xsd:decimal[>= 100 , < 500]
     
     SubClassOf: 
-        wmo:Floe
+        Floe
     
     
-Class: wmo:SmallIceCake
+Class: SmallIceCake
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.3.1",
@@ -175,11 +175,11 @@ Class: wmo:SmallIceCake
         rdfs:comment "An ice cake less than 2 m across"
     
     SubClassOf: 
-        wmo:IceCake,
-        wmo:hasFloeSize only xsd:decimal[< 2]
+        IceCake,
+        hasFloeSize only xsd:decimal[< 2]
     
     
-Class: wmo:BigFloe
+Class: BigFloe
 
     Annotations: 
         rdfs:label "Big floe",
@@ -187,13 +187,13 @@ Class: wmo:BigFloe
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2"
     
     EquivalentTo: 
-        wmo:hasFloeSize only xsd:decimal[>= 500 , < 2000]
+        hasFloeSize only xsd:decimal[>= 500 , < 2000]
     
     SubClassOf: 
-        wmo:Floe
+        Floe
     
     
-Class: wmo:Floeberg
+Class: Floeberg
 
     Annotations: 
         rdfs:comment "A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level",
@@ -204,7 +204,7 @@ Class: wmo:Floeberg
         SeaIce
     
     
-Class: wmo:GiantFloe
+Class: GiantFloe
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2.1",
@@ -212,13 +212,13 @@ Class: wmo:GiantFloe
         rdfs:comment "Over 10 km across."
     
     EquivalentTo: 
-        wmo:hasFloeSize only xsd:decimal[>= 10000]
+        hasFloeSize only xsd:decimal[>= 10000]
     
     SubClassOf: 
-        wmo:Floe
+        Floe
     
     
-Class: wmo:IceBreccia
+Class: IceBreccia
 
     Annotations: 
         rdfs:label "Ice breccia",
@@ -240,7 +240,7 @@ Class: SeaIce
         IceFragment
     
     
-Class: wmo:BrashIce
+Class: BrashIce
 
     Annotations: 
         rdfs:label "Brash ice",
@@ -248,11 +248,11 @@ Class: wmo:BrashIce
         rdfs:comment "Accumulations of floating ice made up of fragments not more than 2 m across, the wreckage of other forms of ice as a result of melting. [Note: BAS usage is normally that brash is small fragments of glacier ice. We also use the term porridge to refer to a mass of fragments, often under slight pressure, through which navigation is difficult.]"
     
     SubClassOf: 
-        wmo:IceCake,
-        wmo:hasFloeSize only xsd:decimal[< 2]
+        IceCake,
+        hasFloeSize only xsd:decimal[< 2]
     
     
-Class: wmo:Floe
+Class: Floe
 
     Annotations: 
         rdfs:comment "Any relatively flat piece of sea ice 20 m or more across. Floes are subdivided according to horizontal extent.",
@@ -260,13 +260,13 @@ Class: wmo:Floe
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.2"
     
     EquivalentTo: 
-        wmo:hasFloeSize only xsd:decimal[>= 20]
+        hasFloeSize only xsd:decimal[>= 20]
     
     SubClassOf: 
         SeaIce
     
     
-Class: wmo:SeaIce
+Class: IceWithForm
 
     Annotations: 
         rdfs:label "Forms of floating ice",
@@ -282,10 +282,10 @@ Class: IceFragment
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.1"
     
     SubClassOf: 
-        wmo:SeaIce
+        IceWithForm
     
     
-Class: wmo:PancakeIce
+Class: PancakeIce
 
     Annotations: 
         rdfs:comment "Predominantly circular plates of ice from 30 cm to 3 m in diameter, and up to about 10 cm in thickness, with raised rims due to the pieces striking against one another. It may be formed on a slight swell from grease ice, shuga or slush or as a result of the breaking of ice rind, nilas or, under heavy swell, of grey ice.",
@@ -293,16 +293,16 @@ Class: wmo:PancakeIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.4"
     
     SubClassOf: 
-        ((not (wmo:FastIce))
-         and (not (wmo:Floe))
-         and (not (wmo:Floeberg))
-         and (not (wmo:IceBreccia))
-         and (not (wmo:IceCake)))
-         and (wmo:hasFloeSize only xsd:decimal[>= "0.3"^^xsd:decimal , < 3]),
+        ((not (FastIce))
+         and (not (Floe))
+         and (not (Floeberg))
+         and (not (IceBreccia))
+         and (not (IceCake)))
+         and (hasFloeSize only xsd:decimal[>= "0.3"^^xsd:decimal , < 3]),
         SeaIce
     
     
-Class: wmo:IceCake
+Class: IceCake
 
     Annotations: 
         rdfs:label "Ice cake",
@@ -310,8 +310,8 @@ Class: wmo:IceCake
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section5.3"
     
     EquivalentTo: 
-        (not (wmo:PancakeIce))
-         and (wmo:hasFloeSize only xsd:decimal[< 20])
+        (not (PancakeIce))
+         and (hasFloeSize only xsd:decimal[< 20])
     
     SubClassOf: 
         SeaIce
@@ -320,10 +320,10 @@ Class: wmo:IceCake
 Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#IceOfLandOrigin>
 
     SubClassOf: 
-        wmo:SeaIce
+        IceWithForm
     
     
-Class: wmo:SmallFloe
+Class: SmallFloe
 
     Annotations: 
         rdfs:label "Small floe",
@@ -331,10 +331,10 @@ Class: wmo:SmallFloe
         rdfs:comment "20  100 m across"
     
     EquivalentTo: 
-        wmo:hasFloeSize only xsd:decimal[>= 2 , < 100]
+        hasFloeSize only xsd:decimal[>= 2 , < 100]
     
     SubClassOf: 
-        wmo:Floe
+        Floe
     
     
 Individual: physical-quality:area
