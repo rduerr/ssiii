@@ -8,8 +8,8 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
-Prefix: : <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
+Prefix: : <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
@@ -19,7 +19,7 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 Ontology: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 
-Import: <http://purl.org/nsidc/ssiii/annotations.owl>
+Import: <http://purl.org/nsidc/ssiii/annotations#>
 
 Annotations: 
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs",
@@ -39,8 +39,8 @@ Annotations:
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types",
     dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_ice_sheets",
     dc:language "english",
-    dc:creator "SSIII Project Team",
     rdfs:comment "This ontology describes the types of ice of land origin found floating in the sea.",
+    dc:creator "SSIII Project Team",
     dc:title "Terminology for the types of ice of land origin found floating in the sea",
     rdfs:label "Ice of land origin."
 
@@ -110,16 +110,6 @@ Datatype: rdfs:Literal
 ObjectProperty: muo:measuresQuality
 
     
-Class: IceIsland
-
-    Annotations: 
-        rdfs:comment "A large piece of floating ice protruding about 5 m above sea-level, which has broken away from an Arctic ice shelf, having a thickness of 15-30 m and an area of from a few thousand square meters to 500 km2 or more, and usually characterized by a regularly undulating surface which gives it a ribbed appearance from the air. (10.4.3) [Note: Antarctic use is slightly different and refers to a grounded part of a floating ice sheet which rises significantly higher than its surroundings, eg Butler Island. There are also more substantial features, eg the Lyddan Ice Rise.]",
-        rdfs:label "Ice island"
-    
-    SubClassOf: 
-        IceOfLandOrigin
-    
-    
 Class: GlacierBerg
 
     Annotations: 
@@ -129,6 +119,16 @@ Class: GlacierBerg
     
     SubClassOf: 
         Iceberg
+    
+    
+Class: IceIsland
+
+    Annotations: 
+        rdfs:comment "A large piece of floating ice protruding about 5 m above sea-level, which has broken away from an Arctic ice shelf, having a thickness of 15-30 m and an area of from a few thousand square meters to 500 km2 or more, and usually characterized by a regularly undulating surface which gives it a ribbed appearance from the air. (10.4.3) [Note: Antarctic use is slightly different and refers to a grounded part of a floating ice sheet which rises significantly higher than its surroundings, eg Butler Island. There are also more substantial features, eg the Lyddan Ice Rise.]",
+        rdfs:label "Ice island"
+    
+    SubClassOf: 
+        IceOfLandOrigin
     
     
 Class: Iceberg
@@ -205,17 +205,6 @@ Class: IcebergTonque
         IceOfLandOrigin
     
     
-Class: TabularBerg
-
-    Annotations: 
-        rdfs:comment "Most flat-topped icebergs form by calving from an ice shelf and show horizontal banding (cf. ice island).",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.2",
-        rdfs:label "Tabular berg"
-    
-    SubClassOf: 
-        Iceberg
-    
-    
 Class: Growler
 
     Annotations: 
@@ -225,6 +214,17 @@ Class: Growler
     
     SubClassOf: 
         GlacierIce
+    
+    
+Class: TabularBerg
+
+    Annotations: 
+        rdfs:comment "Most flat-topped icebergs form by calving from an ice shelf and show horizontal banding (cf. ice island).",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.2",
+        rdfs:label "Tabular berg"
+    
+    SubClassOf: 
+        Iceberg
     
     
 Individual: physical-quality:area
