@@ -23,31 +23,31 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="p0" IRI="http://purl.org/nsidc/ssiii/annotations#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="bfo2" IRI="http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#"/>
-    <Prefix name="" IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#"/>
     <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="" IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="xhv" IRI="http://www.w3.org/1999/xhtml/vocab#"/>
-    <Import>http://purl.org/nsidc/ssiii/annotations.owl</Import>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</Literal>
-    </Annotation>
+    <Import>http://purl.org/nsidc/ssiii/annotations#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="xhv:license"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -62,12 +62,12 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">January 13, 2012</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:rights"/>
