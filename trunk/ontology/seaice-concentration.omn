@@ -19,7 +19,7 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 Ontology: <http://purl.org/wmo/seaice/concentration#>
 
-Import: <http://purl.org/nsidc/ssiii/annotations.owl>
+Import: <http://purl.org/nsidc/ssiii/annotations#>
 
 Annotations: 
     xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
@@ -93,6 +93,9 @@ Datatype: xsd:double
 Datatype: xsd:integer
 
     
+ObjectProperty: dc:hasPart
+
+    
 DataProperty: hasMeanIceConcentration
 
     
@@ -135,13 +138,9 @@ Class: OpenWater
         rdfs:label "Open water",
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.6"
     
-    EquivalentTo: 
-        (hasIceOfLandOrigin value false)
-         and (hasMeanIceConcentration value 0.05)
-         and (hasSeaIce value true)
-         and (hasStdDevIceConcentration value 0.025)
-    
     SubClassOf: 
+        (hasMeanIceConcentration value 0.05)
+         and (hasStdDevIceConcentration value 0.025),
         IceWithConcentration
     
     
@@ -266,13 +265,9 @@ Class: BergyWater
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.5",
         rdfs:label "Bergy water"
     
-    EquivalentTo: 
-        (hasIceOfLandOrigin value true)
-         and (hasMeanIceConcentration value 0.05)
-         and (hasSeaIce value false)
-         and (hasStdDevIceConcentration value 0.025)
-    
     SubClassOf: 
-        IceWithConcentration
+        IceWithConcentration,
+        (hasMeanIceConcentration value 0.05)
+         and (hasStdDevIceConcentration value 0.025)
     
     

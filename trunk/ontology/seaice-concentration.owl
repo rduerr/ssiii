@@ -32,7 +32,7 @@
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="xhv" IRI="http://www.w3.org/1999/xhtml/vocab#"/>
     <Prefix name="geo" IRI="http://opengis.net/ont/OGC-GeoSPARQL/1.0/#"/>
-    <Import>http://purl.org/nsidc/ssiii/annotations.owl</Import>
+    <Import>http://purl.org/nsidc/ssiii/annotations#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="xhv:license"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
@@ -134,13 +134,46 @@
         <Class IRI="VeryOpenPackIce"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:hasPart"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
@@ -157,27 +190,6 @@
     <Declaration>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="BergyWater"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty IRI="hasIceOfLandOrigin"/>
-                <Literal datatypeIRI="&xsd;boolean">true</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasSeaIce"/>
-                <Literal datatypeIRI="&xsd;boolean">false</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="ClosePackIce"/>
         <ObjectIntersectionOf>
@@ -251,27 +263,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="OpenWater"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty IRI="hasIceOfLandOrigin"/>
-                <Literal datatypeIRI="&xsd;boolean">false</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasSeaIce"/>
-                <Literal datatypeIRI="&xsd;boolean">true</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="VeryClosePackIce"/>
         <ObjectIntersectionOf>
             <DataHasValue>
@@ -302,6 +293,19 @@
         <Class IRI="IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="BergyWater"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty IRI="hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="ClosePackIce"/>
         <Class IRI="PackIce"/>
     </SubClassOf>
@@ -328,6 +332,19 @@
     <SubClassOf>
         <Class IRI="OpenWater"/>
         <Class IRI="IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OpenWater"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty IRI="hasMeanIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="hasStdDevIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="PackIce"/>
