@@ -26,8 +26,8 @@
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="p0" IRI="http://purl.org/nsidc/ssiii/annotations#"/>
     <Prefix name="bfo2" IRI="http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#"/>
-    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
     <Prefix name="" IRI="http://purl.org/wmo/seaice/development#"/>
+    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
@@ -60,6 +60,10 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice development stages</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -165,18 +169,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DerivativeWorks"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Distribution"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Reproduction"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
@@ -298,11 +290,11 @@
             <DataProperty IRI="hasIceThickness"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
-                </FacetRestriction>
                 <FacetRestriction facet="&xsd;maxExclusive">
                     <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.1</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
@@ -317,11 +309,11 @@
             <DataProperty IRI="hasIceThickness"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
-                </FacetRestriction>
                 <FacetRestriction facet="&xsd;maxExclusive">
                     <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
@@ -553,11 +545,11 @@
             <DataProperty IRI="hasIceThickness"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
-                </FacetRestriction>
                 <FacetRestriction facet="&xsd;maxExclusive">
                     <Literal datatypeIRI="&xsd;decimal">0.7</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
