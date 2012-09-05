@@ -15,20 +15,88 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Ontology: <http://purl.org/nsidc/jcomm/egg#>
 
 Import: <http://purl.org/wmo/seaice#>
+Import: <http://purl.org/nsidc/ssiii/annotations#>
 
 Annotations: 
-    rdfs:label "Ice conditions codes"
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration",
+    owl:versionInfo "1.0",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice",
+    rdfs:label "Ice conditions codes",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age",
+    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the contents of an Egg code\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice",
+    dc:title "Terminology for the contents of an Egg Code",
+    dc:language "english",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types",
+    <http://www.w3.org/1999/xhtml/vocab#license> "http://creativecommons.org/publicdomain/zero/1.0/",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice",
+    owl:priorVersion "none",
+    dc:date "January 13, 2012",
+    rdfs:comment "This ontology models the contents of standard Egg Codes which are used to encode the characteristics of sea ice in ice charts.",
+    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf",
+    dc:publisher "National Snow and Ice Data Center",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types",
+    dc:creator "SSIII Project Team",
+    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice"
 
-AnnotationProperty: rdfs:seeAlso
+AnnotationProperty: dc:creator
+
+    
+AnnotationProperty: dc:publisher
+
+    
+AnnotationProperty: owl:priorVersion
+
+    
+AnnotationProperty: <http://www.w3.org/1999/xhtml/vocab#license>
+
+    
+AnnotationProperty: dc:subject
 
     
 AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: rdfs:seeAlso
+
+    
+AnnotationProperty: dc:language
+
+    
+AnnotationProperty: dc:date
+
+    
+AnnotationProperty: dc:source
+
+    
+AnnotationProperty: dc:title
 
     
 AnnotationProperty: muo:measuresQuality
 
     
 AnnotationProperty: muo:preferredUnit
+
+    
+AnnotationProperty: dc:rights
 
     
 Datatype: xsd:decimal
@@ -40,10 +108,10 @@ Datatype: xsd:string
 Datatype: xsd:double
 
     
-Datatype: xsd:integer
+Datatype: rdfs:Literal
 
     
-Datatype: rdfs:Literal
+Datatype: xsd:integer
 
     
 ObjectProperty: hasComponent
@@ -121,12 +189,6 @@ Class: wmo:FirstStageThinFirstYearIce
         wmo:ThinFirstYearIce
     
     
-Class: PredominantForm
-
-    SubClassOf: 
-        ssiii:IceWithForm
-    
-    
 Class: ssiii:ZoneComponent
 
     EquivalentTo: 
@@ -135,15 +197,10 @@ Class: ssiii:ZoneComponent
          and (hasIceFormCode max 1 xsd:string)
     
     
-Class: 7_10ths
+Class: PredominantForm
 
-    EquivalentTo: 
-        (wmo:hasMeanIceConcentration value 0.7)
-         and (wmo:hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "7"^^xsd:string
-    
     SubClassOf: 
-        ssiii:IceWithConcentration
+        ssiii:IceWithForm
     
     
 Class: 3_10ths
@@ -152,6 +209,17 @@ Class: 3_10ths
         hasConcentrationCode value "3"^^xsd:string,
         (wmo:hasMeanIceConcentration value 0.3)
          and (wmo:hasStdDevIceConcentration value 0.025)
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 7_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.7)
+         and (wmo:hasStdDevIceConcentration value 0.025),
+        hasConcentrationCode value "7"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -167,6 +235,9 @@ Class: Zone
         hasConcentrationCode exactly 1 xsd:string
     
     
+Class: wmo:BrashIce
+
+    
 Class: 6_7_10ths
 
     EquivalentTo: 
@@ -177,9 +248,6 @@ Class: 6_7_10ths
     SubClassOf: 
         ssiii:IceWithConcentration
     
-    
-Class: wmo:BrashIce
-
     
 Class: <http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Feature>
 
@@ -249,23 +317,23 @@ Class: 8_10_10ths
         ssiii:IceWithConcentration
     
     
-Class: 3_5_10ths
-
-    EquivalentTo: 
-        (wmo:hasMeanIceConcentration value 0.4)
-         and (wmo:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "3-5"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithConcentration
-    
-    
 Class: 8_10ths
 
     EquivalentTo: 
         (wmo:hasMeanIceConcentration value 0.8)
          and (wmo:hasStdDevIceConcentration value 0.025),
         hasConcentrationCode value "8"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 3_5_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.4)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "3-5"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -316,23 +384,23 @@ Class: wmo:TraceConcentration
         ssiii:IceWithConcentration
     
     
-Class: 5_7_10ths
-
-    EquivalentTo: 
-        (wmo:hasMeanIceConcentration value 0.6)
-         and (wmo:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "5-7"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithConcentration
-    
-    
 Class: 2_10ths
 
     EquivalentTo: 
         hasConcentrationCode value "2"^^xsd:string,
         (wmo:hasMeanIceConcentration value 0.2)
          and (wmo:hasStdDevIceConcentration value 0.025)
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 5_7_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.6)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "5-7"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -349,14 +417,14 @@ Class: 4_10ths
         ssiii:IceWithConcentration
     
     
-Class: ssiii:IceWithForm
-
-    
 Class: wmo:GiantFloe
 
     EquivalentTo: 
         hasIceFormCode value "7"^^xsd:string
     
+    
+Class: ssiii:IceWithForm
+
     
 Class: wmo:FirstYearIce
 
@@ -475,6 +543,12 @@ Class: wmo:YoungIce
 Class: wmo:IceWithDevelopmentStage
 
     
+Class: wmo:UnknownForm
+
+    SubClassOf: 
+        ssiii:UndeterminedOrUnknownForm
+    
+    
 Class: wmo:SecondYearIce
 
     EquivalentTo: 
@@ -482,12 +556,6 @@ Class: wmo:SecondYearIce
     
     SubClassOf: 
         wmo:OldIce
-    
-    
-Class: wmo:UnknownForm
-
-    SubClassOf: 
-        ssiii:UndeterminedOrUnknownForm
     
     
 Class: wmo:NewIce
@@ -539,17 +607,6 @@ Class: 10_10ths
         ssiii:IceWithConcentration
     
     
-Class: 2_4_10ths
-
-    EquivalentTo: 
-        (wmo:hasMeanIceConcentration value 0.3)
-         and (wmo:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "2-4"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithConcentration
-    
-    
 Class: wmo:SecondStageThinFirstYearIce
 
     EquivalentTo: 
@@ -559,26 +616,12 @@ Class: wmo:SecondStageThinFirstYearIce
         wmo:ThinFirstYearIce
     
     
-Class: wmo:SmallIceCake
-
-    
-Class: 7_9_10ths
+Class: 2_4_10ths
 
     EquivalentTo: 
-        (wmo:hasMeanIceConcentration value 0.8)
+        (wmo:hasMeanIceConcentration value 0.3)
          and (wmo:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "7-9"^^xsd:string
-    
-    SubClassOf: 
-        ssiii:IceWithConcentration
-    
-    
-Class: 9_10ths
-
-    EquivalentTo: 
-        (wmo:hasMeanIceConcentration value 0.9)
-         and (wmo:hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "9"^^xsd:string
+        hasConcentrationCode value "2-4"^^xsd:string
     
     SubClassOf: 
         ssiii:IceWithConcentration
@@ -592,6 +635,31 @@ Class: wmo:MediumFloe
     EquivalentTo: 
         hasIceFormCode value "4"^^xsd:string
     
+    
+Class: 9_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.9)
+         and (wmo:hasStdDevIceConcentration value 0.025),
+        hasConcentrationCode value "9"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: 7_9_10ths
+
+    EquivalentTo: 
+        (wmo:hasMeanIceConcentration value 0.8)
+         and (wmo:hasStdDevIceConcentration value 0.075),
+        hasConcentrationCode value "7-9"^^xsd:string
+    
+    SubClassOf: 
+        ssiii:IceWithConcentration
+    
+    
+Class: wmo:SmallIceCake
+
     
 Class: wmo:Floeberg
 
@@ -700,9 +768,6 @@ Class: 6_8_10ths
 Individual: physical-quality:area
 
     
-Individual: physical-quality:fraction
-
-    
 Individual: fractionalArea
 
     Types: 
@@ -712,4 +777,7 @@ Individual: fractionalArea
      muo:measuresQuality  physical-quality:fraction,
      muo:measuresQuality  physical-quality:area
     
+    
+Individual: physical-quality:fraction
+
     
