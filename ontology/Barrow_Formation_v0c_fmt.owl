@@ -1,0 +1,356 @@
+<rdf:RDF
+    xmlns:j.0="http://localhost/default#relates%20"
+    xmlns:j.1="http://localhost/default#forms%20most%20often%20"
+    xmlns:j.2="http://localhost/default#stirs%20"
+    xmlns:j.3="http://localhost/default#due%20"
+    xmlns:j.4="http://localhost/default#attaches%20"
+    xmlns:j.5="http://localhost/default#can%20"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:j.6="http://localhost/default#forms%20"
+    xmlns:j.7="http://localhost/default#moved%20to%20shore%20"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.8="http://localhost/default#driven%20in%20"
+    xmlns="http://localhost/default#"
+    xmlns:j.9="http://localhost/default#depends%20"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.10="http://localhost/default#used%20to%20"
+    xmlns:j.11="http://localhost/default#is%20"
+    xmlns:j.12="http://localhost/default#in%20Barrow%20"
+    xmlns:j.13="http://localhost/default#can%20form%20"
+    xmlns:j.14="http://localhost/default#accummulates%20"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.15="http://localhost/default#occurs%20"
+    xmlns:j.16="http://localhost/default#evaluated%20"
+    xmlns:j.17="http://localhost/default#thickens%20"
+    xmlns:j.18="http://localhost/default#forms%20on%20"
+    xmlns:j.19="http://localhost/default#attached%20"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Class rdf:about="http://localhost/default#VerySafeIce"/>
+  <owl:Class rdf:about="http://localhost/default#ColdDay"/>
+  <owl:Class rdf:about="http://localhost/default#Qunu">
+    <j.17:by>
+      <owl:Class rdf:about="http://localhost/default#RaftingProcess"/>
+    </j.17:by>
+    <hasMinorActivity>
+      <owl:Class rdf:about="http://localhost/default#IceJigging"/>
+    </hasMinorActivity>
+    <undergoes>
+      <owl:Class rdf:about="http://localhost/default#QunuBreakup"/>
+    </undergoes>
+    <hasMajorActivity>
+      <owl:Class rdf:about="http://localhost/default#Waiting"/>
+    </hasMajorActivity>
+    <cannot>
+      <owl:Class rdf:about="http://localhost/default#WalkOn"/>
+    </cannot>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#ForWalking"/>
+  <owl:Class rdf:about="http://localhost/default#Qaligiisitaq"/>
+  <owl:Class rdf:about="http://localhost/default#shore"/>
+  <owl:Class rdf:about="http://localhost/default#BreakingUpOfShoreFastIce">
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#Tuvaiyaaq"/>
+    </j.12:Terminology>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Uungheq"/>
+  <owl:Class rdf:about="http://localhost/default#Equipment"/>
+  <owl:Class rdf:about="http://localhost/default#SnowMachine">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Equipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#IceBerm"/>
+  <owl:Class rdf:about="http://localhost/default#Tide"/>
+  <owl:Class rdf:about="http://localhost/default#Heat"/>
+  <owl:Class rdf:about="http://localhost/default#Rock">
+    <retain rdf:resource="http://localhost/default#Heat"/>
+    <actas>
+      <owl:Class rdf:about="http://localhost/default#Thermostat"/>
+    </actas>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Qaamguq">
+    <owl:sameAs>
+      <owl:Class rdf:about="http://localhost/default#IceOnBeach"/>
+    </owl:sameAs>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#PackIceHit"/>
+  <owl:Class rdf:about="http://localhost/default#Sounding"/>
+  <owl:Class rdf:about="http://localhost/default#Tuvaiyaaq">
+    <is>
+      <owl:Class rdf:about="http://localhost/default#Unsafe"/>
+    </is>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#FirstPressureRidge">
+    <j.19:to>
+      <owl:Class rdf:about="http://localhost/default#Beach"/>
+    </j.19:to>
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#Igniquuq"/>
+    </j.12:Terminology>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#WaveBreakUp"/>
+  <owl:Class rdf:about="http://localhost/default#HighLowTideLine"/>
+  <owl:Class rdf:about="http://localhost/default#HeavyIce">
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#Tuvaqruaq"/>
+    </j.12:Terminology>
+    <j.7:by>
+      <owl:Class rdf:about="http://localhost/default#Current"/>
+    </j.7:by>
+    <hasthickness>
+      <owl:Class rdf:about="http://localhost/default#6ftOrMore"/>
+    </hasthickness>
+    <j.7:by>
+      <owl:Class rdf:about="http://localhost/default#Wind"/>
+    </j.7:by>
+    <is>
+      <owl:Class rdf:about="http://localhost/default#MultiYearIce"/>
+    </is>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#AnytimeOfShoreFastIce"/>
+  <owl:Class rdf:about="http://localhost/default#DarkIce">
+    <isavoidedby>
+      <owl:Class rdf:about="http://localhost/default#Locals"/>
+    </isavoidedby>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Sediment"/>
+  <owl:Class rdf:about="http://localhost/default#ShoreFastIce">
+    <includes rdf:resource="http://localhost/default#FirstPressureRidge"/>
+    <includes>
+      <owl:Class rdf:about="http://localhost/default#Igniquuq"/>
+    </includes>
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#Tuvaq"/>
+    </j.12:Terminology>
+    <inSavoonga>
+      <owl:Class rdf:about="http://localhost/default#Tuvaq"/>
+    </inSavoonga>
+    <buildsby>
+      <owl:Class rdf:about="http://localhost/default#AddonIce"/>
+    </buildsby>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Qaspik"/>
+  <owl:Class rdf:about="http://localhost/default#Tuvaq">
+    <requires>
+      <owl:Class rdf:about="http://localhost/default#Caution"/>
+    </requires>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Land"/>
+  <owl:Class rdf:about="http://localhost/default#SafetyHazard"/>
+  <owl:Class rdf:about="http://localhost/default#AddonIce">
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#iiguag"/>
+    </j.12:Terminology>
+    <inSavoonga>
+      <owl:Class rdf:about="http://localhost/default#Nevzin"/>
+    </inSavoonga>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Nov%20X%20+%201"/>
+  <owl:Class rdf:about="http://localhost/default#PartialBreakingUpofShoreFastIce">
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#Ilanaq"/>
+    </j.12:Terminology>
+    <canoccur rdf:resource="http://localhost/default#AnytimeOfShoreFastIce"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Sikuliaq">
+    <thickenstoform>
+      <owl:Class rdf:about="http://localhost/default#Sikuliaqruaq"/>
+    </thickenstoform>
+    <j.11:safe rdf:resource="http://localhost/default#ForWalking"/>
+    <within>
+      <owl:Class rdf:about="http://localhost/default#2Days"/>
+    </within>
+    <testedforsafety>
+      <owl:Class rdf:about="http://localhost/default#Tester"/>
+    </testedforsafety>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Sullek">
+    <doesnotallow>
+      <owl:Class rdf:about="http://localhost/default#Hunting"/>
+    </doesnotallow>
+    <cannot rdf:resource="http://localhost/default#WalkOn"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Qaniq"/>
+  <owl:Class rdf:about="http://localhost/default#Caution">
+    <j.16:by rdf:resource="http://localhost/default#Sounding"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Kiivnin"/>
+  <owl:Class rdf:about="http://localhost/default#Igniquuq">
+    <is>
+      <owl:Class rdf:about="http://localhost/default#SafestIce"/>
+    </is>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Weather">
+    <j.2:up rdf:resource="http://localhost/default#Sediment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Buktaaq"/>
+  <owl:Class rdf:about="http://localhost/default#GranulatedIce">
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#Qenghuk"/>
+    </j.12:Terminology>
+    <j.4:to rdf:resource="http://localhost/default#ShoreFastIce"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#90Days"/>
+  <owl:Class rdf:about="http://localhost/default#PancakeIce">
+    <j.12:Terminology rdf:resource="http://localhost/default#Buktaaq"/>
+    <formedby rdf:resource="http://localhost/default#WaveBreakUp"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Silt"/>
+  <owl:Class rdf:about="http://localhost/default#Sikuliaqruaq">
+    <youngerthan rdf:resource="http://localhost/default#90Days"/>
+    <thickerthan rdf:resource="http://localhost/default#Sikuliaq"/>
+    <inSavoonga>
+      <owl:Class rdf:about="http://localhost/default#Sikughlluggaq"/>
+    </inSavoonga>
+    <olderthan>
+      <owl:Class rdf:about="http://localhost/default#30Days"/>
+    </olderthan>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Iuu"/>
+  <owl:Class rdf:about="http://localhost/default#Naaqpauraq"/>
+  <owl:Class rdf:about="http://localhost/default#FirstShoreFastIce">
+    <undergoes rdf:resource="http://localhost/default#BreakingUpOfShoreFastIce"/>
+    <breaksoffdueto>
+      <owl:Class rdf:about="http://localhost/default#Currents"/>
+    </breaksoffdueto>
+    <j.12:Terminology rdf:resource="http://localhost/default#Tuvaq"/>
+    <formsin>
+      <owl:Class rdf:about="http://localhost/default#November"/>
+    </formsin>
+    <undergoes rdf:resource="http://localhost/default#PartialBreakingUpofShoreFastIce"/>
+    <stabilizestoform rdf:resource="http://localhost/default#ShoreFastIce"/>
+    <breaksoffdueto rdf:resource="http://localhost/default#PackIceHit"/>
+    <stuckto rdf:resource="http://localhost/default#Beach"/>
+    <breaksoffdueto>
+      <owl:Class rdf:about="http://localhost/default#HighWind"/>
+    </breaksoffdueto>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#OceanCurrent"/>
+  <owl:Class rdf:about="http://localhost/default#Coast">
+    <j.0:to rdf:resource="http://localhost/default#Beach"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Mugglik"/>
+  <owl:Class rdf:about="http://localhost/default#Tools">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Equipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#SnowFall"/>
+  <owl:Class rdf:about="http://localhost/default#LeeSideofPoint"/>
+  <owl:Class rdf:about="http://localhost/default#QunuBreakup">
+    <inSavoonga rdf:resource="http://localhost/default#Sullek"/>
+    <j.3:to rdf:resource="http://localhost/default#Wind"/>
+    <j.3:to rdf:resource="http://localhost/default#Tide"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#RaftingProcess">
+    <j.12:Terminology rdf:resource="http://localhost/default#Qaligiisitaq"/>
+    <inSavoonga rdf:resource="http://localhost/default#Qaspik"/>
+    <leadsto rdf:resource="http://localhost/default#Sikuliaq"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Qenghuk">
+    <j.5:be rdf:resource="http://localhost/default#SafetyHazard"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#CrystalFormation">
+    <owl:sameAs>
+      <owl:Class rdf:about="http://localhost/default#FrostFlowers"/>
+    </owl:sameAs>
+    <j.12:Terminology rdf:resource="http://localhost/default#Qaniq"/>
+    <leadsto>
+      <owl:Class rdf:about="http://localhost/default#WhiteIce"/>
+    </leadsto>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Tester">
+    <inSavoonga rdf:resource="http://localhost/default#Uungheq"/>
+    <j.12:Terminology rdf:resource="http://localhost/default#Naaqpauraq"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Lake"/>
+  <owl:Class rdf:about="http://localhost/default#LowWind"/>
+  <owl:Class rdf:about="http://localhost/default#Tuvaqruaq">
+    <is rdf:resource="http://localhost/default#VerySafeIce"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Nevzin">
+    <requires rdf:resource="http://localhost/default#Caution"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#OceanTemperature"/>
+  <owl:Class rdf:about="http://localhost/default#Shore?"/>
+  <owl:Class rdf:about="http://localhost/default#Oct."/>
+  <owl:Class rdf:about="http://localhost/default#Sauoougu">
+    <floatsto rdf:resource="http://localhost/default#Shore?"/>
+    <j.9:on rdf:resource="http://localhost/default#OceanTemperature"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#WindFormation">
+    <j.12:Terminology rdf:resource="http://localhost/default#Iuu"/>
+    <inSavoonga>
+      <owl:Class rdf:about="http://localhost/default#Vuu"/>
+    </inSavoonga>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#IcePiles">
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#euunrut"/>
+    </j.12:Terminology>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#All%20the%20time"/>
+  <owl:Class rdf:about="http://localhost/default#PressureRidge">
+    <j.8:by rdf:resource="http://localhost/default#WindFormation"/>
+    <j.15:over rdf:resource="http://localhost/default#Land"/>
+    <j.12:Terminology>
+      <owl:Class rdf:about="http://localhost/default#Taglaghneq"/>
+    </j.12:Terminology>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Iuuniq"/>
+  <owl:Class rdf:about="http://localhost/default#Tomcod"/>
+  <owl:Class rdf:about="http://localhost/default#IceJigging">
+    <localslookfor rdf:resource="http://localhost/default#Tomcod"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Qaumguuq"/>
+  <owl:Class rdf:about="http://localhost/default#OpenLead"/>
+  <owl:Class rdf:about="http://localhost/default#5ft%20thick%20on%20shore"/>
+  <owl:Class rdf:about="http://localhost/default#suuuoug?????"/>
+  <owl:Class rdf:about="http://localhost/default#SeaBed">
+    <madeof rdf:resource="http://localhost/default#Silt"/>
+    <madeof rdf:resource="http://localhost/default#Rock"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Sled">
+    <rdfs:subClassOf rdf:resource="http://localhost/default#Equipment"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Slush">
+    <gathersalong rdf:resource="http://localhost/default#Coast"/>
+    <j.8:by rdf:resource="http://localhost/default#Wind"/>
+    <moves rdf:resource="http://localhost/default#All%20the%20time"/>
+    <formsfirston rdf:resource="http://localhost/default#LeeSideofPoint"/>
+    <j.6:on>
+      <owl:Class rdf:about="http://localhost/default#OpenOcean"/>
+    </j.6:on>
+    <j.6:on rdf:resource="http://localhost/default#SeaBed"/>
+    <j.1:during rdf:resource="http://localhost/default#SnowFall"/>
+    <j.18:shore>
+      <owl:Class rdf:about="http://localhost/default#SlushMound"/>
+    </j.18:shore>
+    <inSavoonga rdf:resource="http://localhost/default#Kiivnin"/>
+    <j.12:Terminology rdf:resource="http://localhost/default#Mugglik"/>
+    <movesto rdf:resource="http://localhost/default#shore"/>
+    <j.7:by rdf:resource="http://localhost/default#OceanCurrent"/>
+    <turnsintobelowXTemp>
+      <owl:Class rdf:about="http://localhost/default#Very%20young%20ice"/>
+    </turnsintobelowXTemp>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#iiguag">
+    <requires rdf:resource="http://localhost/default#Caution"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#SlushMound">
+    <j.12:Terminology rdf:resource="http://localhost/default#Qaumguuq"/>
+    <j.14:on rdf:resource="http://localhost/default#shore"/>
+    <contains rdf:resource="http://localhost/default#Sediment"/>
+    <owl:sameAs rdf:resource="http://localhost/default#IceBerm"/>
+    <j.5:be rdf:resource="http://localhost/default#5ft%20thick%20on%20shore"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#Very%20young%20ice">
+    <j.6:in rdf:resource="http://localhost/default#Nov%20X%20+%201"/>
+    <j.12:Terminology rdf:resource="http://localhost/default#Qunu"/>
+    <j.10:happen rdf:resource="http://localhost/default#Oct."/>
+    <j.6:under rdf:resource="http://localhost/default#LowWind"/>
+    <j.13:on rdf:resource="http://localhost/default#ColdDay"/>
+    <turnsto rdf:resource="http://localhost/default#Sikuliaq"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://localhost/default#WallofHardtoBreakIce">
+    <j.12:Terminology rdf:resource="http://localhost/default#suuuoug?????"/>
+    <j.11:not rdf:resource="http://localhost/default#Qunu"/>
+    <j.11:not rdf:resource="http://localhost/default#Mugglik"/>
+  </owl:Class>
+</rdf:RDF>
