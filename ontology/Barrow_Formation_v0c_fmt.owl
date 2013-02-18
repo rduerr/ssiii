@@ -1,29 +1,29 @@
 <rdf:RDF
-    xmlns:j.0="http://localhost/default#relates%20"
-    xmlns:j.1="http://localhost/default#forms%20most%20often%20"
-    xmlns:j.2="http://localhost/default#stirs%20"
-    xmlns:j.3="http://localhost/default#due%20"
-    xmlns:j.4="http://localhost/default#attaches%20"
-    xmlns:j.5="http://localhost/default#can%20"
+    xmlns:j.0="http://localhost/default#relates"
+    xmlns:j.1="http://localhost/default#formsMostften"
+    xmlns:j.2="http://localhost/default#stirs"
+    xmlns:j.3="http://localhost/default#due"
+    xmlns:j.4="http://localhost/default#attaches"
+    xmlns:j.5="http://localhost/default#can"
     xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
-    xmlns:j.6="http://localhost/default#forms%20"
-    xmlns:j.7="http://localhost/default#moved%20to%20shore%20"
+    xmlns:j.6="http://localhost/default#forms"
+    xmlns:j.7="http://localhost/default#movedToShore"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.8="http://localhost/default#driven%20in%20"
+    xmlns:j.8="http://localhost/default#drivenIn"
     xmlns="http://localhost/default#"
-    xmlns:j.9="http://localhost/default#depends%20"
+    xmlns:j.9="http://localhost/default#depends"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:j.10="http://localhost/default#used%20to%20"
-    xmlns:j.11="http://localhost/default#is%20"
-    xmlns:j.12="http://localhost/default#in%20Barrow%20"
-    xmlns:j.13="http://localhost/default#can%20form%20"
-    xmlns:j.14="http://localhost/default#accummulates%20"
+    xmlns:j.10="http://localhost/default#usedTo"
+    xmlns:j.11="http://localhost/default#is"
+    xmlns:j.12="http://localhost/default#inBarrow"
+    xmlns:j.13="http://localhost/default#canForm"
+    xmlns:j.14="http://localhost/default#accummulates"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.15="http://localhost/default#occurs%20"
-    xmlns:j.16="http://localhost/default#evaluated%20"
-    xmlns:j.17="http://localhost/default#thickens%20"
-    xmlns:j.18="http://localhost/default#forms%20on%20"
-    xmlns:j.19="http://localhost/default#attached%20"
+    xmlns:j.15="http://localhost/default#occurs"
+    xmlns:j.16="http://localhost/default#evaluated"
+    xmlns:j.17="http://localhost/default#thickens"
+    xmlns:j.18="http://localhost/default#formsOn"
+    xmlns:j.19="http://localhost/default#attached"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Class rdf:about="http://localhost/default#VerySafeIce"/>
   <owl:Class rdf:about="http://localhost/default#ColdDay"/>
@@ -143,7 +143,7 @@
       <owl:Class rdf:about="http://localhost/default#Nevzin"/>
     </inSavoonga>
   </owl:Class>
-  <owl:Class rdf:about="http://localhost/default#Nov%20X%20+%201"/>
+  <owl:Class rdf:about="http://localhost/default#NovX+1"/>
   <owl:Class rdf:about="http://localhost/default#PartialBreakingUpofShoreFastIce">
     <j.12:Terminology>
       <owl:Class rdf:about="http://localhost/default#Ilanaq"/>
@@ -285,7 +285,7 @@
       <owl:Class rdf:about="http://localhost/default#euunrut"/>
     </j.12:Terminology>
   </owl:Class>
-  <owl:Class rdf:about="http://localhost/default#All%20the%20time"/>
+  <owl:Class rdf:about="http://localhost/default#AllTheTime"/>
   <owl:Class rdf:about="http://localhost/default#PressureRidge">
     <j.8:by rdf:resource="http://localhost/default#WindFormation"/>
     <j.15:over rdf:resource="http://localhost/default#Land"/>
@@ -300,8 +300,8 @@
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#Qaumguuq"/>
   <owl:Class rdf:about="http://localhost/default#OpenLead"/>
-  <owl:Class rdf:about="http://localhost/default#5ft%20thick%20on%20shore"/>
-  <owl:Class rdf:about="http://localhost/default#suuuoug?????"/>
+  <owl:Class rdf:about="http://localhost/default#5ftThickOnShore"/>
+  <owl:Class rdf:about="http://localhost/default#suuuoug??"/>
   <owl:Class rdf:about="http://localhost/default#SeaBed">
     <madeof rdf:resource="http://localhost/default#Silt"/>
     <madeof rdf:resource="http://localhost/default#Rock"/>
@@ -312,7 +312,7 @@
   <owl:Class rdf:about="http://localhost/default#Slush">
     <gathersalong rdf:resource="http://localhost/default#Coast"/>
     <j.8:by rdf:resource="http://localhost/default#Wind"/>
-    <moves rdf:resource="http://localhost/default#All%20the%20time"/>
+    <moves rdf:resource="http://localhost/default#AllTheTime"/>
     <formsfirston rdf:resource="http://localhost/default#LeeSideofPoint"/>
     <j.6:on>
       <owl:Class rdf:about="http://localhost/default#OpenOcean"/>
@@ -327,7 +327,7 @@
     <movesto rdf:resource="http://localhost/default#shore"/>
     <j.7:by rdf:resource="http://localhost/default#OceanCurrent"/>
     <turnsintobelowXTemp>
-      <owl:Class rdf:about="http://localhost/default#Very%20young%20ice"/>
+      <owl:Class rdf:about="http://localhost/default#VeryYoungIce"/>
     </turnsintobelowXTemp>
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#iiguag">
@@ -338,10 +338,10 @@
     <j.14:on rdf:resource="http://localhost/default#shore"/>
     <contains rdf:resource="http://localhost/default#Sediment"/>
     <owl:sameAs rdf:resource="http://localhost/default#IceBerm"/>
-    <j.5:be rdf:resource="http://localhost/default#5ft%20thick%20on%20shore"/>
+    <j.5:be rdf:resource="http://localhost/default#5ftThickOnShore"/>
   </owl:Class>
-  <owl:Class rdf:about="http://localhost/default#Very%20young%20ice">
-    <j.6:in rdf:resource="http://localhost/default#Nov%20X%20+%201"/>
+  <owl:Class rdf:about="http://localhost/default#VeryYoungIce">
+    <j.6:in rdf:resource="http://localhost/default#NovX+1"/>
     <j.12:Terminology rdf:resource="http://localhost/default#Qunu"/>
     <j.10:happen rdf:resource="http://localhost/default#Oct."/>
     <j.6:under rdf:resource="http://localhost/default#LowWind"/>
