@@ -107,9 +107,9 @@
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#AnytimeOfShoreFastIce"/>
   <owl:Class rdf:about="http://localhost/default#DarkIce">
-    <isavoidedby>
+    <isAvoidedBy>
       <owl:Class rdf:about="http://localhost/default#Locals"/>
-    </isavoidedby>
+    </isAvoidedBy>
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#Sediment"/>
   <owl:Class rdf:about="http://localhost/default#ShoreFastIce">
@@ -216,9 +216,9 @@
       <owl:Class rdf:about="http://localhost/default#November"/>
     </formsIn>
     <undergoes rdf:resource="http://localhost/default#PartialBreakingUpofShoreFastIce"/>
-    <stabilizestoform rdf:resource="http://localhost/default#ShoreFastIce"/>
-    <breaksoffdueto rdf:resource="http://localhost/default#PackIceHit"/>
-    <stuckto rdf:resource="http://localhost/default#Beach"/>
+    <stabilizesToForm rdf:resource="http://localhost/default#ShoreFastIce"/>
+    <breaksOffDueTo rdf:resource="http://localhost/default#PackIceHit"/>
+    <stuckTo rdf:resource="http://localhost/default#Beach"/>
     <BreaksOffDueTo>
       <owl:Class rdf:about="http://localhost/default#HighWind"/>
     </BreaksOffDueTo>
@@ -310,10 +310,10 @@
     <rdfs:subClassOf rdf:resource="http://localhost/default#Equipment"/>
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#Slush">
-    <gathersalong rdf:resource="http://localhost/default#Coast"/>
+    <gathersAlong rdf:resource="http://localhost/default#Coast"/>
     <j.8:by rdf:resource="http://localhost/default#Wind"/>
     <moves rdf:resource="http://localhost/default#AllTheTime"/>
-    <formsfirston rdf:resource="http://localhost/default#LeeSideofPoint"/>
+    <formsFirstOn rdf:resource="http://localhost/default#LeeSideofPoint"/>
     <j.6:on>
       <owl:Class rdf:about="http://localhost/default#OpenOcean"/>
     </j.6:on>
@@ -326,7 +326,7 @@
     <j.12:Terminology rdf:resource="http://localhost/default#Mugglik"/>
     <movesto rdf:resource="http://localhost/default#shore"/>
     <j.7:by rdf:resource="http://localhost/default#OceanCurrent"/>
-    <turnsintobelowXTemp>
+    <turnsIntoBelowXTemp>
       <owl:Class rdf:about="http://localhost/default#VeryYoungIce"/>
     </turnsintobelowXTemp>
   </owl:Class>
