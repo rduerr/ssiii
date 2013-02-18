@@ -1,6 +1,6 @@
 <rdf:RDF
     xmlns:j.0="http://localhost/default#relates"
-    xmlns:j.1="http://localhost/default#formsMostften"
+    xmlns:j.1="http://localhost/default#formsMostOften"
     xmlns:j.2="http://localhost/default#stirs"
     xmlns:j.3="http://localhost/default#due"
     xmlns:j.4="http://localhost/default#attaches"
@@ -212,16 +212,16 @@
       <owl:Class rdf:about="http://localhost/default#Currents"/>
     </breaksoffdueto>
     <j.12:Terminology rdf:resource="http://localhost/default#Tuvaq"/>
-    <formsin>
+    <formsIn>
       <owl:Class rdf:about="http://localhost/default#November"/>
-    </formsin>
+    </formsIn>
     <undergoes rdf:resource="http://localhost/default#PartialBreakingUpofShoreFastIce"/>
     <stabilizestoform rdf:resource="http://localhost/default#ShoreFastIce"/>
     <breaksoffdueto rdf:resource="http://localhost/default#PackIceHit"/>
     <stuckto rdf:resource="http://localhost/default#Beach"/>
-    <breaksoffdueto>
+    <BreaksOffDueTo>
       <owl:Class rdf:about="http://localhost/default#HighWind"/>
-    </breaksoffdueto>
+    </BreaksOffDueTo>
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#OceanCurrent"/>
   <owl:Class rdf:about="http://localhost/default#Coast">
@@ -232,7 +232,7 @@
     <rdfs:subClassOf rdf:resource="http://localhost/default#Equipment"/>
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#SnowFall"/>
-  <owl:Class rdf:about="http://localhost/default#LeeSideofPoint"/>
+  <owl:Class rdf:about="http://localhost/default#LeeSideOfPoint"/>
   <owl:Class rdf:about="http://localhost/default#QunuBreakup">
     <inSavoonga rdf:resource="http://localhost/default#Sullek"/>
     <j.3:to rdf:resource="http://localhost/default#Wind"/>
@@ -269,7 +269,7 @@
   </owl:Class>
   <owl:Class rdf:about="http://localhost/default#OceanTemperature"/>
   <owl:Class rdf:about="http://localhost/default#Shore?"/>
-  <owl:Class rdf:about="http://localhost/default#Oct."/>
+  <owl:Class rdf:about="http://localhost/default#October"/>
   <owl:Class rdf:about="http://localhost/default#Sauoougu">
     <floatsto rdf:resource="http://localhost/default#Shore?"/>
     <j.9:on rdf:resource="http://localhost/default#OceanTemperature"/>
