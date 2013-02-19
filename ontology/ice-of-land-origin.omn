@@ -1,11 +1,9 @@
 Prefix: daml: <http://www.daml.org/2001/03/daml+oil#>
-Prefix: wmo: <http://purl.org/wmo/seaice#>
 Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: cc: <http://creativecommons.org/ns#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
 Prefix: : <http://purl.org/wmo/seaice/iceOfLandOrigin#>
@@ -19,30 +17,29 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 Ontology: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 
-Import: <http://purl.org/nsidc/ssiii/annotations#>
 
 Annotations: 
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers",
+    owl:priorVersion "1.0",
     xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
-    owl:versionInfo "1.0",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers",
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs",
-    dc:date "January 13, 2012",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers>,
+    dc:date "February 18, 2013",
     rdfs:comment "A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers>,
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the types of ice of land origin found floating in the sea\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_icebergs",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_ice_sheets>,
     dc:publisher "National Snow and Ice Data Center",
-    owl:priorVersion "None",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_ice_sheets",
+    dc:creator "Ruth Duerr and the SSIII Project Team",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheet>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs>,
+    owl:versionInfo "2.0",
     dc:language "english",
-    dc:creator "SSIII Project Team",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types>,
     rdfs:comment "This ontology describes the types of ice of land origin found floating in the sea.",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs>,
     dc:title "Terminology for the types of ice of land origin found floating in the sea",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_icebergs>,
     rdfs:label "Ice of land origin."
 
 AnnotationProperty: dc:creator
@@ -78,10 +75,10 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
-AnnotationProperty: muo:measuresQuality
+AnnotationProperty: dc:title
 
     
-AnnotationProperty: dc:title
+AnnotationProperty: muo:measuresQuality
 
     
 AnnotationProperty: muo:preferredUnit
@@ -102,24 +99,23 @@ Datatype: xsd:string
 Datatype: xsd:double
 
     
-Datatype: xsd:integer
+Datatype: rdfs:Literal
 
     
-Datatype: rdfs:Literal
+Datatype: xsd:integer
 
     
 ObjectProperty: muo:measuresQuality
 
     
-Class: GlacierBerg
+Class: IceIsland
 
     Annotations: 
-        rdfs:label "Glacier berg",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.1",
-        rdfs:comment "An irregularly shaped iceberg"
+        rdfs:comment "A large piece of floating ice protruding about 5 m above sea-level, which has broken away from an Arctic ice shelf, having a thickness of 15-30 m and an area of from a few thousand square meters to 500 km2 or more, and usually characterized by a regularly undulating surface which gives it a ribbed appearance from the air. (10.4.3) [Note: Antarctic use is slightly different and refers to a grounded part of a floating ice sheet which rises significantly higher than its surroundings, eg Butler Island. There are also more substantial features, eg the Lyddan Ice Rise.]",
+        rdfs:label "Ice island"
     
     SubClassOf: 
-        Iceberg
+        IceOfLandOrigin
     
     
 Class: Iceberg
@@ -133,14 +129,15 @@ Class: Iceberg
         GlacierIce
     
     
-Class: IceIsland
+Class: GlacierBerg
 
     Annotations: 
-        rdfs:comment "A large piece of floating ice protruding about 5 m above sea-level, which has broken away from an Arctic ice shelf, having a thickness of 15-30 m and an area of from a few thousand square meters to 500 km2 or more, and usually characterized by a regularly undulating surface which gives it a ribbed appearance from the air. (10.4.3) [Note: Antarctic use is slightly different and refers to a grounded part of a floating ice sheet which rises significantly higher than its surroundings, eg Butler Island. There are also more substantial features, eg the Lyddan Ice Rise.]",
-        rdfs:label "Ice island"
+        rdfs:label "Glacier berg",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.1",
+        rdfs:comment "An irregularly shaped iceberg"
     
     SubClassOf: 
-        IceOfLandOrigin
+        Iceberg
     
     
 Class: Glacier
@@ -206,17 +203,6 @@ Class: IcebergTonque
         IceOfLandOrigin
     
     
-Class: Growler
-
-    Annotations: 
-        rdfs:comment "A smaller piece of ice of land origin than a bergy bit. The color is usually white, but sometimes transparent or blue-green or nearly black, normally occupying an area of about 20 m2. Growlers are distinguished with difficulty when they are surrounded by ice and also in heavy swell. ",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.4",
-        rdfs:label "Growler"
-    
-    SubClassOf: 
-        GlacierIce
-    
-    
 Class: TabularBerg
 
     Annotations: 
@@ -226,6 +212,17 @@ Class: TabularBerg
     
     SubClassOf: 
         Iceberg
+    
+    
+Class: Growler
+
+    Annotations: 
+        rdfs:comment "A smaller piece of ice of land origin than a bergy bit. The color is usually white, but sometimes transparent or blue-green or nearly black, normally occupying an area of about 20 m2. Growlers are distinguished with difficulty when they are surrounded by ice and also in heavy swell. ",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.4.4",
+        rdfs:label "Growler"
+    
+    SubClassOf: 
+        GlacierIce
     
     
 Individual: physical-quality:area
