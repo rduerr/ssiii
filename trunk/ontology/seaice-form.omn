@@ -1,10 +1,10 @@
 Prefix: wmo: <http://purl.org/wmo/seaice#>
 Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
+Prefix: iceoflandorigin: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: cc: <http://creativecommons.org/ns#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
 Prefix: : <http://purl.org/wmo/seaice/form#>
@@ -18,30 +18,30 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 Ontology: <http://purl.org/wmo/seaice/form#>
 
-Import: <http://purl.org/nsidc/ssiii/annotations>
+Import: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
 
 Annotations: 
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs",
-    xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    owl:priorVersion "1.0",
     rdfs:comment "This ontology describes the forms of floating sea ice.",
+    xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
     dc:title "Terminology for the forms of sea ice",
-    owl:versionInfo "1.0",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice",
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs",
-    dc:date "January 12, 2012",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice>,
+    dc:date "February 18, 2013",
     rdfs:comment "A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice>,
     dc:publisher "National Snow and Ice Data Center",
-    owl:priorVersion "None",
     rdfs:label "Sea ice forms",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs>,
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the forms of sea ice\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
+    dc:creator "Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team",
+    owl:versionInfo "2.0",
     dc:language "english",
-    dc:creator "SSIII Project Team",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes"
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice>
 
 AnnotationProperty: dc:creator
 
@@ -79,10 +79,10 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
-AnnotationProperty: muo:measuresQuality
+AnnotationProperty: dc:title
 
     
-AnnotationProperty: dc:title
+AnnotationProperty: muo:measuresQuality
 
     
 AnnotationProperty: muo:preferredUnit
@@ -103,10 +103,10 @@ Datatype: xsd:string
 Datatype: xsd:double
 
     
-Datatype: rdfs:Literal
+Datatype: xsd:integer
 
     
-Datatype: xsd:integer
+Datatype: rdfs:Literal
 
     
 ObjectProperty: hasComponent
@@ -174,6 +174,17 @@ Class: RiverOrLakeIce
         IceFragment
     
     
+Class: Floeberg
+
+    Annotations: 
+        rdfs:comment "A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level",
+        rdfs:label "Floeberg",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section7.5"
+    
+    SubClassOf: 
+        SeaIce
+    
+    
 Class: SmallIceCake
 
     Annotations: 
@@ -184,17 +195,6 @@ Class: SmallIceCake
     SubClassOf: 
         hasFloeSize only xsd:decimal[< 2],
         IceCake
-    
-    
-Class: Floeberg
-
-    Annotations: 
-        rdfs:comment "A massive piece of sea ice composed of a hummock, or a group of hummocks frozen together, presenting a separate floating ice fragment in ice-free water or among separate ice fragments. It may protrude up to 5 m above sea-level",
-        rdfs:label "Floeberg",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section7.5"
-    
-    SubClassOf: 
-        SeaIce
     
     
 Class: IceCake
@@ -256,7 +256,7 @@ Class: IceFragment
         IceWithForm
     
     
-Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#IceOfLandOrigin>
+Class: iceoflandorigin:IceOfLandOrigin
 
     SubClassOf: 
         IceWithForm
