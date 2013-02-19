@@ -5,7 +5,6 @@ Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: cc: <http://creativecommons.org/ns#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: bfo2: <http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#>
 Prefix: physical-quality: <http://purl.oclc.org/NET/muo/ucum/physical-quality/>
@@ -19,25 +18,24 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 Ontology: <http://purl.org/wmo/seaice/development#>
 
-Import: <http://purl.org/nsidc/ssiii/annotations#>
 
 Annotations: 
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types",
-    owl:versionInfo "1.0",
+    owl:priorVersion "1.0",
     dc:title "Terminology for the stages of development of sea ice",
     xhv:license "<http://creativecommons.org/publicdomain/zero/1.0/>",
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    dc:date "January 13, 2012",
     rdfs:label "Sea ice development stages",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age",
+    dc:date "February 18, 2013",
     rdfs:comment "A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age>,
     dc:publisher "National Snow and Ice Data Center",
-    owl:priorVersion "None",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age>,
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the stages of development of sea ice\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types",
+    owl:versionInfo "2.0",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types>,
     dc:language "english",
-    dc:creator "SSIII Project Team",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types>,
+    dc:creator "Jim McCusker, Ruth Duerr and the rest of the SSIII Project Team",
     rdfs:comment "This ontology encodes the stages of development of sea ice from the 2010 version of the WMO Sea Ice nomenclature."
 
 AnnotationProperty: dc:creator
@@ -73,10 +71,10 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
-AnnotationProperty: muo:preferredUnit
+AnnotationProperty: dc:title
 
     
-AnnotationProperty: dc:title
+AnnotationProperty: muo:preferredUnit
 
     
 AnnotationProperty: dc:rights
@@ -132,8 +130,8 @@ Class: MediumFirstYearIce
         rdfs:comment "First-year ice 70-120 cm thick."
     
     SubClassOf: 
-        hasIceThickness only xsd:decimal[>= "0.7"^^xsd:decimal , < "1.2"^^xsd:decimal],
-        FirstYearIce
+        FirstYearIce,
+        hasIceThickness only xsd:decimal[>= "0.7"^^xsd:decimal , < "1.2"^^xsd:decimal]
     
     
 Class: ResidualFirstYearIce
@@ -145,8 +143,8 @@ Class: ResidualFirstYearIce
     
     SubClassOf: 
         OldIce,
-        hasIceThickness only xsd:decimal[>= ".3"^^xsd:decimal , < "1.8"^^xsd:decimal],
-        hasIceAge only xsd:decimal[< "2"^^xsd:decimal]
+        hasIceAge only xsd:decimal[< "2"^^xsd:decimal],
+        hasIceThickness only xsd:decimal[>= ".3"^^xsd:decimal , < "1.8"^^xsd:decimal]
     
     
 Class: ThickFirstYearIce
@@ -157,8 +155,8 @@ Class: ThickFirstYearIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.3"
     
     SubClassOf: 
-        hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal],
-        FirstYearIce
+        FirstYearIce,
+        hasIceThickness only xsd:decimal[>= "1.2"^^xsd:decimal , < "2"^^xsd:decimal]
     
     
 Class: FrazilIce
@@ -239,8 +237,8 @@ Class: MultiYearIce
     
     SubClassOf: 
         OldIce,
-        hasIceThickness only xsd:decimal[< "3"^^xsd:decimal],
-        hasIceAge only xsd:decimal[>= "2"^^xsd:decimal]
+        hasIceAge only xsd:decimal[>= "2"^^xsd:decimal],
+        hasIceThickness only xsd:decimal[< "3"^^xsd:decimal]
     
     
 Class: OldIce
@@ -276,8 +274,8 @@ Class: YoungIce
     
     SubClassOf: 
         IceWithDevelopmentStage,
-        hasIceAge only xsd:decimal[< "1.0"^^xsd:decimal],
-        hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.3"^^xsd:decimal]
+        hasIceThickness only xsd:decimal[>= "0.1"^^xsd:decimal , < "0.3"^^xsd:decimal],
+        hasIceAge only xsd:decimal[< "1.0"^^xsd:decimal]
     
     
 Class: ThinFirstYearIce
@@ -317,17 +315,6 @@ Class: Shuga
         NewIce
     
     
-Class: GreaseIce
-
-    Annotations: 
-        rdfs:comment "A later stage of freezing than frazil ice when the crystals have coagulated to form a soupy layer on the surface. Grease ice reflects little light, giving the sea a matt appearance.",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.2",
-        rdfs:label "Grease ice"
-    
-    SubClassOf: 
-        NewIce
-    
-    
 Class: SecondYearIce
 
     Annotations: 
@@ -340,6 +327,17 @@ Class: SecondYearIce
         OldIce,
         hasIceThickness only xsd:decimal[< "2.5"^^xsd:decimal],
         hasIceAge only xsd:decimal[< "2"^^xsd:decimal]
+    
+    
+Class: GreaseIce
+
+    Annotations: 
+        rdfs:comment "A later stage of freezing than frazil ice when the crystals have coagulated to form a soupy layer on the surface. Grease ice reflects little light, giving the sea a matt appearance.",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.2",
+        rdfs:label "Grease ice"
+    
+    SubClassOf: 
+        NewIce
     
     
 Class: GrayIce
@@ -363,4 +361,5 @@ Class: Slush
     
     SubClassOf: 
         NewIce
+    
     
