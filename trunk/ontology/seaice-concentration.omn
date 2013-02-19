@@ -5,8 +5,8 @@ Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: cc: <http://creativecommons.org/ns#>
 Prefix: wmo-iolo: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
+Prefix: seaiceform: <http://purl.org/wmo/seaice/form#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Prefix: p0: <http://purl.org/nsidc/ssiii/annotations#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: : <http://purl.org/wmo/seaice/concentration#>
 Prefix: wmo-sif: <http://purl.org/wmo/seaice/form#>
@@ -19,25 +19,25 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 
 Ontology: <http://purl.org/wmo/seaice/concentration#>
 
-Import: <http://purl.org/nsidc/ssiii/annotations#>
+Import: <http://purl.org/wmo/seaice/form#>
 
 Annotations: 
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration",
-    xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    owl:priorVersion "1.0",
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology related to the concentration of ice in the ocean\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
-    owl:versionInfo "1.0",
-    owl:priorVersion "none",
+    xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice>,
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
-    dc:date "January 13, 2012",
     dc:title "Terminology related to the concentration of ice in the ocean",
+    dc:date "February 18, 2013",
     rdfs:comment "A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration>,
     dc:publisher "National Snow and Ice Data Center",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice>,
+    owl:versionInfo "2.0",
+    dc:creator "Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team",
     rdfs:comment "This ontology describes terms that denote the concentration of ice in a region of ocean.",
     dc:language "english",
-    dc:creator "SSIII Project Team",
-    dc:subject "http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration>,
     rdfs:label "Concentration"
 
 AnnotationProperty: dc:creator
@@ -202,17 +202,6 @@ Class: ConsolidatedIce
         IceWithConcentration
     
     
-Class: FastIce
-
-    Annotations: 
-        rdfs:comment "Consolidated solid ice attached to the shore, to an ice wall or to an ice front. It forms by freezing to the shore of the ice cover forming in the coastal zone or as a result of freezing of drifting ice of any age category to the shore or fast ice. Vertical movement may be observed during tidal oscillations. It can be preserved without fracturing for two or more years transforming from first-year ice to multiyear ice and even shelf ice. The fast ice width can vary from several hundreds of meters to several hundreds of kilometers. That part of fast ice presenting a narrow fringe of ice directly attached to the coast with a shallow bottom and unresponsive to tidal oscillations that remains after the fast ice has moved away is called the Ice foot. Fast ice at the initial stage of formation consisting of nilas and young ice with a width up to 100-200 m is called young coastal ice. When coding and depicting fast ice on ice charts, total concentration is not indicated as this is always equal to 10/10 in accordance with the definition.",
-        rdfs:label "Fast ice",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.3"
-    
-    SubClassOf: 
-        ConsolidatedIce
-    
-    
 Class: Ice-free
 
     Annotations: 
@@ -270,5 +259,11 @@ Class: BergyWater
         IceWithConcentration,
         (hasMeanIceConcentration value 0.05)
          and (hasStdDevIceConcentration value 0.025)
+    
+    
+Class: seaiceform:FastIce
+
+    SubClassOf: 
+        ConsolidatedIce
     
     
