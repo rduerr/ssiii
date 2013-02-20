@@ -3,13 +3,14 @@ Prefix: wmo: <http://purl.org/wmo/seaice#>
 Prefix: muo: <http://purl.oclc.org/NET/muo/muo#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-Prefix: cc: <http://creativecommons.org/ns#>
+Prefix: concentration: <http://purl.org/wmo/seaice/concentration#>
 Prefix: wmo-iolo: <http://purl.org/wmo/seaice/iceOfLandOrigin#>
+Prefix: cc: <http://creativecommons.org/ns#>
 Prefix: seaiceform: <http://purl.org/wmo/seaice/form#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: : <http://purl.org/wmo/seaice/concentration#>
 Prefix: wmo-sif: <http://purl.org/wmo/seaice/form#>
+Prefix: : <http://purl.org/wmo/seaice/concentration#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: geo: <http://opengis.net/ont/OGC-GeoSPARQL/1.0/#>
@@ -20,11 +21,12 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 Ontology: <http://purl.org/wmo/seaice/concentration#>
 
 Import: <http://purl.org/wmo/seaice/form#>
+Import: <http://semanticscience.org/ontology/sio.owl>
 
 Annotations: 
-    owl:priorVersion "1.0",
-    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology related to the concentration of ice in the ocean\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology related to the concentration of ice in the ocean\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
+    owl:priorVersion "1.0",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice>,
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
     dc:title "Terminology related to the concentration of ice in the ocean",
@@ -33,8 +35,8 @@ Annotations:
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration>,
     dc:publisher "National Snow and Ice Data Center",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice>,
-    owl:versionInfo "2.0",
     dc:creator "Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team",
+    owl:versionInfo "2.0",
     rdfs:comment "This ontology describes terms that denote the concentration of ice in a region of ocean.",
     dc:language "english",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration>,
@@ -97,19 +99,22 @@ Datatype: xsd:integer
 ObjectProperty: dc:hasPart
 
     
-DataProperty: hasMeanIceConcentration
+ObjectProperty: <http://semanticscience.org/resource/SIO_000008>
 
     
-DataProperty: hasSeaIce
+DataProperty: concentration:hasSeaIce
 
     
-DataProperty: hasIceOfLandOrigin
+DataProperty: concentration:hasIceConcentration
 
     
-DataProperty: hasStdDevIceConcentration
+DataProperty: <http://semanticscience.org/resource/SIO_000300>
 
     
-Class: VeryClosePackIce
+DataProperty: concentration:hasIceOfLandOrigin
+
+    
+Class: concentration:VeryClosePackIce
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.2",
@@ -117,22 +122,32 @@ Class: VeryClosePackIce
         rdfs:label "Very close pack ice"
     
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.95)
-         and (hasStdDevIceConcentration value 0.05)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.95)))))
+         and (concentration:hasIceConcentration value 0.95)
     
     SubClassOf: 
-        PackIce
+        concentration:PackIce
     
     
-Class: IceWithConcentration
+Class: concentration:IceWithConcentration
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2",
         rdfs:comment "The ratio of the area of ice features to the total area of a sea part (zone) delineated on the chart, expressed in tenths. The total concentration includes all stages of development and the partial concentration includes areas of ice of specific age or arrangement which comprise only part of the total concentration. Concentrations within 0-1/10 and 9/10 - 10/10 from instrumental observations can be expressed in hundredths.",
         rdfs:label "Concentration"
     
+    SubClassOf: 
+        <http://semanticscience.org/resource/SIO_010462>
     
-Class: OpenWater
+    
+Class: concentration:OpenWater
 
     Annotations: 
         rdfs:comment "A large area of freely navigable water in which sea ice is present in concentrations less than 1/10 and ice of land origin is absent.",
@@ -140,12 +155,19 @@ Class: OpenWater
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.6"
     
     SubClassOf: 
-        (hasMeanIceConcentration value 0.05)
-         and (hasStdDevIceConcentration value 0.025),
-        IceWithConcentration
+        concentration:IceWithConcentration,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))))
+         and (concentration:hasIceConcentration value 0.05)
     
     
-Class: PackIce
+Class: concentration:PackIce
 
     Annotations: 
         rdfs:label "Pack ice",
@@ -153,10 +175,10 @@ Class: PackIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.4"
     
     SubClassOf: 
-        IceWithConcentration
+        concentration:IceWithConcentration
     
     
-Class: CompactPackIce
+Class: concentration:CompactPackIce
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1",
@@ -164,15 +186,34 @@ Class: CompactPackIce
         rdfs:comment "Floating ice in which the concentration is 10/10 and no water is visible"
     
     EquivalentTo: 
-        (not (ConsolidatedIce))
-         and (hasMeanIceConcentration value 1.0)
-         and (hasStdDevIceConcentration value 0.01)
+        (not (concentration:ConsolidatedIce))
+         and (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.01)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 1.0)))))
+         and (concentration:hasIceConcentration value 1.0)
     
     SubClassOf: 
-        PackIce
+        concentration:PackIce
     
     
-Class: VeryOpenPackIce
+Class: <http://semanticscience.org/resource/SIO_010462>
+
+    
+Class: <http://semanticscience.org/resource/SIO_001109>
+
+    
+Class: concentration:IceConcentration
+
+    SubClassOf: 
+        <http://semanticscience.org/resource/SIO_000044>
+    
+    
+Class: concentration:VeryOpenPackIce
 
     Annotations: 
         rdfs:label "Very open pack ice",
@@ -180,14 +221,27 @@ Class: VeryOpenPackIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.5"
     
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.2)
-         and (hasStdDevIceConcentration value 0.075)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.2)))))
+         and (concentration:hasIceConcentration value 0.2)
     
     SubClassOf: 
-        PackIce
+        concentration:PackIce
     
     
-Class: ConsolidatedIce
+Class: seaiceform:IceWithForm
+
+    SubClassOf: 
+        <http://semanticscience.org/resource/SIO_010462>
+    
+    
+Class: concentration:ConsolidatedIce
 
     Annotations: 
         rdfs:label "Consolidated ice",
@@ -195,14 +249,27 @@ Class: ConsolidatedIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1.1"
     
     EquivalentTo: 
-        (hasMeanIceConcentration value 1.0)
-         and (hasStdDevIceConcentration value 0.001)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.001)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 1.0)))))
+         and (concentration:hasIceConcentration value 1.0)
     
     SubClassOf: 
-        IceWithConcentration
+        concentration:IceWithConcentration
     
     
-Class: Ice-free
+Class: <http://semanticscience.org/resource/SIO_000770>
+
+    
+Class: <http://semanticscience.org/resource/SIO_000044>
+
+    
+Class: concentration:Ice-free
 
     Annotations: 
         rdfs:comment "No ice is present. If ice of any kind is present this term shall not be used.",
@@ -210,15 +277,15 @@ Class: Ice-free
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.6"
     
     EquivalentTo: 
-        (hasIceOfLandOrigin value false)
-         and (hasSeaIce value false)
-         and (hasMeanIceConcentration max 0 xsd:decimal)
+        (concentration:hasIceOfLandOrigin value false)
+         and (concentration:hasSeaIce value false)
+         and (concentration:hasIceConcentration max 0 xsd:decimal)
     
     SubClassOf: 
-        IceWithConcentration
+        concentration:IceWithConcentration
     
     
-Class: ClosePackIce
+Class: concentration:ClosePackIce
 
     Annotations: 
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.3",
@@ -226,14 +293,21 @@ Class: ClosePackIce
         rdfs:label "Close pack ice"
     
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.75)
-         and (hasStdDevIceConcentration value 0.05)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.75)))))
+         and (concentration:hasIceConcentration value 0.75)
     
     SubClassOf: 
-        PackIce
+        concentration:PackIce
     
     
-Class: OpenPackIce
+Class: concentration:OpenPackIce
 
     Annotations: 
         rdfs:label "Open pack ice",
@@ -241,14 +315,21 @@ Class: OpenPackIce
         rdfs:comment "Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another"
     
     EquivalentTo: 
-        (hasMeanIceConcentration value 0.5)
-         and (hasStdDevIceConcentration value 0.075)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.5)))))
+         and (concentration:hasIceConcentration value 0.5)
     
     SubClassOf: 
-        PackIce
+        concentration:PackIce
     
     
-Class: BergyWater
+Class: concentration:BergyWater
 
     Annotations: 
         rdfs:comment "A large area of navigable water in which ice of land origin is present or possible at a total concentration less than 1/10. Such zones do not usually have a clearly expressed edge or boundary with ice-free water. A characterization of ice conditions in such areas can be made both on the basis of data from direct observations, data from previous observations or from climatic data.",
@@ -256,14 +337,21 @@ Class: BergyWater
         rdfs:label "Bergy water"
     
     SubClassOf: 
-        IceWithConcentration,
-        (hasMeanIceConcentration value 0.05)
-         and (hasStdDevIceConcentration value 0.025)
+        concentration:IceWithConcentration,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (concentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))))
+         and (concentration:hasIceConcentration value 0.05)
     
     
 Class: seaiceform:FastIce
 
     SubClassOf: 
-        ConsolidatedIce
+        concentration:ConsolidatedIce
     
     
