@@ -356,6 +356,3 @@ Class: seaiceform:FastIce
         concentration:ConsolidatedIce
     
     
-Rule: 
-    concentration:IceConcentration(?<urn:swrl#c>), sio:SIO_001109(?<urn:swrl#mean>), sio:SIO_000008(?<urn:swrl#c>, ?<urn:swrl#mean>), sio:SIO_000008(?<urn:swrl#i>, ?<urn:swrl#c>), sio:SIO_000300(?<urn:swrl#mean>, ?<urn:swrl#x>) -> concentration:hasIceConcentration(?<urn:swrl#i>, ?<urn:swrl#x>), sio:SIO_000300(?<urn:swrl#c>, ?<urn:swrl#x>)
-
