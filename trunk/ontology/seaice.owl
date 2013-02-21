@@ -24,33 +24,17 @@
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="geo" IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/"/>
-    <Import>http://purl.org/nsidc/ssiii/annotations#</Import>
+    <Import>http://purl.org/wmo/seaice/iceOfLandOrigin#</Import>
     <Import>http://purl.org/wmo/seaice/form#</Import>
     <Import>http://purl.org/wmo/seaice/concentration#</Import>
     <Import>http://purl.org/wmo/seaice/development#</Import>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -58,19 +42,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -78,27 +50,35 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:language"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">english</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -106,11 +86,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://www.w3.org/1999/xhtml/vocab#license"/>
@@ -118,43 +94,67 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">none</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">January 13, 2012</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">February 18, 2013</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:publisher"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">National Snow and Ice Data Center</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</IRI>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:rights"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Sea ice terminology&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">SSIII Project Team</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice terminology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice</IRI>
     </Annotation>
     <Declaration>
         <Class IRI="Zone"/>
