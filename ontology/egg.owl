@@ -10,96 +10,67 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://purl.org/nsidc/jcomm/egg#"
+     xml:base="http://purl.org/wmo/seaice#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://purl.org/nsidc/jcomm/egg#">
-    <Prefix name="ssiii" IRI="http://purl.org/nsidc/ssiii/seaice#"/>
+     ontologyIRI="http://purl.org/wmo/seaice#">
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="geo-gml" IRI="http://www.opengis.net/def/dataType/OGC-GML/3.0/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="wmo" IRI="http://purl.org/wmo/seaice#"/>
-    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
-    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
-    <Prefix name="" IRI="http://purl.org/nsidc/jcomm/egg#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://purl.org/wmo/seaice#</Import>
-    <Import>http://purl.org/nsidc/ssiii/annotations#</Import>
+    <Prefix name="geo" IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/"/>
+    <Import>http://purl.org/wmo/seaice/iceOfLandOrigin#</Import>
+    <Import>http://purl.org/wmo/seaice/form#</Import>
+    <Import>http://purl.org/wmo/seaice/concentration#</Import>
+    <Import>http://purl.org/wmo/seaice/development#</Import>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice conditions codes</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:rights"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Terminology for the contents of an Egg code&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Terminology for the contents of an Egg Code</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:language"/>
@@ -107,11 +78,15 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology describes all of the tems within the WMO sea ice nomenclature that have relevance to the egg codes used to encode ice charts.  Eventually, we hope to include all terms within the WMO nomenclature.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty IRI="http://www.w3.org/1999/xhtml/vocab#license"/>
@@ -119,23 +94,27 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">none</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">January 13, 2012</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">February 18, 2013</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology models the contents of standard Egg Codes which are used to encode the characteristics of sea ice in ice charts.</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:publisher"/>
@@ -143,1381 +122,136 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Sea ice terminology&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">SSIII Project Team</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice</Literal>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice terminology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice</IRI>
     </Annotation>
     <Declaration>
-        <Class abbreviatedIRI="muo:BaseUnit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="10_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="1_10th"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="1_2_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="1_3_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="2_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="2_3_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="2_4_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="3_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="3_4_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="3_5_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4_5_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="4_6_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="5_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="5_6_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="5_7_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="6_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="6_7_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="6_8_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="7_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="7_8_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="7_9_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="8_10_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="8_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="8_9_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="9+_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="9_10_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="9_10ths"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PredominantForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SecondaryForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="UnknownDevelopment"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Zone"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssiii:CanadaZone"/>
+        <Class abbreviatedIRI="geo:Feature"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
+        <Class abbreviatedIRI="geo:Geometry"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
+        <Class abbreviatedIRI="geo:SpatialObject"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="ssiii:ZoneComponent"/>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:BigFloe"/>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:BrashIce"/>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:FastIce"/>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:FirstStageThinFirstYearIce"/>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:FirstYearIce"/>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:Floeberg"/>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:GiantFloe"/>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:GrayIce"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:GrayWhiteIce"/>
+        <AnnotationProperty IRI="http://www.w3.org/1999/xhtml/vocab#license"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:Growler"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:IceCake"/>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:IceFree"/>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
+        <Datatype abbreviatedIRI="geo-gml:GMLLiteral"/>
     </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:Iceberg"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:MediumFloe"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:MultiYearIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:NewIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:Nilas"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:NoDevelopment"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:OldIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:PancakeIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:SecondStageThinFirstYearIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:SecondYearIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:SmallFloe"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:SmallIceCake"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:ThickFirstYearIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:TraceConcentration"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:UndeterminedForm"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:UnknownForm"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:VastFloe"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:YoungIce"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="wmo:Zone"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Feature"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasComponent"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="fractionalArea"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="muo:measuresQuality"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:double"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class IRI="10_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;integer">1</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.001</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="10_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">10</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="1_10th"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.1</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="1_10th"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">1</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="1_2_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.15</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="1_2_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">1-2</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="1_3_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.2</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="1_3_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">1-3</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="2_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.2</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="2_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">2</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="2_3_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.25</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="2_3_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">2-3</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="2_4_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.3</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="2_4_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">2-4</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="3_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.3</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="3_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">3</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="3_4_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.35</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="3_4_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">3-4</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="3_5_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.4</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="3_5_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">3-5</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="4_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.4</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="4_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">4</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="4_5_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.45</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="4_5_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">4-5</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="4_6_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.5</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="4_6_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">4-6</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="5_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.5</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="5_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">5</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="5_6_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.55</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="5_6_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">5-6</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="5_7_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.6</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="5_7_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">5-7</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="6_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.6</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="6_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">6</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="6_7_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.65</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="6_7_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">6-7</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="6_8_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.7</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="6_8_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">6-8</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="7_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.7</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="7_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">7</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="7_8_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.75</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="7_8_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">7-8</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="7_9_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.8</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="7_9_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">7-9</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="8_10_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.9</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="8_10_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">8-10</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="8_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.8</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="8_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">8</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="8_9_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.85</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="8_9_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">8-9</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="9+_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.95</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.0125</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="9+_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">9+</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="9_10_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.95</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="9_10_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">9-10</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="9_10ths"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.9</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="9_10ths"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">9</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="UnknownDevelopment"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">x</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
-        <ObjectUnionOf>
-            <Class abbreviatedIRI="wmo:UndeterminedForm"/>
-            <Class abbreviatedIRI="wmo:UnknownForm"/>
-        </ObjectUnionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">x</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="ssiii:ZoneComponent"/>
-        <ObjectIntersectionOf>
-            <DataExactCardinality cardinality="1">
-                <DataProperty IRI="hasDevelopmentStageCode"/>
-                <Datatype abbreviatedIRI="xsd:string"/>
-            </DataExactCardinality>
-            <DataMaxCardinality cardinality="1">
-                <DataProperty IRI="hasConcentrationCode"/>
-                <Datatype abbreviatedIRI="xsd:string"/>
-            </DataMaxCardinality>
-            <DataMaxCardinality cardinality="1">
-                <DataProperty IRI="hasIceFormCode"/>
-                <Datatype abbreviatedIRI="xsd:string"/>
-            </DataMaxCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:BigFloe"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">5</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:FastIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">8</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:FirstStageThinFirstYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">8</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:FirstYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">6</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:GiantFloe"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">7</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:GrayIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">4</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:GrayWhiteIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">5</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:IceCake"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">2</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:IceFree"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.0</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.001</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:IceFree"/>
-        <ObjectUnionOf>
-            <DataHasValue>
-                <DataProperty IRI="hasConcentrationCode"/>
-                <Literal datatypeIRI="&xsd;string"></Literal>
-            </DataHasValue>
-            <DataMaxCardinality cardinality="0">
-                <DataProperty IRI="hasConcentrationCode"/>
-            </DataMaxCardinality>
-        </ObjectUnionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">▲*</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">1*</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:MediumFloe"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">4</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:MultiYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">9*</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:NewIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">1</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:Nilas"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">2</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:NoDevelopment"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">0</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:OldIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">7*</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:PancakeIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">0</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:SecondStageThinFirstYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">9</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:SecondYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">8*</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:SmallFloe"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">3</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:ThickFirstYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">4*</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">7</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:TraceConcentration"/>
-        <ObjectIntersectionOf>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasMeanIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty abbreviatedIRI="wmo:hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
-            </DataHasValue>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:TraceConcentration"/>
-        <DataHasValue>
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Literal datatypeIRI="&xsd;string">0</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI="wmo:YoungIce"/>
-        <DataHasValue>
-            <DataProperty IRI="hasDevelopmentStageCode"/>
-            <Literal datatypeIRI="&xsd;string">3</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="10_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="1_10th"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="1_2_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="1_3_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="2_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="2_3_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="2_4_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="3_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="3_4_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="3_5_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4_5_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="4_6_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="5_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="5_6_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="5_7_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="6_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="6_7_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="6_8_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="7_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="7_8_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="7_9_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="8_10_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="8_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="8_9_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="9+_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="9_10_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="9_10ths"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PredominantForm"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SecondaryForm"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="UnknownDevelopment"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="Zone"/>
-        <Class IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Feature"/>
+        <Class abbreviatedIRI="geo:Feature"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Zone"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="hasComponent"/>
-            <Class abbreviatedIRI="ssiii:ZoneComponent"/>
-        </ObjectMinCardinality>
+        <Class abbreviatedIRI="geo:Feature"/>
+        <Class abbreviatedIRI="geo:SpatialObject"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Zone"/>
-        <ObjectMaxCardinality cardinality="1">
-            <ObjectProperty IRI="hasComponent"/>
-            <Class IRI="PredominantForm"/>
-        </ObjectMaxCardinality>
+        <Class abbreviatedIRI="geo:Feature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+            <Class abbreviatedIRI="geo:Geometry"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Zone"/>
-        <ObjectMaxCardinality cardinality="1">
-            <ObjectProperty IRI="hasComponent"/>
-            <Class IRI="SecondaryForm"/>
-        </ObjectMaxCardinality>
+        <Class abbreviatedIRI="geo:Geometry"/>
+        <Class abbreviatedIRI="geo:SpatialObject"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Zone"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="hasConcentrationCode"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
+        <Class abbreviatedIRI="geo:SpatialObject"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="ssiii:CanadaZone"/>
-        <Class IRI="Zone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="ssiii:CanadaZone"/>
-        <ObjectMaxCardinality cardinality="5">
-            <ObjectProperty IRI="hasComponent"/>
-            <Class abbreviatedIRI="ssiii:ZoneComponent"/>
-        </ObjectMaxCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
-        <Class abbreviatedIRI="ssiii:IceWithForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:FirstStageThinFirstYearIce"/>
-        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:Floeberg"/>
-        <Class abbreviatedIRI="wmo:Iceberg"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:GrayIce"/>
-        <Class abbreviatedIRI="wmo:YoungIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:GrayWhiteIce"/>
-        <Class abbreviatedIRI="wmo:YoungIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:Growler"/>
-        <Class abbreviatedIRI="wmo:Iceberg"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:IceFree"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:IceOfLandOrigin"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:MediumFirstYearIce"/>
-        <Class abbreviatedIRI="wmo:FirstYearIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:MultiYearIce"/>
-        <Class abbreviatedIRI="wmo:OldIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:NoDevelopment"/>
-        <Class abbreviatedIRI="wmo:IceWithDevelopmentStage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:SecondStageThinFirstYearIce"/>
-        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:SecondYearIce"/>
-        <Class abbreviatedIRI="wmo:OldIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:ThickFirstYearIce"/>
-        <Class abbreviatedIRI="wmo:FirstYearIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:ThinFirstYearIce"/>
-        <Class abbreviatedIRI="wmo:FirstYearIce"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:TraceConcentration"/>
-        <Class abbreviatedIRI="ssiii:IceWithConcentration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:UndeterminedForm"/>
-        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:UnknownForm"/>
-        <Class abbreviatedIRI="ssiii:UndeterminedOrUnknownForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:VastFloe"/>
-        <DataHasValue>
-            <DataProperty IRI="hasIceFormCode"/>
-            <Literal datatypeIRI="&xsd;string">6</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:Zone"/>
-        <Class IRI="Zone"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="wmo:Zone"/>
-        <ObjectMaxCardinality cardinality="3">
-            <ObjectProperty IRI="hasComponent"/>
-            <Class abbreviatedIRI="ssiii:ZoneComponent"/>
-        </ObjectMaxCardinality>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="muo:BaseUnit"/>
-        <NamedIndividual IRI="fractionalArea"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
-        <NamedIndividual IRI="fractionalArea"/>
-        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
-        <NamedIndividual IRI="fractionalArea"/>
-        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
-    </ObjectPropertyAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-        <AbbreviatedIRI>wmo:hasMeanIceConcentration</AbbreviatedIRI>
-        <IRI>fractionalArea</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-        <AbbreviatedIRI>wmo:hasStdDevIceConcentration</AbbreviatedIRI>
-        <IRI>fractionalArea</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
-        <AbbreviatedIRI>wmo:hasStdDevIceConcentration</AbbreviatedIRI>
-        <IRI>http://dbpedia.org/page/Standard_deviation</IRI>
-    </AnnotationAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <Class abbreviatedIRI="geo:Geometry"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="geo:asGML"/>
+        <Class abbreviatedIRI="geo:Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="geo:asGML"/>
+        <Datatype abbreviatedIRI="geo-gml:GMLLiteral"/>
+    </DataPropertyRange>
 </Ontology>
 
 
