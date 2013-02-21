@@ -9,8 +9,9 @@ Prefix: cc: <http://creativecommons.org/ns#>
 Prefix: seaiceform: <http://purl.org/wmo/seaice/form#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: wmo-sif: <http://purl.org/wmo/seaice/form#>
 Prefix: : <http://purl.org/wmo/seaice/concentration#>
+Prefix: sio: <http://semanticscience.org/resource/>
+Prefix: wmo-sif: <http://purl.org/wmo/seaice/form#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: geo: <http://opengis.net/ont/OGC-GeoSPARQL/1.0/#>
@@ -35,8 +36,8 @@ Annotations:
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration>,
     dc:publisher "National Snow and Ice Data Center",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice>,
-    dc:creator "Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team",
     owl:versionInfo "2.0",
+    dc:creator "Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team",
     rdfs:comment "This ontology describes terms that denote the concentration of ice in a region of ocean.",
     dc:language "english",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration>,
@@ -96,10 +97,10 @@ Datatype: xsd:double
 Datatype: xsd:integer
 
     
-ObjectProperty: dc:hasPart
+ObjectProperty: sio:SIO_000008
 
     
-ObjectProperty: <http://semanticscience.org/resource/SIO_000008>
+ObjectProperty: dc:hasPart
 
     
 DataProperty: concentration:hasSeaIce
@@ -108,7 +109,7 @@ DataProperty: concentration:hasSeaIce
 DataProperty: concentration:hasIceConcentration
 
     
-DataProperty: <http://semanticscience.org/resource/SIO_000300>
+DataProperty: sio:SIO_000300
 
     
 DataProperty: concentration:hasIceOfLandOrigin
@@ -122,14 +123,14 @@ Class: concentration:VeryClosePackIce
         rdfs:label "Very close pack ice"
     
     EquivalentTo: 
-        (<http://semanticscience.org/resource/SIO_000008> some 
+        (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.95)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.05)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 0.95)))))
          and (concentration:hasIceConcentration value 0.95)
     
     SubClassOf: 
@@ -144,7 +145,7 @@ Class: concentration:IceWithConcentration
         rdfs:label "Concentration"
     
     SubClassOf: 
-        <http://semanticscience.org/resource/SIO_010462>
+        sio:SIO_010462
     
     
 Class: concentration:OpenWater
@@ -156,14 +157,14 @@ Class: concentration:OpenWater
     
     SubClassOf: 
         concentration:IceWithConcentration,
-        (<http://semanticscience.org/resource/SIO_000008> some 
+        (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.025)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 0.05)))))
          and (concentration:hasIceConcentration value 0.05)
     
     
@@ -187,30 +188,30 @@ Class: concentration:CompactPackIce
     
     EquivalentTo: 
         (not (concentration:ConsolidatedIce))
-         and (<http://semanticscience.org/resource/SIO_000008> some 
+         and (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.01)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 1.0)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.01)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 1.0)))))
          and (concentration:hasIceConcentration value 1.0)
     
     SubClassOf: 
         concentration:PackIce
     
     
-Class: <http://semanticscience.org/resource/SIO_010462>
+Class: sio:SIO_010462
 
     
-Class: <http://semanticscience.org/resource/SIO_001109>
+Class: sio:SIO_001109
 
     
 Class: concentration:IceConcentration
 
     SubClassOf: 
-        <http://semanticscience.org/resource/SIO_000044>
+        sio:SIO_000044
     
     
 Class: concentration:VeryOpenPackIce
@@ -221,14 +222,14 @@ Class: concentration:VeryOpenPackIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.5"
     
     EquivalentTo: 
-        (<http://semanticscience.org/resource/SIO_000008> some 
+        (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.2)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.075)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 0.2)))))
          and (concentration:hasIceConcentration value 0.2)
     
     SubClassOf: 
@@ -238,7 +239,7 @@ Class: concentration:VeryOpenPackIce
 Class: seaiceform:IceWithForm
 
     SubClassOf: 
-        <http://semanticscience.org/resource/SIO_010462>
+        sio:SIO_010462
     
     
 Class: concentration:ConsolidatedIce
@@ -249,24 +250,21 @@ Class: concentration:ConsolidatedIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1.1"
     
     EquivalentTo: 
-        (<http://semanticscience.org/resource/SIO_000008> some 
+        (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.001)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 1.0)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.001)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 1.0)))))
          and (concentration:hasIceConcentration value 1.0)
     
     SubClassOf: 
         concentration:IceWithConcentration
     
     
-Class: <http://semanticscience.org/resource/SIO_000770>
-
-    
-Class: <http://semanticscience.org/resource/SIO_000044>
+Class: sio:SIO_000770
 
     
 Class: concentration:Ice-free
@@ -285,6 +283,9 @@ Class: concentration:Ice-free
         concentration:IceWithConcentration
     
     
+Class: sio:SIO_000044
+
+    
 Class: concentration:ClosePackIce
 
     Annotations: 
@@ -293,14 +294,14 @@ Class: concentration:ClosePackIce
         rdfs:label "Close pack ice"
     
     EquivalentTo: 
-        (<http://semanticscience.org/resource/SIO_000008> some 
+        (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.75)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.05)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 0.75)))))
          and (concentration:hasIceConcentration value 0.75)
     
     SubClassOf: 
@@ -315,14 +316,14 @@ Class: concentration:OpenPackIce
         rdfs:comment "Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another"
     
     EquivalentTo: 
-        (<http://semanticscience.org/resource/SIO_000008> some 
+        (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.5)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.075)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 0.5)))))
          and (concentration:hasIceConcentration value 0.5)
     
     SubClassOf: 
@@ -338,14 +339,14 @@ Class: concentration:BergyWater
     
     SubClassOf: 
         concentration:IceWithConcentration,
-        (<http://semanticscience.org/resource/SIO_000008> some 
+        (sio:SIO_000008 some 
             (concentration:IceConcentration
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_000770>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
-             and (<http://semanticscience.org/resource/SIO_000008> some 
-                (<http://semanticscience.org/resource/SIO_001109>
-                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))))
+             and (sio:SIO_000008 some 
+                (sio:SIO_000770
+                 and (sio:SIO_000300 value 0.025)))
+             and (sio:SIO_000008 some 
+                (sio:SIO_001109
+                 and (sio:SIO_000300 value 0.05)))))
          and (concentration:hasIceConcentration value 0.05)
     
     
@@ -355,3 +356,6 @@ Class: seaiceform:FastIce
         concentration:ConsolidatedIce
     
     
+Rule: 
+    concentration:IceConcentration(?<urn:swrl#c>), sio:SIO_001109(?<urn:swrl#mean>), sio:SIO_000008(?<urn:swrl#c>, ?<urn:swrl#mean>), sio:SIO_000008(?<urn:swrl#i>, ?<urn:swrl#c>), sio:SIO_000300(?<urn:swrl#mean>, ?<urn:swrl#x>) -> concentration:hasIceConcentration(?<urn:swrl#i>, ?<urn:swrl#x>), sio:SIO_000300(?<urn:swrl#c>, ?<urn:swrl#x>)
+
