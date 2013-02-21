@@ -21,8 +21,8 @@ Import: <http://purl.org/wmo/seaice#>
 Annotations: 
     owl:versionInfo "1.0",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice>,
-    rdfs:label "Ice conditions codes",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice>,
+    rdfs:label "Ice conditions codes",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration>,
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the contents of an Egg code\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
@@ -34,13 +34,13 @@ Annotations:
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration>,
     <http://www.w3.org/1999/xhtml/vocab#license> "http://creativecommons.org/publicdomain/zero/1.0/",
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers>,
     owl:priorVersion "none",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers>,
     dc:date "January 13, 2012",
     rdfs:comment "This ontology models the contents of standard Egg Codes which are used to encode the characteristics of sea ice in ice charts.",
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers>,
-    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes>,
+    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice>,
     dc:publisher "National Snow and Ice Data Center",
@@ -48,8 +48,8 @@ Annotations:
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types>,
-    dc:creator "SSIII Project Team",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs>,
+    dc:creator "SSIII Project Team",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice>
 
 AnnotationProperty: dc:creator
@@ -176,6 +176,12 @@ Class: UndeterminedForm
         UndeterminedOrUnknownForm
     
     
+Class: seaiceform:MediumFloe
+
+    EquivalentTo: 
+        hasIceFormCode value "4"^^xsd:string
+    
+    
 Class: 6_10ths
 
     Annotations: 
@@ -184,28 +190,29 @@ Class: 6_10ths
         rdfs:label "6 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.6)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "6"^^xsd:string
+        hasConcentrationCode value "6"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.6)))))
+         and (seaiceconcentration:hasIceConcentration value 0.6)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
     
     
-Class: seaiceform:MediumFloe
+Class: muo:BaseUnit
 
-    EquivalentTo: 
-        hasIceFormCode value "4"^^xsd:string
-    
     
 Class: seaiceconcentration:IceWithConcentration
 
     EquivalentTo: 
         hasConcentrationCode some xsd:string
     
-    
-Class: muo:BaseUnit
-
     
 Class: 3_4_10ths
 
@@ -215,8 +222,15 @@ Class: 3_4_10ths
         rdfs:comment "Ice concentration of 3 to 4 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.35)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.35)))))
+         and (seaiceconcentration:hasIceConcentration value 0.35),
         hasConcentrationCode value "3-4"^^xsd:string
     
     SubClassOf: 
@@ -237,9 +251,16 @@ Class: 3_10ths
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc"
     
     EquivalentTo: 
-        hasConcentrationCode value "3"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.3)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.3)))))
+         and (seaiceconcentration:hasIceConcentration value 0.3),
+        hasConcentrationCode value "3"^^xsd:string
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -253,9 +274,16 @@ Class: 7_10ths
         rdfs:comment "Ice concentration of 7 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.7)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "7"^^xsd:string
+        hasConcentrationCode value "7"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.7)))))
+         and (seaiceconcentration:hasIceConcentration value 0.7)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -287,9 +315,16 @@ Class: 6_7_10ths
         rdfs:label "6 to 7 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.65)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05),
-        hasConcentrationCode value "6-7"^^xsd:string
+        hasConcentrationCode value "6-7"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.65)))))
+         and (seaiceconcentration:hasIceConcentration value 0.65)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -312,9 +347,16 @@ Class: 7_8_10ths
         rdfs:comment "Ice concentration of 7 to 8 tenths"
     
     EquivalentTo: 
-        hasConcentrationCode value "7-8"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.75)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.75)))))
+         and (seaiceconcentration:hasIceConcentration value 0.75),
+        hasConcentrationCode value "7-8"^^xsd:string
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -334,8 +376,15 @@ Class: 4_5_10ths
         rdfs:label "4 to 5 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.45)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.45)))))
+         and (seaiceconcentration:hasIceConcentration value 0.45),
         hasConcentrationCode value "4-5"^^xsd:string
     
     SubClassOf: 
@@ -351,8 +400,15 @@ Class: TraceConcentration
     
     EquivalentTo: 
         hasConcentrationCode value "0"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.05)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))))
+         and (seaiceconcentration:hasIceConcentration value 0.05)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -372,9 +428,16 @@ Class: 8_10_10ths
         rdfs:comment "Ice concentration of 8 to 10 tenths"
     
     EquivalentTo: 
-        hasConcentrationCode value "8-10"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.9)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.9)))))
+         and (seaiceconcentration:hasIceConcentration value 0.9),
+        hasConcentrationCode value "8-10"^^xsd:string
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -388,9 +451,16 @@ Class: 3_5_10ths
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.4)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "3-5"^^xsd:string
+        hasConcentrationCode value "3-5"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.4)))))
+         and (seaiceconcentration:hasIceConcentration value 0.4)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -404,9 +474,16 @@ Class: 8_10ths
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.8)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "8"^^xsd:string
+        hasConcentrationCode value "8"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.8)))))
+         and (seaiceconcentration:hasIceConcentration value 0.8)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -420,8 +497,15 @@ Class: 5_10ths
         rdfs:comment "Ice concentration of 5 tenths."
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.5)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.5)))))
+         and (seaiceconcentration:hasIceConcentration value 0.5),
         hasConcentrationCode value "5"^^xsd:string
     
     SubClassOf: 
@@ -437,8 +521,15 @@ Class: 1_2_10ths
     
     EquivalentTo: 
         hasConcentrationCode value "1-2"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.15)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.15)))))
+         and (seaiceconcentration:hasIceConcentration value 0.15)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -452,9 +543,16 @@ Class: 5_7_10ths
         rdfs:comment "Ice concentrations of 5 to 7 tenths."
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.6)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "5-7"^^xsd:string
+        hasConcentrationCode value "5-7"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.6)))))
+         and (seaiceconcentration:hasIceConcentration value 0.6)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -468,8 +566,15 @@ Class: 2_10ths
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.2)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.2)))))
+         and (seaiceconcentration:hasIceConcentration value 0.2),
         hasConcentrationCode value "2"^^xsd:string
     
     SubClassOf: 
@@ -484,8 +589,15 @@ Class: 4_10ths
         rdfs:label "4 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.4)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.4)))))
+         and (seaiceconcentration:hasIceConcentration value 0.4),
         hasConcentrationCode value "4"^^xsd:string
     
     SubClassOf: 
@@ -534,8 +646,15 @@ Class: 9+_10ths
     
     EquivalentTo: 
         hasConcentrationCode value "9+"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.95)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.0125)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.0125)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.95)))))
+         and (seaiceconcentration:hasIceConcentration value 0.95)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -558,8 +677,15 @@ Class: 8_9_10ths
         rdfs:comment "Ice concentration of 8 to 9 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.85)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.85)))))
+         and (seaiceconcentration:hasIceConcentration value 0.85),
         hasConcentrationCode value "8-9"^^xsd:string
     
     SubClassOf: 
@@ -574,9 +700,16 @@ Class: 4_6_10ths
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.5)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "4-6"^^xsd:string
+        hasConcentrationCode value "4-6"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.5)))))
+         and (seaiceconcentration:hasIceConcentration value 0.5)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -616,22 +749,6 @@ Class: seaiceconcentration:Ice-Free
          or (hasConcentrationCode max 0 rdfs:Literal)
     
     
-Class: 9_10_10ths
-
-    Annotations: 
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc",
-        rdfs:comment "Ice concentration of 9 to 10 tenths",
-        rdfs:label "9 to 10 tenths"
-    
-    EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.95)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05),
-        hasConcentrationCode value "9-10"^^xsd:string
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: seaicedevelopment:SecondStageThinFirstYearIce
 
     EquivalentTo: 
@@ -646,10 +763,39 @@ Class: ZoneComponent
          and (hasIceFormCode max 1 xsd:string)
     
     
+Class: 9_10_10ths
+
+    Annotations: 
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc",
+        rdfs:comment "Ice concentration of 9 to 10 tenths",
+        rdfs:label "9 to 10 tenths"
+    
+    EquivalentTo: 
+        hasConcentrationCode value "9-10"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.95)))))
+         and (seaiceconcentration:hasIceConcentration value 0.95)
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
+Class: seaiceconcentration:IceConcentration
+
+    
 Class: seaiceform:IceWithForm
 
     
 Class: iceoflandorigin:Iceberg
+
+    
+Class: <http://semanticscience.org/resource/SIO_000770>
 
     
 Class: seaicedevelopment:ThinFirstYearIce
@@ -667,8 +813,15 @@ Class: 1_10th
     
     EquivalentTo: 
         hasConcentrationCode value "1"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.1)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.1)))))
+         and (seaiceconcentration:hasIceConcentration value 0.1)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -693,9 +846,16 @@ Class: 10_10ths
         rdfs:label "Ten tenths"
     
     EquivalentTo: 
-        hasConcentrationCode value "10"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 1)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.001)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.001)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 1)))))
+         and (seaiceconcentration:hasIceConcentration value 1),
+        hasConcentrationCode value "10"^^xsd:string
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -712,8 +872,15 @@ Class: 2_4_10ths
         rdfs:label "2 to 4 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.3)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.3)))))
+         and (seaiceconcentration:hasIceConcentration value 0.3),
         hasConcentrationCode value "2-4"^^xsd:string
     
     SubClassOf: 
@@ -732,22 +899,6 @@ Class: seaicedevelopment:MediumFirstYearIce
         hasDevelopmentStageCode value "1*"^^xsd:string
     
     
-Class: 9_10ths
-
-    Annotations: 
-        rdfs:comment "Ice concentration of 9 tenths",
-        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc",
-        rdfs:label "9 tenths"
-    
-    EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.9)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.025),
-        hasConcentrationCode value "9"^^xsd:string
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: 7_9_10ths
 
     Annotations: 
@@ -757,8 +908,38 @@ Class: 7_9_10ths
     
     EquivalentTo: 
         hasConcentrationCode value "7-9"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.8)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.8)))))
+         and (seaiceconcentration:hasIceConcentration value 0.8)
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
+Class: 9_10ths
+
+    Annotations: 
+        rdfs:comment "Ice concentration of 9 tenths",
+        dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM TR24 colour standard.doc",
+        rdfs:label "9 tenths"
+    
+    EquivalentTo: 
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.025)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.9)))))
+         and (seaiceconcentration:hasIceConcentration value 0.9),
+        hasConcentrationCode value "9"^^xsd:string
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -779,12 +960,22 @@ Class: 2_3_10ths
     
     EquivalentTo: 
         hasConcentrationCode value "2-3"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.25)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.25)))))
+         and (seaiceconcentration:hasIceConcentration value 0.25)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
     
+    
+Class: <http://semanticscience.org/resource/SIO_001109>
+
     
 Class: 1_3_10ths
 
@@ -794,9 +985,16 @@ Class: 1_3_10ths
         rdfs:comment "Ice concentration of 1 to 3 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.2)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075),
-        hasConcentrationCode value "1-3"^^xsd:string
+        hasConcentrationCode value "1-3"^^xsd:string,
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.2)))))
+         and (seaiceconcentration:hasIceConcentration value 0.2)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -816,8 +1014,15 @@ Class: 5_6_10ths
         rdfs:label "5 to 6 tenths"
     
     EquivalentTo: 
-        (seaiceconcentration:hasMeanIceConcentration value 0.55)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.05),
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.05)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.55)))))
+         and (seaiceconcentration:hasIceConcentration value 0.55),
         hasConcentrationCode value "5-6"^^xsd:string
     
     SubClassOf: 
@@ -842,6 +1047,15 @@ Class: seaiceform:VastFloe
         hasIceFormCode value "6"^^xsd:string
     
     
+Class: UnknownDevelopment
+
+    EquivalentTo: 
+        hasDevelopmentStageCode value "x"^^xsd:string
+    
+    SubClassOf: 
+        seaicedevelopment:IceWithDevelopmentStage
+    
+    
 Class: seaiceform:PancakeIce
 
     EquivalentTo: 
@@ -854,15 +1068,6 @@ Class: seaicedevelopment:GrayIce
         hasDevelopmentStageCode value "4"^^xsd:string
     
     
-Class: UnknownDevelopment
-
-    EquivalentTo: 
-        hasDevelopmentStageCode value "x"^^xsd:string
-    
-    SubClassOf: 
-        seaicedevelopment:IceWithDevelopmentStage
-    
-    
 Class: 6_8_10ths
 
     Annotations: 
@@ -872,8 +1077,15 @@ Class: 6_8_10ths
     
     EquivalentTo: 
         hasConcentrationCode value "6-8"^^xsd:string,
-        (seaiceconcentration:hasMeanIceConcentration value 0.7)
-         and (seaiceconcentration:hasStdDevIceConcentration value 0.075)
+        (<http://semanticscience.org/resource/SIO_000008> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_000770>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.075)))
+             and (<http://semanticscience.org/resource/SIO_000008> some 
+                (<http://semanticscience.org/resource/SIO_001109>
+                 and (<http://semanticscience.org/resource/SIO_000300> value 0.7)))))
+         and (seaiceconcentration:hasIceConcentration value 0.7)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
