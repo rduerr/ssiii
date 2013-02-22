@@ -16,6 +16,14 @@
 
  * The big issue here is whether to try to assign thicknesses to sea ice stages older than one year.   Neither the WMO nomenclature nor the egg code actually assign thicknesses to these types (beyond terms like "typically").  Should we?  It is a bit confusing since these "stages" are actually about ice age and while thickness is a good proxy for young ice, color and other attributes are better proxies for older ice.  Left these as they were at the end of the sprint for the moment.
 
+== Egg Ontology Notes ==
+
+ * We'd like this ontology to work for all the sea ice charts that are created any where in the world; but at this point have only added enough to represent charts created by the US National Ice Center and the Canadian Ice Service.
+ * We limited the ice chart specific information to be that is common between all of the example charts in the JCOMM TR24 colour standard for ice charts.  That is:
+   * Spatial domain name (e.g., Bering Sea)
+   * Source (e.g., US National Ice Center)
+   * Date range over which the chart is applicable (e.g., 24-26 June, 2013) 
+
 == General Notes ==
 
  * Inferencing can be tricky - for example, bergy bits and growlers actually are small chunks of "ice of land origin" that have size definitions that fit nicely into the "sea ice" floe size definitions.  And actually they are chunks of ice smaller than the smallest sea ice floe.  You'd think that you could simply reuse the hasFloeSize data property to associate their sizes; but if you do then they end up being inferred as "sea ice."  In other words, if you want to capture floe sizes for these types of ice, you would either have to define another kind of floe size hasLandIceFloeSize or accept that ice in this category might be sea ice...
