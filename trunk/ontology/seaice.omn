@@ -19,10 +19,10 @@ Import: <http://purl.org/wmo/seaice/development#>
 Annotations: 
     owl:priorVersion "1.0",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice>,
-    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice>,
-    rdfs:comment "A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.",
+    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes>,
+    rdfs:comment "A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs>,
@@ -35,20 +35,20 @@ Annotations:
     <http://www.w3.org/1999/xhtml/vocab#license> "http://creativecommons.org/publicdomain/zero/1.0/",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers>,
     dc:date "February 18, 2013",
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice>,
-    dc:publisher "National Snow and Ice Data Center",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice>,
+    dc:publisher "National Snow and Ice Data Center",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs>,
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Sea ice terminology\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     dc:creator "Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs>,
-    dc:title "Sea ice terminology",
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice>
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice>,
+    dc:title "Sea ice terminology"
 
 AnnotationProperty: dc:creator
 
@@ -107,6 +107,18 @@ DataProperty: geo:asGML
         geo-gml:GMLLiteral
     
     
+Class: <http://purl.org/wmo/seaice/form#IceWithForm>
+
+    SubClassOf: 
+        <http://purl.org/wmo/seaice#SeaIce>
+    
+    
+Class: <http://purl.org/wmo/seaice/development#IceWithDevelopmentStage>
+
+    SubClassOf: 
+        <http://purl.org/wmo/seaice#SeaIce>
+    
+    
 Class: owl:Thing
 
     
@@ -114,6 +126,15 @@ Class: geo:Geometry
 
     SubClassOf: 
         geo:SpatialObject
+    
+    
+Class: <http://purl.org/wmo/seaice#SeaIce>
+
+    
+Class: <http://purl.org/wmo/seaice/concentration#IceWithConcentration>
+
+    SubClassOf: 
+        <http://purl.org/wmo/seaice#SeaIce>
     
     
 Class: <http://purl.org/wmo/seaice#Zone>

@@ -9,9 +9,9 @@ Prefix: cc: <http://creativecommons.org/ns#>
 Prefix: seaiceform: <http://purl.org/wmo/seaice/form#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
-Prefix: : <http://purl.org/wmo/seaice/concentration#>
 Prefix: sio: <http://semanticscience.org/resource/>
 Prefix: wmo-sif: <http://purl.org/wmo/seaice/form#>
+Prefix: : <http://purl.org/wmo/seaice/concentration#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: geo: <http://opengis.net/ont/OGC-GeoSPARQL/1.0/#>
@@ -22,20 +22,19 @@ Prefix: xhv: <http://www.w3.org/1999/xhtml/vocab#>
 Ontology: <http://purl.org/wmo/seaice/concentration#>
 
 Import: <http://purl.org/wmo/seaice/form#>
-Import: <http://semanticscience.org/ontology/sio.owl>
 
 Annotations: 
+    owl:priorVersion "1.0",
     xhv:license "http://creativecommons.org/publicdomain/zero/1.0/",
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology related to the concentration of ice in the ocean\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
-    owl:priorVersion "1.0",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice>,
     dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf",
     dc:title "Terminology related to the concentration of ice in the ocean",
     dc:date "February 18, 2013",
     rdfs:comment "A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration>,
-    dc:publisher "National Snow and Ice Data Center",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice>,
+    dc:publisher "National Snow and Ice Data Center",
     owl:versionInfo "2.0",
     dc:creator "Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team",
     rdfs:comment "This ontology describes terms that denote the concentration of ice in a region of ocean.",
@@ -97,22 +96,25 @@ Datatype: xsd:double
 Datatype: xsd:integer
 
     
-ObjectProperty: sio:SIO_000008
+ObjectProperty: dc:hasPart
 
     
-ObjectProperty: dc:hasPart
+ObjectProperty: sio:has-attribute
 
     
 DataProperty: concentration:hasSeaIce
 
     
+DataProperty: sio:has-value
+
+    
 DataProperty: concentration:hasIceConcentration
 
     
-DataProperty: sio:SIO_000300
+DataProperty: concentration:hasIceOfLandOrigin
 
     
-DataProperty: concentration:hasIceOfLandOrigin
+Class: owl:Thing
 
     
 Class: concentration:VeryClosePackIce
@@ -123,19 +125,22 @@ Class: concentration:VeryClosePackIce
         rdfs:label "Very close pack ice"
     
     EquivalentTo: 
-        (sio:SIO_000008 some 
+        (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.05)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 0.95)))))
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 0.95)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.05)))))
          and (concentration:hasIceConcentration value 0.95)
     
     SubClassOf: 
         concentration:PackIce
     
+    
+Class: sio:standard-deviation
+
     
 Class: concentration:IceWithConcentration
 
@@ -145,7 +150,7 @@ Class: concentration:IceWithConcentration
         rdfs:label "Concentration"
     
     SubClassOf: 
-        sio:SIO_010462
+        owl:Thing
     
     
 Class: concentration:OpenWater
@@ -156,16 +161,16 @@ Class: concentration:OpenWater
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.6"
     
     SubClassOf: 
-        concentration:IceWithConcentration,
-        (sio:SIO_000008 some 
+        (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.025)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 0.05)))))
-         and (concentration:hasIceConcentration value 0.05)
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 0.05)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.025)))))
+         and (concentration:hasIceConcentration value 0.05),
+        concentration:IceWithConcentration
     
     
 Class: concentration:PackIce
@@ -188,25 +193,19 @@ Class: concentration:CompactPackIce
     
     EquivalentTo: 
         (not (concentration:ConsolidatedIce))
-         and (sio:SIO_000008 some 
+         and (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.01)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 1.0)))))
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 1.0)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.01)))))
          and (concentration:hasIceConcentration value 1.0)
     
     SubClassOf: 
         concentration:PackIce
     
-    
-Class: sio:SIO_010462
-
-    
-Class: sio:SIO_001109
-
     
 Class: concentration:IceConcentration
 
@@ -222,24 +221,18 @@ Class: concentration:VeryOpenPackIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.5"
     
     EquivalentTo: 
-        (sio:SIO_000008 some 
+        (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.075)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 0.2)))))
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 0.2)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.075)))))
          and (concentration:hasIceConcentration value 0.2)
     
     SubClassOf: 
         concentration:PackIce
-    
-    
-Class: seaiceform:IceWithForm
-
-    SubClassOf: 
-        sio:SIO_010462
     
     
 Class: concentration:ConsolidatedIce
@@ -250,22 +243,31 @@ Class: concentration:ConsolidatedIce
         dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1.1"
     
     EquivalentTo: 
-        (sio:SIO_000008 some 
+        (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.001)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 1.0)))))
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 1.0)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.001)))))
          and (concentration:hasIceConcentration value 1.0)
     
     SubClassOf: 
         concentration:IceWithConcentration
     
     
-Class: sio:SIO_000770
+Class: seaiceform:IceWithForm
 
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: sio:SIO_000044
+
+    Annotations: 
+        rdfs:label "2D extent quantity"
+    
     
 Class: concentration:Ice-free
 
@@ -283,7 +285,7 @@ Class: concentration:Ice-free
         concentration:IceWithConcentration
     
     
-Class: sio:SIO_000044
+Class: sio:mean
 
     
 Class: concentration:ClosePackIce
@@ -294,14 +296,14 @@ Class: concentration:ClosePackIce
         rdfs:label "Close pack ice"
     
     EquivalentTo: 
-        (sio:SIO_000008 some 
+        (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.05)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 0.75)))))
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 0.75)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.05)))))
          and (concentration:hasIceConcentration value 0.75)
     
     SubClassOf: 
@@ -316,14 +318,14 @@ Class: concentration:OpenPackIce
         rdfs:comment "Floating ice in which the ice concentration is 4/10 to 6/10, with many fractures, and floes that are generally not in contact with one another"
     
     EquivalentTo: 
-        (sio:SIO_000008 some 
+        (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.075)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 0.5)))))
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 0.5)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.075)))))
          and (concentration:hasIceConcentration value 0.5)
     
     SubClassOf: 
@@ -338,16 +340,16 @@ Class: concentration:BergyWater
         rdfs:label "Bergy water"
     
     SubClassOf: 
-        concentration:IceWithConcentration,
-        (sio:SIO_000008 some 
+        (sio:has-attribute some 
             (concentration:IceConcentration
-             and (sio:SIO_000008 some 
-                (sio:SIO_000770
-                 and (sio:SIO_000300 value 0.025)))
-             and (sio:SIO_000008 some 
-                (sio:SIO_001109
-                 and (sio:SIO_000300 value 0.05)))))
-         and (concentration:hasIceConcentration value 0.05)
+             and (sio:has-attribute some 
+                (sio:mean
+                 and (sio:has-value value 0.05)))
+             and (sio:has-attribute some 
+                (sio:standard-deviation
+                 and (sio:has-value value 0.025)))))
+         and (concentration:hasIceConcentration value 0.05),
+        concentration:IceWithConcentration
     
     
 Class: seaiceform:FastIce
