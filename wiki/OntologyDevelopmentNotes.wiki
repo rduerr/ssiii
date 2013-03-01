@@ -23,6 +23,20 @@
    * Spatial domain name (e.g., Bering Sea)
    * Source (e.g., US National Ice Center)
    * Date range over which the chart is applicable (e.g., 24-26 June, 2013) 
+We discussed what provenance information needs to be added to the egg code. We looked at the examples in the JCOMM color code document and found only these common elements on the charts:
+* analysis center (use Prov-O prov:Organization, or DC:publisher?)
+* spatial domain (prov:location, or DC:coverage)
+* valid date (the Prov-O dates, instantaneous or start and end, refer to the existence of the object being described, not a forecast.  DC:PeriodOfTime may be better)
+
+but there is other information on some charts that would be good to capture as well:
+* source data (satellite sensor), and date of that source
+* analyst: (use prov:wasGeneratedBy or DC:contributor)
+* projection: (CIS charts have this)
+
+And then, what about:?
+* filename
+* file location
+from NEPOMUK File Ontology
 
 == General Notes ==
 
