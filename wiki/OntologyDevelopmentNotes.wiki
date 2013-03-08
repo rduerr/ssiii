@@ -19,7 +19,11 @@
 == Egg Ontology Notes ==
 
  * We'd like this ontology to work for all the sea ice charts that are created any where in the world; but at this point have only added enough to represent charts created by the US National Ice Center and the Canadian Ice Service.
- * Each egg code with its associated geometry (the pair being called a zone) will have a parent chart from which it came (i.e., {{{<eggcode zone> void:inChart <overall chartURL> and <overall chartURL> prov:alternateOf <originalFile>}}}) - with this we only really handle charts that are somehow on-line
+ * Each egg code with its associated geometry (the pair being called a zone) will have a parent chart from which it came (i.e., 
+    * {{{<eggcode zone> isA sio:figure-part and }}}
+    * {{{<overall chartURL> isA sio:map and }}}
+    * {{{<eggcode zone> isPartOf <overall chartURL> }}}
+    * with this we only really handle charts that are somehow on-line
  * We limited the ice chart specific information to be that is common between all of the example charts in the JCOMM TR24 colour standard for ice charts.  They are:
    * analysis center (use Prov-O prov:Organization, or DC:publisher?)
    * spatial domain (prov:location, or DC:coverage)
