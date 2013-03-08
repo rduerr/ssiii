@@ -26,13 +26,16 @@
     * with this we only really handle charts that are somehow on-line
  * We limited the ice chart specific information to be that is common between all of the example charts in the JCOMM TR24 colour standard for ice charts.  They are:
    * analysis center (use Prov-O prov:Organization, or DC:publisher?)
-   * spatial domain (prov:location, or DC:coverage)
+   * spatial domain 
+     * Each analysis center only creates charts for a few regions, which are fixed and well defined.
+     * We agreed to define and place into a separate rdf file the geofeatures for the 5 or so types of charts that the Canadian Ice Service creates, that way they can be generally referenced from anywhere. 
    * valid date (the Prov-O dates, instantaneous or start and end, refer to the existence of the object being described, not a forecast.  DC:PeriodOfTime may be better)
 
 But there is other information on some charts that would be good to capture as well:
  * source data (satellite sensor), and date of that source
  * analyst: (use prov:wasGeneratedBy or DC:contributor)
  * projection: (CIS charts have this)
+However on 2/8/2013 we decided to ignore these for a while.
 
 
 == SIGRID file ontology ==
