@@ -29,7 +29,7 @@
    * spatial domain 
      * Each analysis center only creates charts for a few regions, which are fixed and well defined.
      * We agreed to define and place into a separate rdf file the geofeatures for the 5 or so types of charts that the Canadian Ice Service creates, that way they can be generally referenced from anywhere. 
-   * valid date (the Prov-O dates, instantaneous or start and end, refer to the existence of the object being described, not a forecast.  DC:PeriodOfTime may be better)
+   * valid date (We agreed to relate the overall contents of the chart to the prov:generatedAtTime and invalidatedAtTime terms)
 
 But there is other information on some charts that would be good to capture as well:
  * source data (satellite sensor), and date of that source
