@@ -40,12 +40,12 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Terminology for the stages of development of sea ice</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="xhv:license"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
+        <IRI>http://creativecommons.org/publicdomain/zero/1.0/</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -307,11 +307,11 @@
             <DataProperty IRI="hasIceThickness"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
-                </FacetRestriction>
                 <FacetRestriction facet="&xsd;maxExclusive">
                     <Literal datatypeIRI="&xsd;decimal">0.3</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">0.15</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
@@ -469,11 +469,11 @@
             <DataProperty IRI="hasIceThickness"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;decimal">.3</Literal>
-                </FacetRestriction>
                 <FacetRestriction facet="&xsd;maxExclusive">
                     <Literal datatypeIRI="&xsd;decimal">1.8</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">.3</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
@@ -524,11 +524,11 @@
             <DataProperty IRI="hasIceThickness"/>
             <DatatypeRestriction>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;decimal">1.2</Literal>
-                </FacetRestriction>
                 <FacetRestriction facet="&xsd;maxExclusive">
                     <Literal datatypeIRI="&xsd;decimal">2</Literal>
+                </FacetRestriction>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;decimal">1.2</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
@@ -586,7 +586,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>DarkNilas</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -601,7 +601,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>FirstYearIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -621,7 +621,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>FrazilIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -636,7 +636,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>GrayIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -651,7 +651,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>GrayWhiteIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -666,7 +666,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>GreaseIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -681,7 +681,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>IceRind</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.3</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.3</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -696,7 +696,14 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>IceWithDevelopmentStage</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceWithDevelopmentStage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The source document does not provide a definition for development stage; however, a good working definition might be:
+
+&quot;A phrase used to classify sea ice for operational purposes using the age of the ice as a proxy for its thickness.  Specific terms such as New ice, Nilas, Young ice, Multi-year ice, etc. are used for each stage of sea ice development.&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -706,7 +713,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>LightNilas</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -721,7 +728,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>MediumFirstYearIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -736,7 +743,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>MultiYearIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.3</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.3</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -756,7 +763,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>NewIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -771,7 +778,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>Nilas</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -786,7 +793,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>OldIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -801,7 +808,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>ResidualFirstYearIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -816,7 +823,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>SecondYearIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.5.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -836,7 +843,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>Shuga</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.4</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.4</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -851,7 +858,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>Slush</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.4</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.1.4</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -866,7 +873,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>ThickFirstYearIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.3</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.3</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -881,7 +888,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>ThinFirstYearIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.4.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -896,7 +903,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>YoungIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section3.3</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

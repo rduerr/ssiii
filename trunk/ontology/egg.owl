@@ -10,26 +10,28 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://purl.org/wmo/seaice#"
+     xml:base="http://purl.org/nsidc/jcomm/egg#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://purl.org/wmo/seaice#">
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="geo-gml" IRI="http://www.opengis.net/def/dataType/OGC-GML/3.0/"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+     ontologyIRI="http://purl.org/nsidc/jcomm/egg#">
+    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="iceoflandorigin" IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="seaiceform" IRI="http://purl.org/wmo/seaice/form#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://purl.org/nsidc/jcomm/egg#"/>
+    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
+    <Prefix name="seaicedevelopment" IRI="http://purl.org/wmo/seaice/development#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="geo" IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/"/>
-    <Import>http://purl.org/wmo/seaice/iceOfLandOrigin#</Import>
-    <Import>http://purl.org/wmo/seaice/form#</Import>
-    <Import>http://purl.org/wmo/seaice/concentration#</Import>
-    <Import>http://purl.org/wmo/seaice/development#</Import>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="seaiceconcentration" IRI="http://purl.org/wmo/seaice/concentration#"/>
+    <Import>http://purl.org/wmo/seaice#</Import>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
     </Annotation>
     <Annotation>
@@ -41,20 +43,20 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice conditions codes</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Terminology for the contents of an Egg code&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -65,12 +67,12 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2.0</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Terminology for the contents of an Egg Code</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:language"/>
@@ -79,10 +81,6 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology describes all of the tems within the WMO sea ice nomenclature that have relevance to the egg codes used to encode ice charts.  Eventually, we hope to include all terms within the WMO nomenclature.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -97,16 +95,28 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">February 18, 2013</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">none</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes</IRI>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">January 13, 2012</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology models the contents of standard Egg Codes which are used to encode the characteristics of sea ice in ice charts.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -133,14 +143,6 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:rights"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Sea ice terminology&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</IRI>
     </Annotation>
@@ -149,30 +151,273 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Sea ice terminology</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SSIII Project Team</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice</IRI>
     </Annotation>
     <Declaration>
+        <Class abbreviatedIRI="muo:BaseUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="1_10th"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="1_2_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="1_3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="2_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="2_3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="2_4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="3_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="3_4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="3_5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4_5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="4_6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="5_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="5_6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="5_7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="6_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="6_7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="6_8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="7_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="7_8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="7_9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="8_10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="8_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="8_9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="9+_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="9_10_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="9_10ths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FirstStageThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NoDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PredominantForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SeaIceChart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SeaIceChartPublisher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SeaIceChartRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SecondaryForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TraceConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UndeterminedOrUnknownForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UnknownDevelopment"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Zone"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="geo:Feature"/>
+        <Class IRI="ZoneComponent"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="geo:Geometry"/>
+        <Class IRI="http://purl.org/wmo/seaice#Zone"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="geo:SpatialObject"/>
+        <Class abbreviatedIRI="seaiceconcentration:Ice-free"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:FirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:GrayIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:GrayWhiteIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:IceWithDevelopmentStage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:MediumFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:MultiYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:NewIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:Nilas"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:OldIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:SecondStageThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:SecondYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:ThickFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:ThinFirstYearIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaicedevelopment:YoungIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:BigFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:FastIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:Floeberg"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:GiantFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:IceCake"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:IceWithForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:MediumFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:PancakeIce"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:SmallFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="seaiceform:VastFloe"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="iceoflandorigin:IceOfLandOrigin"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="iceoflandorigin:Iceberg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanticscience.org/resource/map"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanticscience.org/resource/mean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/prov#Organization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://semanticscience.org/resource/is-model-of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://semanticscience.org/resource/is-modeled-by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="fractionalArea"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -205,53 +450,2304 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="geo-gml:GMLLiteral"/>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="10_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;integer">1</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.001</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;integer">1</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_10th"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.1</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.1</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_10th"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">1</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_2_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.15</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.15</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_2_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">1-2</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_3_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.2</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.2</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="1_3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">1-3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.2</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.2</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">2</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_3_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.25</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.25</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">2-3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_4_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.3</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.3</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="2_4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">2-4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.3</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.3</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_4_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.35</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.35</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">3-4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_5_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.4</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.4</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="3_5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">3-5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.4</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.4</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_5_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.45</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.45</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">4-5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_6_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.5</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.5</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="4_6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">4-6</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.5</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.5</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_6_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.55</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.55</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">5-6</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_7_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.6</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.6</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="5_7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">5-7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.6</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.6</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">6</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_7_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.65</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.65</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">6-7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_8_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.7</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.7</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="6_8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">6-8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.7</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.7</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_8_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.75</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.75</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">7-8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_9_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.8</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.8</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="7_9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">7-9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_10_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.9</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.9</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">8-10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.8</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.8</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_9_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.85</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.85</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="8_9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">8-9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9+_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.95</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.0125</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.95</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9+_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">9+</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9_10_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.95</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.95</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9_10_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">9-10</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9_10ths"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.9</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.9</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="9_10ths"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="FirstStageThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="NoDevelopment"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">0</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="TraceConcentration"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class abbreviatedIRI="seaiceconcentration:IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/mean"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://semanticscience.org/resource/has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class IRI="http://semanticscience.org/resource/standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty IRI="http://semanticscience.org/resource/has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="TraceConcentration"/>
+        <DataHasValue>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Literal datatypeIRI="&xsd;string">0</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="UndeterminedOrUnknownForm"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">x</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="UnknownDevelopment"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">x</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="ZoneComponent"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="hasDevelopmentStageCode"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="hasConcentrationCode"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataMaxCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="hasIceFormCode"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceconcentration:Ice-free"/>
+        <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="hasConcentrationCode"/>
+                <Literal datatypeIRI="&xsd;string"></Literal>
+            </DataHasValue>
+            <DataMaxCardinality cardinality="0">
+                <DataProperty IRI="hasConcentrationCode"/>
+            </DataMaxCardinality>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:FirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">6</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:GrayIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:GrayWhiteIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:MediumFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">1*</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:MultiYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">9*</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:NewIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">1</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:Nilas"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">2</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:OldIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">7*</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:SecondStageThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">9</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:SecondYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">8*</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:ThickFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">4*</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:ThinFirstYearIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaicedevelopment:YoungIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceform:BigFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">5</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceform:FastIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">8</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceform:GiantFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">7</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceform:IceCake"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">2</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceform:MediumFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">4</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceform:PancakeIce"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">0</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="seaiceform:SmallFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">3</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="iceoflandorigin:IceOfLandOrigin"/>
+        <DataHasValue>
+            <DataProperty IRI="hasDevelopmentStageCode"/>
+            <Literal datatypeIRI="&xsd;string">▲*</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="Zone"/>
-        <Class abbreviatedIRI="geo:Feature"/>
+        <Class IRI="10_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="geo:Feature"/>
-        <Class abbreviatedIRI="geo:SpatialObject"/>
+        <Class IRI="1_10th"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="geo:Feature"/>
+        <Class IRI="1_2_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="1_3_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="2_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="2_3_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="2_4_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="3_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="3_4_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="3_5_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="4_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="4_5_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="4_6_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="5_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="5_6_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="5_7_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="6_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="6_7_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="6_8_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="7_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="7_8_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="7_9_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="8_10_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="8_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="8_9_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="9+_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="9_10_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="9_10ths"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FirstStageThinFirstYearIce"/>
+        <Class abbreviatedIRI="seaicedevelopment:ThinFirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NoDevelopment"/>
+        <Class abbreviatedIRI="seaicedevelopment:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PredominantForm"/>
+        <Class abbreviatedIRI="seaiceform:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SeaIceChart"/>
+        <Class IRI="http://semanticscience.org/resource/map"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SeaIceChart"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
-            <Class abbreviatedIRI="geo:Geometry"/>
+            <ObjectProperty IRI="http://www.w3.org/ns/prov#wasAttributedTo"/>
+            <Class IRI="SeaIceChartPublisher"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="geo:Geometry"/>
-        <Class abbreviatedIRI="geo:SpatialObject"/>
+        <Class IRI="SeaIceChart"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://semanticscience.org/resource/is-model-of"/>
+            <Class IRI="SeaIceChartRegion"/>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="geo:SpatialObject"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="SeaIceChart"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/ns/prov#generatedAtTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
     </SubClassOf>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
-        <Class abbreviatedIRI="geo:Feature"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
-        <Class abbreviatedIRI="geo:Geometry"/>
-    </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="geo:asGML"/>
-        <Class abbreviatedIRI="geo:Geometry"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="geo:asGML"/>
-        <Datatype abbreviatedIRI="geo-gml:GMLLiteral"/>
-    </DataPropertyRange>
+    <SubClassOf>
+        <Class IRI="SeaIceChart"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.w3.org/ns/prov#invalidatedAtTime"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SeaIceChartPublisher"/>
+        <Class IRI="http://www.w3.org/ns/prov#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SeaIceChartRegion"/>
+        <Class IRI="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SecondaryForm"/>
+        <Class abbreviatedIRI="seaiceform:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TraceConcentration"/>
+        <Class abbreviatedIRI="seaiceconcentration:IceWithConcentration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UndeterminedOrUnknownForm"/>
+        <Class abbreviatedIRI="seaiceform:IceWithForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UnknownDevelopment"/>
+        <Class abbreviatedIRI="seaicedevelopment:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <Class IRI="http://purl.org/wmo/seaice#Zone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://semanticscience.org/resource/is-modeled-by"/>
+            <Class IRI="http://semanticscience.org/resource/map"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class IRI="ZoneComponent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class IRI="PredominantForm"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class IRI="SecondaryForm"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <ObjectMaxCardinality cardinality="3">
+            <ObjectProperty IRI="hasComponent"/>
+            <Class IRI="ZoneComponent"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="hasConcentrationCode"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seaicedevelopment:SecondStageThinFirstYearIce"/>
+        <Class abbreviatedIRI="seaicedevelopment:ThinFirstYearIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seaiceform:Floeberg"/>
+        <Class abbreviatedIRI="iceoflandorigin:Iceberg"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="seaiceform:VastFloe"/>
+        <DataHasValue>
+            <DataProperty IRI="hasIceFormCode"/>
+            <Literal datatypeIRI="&xsd;string">6</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="iceoflandorigin:IceOfLandOrigin"/>
+        <Class abbreviatedIRI="seaicedevelopment:IceWithDevelopmentStage"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="muo:BaseUnit"/>
+        <NamedIndividual IRI="fractionalArea"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+        <NamedIndividual IRI="fractionalArea"/>
+        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+        <NamedIndividual IRI="fractionalArea"/>
+        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
+    </ObjectPropertyAssertion>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="seaiceconcentration:hasIceConcentration"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>10_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>10_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ten tenths ice concentration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>10_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ten tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>1_10th</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>1_10th</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of one tenth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>1_10th</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">One tenth </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>1_2_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>1_2_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 1 to 2 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>1_2_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1 to 2 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>1_3_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>1_3_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 1 to 3 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>1_3_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1 to 3 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>2_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>2_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 2 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>2_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>2_3_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>2_3_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentrations of 2 to 3 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>2_3_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2 to 3 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>2_4_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>2_4_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration between 2 and 4 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>2_4_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2 to 4 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>3_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>3_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 3 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>3_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">3 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>3_4_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>3_4_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 3 to 4 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>3_4_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">3 to 4 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>3_5_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>3_5_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 3 to 5 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>3_5_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">3 to 5 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>4_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>4_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 4 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>4_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>4_5_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>4_5_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 4 to 5 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>4_5_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4 to 5 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>4_6_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>4_6_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 4 to 6 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>4_6_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4 to 6 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>5_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>5_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 5 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>5_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">5 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>5_6_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>5_6_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 5 to 6 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>5_6_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">5 to 6 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>5_7_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>5_7_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentrations of 5 to 7 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>5_7_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">5 to 7 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>6_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>6_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 6 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>6_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">6 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>6_7_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>6_7_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 6 to 7 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>6_7_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">6 to 7 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>6_8_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>6_8_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 6 to 8 tenths.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>6_8_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">6 to 8 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>7_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>7_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 7 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>7_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">7 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>7_8_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>7_8_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 7 to 8 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>7_8_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">7 to 8 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>7_9_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>7_9_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 7 to 9 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>7_9_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">7 to 9 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>8_10_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>8_10_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 8 to 10 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>8_10_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">8 to 10 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>8_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>8_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 8 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>8_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">8 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>8_9_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>8_9_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 8 to 9 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>8_9_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">8 to 9 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>9+_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>9+_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">More than 9 tenths but less than 10 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>9+_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">9+ tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>9_10_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>9_10_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 9 to 10 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>9_10_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">9 to 10 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>9_10ths</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>9_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of 9 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>9_10ths</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">9 tenths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>NoDevelopment</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NoDevelopment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A term used when ice is not observed in a region described by an egg code.  Typically the concentration value will be ice free in this case.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NoDevelopment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">No stage of development</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>PredominantForm</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PredominantForm</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The predominant floe size within a region described by an egg code. Part of the Second Variant for encoding the Form of Ice (F).  Derived rom the source document statement
+
+&quot;Predominant and secondary floe size, reported independently from Sa, Sb, Sc respectively (see symbols in table 3.3)&quot; 
+
+If the Second Variant is used, none of the ZoneComponents within the egg code referenced will have an IceFormCode (i.e., hasIceFormCode will be empty).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PredominantForm</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Predominant ice form</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SeaIceChart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A specific sea ice chart.  Sea ice charts depict sea ice analyst expert assessments of the expected sea ice conditions over a stated period of time in the region covered by the chart.  The sea ice conditions are depicted using a number of polygons each of which bounds an area of ice with similar properties, those properties being described by an egg code associated with that polygon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeaIceChart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sea ice chart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SeaIceChartPublisher</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The name of the individual or organization that published the sea ice chart being referenced.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeaIceChartPublisher</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sea Ice Chart Publisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SeaIceChartRegion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The region (e.g., Great Lakes or Hudson Bay) covered by a particular sea ice chart.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeaIceChartRegion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sea ice chart region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>SecondaryForm</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SecondaryForm</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The secondary floe size within a region described by an egg code. Part of the Second Variant for encoding the Form of Ice (F).  Derived rom the source document statement
+
+&quot;Predominant and secondary floe size, reported independently from Sa, Sb, Sc respectively (see symbols in table 3.3)&quot; 
+
+If the Second Variant is used, none of the ZoneComponents within the egg code referenced will have an IceFormCode (i.e., hasIceFormCode will be empty).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SecondaryForm</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Secondary ice form</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>TraceConcentration</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TraceConcentration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice concentration of less than one tenth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TraceConcentration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Trace concentration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>UndeterminedOrUnknownForm</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UndeterminedOrUnknownForm</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">For some reason it was either not possible to determine the form of ice or the form is of some previously unknown type.  Typical reasons for why an egg code might contain values of this type are that no data was observed for example due to cloud cover or instrument related issues.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UndeterminedOrUnknownForm</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Undetermined or unknown ice form</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <IRI>UnknownDevelopment</IRI>
+        <IRI>http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>UnknownDevelopment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">For some reason the stage of development of the ice is either not known or has not been determined (e.g., due to lack of data due to instrument problems, weather issues, etc.).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UnknownDevelopment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Undetermined or unknown development stage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Zone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A geographic region depicted on a sea ice map along with the contents of the egg code describing the ice in that region. Each map may contain many ice zones each with its own geographic boundaries and associated egg code.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Zone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ice zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ZoneComponent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A stage of development of some constituent type of ice within the region represented by an egg code along with its partial ice concentration (if any) and form of ice (if any).
+
+A particular egg code may contain up to 5 zone components.  
+
+A zone component will not have an associated form of ice if the second variant for the form of Ice is used, though it should have a partial ice concentration in that case.  Only the predominant and possibly secondary forms of ice are reported instead.
+
+If a zone component only contains a stage of development, that indicates either that a) this is the thickest stage of development; but that the partial concentration of this ice is less than 1/10th, or b) the stage of development of the thinnest ice in the region.  In case b, this zone component represents either the fourth or fifth thinnest stage of ice in the region described by the egg code depending on whether this is the only zone component for this egg code that only has a development stage (fourth thinnest) or not (fifth thinnest).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ZoneComponent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Zone component</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 

@@ -21,29 +21,27 @@
     <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
+    <Prefix name="concentration" IRI="http://purl.org/wmo/seaice/concentration#"/>
     <Prefix name="wmo-iolo" IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#"/>
+    <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="seaiceform" IRI="http://purl.org/wmo/seaice/form#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="" IRI="http://purl.org/wmo/seaice/concentration#"/>
     <Prefix name="wmo-sif" IRI="http://purl.org/wmo/seaice/form#"/>
+    <Prefix name="sio" IRI="http://semanticscience.org/resource/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="xhv" IRI="http://www.w3.org/1999/xhtml/vocab#"/>
     <Prefix name="geo" IRI="http://opengis.net/ont/OGC-GeoSPARQL/1.0/#"/>
     <Import>http://purl.org/wmo/seaice/form#</Import>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:rights"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Terminology related to the concentration of ice in the ocean&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="xhv:license"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -52,6 +50,10 @@
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
+        <IRI>http://creativecommons.org/publicdomain/zero/1.0/</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
@@ -78,12 +80,12 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2.0</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Jim McCusker, Ruth Duerr, and the rest of the SSIII Project Team</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -117,6 +119,9 @@
         <Class IRI="Ice-free"/>
     </Declaration>
     <Declaration>
+        <Class IRI="IceConcentration"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="IceWithConcentration"/>
     </Declaration>
     <Declaration>
@@ -138,7 +143,25 @@
         <Class abbreviatedIRI="wmo-sif:FastIce"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="wmo-sif:IceWithForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sio:SIO_000044"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sio:mean"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sio:standard-deviation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="dc:hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
@@ -197,13 +220,35 @@
     <EquivalentClasses>
         <Class IRI="ClosePackIce"/>
         <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.75</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.75</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -213,26 +258,70 @@
             <ObjectComplementOf>
                 <Class IRI="ConsolidatedIce"/>
             </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">1.0</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.01</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">1.0</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.01</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="ConsolidatedIce"/>
         <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">1.0</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.001</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">1.0</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.001</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -248,7 +337,7 @@
                 <Literal datatypeIRI="&xsd;boolean">false</Literal>
             </DataHasValue>
             <DataMaxCardinality cardinality="0">
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Datatype abbreviatedIRI="xsd:decimal"/>
             </DataMaxCardinality>
         </ObjectIntersectionOf>
@@ -256,39 +345,105 @@
     <EquivalentClasses>
         <Class IRI="OpenPackIce"/>
         <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.5</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.5</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="VeryClosePackIce"/>
         <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.95</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.95</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.05</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="VeryOpenPackIce"/>
         <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.2</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.075</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.2</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.075</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -299,13 +454,35 @@
     <SubClassOf>
         <Class IRI="BergyWater"/>
         <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </SubClassOf>
@@ -326,6 +503,14 @@
         <Class IRI="IceWithConcentration"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="IceConcentration"/>
+        <Class abbreviatedIRI="sio:SIO_000044"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IceWithConcentration"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="OpenPackIce"/>
         <Class IRI="PackIce"/>
     </SubClassOf>
@@ -336,13 +521,35 @@
     <SubClassOf>
         <Class IRI="OpenWater"/>
         <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="IceConcentration"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:mean"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.05</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="sio:has-attribute"/>
+                        <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="sio:standard-deviation"/>
+                            <DataHasValue>
+                                <DataProperty abbreviatedIRI="sio:has-value"/>
+                                <Literal datatypeIRI="&xsd;double">0.025</Literal>
+                            </DataHasValue>
+                        </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
             <DataHasValue>
-                <DataProperty IRI="hasMeanIceConcentration"/>
+                <DataProperty IRI="hasIceConcentration"/>
                 <Literal datatypeIRI="&xsd;double">0.05</Literal>
-            </DataHasValue>
-            <DataHasValue>
-                <DataProperty IRI="hasStdDevIceConcentration"/>
-                <Literal datatypeIRI="&xsd;double">0.025</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </SubClassOf>
@@ -362,10 +569,14 @@
         <Class abbreviatedIRI="wmo-sif:FastIce"/>
         <Class IRI="ConsolidatedIce"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wmo-sif:IceWithForm"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>BergyWater</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.5</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.5</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -380,7 +591,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>ClosePackIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.3</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.3</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -395,7 +606,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>CompactPackIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -410,7 +621,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>ConsolidatedIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1.1</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.1.1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -425,7 +636,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>Ice-free</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.6</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.6</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -438,9 +649,19 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">Ice-free</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceConcentration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The value in percent of the ice concentration in a region.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceConcentration</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice Concentration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>IceWithConcentration</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -450,12 +671,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IceWithConcentration</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Concentration</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ice with concentration</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>OpenPackIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.4</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.4</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -470,7 +691,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>OpenWater</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.6</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.6</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -485,7 +706,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>PackIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.4</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section1.4</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -500,7 +721,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>VeryClosePackIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.2</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.2</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -515,7 +736,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
         <IRI>VeryOpenPackIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.5</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section2.2.5</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -526,6 +747,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>VeryOpenPackIce</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Very open pack ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>sio:SIO_000044</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2D extent quantity</Literal>
     </AnnotationAssertion>
 </Ontology>
 
