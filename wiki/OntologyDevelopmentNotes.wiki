@@ -20,12 +20,10 @@
 
  * We'd like this ontology to work for all the sea ice charts that are created any where in the world; but at this point have only added enough to represent charts created by the US National Ice Center and the Canadian Ice Service.
  * Each egg code with its associated geometry (the pair being called a zone) will have a parent chart from which it came (i.e., 
-    * {{{<eggcode zone> isA sio:figure-part and }}}
-    * {{{<overall chartURL> isA sio:map and }}}
-    * {{{<eggcode zone> isPartOf <overall chartURL> }}}
+    * {{{<eggcode zone> is-modeled-by some map}}}
     * with this we only really handle charts that are somehow on-line
- * We limited the ice chart specific information to be that is common between all of the example charts in the JCOMM TR24 colour standard for ice charts.  They are:
-   * analysis center (use Prov-O prov:Organization, or DC:publisher?)
+ * We limited the ice chart (i.e., subtype of sio:map) specific information to be that is common between all of the example charts in the JCOMM TR24 colour standard for ice charts.  They are:
+   * analysis center (used Prov-O prov:Organization)
    * spatial domain 
      * Each analysis center only creates charts for a few regions, which are fixed and well defined.
      * We agreed to define and place into a separate rdf file the geofeatures for the 5 or so types of charts that the Canadian Ice Service creates, that way they can be generally referenced from anywhere. 
