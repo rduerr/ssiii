@@ -67,12 +67,12 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</IRI>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Terminology for the contents of an Egg Code</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:language"/>
@@ -107,16 +107,16 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">This ontology models the contents of standard Egg Codes which are used to encode the characteristics of sea ice in ice charts.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -147,12 +147,12 @@
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</IRI>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">SSIII Project Team</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</IRI>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>

@@ -1,1 +1,252 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY egg "http://purl.org/nsidc/jcomm/egg#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vocab "http://www.w3.org/1999/xhtml/vocab#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY OGC-GeoSPARQL "http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/" >
+    <!ENTITY Sea-Ice-Chart-Regions "http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#"
+     xml:base="http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:OGC-GeoSPARQL="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vocab="http://www.w3.org/1999/xhtml/vocab#"
+     xmlns:egg="http://purl.org/nsidc/jcomm/egg#"
+     xmlns:Sea-Ice-Chart-Regions="http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#">
+    <owl:Ontology rdf:about="http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions">
+        <rdfs:label xml:lang="en">Sea Ice Chart Regions</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <dc:title xml:lang="en">Canadian Ice Service Sea Ice Chart Region Definitions</dc:title>
+        <rdfs:comment xml:lang="en">Defines the geographic regions covered by the standard sea ice charts produced by the Canadian Ice Service and archived at NSIDC.  There are currently five standard ice charts produced: Western Arctic, Eastern Arctic, Hudson Bay, Great Lakes, and East Coast.  It should be noted that the corner points of the geographic regions were determined by visual inspection of the maps produced by the Canadien Ice Service.</rdfs:comment>
+        <dc:publisher xml:lang="en">National Snow and Ice Data Center</dc:publisher>
+        <dc:creator xml:lang="en">Ruth Duerr and the SSIII Project Team</dc:creator>
+        <dc:rights xml:lang="en">To the extent possible under law, the Ruth Duerr and the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Canadian Ice Service Sea Ice Chart Region Definitions&quot;.  The Ruth Duerr and the SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</dc:rights>
+        <vocab:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_floes"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_pack_ice"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_lake_ice"/>
+        <dc:subject rdf:resource="http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice"/>
+        <rdfs:seeAlso rdf:resource="http://nsidc.org/data/g02171.html"/>
+        <dc:source rdf:resource="http://www.ec.gc.ca/glaces-ice/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ec.gc.ca/glaces-ice/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral -->
+
+    <rdfs:Datatype rdf:about="http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="&OGC-GeoSPARQL;hasGeometry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/asGML -->
+
+    <owl:DatatypeProperty rdf:about="&OGC-GeoSPARQL;asGML"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/nsidc/jcomm/egg#SeaIceChartRegion -->
+
+    <owl:Class rdf:about="&egg;SeaIceChartRegion"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/Geometry -->
+
+    <owl:Class rdf:about="&OGC-GeoSPARQL;Geometry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#EastCoast -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;EastCoast">
+        <rdf:type rdf:resource="&egg;SeaIceChartRegion"/>
+        <OGC-GeoSPARQL:hasGeometry rdf:resource="&Sea-Ice-Chart-Regions;EastCoastGeometry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#EastCoastGeometry -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;EastCoastGeometry">
+        <rdf:type rdf:resource="&OGC-GeoSPARQL;Geometry"/>
+        <OGC-GeoSPARQL:asGML rdf:datatype="http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral">&lt;gml:Polygon&gt;&lt;gml:outerBoundaryIs&gt;&lt;gml:LinearRing&gt;&lt;gml:coordinates&gt;-75,55 -40,55 -45,42 -70,42&lt;/gml:coordinates&gt;&lt;/gml:LinearRing&gt;&lt;/gml:outerBoundaryIs&gt;&lt;/gml:Polygon&gt;</OGC-GeoSPARQL:asGML>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#EasternArctic -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;EasternArctic">
+        <rdf:type rdf:resource="&egg;SeaIceChartRegion"/>
+        <OGC-GeoSPARQL:hasGeometry rdf:resource="&Sea-Ice-Chart-Regions;EasternArcticGeometry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#EasternArcticGeometry -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;EasternArcticGeometry">
+        <rdf:type rdf:resource="&OGC-GeoSPARQL;Geometry"/>
+        <OGC-GeoSPARQL:asGML rdf:datatype="http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral">&lt;gml:Polygon&gt;&lt;gml:outerBoundaryIs&gt;&lt;gml:LinearRing&gt;&lt;gml:coordinates&gt;-112,82.2 -30,77 -52,63 -91,64&lt;/gml:coordinates&gt;&lt;/gml:LinearRing&gt;&lt;/gml:outerBoundaryIs&gt;&lt;/gml:Polygon&gt;</OGC-GeoSPARQL:asGML>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#GreatLakes -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;GreatLakes">
+        <rdf:type rdf:resource="&egg;SeaIceChartRegion"/>
+        <OGC-GeoSPARQL:hasGeometry rdf:resource="&Sea-Ice-Chart-Regions;GreatLakesGeometry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#GreatLakesGeometry -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;GreatLakesGeometry">
+        <rdf:type rdf:resource="&OGC-GeoSPARQL;Geometry"/>
+        <OGC-GeoSPARQL:asGML rdf:datatype="http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral">&lt;gml:Polygon&gt;&lt;gml:outerBoundaryIs&gt;&lt;gml:LinearRing&gt;&lt;gml:coordinates&gt;-93,49 -75,49 -74,40 -91,40&lt;/gml:coordinates&gt;&lt;/gml:LinearRing&gt;&lt;/gml:outerBoundaryIs&gt;&lt;/gml:Polygon&gt;</OGC-GeoSPARQL:asGML>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#HudsonBay -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;HudsonBay">
+        <rdf:type rdf:resource="&egg;SeaIceChartRegion"/>
+        <OGC-GeoSPARQL:hasGeometry rdf:resource="&Sea-Ice-Chart-Regions;HudsonBayGeometry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#HudsonBayGeometry -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;HudsonBayGeometry">
+        <rdf:type rdf:resource="&OGC-GeoSPARQL;Geometry"/>
+        <OGC-GeoSPARQL:asGML rdf:datatype="http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral">&lt;gml:Polygon&gt;&lt;gml:outerBoundaryIs&gt;&lt;gml:LinearRing&gt;&lt;gml:coordinates&gt;-100,61 -55,68 -55,54 - 85,50&lt;/gml:coordinates&gt;&lt;/gml:LinearRing&gt;&lt;/gml:outerBoundaryIs&gt;&lt;/gml:Polygon&gt;</OGC-GeoSPARQL:asGML>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#WesternArctic -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;WesternArctic">
+        <rdf:type rdf:resource="&egg;SeaIceChartRegion"/>
+        <OGC-GeoSPARQL:hasGeometry rdf:resource="&Sea-Ice-Chart-Regions;WesternArcticGeometry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#WesternArcticGeometry -->
+
+    <owl:NamedIndividual rdf:about="&Sea-Ice-Chart-Regions;WesternArcticGeometry">
+        <rdf:type rdf:resource="&OGC-GeoSPARQL;Geometry"/>
+        <OGC-GeoSPARQL:asGML rdf:datatype="http://www.opengis.net/def/dataType/OGC-GML/3.0/GMLLiteral">&lt;gml:Polygon&gt;&lt;gml:outerBoundaryIs&gt;&lt;gml:LinearRing&gt;&lt;gml:coordinates&gt;-164.0,71.5 -87,80.5 -89,66 -138,62&lt;/gml:coordinates&gt;&lt;/gml:LinearRing&gt;&lt;/gml:outerBoundaryIs&gt;&lt;/gml:Polygon&gt;</OGC-GeoSPARQL:asGML>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
