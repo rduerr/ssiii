@@ -49,6 +49,8 @@ We discussed what provenance information needs to be added to the sigrid ontolog
    * {{{ prov:endedAtTime <datetime>;}}}  
    * {{{ prov:wasAssociatedWith <Canadian Ice Service or whomever>;]}}}
 
+While cleaning up the sigrid3 ontology in preparation for adding provenance information, I realized that there are a number of terms used in the sigrid3 file for the Form of ice which do not map to anything on the egg code, but which do use terms in the WMO sea ice nomenclature which are as yet not part of any ontology.  This implies that it may not be possible to completely re-create a compliant sea ice map from a sigrid3 file.  It also implies that we may need to create yet more WMO ontologies...  The urgency of these fixes depends on what we see in the data we have.
+
 == General Notes ==
 
  * Inferencing can be tricky - for example, bergy bits and growlers actually are small chunks of "ice of land origin" that have size definitions that fit nicely into the "sea ice" floe size definitions.  And actually they are chunks of ice smaller than the smallest sea ice floe.  You'd think that you could simply reuse the hasFloeSize data property to associate their sizes; but if you do then they end up being inferred as "sea ice."  In other words, if you want to capture floe sizes for these types of ice, you would either have to define another kind of floe size hasLandIceFloeSize or accept that ice in this category might be sea ice...
