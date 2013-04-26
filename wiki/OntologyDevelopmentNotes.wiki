@@ -40,14 +40,16 @@ However on 2/8/2013 we decided to ignore these for a while.
 
 We discussed what provenance information needs to be added to the sigrid ontology - attached to each zone in the file 
  * filename {{{(prov:wasDerivedFrom <fileURL>)}}}
- * a reference back to the data set it came from 
-   * {{{(i.e., <zoneURL> void:inDataset <overall datasetURL>}}}.
-   * {{{<originalFile> dc:partOf <overall datasetURL>)}}}
- * the files provenance 
-   * {{{<originalFileURL> prov:wasGeneratedBy [a prov:Activity;}}} 
-   * {{{ prov:startedAtTime <datetime>;}}}  
-   * {{{ prov:endedAtTime <datetime>;}}}  
-   * {{{ prov:wasAssociatedWith <Canadian Ice Service or whomever>;]}}}
+
+We also need to capture that files provenance and that it is part of a larger data set
+   * <a fileURL> ESIPData:hasDataSet <overall datasetURL>
+   * <a fileURL> dc:partOf <overall datasetURL>
+   * <a fileURL> prov:wasGeneratedBy [a prov:Activity]
+   * prov:startedAtTime <a datetime> 
+   * prov:endedAtTime <a datetime> 
+   * prov:wasAssociatedWith <Canadian Ice Service or whomever>
+
+There is an awful lot of FGDC CGDSM metadata associated with each data file.  Ideally we would capture all of that and stick it in the triple store also...
 
 While cleaning up the sigrid3 ontology in preparation for adding provenance information, I realized that there are a number of terms used in the sigrid3 file for the Form of ice which do not map to anything on the egg code, but which do use terms in the WMO sea ice nomenclature which are as yet not part of any ontology.  This implies that it may not be possible to completely re-create a compliant sea ice map from a sigrid3 file.  It also implies that we may need to create yet more WMO ontologies...  The urgency of these fixes depends on what we see in the data we have.
 
