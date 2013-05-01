@@ -45,8 +45,8 @@ We also need to capture that files provenance and that it is part of a larger da
    * <a fileURL> ESIPData:hasDataSet <overall datasetURL>
    * <a fileURL> dc:isPartOf <overall datasetURL>
    * <a fileURL> prov:wasGeneratedBy [a prov:Activity]
-   * prov:startedAtTime <a datetime> 
-   * prov:endedAtTime <a datetime> 
+   * prov:generatedAtTime <a datetime> 
+   * prov:invalidatedAtTime <a datetime> 
    * prov:wasAssociatedWith <Canadian Ice Service or whomever>
 
 There is an awful lot of FGDC CGDSM metadata associated with each data file.  Ideally we would capture all of that and stick it in the triple store also...
