@@ -43,7 +43,7 @@ We discussed what provenance information needs to be added to the sigrid ontolog
 
 We also need to capture that files provenance and that it is part of a larger data set
    * <a fileURL> ESIPData:hasDataSet <overall datasetURL>
-   * <a fileURL> dc:partOf <overall datasetURL>
+   * <a fileURL> dc:isPartOf <overall datasetURL>
    * <a fileURL> prov:wasGeneratedBy [a prov:Activity]
    * prov:startedAtTime <a datetime> 
    * prov:endedAtTime <a datetime> 
