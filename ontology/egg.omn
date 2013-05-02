@@ -28,28 +28,28 @@ Annotations:
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the contents of an Egg code\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheets>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs>,
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types>,
     dc:title "Terminology for the contents of an Egg Code",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_lake_ice>,
+    dc:source <http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf>,
     dc:language "english",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration>,
-    <http://www.w3.org/1999/xhtml/vocab#license> "http://creativecommons.org/publicdomain/zero/1.0/",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers>,
     owl:priorVersion "none",
     dc:date "January 13, 2012",
+    <http://www.w3.org/1999/xhtml/vocab#license> <http://creativecommons.org/publicdomain/zero/1.0/>,
     rdfs:comment "This ontology models the contents of standard Egg Codes which are used to encode the characteristics of sea ice in ice charts.",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes>,
-    dc:source "http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice>,
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice>,
     dc:publisher "National Snow and Ice Data Center",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_pack_ice>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types>,
-    dc:creator "SSIII Project Team",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs>,
+    dc:creator "SSIII Project Team",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_snow_ice_river_ice>
 
 AnnotationProperty: dc:creator
@@ -73,10 +73,10 @@ AnnotationProperty: rdfs:label
 AnnotationProperty: rdfs:comment
 
     
-AnnotationProperty: owl:versionInfo
+AnnotationProperty: rdfs:seeAlso
 
     
-AnnotationProperty: rdfs:seeAlso
+AnnotationProperty: owl:versionInfo
 
     
 AnnotationProperty: dc:language
@@ -88,13 +88,13 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
-AnnotationProperty: dc:title
-
-    
 AnnotationProperty: muo:preferredUnit
 
     
 AnnotationProperty: muo:measuresQuality
+
+    
+AnnotationProperty: dc:title
 
     
 AnnotationProperty: dc:rights
@@ -154,6 +154,9 @@ DataProperty: seaiceconcentration:hasIceConcentration
 DataProperty: hasConcentrationCode
 
     
+DataProperty: seaicedevelopment:hasIceThickness
+
+    
 DataProperty: <http://www.w3.org/ns/prov#invalidatedAtTime>
 
     
@@ -168,11 +171,17 @@ DataProperty: <http://www.w3.org/ns/prov#generatedAtTime>
     
 Class: FirstStageThinFirstYearIce
 
+    Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "Thin first-year ice, first stage",
+        rdfs:comment "The first stage of thin first-year ice which is 30-50 cm thick. "
+    
     EquivalentTo: 
         hasDevelopmentStageCode value "8"^^xsd:string
     
     SubClassOf: 
-        seaicedevelopment:ThinFirstYearIce
+        seaicedevelopment:ThinFirstYearIce,
+        seaicedevelopment:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "0.5"^^xsd:decimal]
     
     
 Class: seaiceform:MediumFloe
@@ -184,9 +193,9 @@ Class: seaiceform:MediumFloe
 Class: 6_10ths
 
     Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
         rdfs:comment "Ice concentration of 6 tenths.",
-        rdfs:label "6 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        rdfs:label "6 tenths"
     
     EquivalentTo: 
         hasConcentrationCode value "6"^^xsd:string,
@@ -204,13 +213,10 @@ Class: 6_10ths
         seaiceconcentration:IceWithConcentration
     
     
-Class: <http://semanticscience.org/resource/map>
+Class: muo:BaseUnit
 
     
 Class: <http://purl.org/wmo/seaice#Zone>
-
-    
-Class: muo:BaseUnit
 
     
 Class: seaiceconcentration:IceWithConcentration
@@ -222,11 +228,14 @@ Class: seaiceconcentration:IceWithConcentration
 Class: <http://semanticscience.org/resource/standard-deviation>
 
     
+Class: <http://semanticscience.org/resource/map>
+
+    
 Class: 3_4_10ths
 
     Annotations: 
-        rdfs:label "3 to 4 tenths",
         dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "3 to 4 tenths",
         rdfs:comment "Ice concentration of 3 to 4 tenths"
     
     EquivalentTo: 
@@ -270,35 +279,12 @@ If the Second Variant is used, none of the ZoneComponents within the egg code re
         seaiceform:IceWithForm
     
     
-Class: 3_10ths
-
-    Annotations: 
-        rdfs:comment "Ice concentration of 3 tenths",
-        rdfs:label "3 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
-    
-    EquivalentTo: 
-        hasConcentrationCode value "3"^^xsd:string,
-        (<http://semanticscience.org/resource/has-attribute> some 
-            (seaiceconcentration:IceConcentration
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/mean>
-                 and (<http://semanticscience.org/resource/has-value> value 0.3)))
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/standard-deviation>
-                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
-         and (seaiceconcentration:hasIceConcentration value 0.3)
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: 7_10ths
 
     Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
         rdfs:label "7 tenths",
-        rdfs:comment "Ice concentration of 7 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        rdfs:comment "Ice concentration of 7 tenths"
     
     EquivalentTo: 
         (<http://semanticscience.org/resource/has-attribute> some 
@@ -311,6 +297,29 @@ Class: 7_10ths
                  and (<http://semanticscience.org/resource/has-value> value 0.025)))))
          and (seaiceconcentration:hasIceConcentration value 0.7),
         hasConcentrationCode value "7"^^xsd:string
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
+Class: 3_10ths
+
+    Annotations: 
+        rdfs:comment "Ice concentration of 3 tenths",
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "3 tenths"
+    
+    EquivalentTo: 
+        hasConcentrationCode value "3"^^xsd:string,
+        (<http://semanticscience.org/resource/has-attribute> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/mean>
+                 and (<http://semanticscience.org/resource/has-value> value 0.3)))
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/standard-deviation>
+                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
+         and (seaiceconcentration:hasIceConcentration value 0.3)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -355,9 +364,9 @@ Class: Zone
 Class: 6_7_10ths
 
     Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
         rdfs:comment "Ice concentration of 6 to 7 tenths.",
-        rdfs:label "6 to 7 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        rdfs:label "6 to 7 tenths"
     
     EquivalentTo: 
         (<http://semanticscience.org/resource/has-attribute> some 
@@ -390,8 +399,8 @@ Class: <http://semanticscience.org/resource/mean>
 Class: 7_8_10ths
 
     Annotations: 
-        rdfs:label "7 to 8 tenths",
         dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "7 to 8 tenths",
         rdfs:comment "Ice concentration of 7 to 8 tenths"
     
     EquivalentTo: 
@@ -420,8 +429,8 @@ Class: 4_5_10ths
 
     Annotations: 
         rdfs:comment "Ice concentration of 4 to 5 tenths.",
-        rdfs:label "4 to 5 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "4 to 5 tenths"
     
     EquivalentTo: 
         (<http://semanticscience.org/resource/has-attribute> some 
@@ -443,8 +452,8 @@ Class: TraceConcentration
 
     Annotations: 
         rdfs:comment "Ice concentration of less than one tenth",
-        rdfs:label "Trace concentration",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "Trace concentration"
     
     EquivalentTo: 
         (<http://semanticscience.org/resource/has-attribute> some 
@@ -472,8 +481,8 @@ Class: 8_10_10ths
 
     Annotations: 
         rdfs:label "8 to 10 tenths",
-        rdfs:comment "Ice concentration of 8 to 10 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:comment "Ice concentration of 8 to 10 tenths"
     
     EquivalentTo: 
         (<http://semanticscience.org/resource/has-attribute> some 
@@ -491,35 +500,12 @@ Class: 8_10_10ths
         seaiceconcentration:IceWithConcentration
     
     
-Class: 8_10ths
-
-    Annotations: 
-        rdfs:comment "Ice concentration of 8 tenths",
-        rdfs:label "8 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
-    
-    EquivalentTo: 
-        hasConcentrationCode value "8"^^xsd:string,
-        (<http://semanticscience.org/resource/has-attribute> some 
-            (seaiceconcentration:IceConcentration
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/mean>
-                 and (<http://semanticscience.org/resource/has-value> value 0.8)))
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/standard-deviation>
-                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
-         and (seaiceconcentration:hasIceConcentration value 0.8)
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: 3_5_10ths
 
     Annotations: 
         rdfs:comment "Ice concentration of 3 to 5 tenths.",
-        rdfs:label "3 to 5 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "3 to 5 tenths"
     
     EquivalentTo: 
         hasConcentrationCode value "3-5"^^xsd:string,
@@ -537,11 +523,34 @@ Class: 3_5_10ths
         seaiceconcentration:IceWithConcentration
     
     
+Class: 8_10ths
+
+    Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:comment "Ice concentration of 8 tenths",
+        rdfs:label "8 tenths"
+    
+    EquivalentTo: 
+        hasConcentrationCode value "8"^^xsd:string,
+        (<http://semanticscience.org/resource/has-attribute> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/mean>
+                 and (<http://semanticscience.org/resource/has-value> value 0.8)))
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/standard-deviation>
+                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
+         and (seaiceconcentration:hasIceConcentration value 0.8)
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
 Class: 5_10ths
 
     Annotations: 
-        rdfs:label "5 tenths",
         dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "5 tenths",
         rdfs:comment "Ice concentration of 5 tenths."
     
     EquivalentTo: 
@@ -563,8 +572,8 @@ Class: 5_10ths
 Class: 1_2_10ths
 
     Annotations: 
-        rdfs:comment "Ice concentration of 1 to 2 tenths.",
         dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:comment "Ice concentration of 1 to 2 tenths.",
         rdfs:label "1 to 2 tenths"
     
     EquivalentTo: 
@@ -583,34 +592,11 @@ Class: 1_2_10ths
         seaiceconcentration:IceWithConcentration
     
     
-Class: 2_10ths
-
-    Annotations: 
-        rdfs:label "2 tenths",
-        rdfs:comment "Ice concentration of 2 tenths.",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
-    
-    EquivalentTo: 
-        hasConcentrationCode value "2"^^xsd:string,
-        (<http://semanticscience.org/resource/has-attribute> some 
-            (seaiceconcentration:IceConcentration
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/mean>
-                 and (<http://semanticscience.org/resource/has-value> value 0.2)))
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/standard-deviation>
-                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
-         and (seaiceconcentration:hasIceConcentration value 0.2)
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: 5_7_10ths
 
     Annotations: 
-        rdfs:label "5 to 7 tenths",
         dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "5 to 7 tenths",
         rdfs:comment "Ice concentrations of 5 to 7 tenths."
     
     EquivalentTo: 
@@ -629,12 +615,35 @@ Class: 5_7_10ths
         seaiceconcentration:IceWithConcentration
     
     
+Class: 2_10ths
+
+    Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "2 tenths",
+        rdfs:comment "Ice concentration of 2 tenths."
+    
+    EquivalentTo: 
+        hasConcentrationCode value "2"^^xsd:string,
+        (<http://semanticscience.org/resource/has-attribute> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/mean>
+                 and (<http://semanticscience.org/resource/has-value> value 0.2)))
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/standard-deviation>
+                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
+         and (seaiceconcentration:hasIceConcentration value 0.2)
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
 Class: 4_10ths
 
     Annotations: 
         rdfs:comment "Ice concentration of 4 tenths.",
-        rdfs:label "4 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "4 tenths"
     
     EquivalentTo: 
         (<http://semanticscience.org/resource/has-attribute> some 
@@ -656,6 +665,21 @@ Class: seaiceform:Floeberg
 
     SubClassOf: 
         iceoflandorigin:Iceberg
+    
+    
+Class: SecondStageThinFirstYearIce
+
+    Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "Thin first-year ice, second stage",
+        rdfs:comment "The second stage of thin first-year ice which is 50-70 cm thick. "
+    
+    EquivalentTo: 
+        hasDevelopmentStageCode value "9"^^xsd:string
+    
+    SubClassOf: 
+        seaicedevelopment:ThinFirstYearIce,
+        seaicedevelopment:hasIceThickness only xsd:decimal[>= "0.5"^^xsd:decimal , < "0.7"^^xsd:decimal]
     
     
 Class: NoDevelopment
@@ -765,8 +789,8 @@ Class: 4_6_10ths
 
     Annotations: 
         rdfs:comment "Ice concentration of 4 to 6 tenths.",
-        rdfs:label "4 to 6 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "4 to 6 tenths"
     
     EquivalentTo: 
         hasConcentrationCode value "4-6"^^xsd:string,
@@ -820,20 +844,11 @@ If a zone component only contains a stage of development, that indicates either 
          and (hasIceFormCode max 1 xsd:string)
     
     
-Class: seaicedevelopment:SecondStageThinFirstYearIce
-
-    EquivalentTo: 
-        hasDevelopmentStageCode value "9"^^xsd:string
-    
-    SubClassOf: 
-        seaicedevelopment:ThinFirstYearIce
-    
-    
 Class: 9_10_10ths
 
     Annotations: 
-        rdfs:comment "Ice concentration of 9 to 10 tenths",
         dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:comment "Ice concentration of 9 to 10 tenths",
         rdfs:label "9 to 10 tenths"
     
     EquivalentTo: 
@@ -871,8 +886,8 @@ Class: 1_10th
 
     Annotations: 
         rdfs:comment "Ice concentration of one tenth",
-        rdfs:label "One tenth ",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "One tenth "
     
     EquivalentTo: 
         hasConcentrationCode value "1"^^xsd:string,
@@ -918,8 +933,8 @@ Class: 10_10ths
 
     Annotations: 
         rdfs:comment "Ten tenths ice concentration.",
-        rdfs:label "Ten tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "Ten tenths"
     
     EquivalentTo: 
         (<http://semanticscience.org/resource/has-attribute> some 
@@ -943,8 +958,8 @@ Class: seaicedevelopment:IceWithDevelopmentStage
 Class: 2_4_10ths
 
     Annotations: 
-        rdfs:comment "Ice concentration between 2 and 4 tenths.",
         dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:comment "Ice concentration between 2 and 4 tenths.",
         rdfs:label "2 to 4 tenths"
     
     EquivalentTo: 
@@ -975,29 +990,6 @@ Class: seaicedevelopment:MediumFirstYearIce
         hasDevelopmentStageCode value "1*"^^xsd:string
     
     
-Class: 7_9_10ths
-
-    Annotations: 
-        rdfs:label "7 to 9 tenths",
-        rdfs:comment "Ice concentration of 7 to 9 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
-    
-    EquivalentTo: 
-        hasConcentrationCode value "7-9"^^xsd:string,
-        (<http://semanticscience.org/resource/has-attribute> some 
-            (seaiceconcentration:IceConcentration
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/mean>
-                 and (<http://semanticscience.org/resource/has-value> value 0.8)))
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/standard-deviation>
-                 and (<http://semanticscience.org/resource/has-value> value 0.075)))))
-         and (seaiceconcentration:hasIceConcentration value 0.8)
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: 9_10ths
 
     Annotations: 
@@ -1021,6 +1013,29 @@ Class: 9_10ths
         seaiceconcentration:IceWithConcentration
     
     
+Class: 7_9_10ths
+
+    Annotations: 
+        rdfs:label "7 to 9 tenths",
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:comment "Ice concentration of 7 to 9 tenths"
+    
+    EquivalentTo: 
+        hasConcentrationCode value "7-9"^^xsd:string,
+        (<http://semanticscience.org/resource/has-attribute> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/mean>
+                 and (<http://semanticscience.org/resource/has-value> value 0.8)))
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/standard-deviation>
+                 and (<http://semanticscience.org/resource/has-value> value 0.075)))))
+         and (seaiceconcentration:hasIceConcentration value 0.8)
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
 Class: seaicedevelopment:GrayWhiteIce
 
     EquivalentTo: 
@@ -1030,9 +1045,9 @@ Class: seaicedevelopment:GrayWhiteIce
 Class: 2_3_10ths
 
     Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
         rdfs:comment "Ice concentrations of 2 to 3 tenths",
-        rdfs:label "2 to 3 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>
+        rdfs:label "2 to 3 tenths"
     
     EquivalentTo: 
         hasConcentrationCode value "2-3"^^xsd:string,
@@ -1131,16 +1146,16 @@ Class: UnknownDevelopment
         seaicedevelopment:IceWithDevelopmentStage
     
     
-Class: seaicedevelopment:GrayIce
-
-    EquivalentTo: 
-        hasDevelopmentStageCode value "4"^^xsd:string
-    
-    
 Class: seaiceform:PancakeIce
 
     EquivalentTo: 
         hasIceFormCode value "0"^^xsd:string
+    
+    
+Class: seaicedevelopment:GrayIce
+
+    EquivalentTo: 
+        hasDevelopmentStageCode value "4"^^xsd:string
     
     
 Class: 6_8_10ths
