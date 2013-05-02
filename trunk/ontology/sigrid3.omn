@@ -11,15 +11,89 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 Ontology: <http://purl.org/nsidc/jcomm/sigrid3#>
 
+Import: <http://www.w3.org/ns/prov#>
 Import: <http://purl.org/nsidc/jcomm/egg#>
 
+Annotations: 
+    owl:priorVersion "1.0"@en,
+    dc:language "english"@en,
+    rdfs:label "Sigrid-3 formatted ice chart file contents"@en,
+    <http://www.w3.org/1999/xhtml/vocab#license> <http://creativecommons.org/publicdomain/zero/1.0/>,
+    dc:title "Terminology for the contents of a Sigrid-3 formatted ice chart"@en,
+    dc:rights "To the extent possible under law, the Ruth Duerr, Jim McCusker and the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the contents of a Sigrid-3 formatted ice chart\".  The authors expect that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States."@en,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age>,
+    dc:creator "Ruth Duerr, Jim McCusker and the SSIII Project Team"@en,
+    rdfs:comment "This ontology models the contents of a SIGRID-3 formatted digital ice chart.  This version does not yet include the complete content of the metadata component of the SIGRID-3 specification."@en,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_concentration>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_age>,
+    dc:source <www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR23%20SIGRID3.doc>,
+    owl:versionInfo "2.0",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_types>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types>,
+    dc:date "May 1, 2013"@en,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration>
+
+AnnotationProperty: dc:creator
+
+    
+AnnotationProperty: owl:priorVersion
+
+    
+AnnotationProperty: <http://www.w3.org/1999/xhtml/vocab#license>
+
+    
+AnnotationProperty: dc:subject
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: dc:language
+
+    
+AnnotationProperty: dc:date
+
+    
+AnnotationProperty: dc:source
+
+    
+AnnotationProperty: dc:title
+
+    
+AnnotationProperty: dc:rights
+
+    
 Datatype: rdf:PlainLiteral
 
     
 Datatype: xsd:string
 
     
+Datatype: xsd:dateTime
+
+    
 Datatype: rdfs:Literal
+
+    
+ObjectProperty: <http://semanticscience.org/resource/is-modeled-by>
+
+    
+ObjectProperty: <http://www.itsc.uah.edu/esip_data#hasDataGranule>
+
+    
+ObjectProperty: dc:isPartOf
+
+    
+ObjectProperty: <http://www.itsc.uah.edu/esip_data#hasDataSet>
+
+    
+ObjectProperty: <http://www.w3.org/ns/prov#wasAttributedTo>
 
     
 DataProperty: <http://purl.org/wmo/seaice#hasIceThickness>
@@ -34,6 +108,24 @@ DataProperty: hasSigrid3ConcentrationCode
 DataProperty: hasSigrid3IceFormCode
 
     
+DataProperty: <http://www.w3.org/ns/prov#invalidatedAtTime>
+
+    
+DataProperty: <http://www.w3.org/ns/prov#generatedAtTime>
+
+    
+Class: egg:FirstStageThinFirstYearIce
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "88"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/form#MediumFloe>
+
+    EquivalentTo: 
+        hasSigrid3IceFormCode value "04"^^xsd:string
+    
+    
 Class: egg:6_10ths
 
     EquivalentTo: 
@@ -46,22 +138,10 @@ Class: egg:3_4_10ths
         hasSigrid3ConcentrationCode value "34"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#BigFloe>
+Class: egg:3_10ths
 
     EquivalentTo: 
-        hasSigrid3IceFormCode value "05"^^xsd:string
-    
-    
-Class: Shuga
-
-    SubClassOf: 
-        ShugaSmallIceCakeOrBrashIce
-    
-    
-Class: <http://purl.org/wmo/seaice#FirstStageThinFirstYearIce>
-
-    EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "88"^^xsd:string
+        hasSigrid3ConcentrationCode value "30"^^xsd:string
     
     
 Class: egg:7_10ths
@@ -70,19 +150,40 @@ Class: egg:7_10ths
         hasSigrid3ConcentrationCode value "70"^^xsd:string
     
     
-Class: egg:3_10ths
+Class: egg:SeaIceChart
+
+    SubClassOf: 
+        <http://semanticscience.org/resource/is-modeled-by> exactly 1 <http://www.itsc.uah.edu/esip_data#DataGranule>
+    
+    
+Class: <http://purl.org/wmo/seaice/development#NewIce>
 
     EquivalentTo: 
-        hasSigrid3ConcentrationCode value "30"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "81"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#BrashIce>
+Class: egg:Zone
 
+    SubClassOf: 
+        <http://www.itsc.uah.edu/esip_data#hasDataGranule> exactly 1 <http://www.itsc.uah.edu/esip_data#DataGranule>
+    
     
 Class: egg:6_7_10ths
 
     EquivalentTo: 
         hasSigrid3ConcentrationCode value "67"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/development#YoungIce>
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "83"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#Glacier>
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "98"^^xsd:string
     
     
 Class: egg:7_8_10ths
@@ -91,25 +192,28 @@ Class: egg:7_8_10ths
         hasSigrid3ConcentrationCode value "78"^^xsd:string
     
     
+Class: <http://purl.org/wmo/seaice/development#FirstYearIce>
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "86"^^xsd:string
+    
+    
 Class: egg:4_5_10ths
 
     EquivalentTo: 
         hasSigrid3ConcentrationCode value "45"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#SmallFloe>
+Class: egg:TraceConcentration
 
     EquivalentTo: 
-        hasSigrid3IceFormCode value "03"^^xsd:string
+        hasSigrid3ConcentrationCode value "01"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#Growler>
-
-    
-Class: <http://purl.org/nsidc/ssiii/seaice#UndeterminedOrUnknownForm>
+Class: <http://purl.org/wmo/seaice/development#SecondYearIce>
 
     EquivalentTo: 
-        hasSigrid3IceFormCode value "99"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "96"^^xsd:string
     
     
 Class: egg:8_10_10ths
@@ -142,18 +246,6 @@ Class: egg:1_2_10ths
         hasSigrid3ConcentrationCode value "12"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#TraceConcentration>
-
-    EquivalentTo: 
-        hasSigrid3ConcentrationCode value "01"^^xsd:string
-    
-    
-Class: <http://purl.org/wmo/seaice#FastIce>
-
-    EquivalentTo: 
-        hasSigrid3IceFormCode value "08"^^xsd:string
-    
-    
 Class: egg:2_10ths
 
     EquivalentTo: 
@@ -175,11 +267,8 @@ Class: egg:4_10ths
 Class: <http://purl.org/nsidc/ssiii/seaice#IceWithForm>
 
     
-Class: <http://purl.org/wmo/seaice#GiantFloe>
+Class: <http://purl.org/wmo/seaice/form#Floeberg>
 
-    EquivalentTo: 
-        hasSigrid3IceFormCode value "07"^^xsd:string
-    
     
 Class: LevelIce
 
@@ -190,19 +279,51 @@ Class: LevelIce
         <http://purl.org/nsidc/ssiii/seaice#IceWithForm>
     
     
-Class: <http://purl.org/wmo/seaice#FirstYearIce>
+Class: <http://purl.org/wmo/seaice/form#SmallIceCake>
+
+    
+Class: egg:SecondStageThinFirstYearIce
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "86"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "89"^^xsd:string
+    
+    
+Class: egg:NoDevelopment
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "80"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/development#MultiYearIce>
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "97"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/form#BigFloe>
+
+    EquivalentTo: 
+        hasSigrid3IceFormCode value "05"^^xsd:string
     
     
 Class: <http://purl.org/wmo/seaice#SeaIce>
 
     
-Class: <http://purl.org/wmo/seaice#OldIce>
+Class: <http://purl.org/wmo/seaice/concentration#Ice-free>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "95"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "00"^^xsd:string,
+        hasSigrid3ConcentrationCode value "00"^^xsd:string,
+        <http://purl.org/wmo/seaice#hasIceThickness> max 0 rdfs:Literal
+    
+    SubClassOf: 
+        <http://purl.org/wmo/seaice/development#IceWithDevelopmentStage>
+    
+    
+Class: <http://purl.org/wmo/seaice/development#Shuga>
+
+    SubClassOf: 
+        ShugaSmallIceCakeOrBrashIce
     
     
 Class: egg:8_9_10ths
@@ -211,44 +332,22 @@ Class: egg:8_9_10ths
         hasSigrid3ConcentrationCode value "89"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#MediumFirstYearIce>
-
-    EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "91"^^xsd:string
-    
-    
 Class: egg:4_6_10ths
 
     EquivalentTo: 
         hasSigrid3ConcentrationCode value "46"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#MultiYearIce>
+Class: <http://purl.org/wmo/seaice/form#SmallFloe>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "97"^^xsd:string
+        hasSigrid3IceFormCode value "03"^^xsd:string
     
     
-Class: IceFree
+Class: <http://purl.org/wmo/seaice/form#GiantFloe>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "00"^^xsd:string,
-        <http://purl.org/wmo/seaice#hasIceThickness> max 0 rdfs:Literal
-    
-    SubClassOf: 
-        <http://purl.org/wmo/seaice#IceWithDevelopmentStage>
-    
-    
-Class: <http://purl.org/wmo/seaice#ThickFirstYearIce>
-
-    EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "92"^^xsd:string
-    
-    
-Class: <http://purl.org/wmo/seaice#VastFloe>
-
-    EquivalentTo: 
-        hasSigrid3IceFormCode value "06"^^xsd:string
+        hasSigrid3IceFormCode value "07"^^xsd:string
     
     
 Class: Floebit
@@ -257,10 +356,10 @@ Class: Floebit
         GrowlerFloebergOrFloebit
     
     
-Class: <http://purl.org/wmo/seaice#Glacier>
+Class: <http://purl.org/wmo/seaice/development#ThickFirstYearIce>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "98"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "92"^^xsd:string
     
     
 Class: egg:9_10_10ths
@@ -272,19 +371,20 @@ Class: egg:9_10_10ths
 Class: ShugaSmallIceCakeOrBrashIce
 
     EquivalentTo: 
-        hasSigrid3IceFormCode value "01"^^xsd:string,
-        Shuga
-         or <http://purl.org/wmo/seaice#BrashIce>
-         or <http://purl.org/wmo/seaice#SmallIceCake>
+        <http://purl.org/wmo/seaice/development#Shuga>
+         or <http://purl.org/wmo/seaice/form#BrashIce>
+         or <http://purl.org/wmo/seaice/form#SmallIceCake>,
+        hasSigrid3IceFormCode value "01"^^xsd:string
     
     SubClassOf: 
         <http://purl.org/wmo/seaice#SeaIce>
     
     
-Class: <http://purl.org/wmo/seaice#YoungIce>
+Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#Iceberg>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "83"^^xsd:string
+        hasSigrid3IceFormCode value "10"^^xsd:string,
+        hasSigrid3ConcentrationCode value "02"^^xsd:string
     
     
 Class: StripsAndPatches
@@ -293,22 +393,7 @@ Class: StripsAndPatches
         <http://purl.org/wmo/seaice#SeaIce>
     
     
-Class: <http://purl.org/wmo/seaice#IceWithDevelopmentStage>
-
-    
-Class: <http://purl.org/wmo/seaice#SecondYearIce>
-
-    EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "96"^^xsd:string
-    
-    
-Class: <http://purl.org/wmo/seaice#NewIce>
-
-    EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "81"^^xsd:string
-    
-    
-Class: <http://purl.org/wmo/seaice#ThinFirstYearIce>
+Class: <http://purl.org/wmo/seaice/development#ThinFirstYearIce>
 
     EquivalentTo: 
         hasSigrid3DevelopmentStageCode value "87"^^xsd:string
@@ -324,23 +409,29 @@ Class: StripsAndPatches1_10
         egg:1_10th
     
     
-Class: <http://purl.org/wmo/seaice#Nilas>
+Class: <http://www.w3.org/ns/prov#Collection>
 
-    EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "82"^^xsd:string
-    
-    
-Class: <http://purl.org/wmo/seaice#IceCake>
-
-    EquivalentTo: 
-        hasSigrid3IceFormCode value "02"^^xsd:string
-    
     
 Class: egg:1_10th
 
     EquivalentTo: 
         hasSigrid3ConcentrationCode value "10"^^xsd:string
     
+    
+Class: <http://purl.org/wmo/seaice/form#BrashIce>
+
+    
+Class: egg:SeaIceChartPublisher
+
+    
+Class: egg:UndeterminedOrUnknownForm
+
+    EquivalentTo: 
+        hasSigrid3IceFormCode value "99"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/development#IceWithDevelopmentStage>
+
     
 Class: egg:10_10ths
 
@@ -354,32 +445,16 @@ Class: egg:2_4_10ths
         hasSigrid3ConcentrationCode value "24"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#SecondStageThinFirstYearIce>
+Class: <http://purl.org/wmo/seaice/development#Nilas>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "89"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "82"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#SmallIceCake>
-
-    
-Class: <http://purl.org/wmo/seaice#Iceberg>
+Class: <http://purl.org/wmo/seaice/development#MediumFirstYearIce>
 
     EquivalentTo: 
-        hasSigrid3IceFormCode value "10"^^xsd:string,
-        hasSigrid3ConcentrationCode value "02"^^xsd:string
-    
-    
-Class: egg:7_9_10ths
-
-    EquivalentTo: 
-        hasSigrid3ConcentrationCode value "79"^^xsd:string
-    
-    
-Class: <http://purl.org/wmo/seaice#MediumFloe>
-
-    EquivalentTo: 
-        hasSigrid3IceFormCode value "04"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "91"^^xsd:string
     
     
 Class: egg:9_10ths
@@ -388,13 +463,16 @@ Class: egg:9_10ths
         hasSigrid3ConcentrationCode value "90"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#Floeberg>
-
-    
-Class: <http://purl.org/wmo/seaice#IceFree>
+Class: egg:7_9_10ths
 
     EquivalentTo: 
-        hasSigrid3ConcentrationCode value "00"^^xsd:string
+        hasSigrid3ConcentrationCode value "79"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/development#GrayWhiteIce>
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "85"^^xsd:string
     
     
 Class: egg:2_3_10ths
@@ -403,22 +481,37 @@ Class: egg:2_3_10ths
         hasSigrid3ConcentrationCode value "23"^^xsd:string
     
     
+Class: <http://www.itsc.uah.edu/esip_data#DataSet>
+
+    
 Class: egg:1_3_10ths
 
     EquivalentTo: 
         hasSigrid3ConcentrationCode value "13"^^xsd:string
     
     
+Class: <http://purl.org/wmo/seaice/form#IceCake>
+
+    EquivalentTo: 
+        hasSigrid3IceFormCode value "02"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/iceOfLandOrigin#Growler>
+
+    
 Class: GrowlerFloebergOrFloebit
 
     EquivalentTo: 
         Floebit
-         or <http://purl.org/wmo/seaice#Floeberg>
-         or <http://purl.org/wmo/seaice#Growler>
+         or <http://purl.org/wmo/seaice/form#Floeberg>
+         or <http://purl.org/wmo/seaice/iceOfLandOrigin#Growler>
     
     SubClassOf: 
-        <http://purl.org/wmo/seaice#Iceberg>
+        <http://purl.org/wmo/seaice/iceOfLandOrigin#Iceberg>
     
+    
+Class: <http://www.w3.org/ns/prov#Entity>
+
     
 Class: egg:5_6_10ths
 
@@ -426,22 +519,27 @@ Class: egg:5_6_10ths
         hasSigrid3ConcentrationCode value "56"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#NoDevelopment>
+Class: <http://purl.org/wmo/seaice/development#OldIce>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "80"^^xsd:string
+        hasSigrid3DevelopmentStageCode value "95"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#GrayIce>
+Class: <http://www.itsc.uah.edu/esip_data#DataGranule>
+
+    SubClassOf: 
+        <http://www.itsc.uah.edu/esip_data#hasDataSet> exactly 1 <http://www.itsc.uah.edu/esip_data#DataSet>,
+        dc:isPartOf exactly 1 <http://www.itsc.uah.edu/esip_data#DataSet>,
+        <http://www.w3.org/ns/prov#Collection>,
+        <http://www.w3.org/ns/prov#wasAttributedTo> some egg:SeaIceChartPublisher,
+        <http://www.w3.org/ns/prov#generatedAtTime> exactly 1 xsd:dateTime,
+        <http://www.w3.org/ns/prov#invalidatedAtTime> exactly 1 xsd:dateTime
+    
+    
+Class: <http://purl.org/wmo/seaice/form#VastFloe>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "84"^^xsd:string
-    
-    
-Class: <http://purl.org/wmo/seaice#PancakeIce>
-
-    EquivalentTo: 
-        hasSigrid3IceFormCode value "00"^^xsd:string
+        hasSigrid3IceFormCode value "06"^^xsd:string
     
     
 Class: egg:UnknownDevelopment
@@ -450,15 +548,27 @@ Class: egg:UnknownDevelopment
         hasSigrid3DevelopmentStageCode value "99"^^xsd:string
     
     
+Class: <http://purl.org/wmo/seaice/development#GrayIce>
+
+    EquivalentTo: 
+        hasSigrid3DevelopmentStageCode value "84"^^xsd:string
+    
+    
+Class: <http://purl.org/wmo/seaice/form#PancakeIce>
+
+    EquivalentTo: 
+        hasSigrid3IceFormCode value "00"^^xsd:string
+    
+    
 Class: egg:6_8_10ths
 
     EquivalentTo: 
         hasSigrid3ConcentrationCode value "68"^^xsd:string
     
     
-Class: <http://purl.org/wmo/seaice#GrayWhiteIce>
+Class: <http://purl.org/wmo/seaice/form#FastIce>
 
     EquivalentTo: 
-        hasSigrid3DevelopmentStageCode value "85"^^xsd:string
+        hasSigrid3IceFormCode value "08"^^xsd:string
     
     
