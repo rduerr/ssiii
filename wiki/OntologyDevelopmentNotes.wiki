@@ -49,11 +49,15 @@ We also need to capture that files provenance and that it is part of a larger da
    * prov:invalidatedAtTime <a datetime> 
    * prov:wasAssociatedWith <Canadian Ice Service or whomever>
 
-*Note*: A lot of these are actually redundant from the terms we used in the egg ontology.  The question is how can we make the SIGRID data granules inherit the data values from the ice charts in the egg ontology?
+Also associated the distribution file to an ESIP DataGranule as part of an ESIP DataSet with title, identifier (i.e., DOI), publisher, as well as to a DCAT Dataset with a LandingPage and a few other attributes.
 
-There is an awful lot of FGDC CGDSM metadata associated with each data file.  Ideally we would capture all of that and stick it in the triple store also...
+*Note*: A lot of these are actually redundant from the terms we used in the egg ontology.  The question is how can we make the SIGRID data granules inherit the data values from the ice charts in the egg ontology?  The answer is that we don't - you have to declare them for both.
+
+There is an awful lot of FGDC CGDSM metadata associated with each data file.  Ideally we would capture all of that and stick it in the triple store also - After looking at the metadata much of it is the same from chart to chart - so should actually be associated with the data set and just once, or with each of the chart regions (i.e., Great Lakes or Hudson Bay) in the RDF file.  Whether or not a separate RDF file for the data set should be manually created (or a set auto-generated from NSIDC catalog) is another issue.  These are left for a task in the future.
 
 While cleaning up the sigrid3 ontology in preparation for adding provenance information, I realized that there are a number of terms used in the sigrid3 file for the Form of ice which do not map to anything on the egg code, but which do use terms in the WMO sea ice nomenclature which are as yet not part of any ontology.  This implies that it may not be possible to completely re-create a compliant sea ice map from a sigrid3 file.  It also implies that we may need to create yet more WMO ontologies...  The urgency of these fixes depends on what we see in the data we have.
+
+Also, there are occasional ice terms in sigrid which are not in the WMO ontologies and which, of course, have no definition in the sigrid documentation either.  Fortunately, the meaning is pretty clear, but still... what to do with them.  Let's hope they don't actually show up in the data.
 
 == General Notes ==
 
