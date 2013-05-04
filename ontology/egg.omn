@@ -34,13 +34,13 @@ Annotations:
     dc:source <http://www.aari.nw.ru/gdsidb/docs/wmo/JCOMM%20TR24%20colour%20standard.pdf>,
     dc:language "english",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_sea_ice_concentration>,
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers>,
     owl:priorVersion "none",
-    dc:date "January 13, 2012",
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers>,
     <http://www.w3.org/1999/xhtml/vocab#license> <http://creativecommons.org/publicdomain/zero/1.0/>,
+    dc:date "January 13, 2012",
     rdfs:comment "This ontology models the contents of standard Egg Codes which are used to encode the characteristics of sea ice in ice charts.",
-    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_glaciers>,
+    dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_ice_floes>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_sea_ice_age>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_snow_ice_river_ice>,
     dc:publisher "National Snow and Ice Data Center",
@@ -88,13 +88,13 @@ AnnotationProperty: dc:date
 AnnotationProperty: dc:source
 
     
+AnnotationProperty: dc:title
+
+    
 AnnotationProperty: muo:preferredUnit
 
     
 AnnotationProperty: muo:measuresQuality
-
-    
-AnnotationProperty: dc:title
 
     
 AnnotationProperty: dc:rights
@@ -145,14 +145,14 @@ DataProperty: hasDevelopmentStageCode
 DataProperty: <http://semanticscience.org/resource/has-value>
 
     
+DataProperty: hasConcentrationCode
+
+    
 DataProperty: seaiceconcentration:hasIceConcentration
 
     SubPropertyOf: 
         owl:topDataProperty
     
-    
-DataProperty: hasConcentrationCode
-
     
 DataProperty: seaicedevelopment:hasIceThickness
 
@@ -180,8 +180,8 @@ Class: FirstStageThinFirstYearIce
         hasDevelopmentStageCode value "8"^^xsd:string
     
     SubClassOf: 
-        seaicedevelopment:ThinFirstYearIce,
-        seaicedevelopment:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "0.5"^^xsd:decimal]
+        seaicedevelopment:hasIceThickness only xsd:decimal[>= "0.3"^^xsd:decimal , < "0.5"^^xsd:decimal],
+        seaicedevelopment:ThinFirstYearIce
     
     
 Class: seaiceform:MediumFloe
@@ -213,6 +213,12 @@ Class: 6_10ths
         seaiceconcentration:IceWithConcentration
     
     
+Class: <http://semanticscience.org/resource/standard-deviation>
+
+    
+Class: <http://semanticscience.org/resource/map>
+
+    
 Class: muo:BaseUnit
 
     
@@ -224,12 +230,6 @@ Class: seaiceconcentration:IceWithConcentration
     EquivalentTo: 
         hasConcentrationCode some xsd:string
     
-    
-Class: <http://semanticscience.org/resource/standard-deviation>
-
-    
-Class: <http://semanticscience.org/resource/map>
-
     
 Class: 3_4_10ths
 
@@ -325,6 +325,12 @@ Class: 3_10ths
         seaiceconcentration:IceWithConcentration
     
     
+Class: seaicedevelopment:NewIce
+
+    EquivalentTo: 
+        hasDevelopmentStageCode value "1"^^xsd:string
+    
+    
 Class: SeaIceChart
 
     Annotations: 
@@ -334,15 +340,9 @@ Class: SeaIceChart
     SubClassOf: 
         <http://semanticscience.org/resource/map>,
         <http://semanticscience.org/resource/is-model-of> exactly 1 SeaIceChartRegion,
-        <http://www.w3.org/ns/prov#wasAttributedTo> some SeaIceChartPublisher,
+        <http://www.w3.org/ns/prov#wasAttributedTo> some SeaIceCenter,
         <http://www.w3.org/ns/prov#generatedAtTime> exactly 1 xsd:dateTime,
         <http://www.w3.org/ns/prov#invalidatedAtTime> exactly 1 xsd:dateTime
-    
-    
-Class: seaicedevelopment:NewIce
-
-    EquivalentTo: 
-        hasDevelopmentStageCode value "1"^^xsd:string
     
     
 Class: Zone
@@ -500,29 +500,6 @@ Class: 8_10_10ths
         seaiceconcentration:IceWithConcentration
     
     
-Class: 3_5_10ths
-
-    Annotations: 
-        rdfs:comment "Ice concentration of 3 to 5 tenths.",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
-        rdfs:label "3 to 5 tenths"
-    
-    EquivalentTo: 
-        hasConcentrationCode value "3-5"^^xsd:string,
-        (<http://semanticscience.org/resource/has-attribute> some 
-            (seaiceconcentration:IceConcentration
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/mean>
-                 and (<http://semanticscience.org/resource/has-value> value 0.4)))
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/standard-deviation>
-                 and (<http://semanticscience.org/resource/has-value> value 0.075)))))
-         and (seaiceconcentration:hasIceConcentration value 0.4)
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: 8_10ths
 
     Annotations: 
@@ -541,6 +518,29 @@ Class: 8_10ths
                 (<http://semanticscience.org/resource/standard-deviation>
                  and (<http://semanticscience.org/resource/has-value> value 0.025)))))
          and (seaiceconcentration:hasIceConcentration value 0.8)
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
+Class: 3_5_10ths
+
+    Annotations: 
+        rdfs:comment "Ice concentration of 3 to 5 tenths.",
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "3 to 5 tenths"
+    
+    EquivalentTo: 
+        hasConcentrationCode value "3-5"^^xsd:string,
+        (<http://semanticscience.org/resource/has-attribute> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/mean>
+                 and (<http://semanticscience.org/resource/has-value> value 0.4)))
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/standard-deviation>
+                 and (<http://semanticscience.org/resource/has-value> value 0.075)))))
+         and (seaiceconcentration:hasIceConcentration value 0.4)
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -667,6 +667,20 @@ Class: seaiceform:Floeberg
         iceoflandorigin:Iceberg
     
     
+Class: NoDevelopment
+
+    Annotations: 
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "No stage of development"@en,
+        rdfs:comment "A term used when ice is not observed in a region described by an egg code.  Typically the concentration value will be ice free in this case."@en
+    
+    EquivalentTo: 
+        hasDevelopmentStageCode value "0"^^xsd:string
+    
+    SubClassOf: 
+        seaicedevelopment:IceWithDevelopmentStage
+    
+    
 Class: SecondStageThinFirstYearIce
 
     Annotations: 
@@ -682,20 +696,6 @@ Class: SecondStageThinFirstYearIce
         seaicedevelopment:hasIceThickness only xsd:decimal[>= "0.5"^^xsd:decimal , < "0.7"^^xsd:decimal]
     
     
-Class: NoDevelopment
-
-    Annotations: 
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
-        rdfs:label "No stage of development"@en,
-        rdfs:comment "A term used when ice is not observed in a region described by an egg code.  Typically the concentration value will be ice free in this case."@en
-    
-    EquivalentTo: 
-        hasDevelopmentStageCode value "0"^^xsd:string
-    
-    SubClassOf: 
-        seaicedevelopment:IceWithDevelopmentStage
-    
-    
 Class: seaicedevelopment:MultiYearIce
 
     EquivalentTo: 
@@ -706,6 +706,16 @@ Class: seaiceform:BigFloe
 
     EquivalentTo: 
         hasIceFormCode value "5"^^xsd:string
+    
+    
+Class: SeaIceCenter
+
+    Annotations: 
+        rdfs:label "Sea Ice Center"@en,
+        rdfs:comment "The name of the individual or organization that published the sea ice chart being referenced."
+    
+    SubClassOf: 
+        <http://www.w3.org/ns/prov#Organization>
     
     
 Class: SecondaryForm
@@ -826,24 +836,6 @@ Class: seaicedevelopment:ThickFirstYearIce
         hasDevelopmentStageCode value "4*"^^xsd:string
     
     
-Class: ZoneComponent
-
-    Annotations: 
-        rdfs:label "Zone component"@en,
-        rdfs:comment "A stage of development of some constituent type of ice within the region represented by an egg code along with its partial ice concentration (if any) and form of ice (if any).
-
-A particular egg code may contain up to 5 zone components.  
-
-A zone component will not have an associated form of ice if the second variant for the form of Ice is used, though it should have a partial ice concentration in that case.  Only the predominant and possibly secondary forms of ice are reported instead.
-
-If a zone component only contains a stage of development, that indicates either that a) this is the thickest stage of development; but that the partial concentration of this ice is less than 1/10th, or b) the stage of development of the thinnest ice in the region.  In case b, this zone component represents either the fourth or fifth thinnest stage of ice in the region described by the egg code depending on whether this is the only zone component for this egg code that only has a development stage (fourth thinnest) or not (fifth thinnest)."@en
-    
-    EquivalentTo: 
-        (hasDevelopmentStageCode exactly 1 xsd:string)
-         and (hasConcentrationCode max 1 xsd:string)
-         and (hasIceFormCode max 1 xsd:string)
-    
-    
 Class: 9_10_10ths
 
     Annotations: 
@@ -865,6 +857,24 @@ Class: 9_10_10ths
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
+    
+    
+Class: ZoneComponent
+
+    Annotations: 
+        rdfs:label "Zone component"@en,
+        rdfs:comment "A stage of development of some constituent type of ice within the region represented by an egg code along with its partial ice concentration (if any) and form of ice (if any).
+
+A particular egg code may contain up to 5 zone components.  
+
+A zone component will not have an associated form of ice if the second variant for the form of Ice is used, though it should have a partial ice concentration in that case.  Only the predominant and possibly secondary forms of ice are reported instead.
+
+If a zone component only contains a stage of development, that indicates either that a) this is the thickest stage of development; but that the partial concentration of this ice is less than 1/10th, or b) the stage of development of the thinnest ice in the region.  In case b, this zone component represents either the fourth or fifth thinnest stage of ice in the region described by the egg code depending on whether this is the only zone component for this egg code that only has a development stage (fourth thinnest) or not (fifth thinnest)."@en
+    
+    EquivalentTo: 
+        (hasDevelopmentStageCode exactly 1 xsd:string)
+         and (hasConcentrationCode max 1 xsd:string)
+         and (hasIceFormCode max 1 xsd:string)
     
     
 Class: seaiceconcentration:IceConcentration
@@ -905,16 +915,6 @@ Class: 1_10th
         seaiceconcentration:IceWithConcentration
     
     
-Class: SeaIceChartPublisher
-
-    Annotations: 
-        rdfs:label "Sea Ice Chart Publisher"@en,
-        rdfs:comment "The name of the individual or organization that published the sea ice chart being referenced."
-    
-    SubClassOf: 
-        <http://www.w3.org/ns/prov#Organization>
-    
-    
 Class: UndeterminedOrUnknownForm
 
     Annotations: 
@@ -928,6 +928,9 @@ Class: UndeterminedOrUnknownForm
     SubClassOf: 
         seaiceform:IceWithForm
     
+    
+Class: seaicedevelopment:IceWithDevelopmentStage
+
     
 Class: 10_10ths
 
@@ -951,9 +954,6 @@ Class: 10_10ths
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
     
-    
-Class: seaicedevelopment:IceWithDevelopmentStage
-
     
 Class: 2_4_10ths
 
@@ -990,29 +990,6 @@ Class: seaicedevelopment:MediumFirstYearIce
         hasDevelopmentStageCode value "1*"^^xsd:string
     
     
-Class: 9_10ths
-
-    Annotations: 
-        rdfs:comment "Ice concentration of 9 tenths",
-        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
-        rdfs:label "9 tenths"
-    
-    EquivalentTo: 
-        (<http://semanticscience.org/resource/has-attribute> some 
-            (seaiceconcentration:IceConcentration
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/mean>
-                 and (<http://semanticscience.org/resource/has-value> value 0.9)))
-             and (<http://semanticscience.org/resource/has-attribute> some 
-                (<http://semanticscience.org/resource/standard-deviation>
-                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
-         and (seaiceconcentration:hasIceConcentration value 0.9),
-        hasConcentrationCode value "9"^^xsd:string
-    
-    SubClassOf: 
-        seaiceconcentration:IceWithConcentration
-    
-    
 Class: 7_9_10ths
 
     Annotations: 
@@ -1031,6 +1008,29 @@ Class: 7_9_10ths
                 (<http://semanticscience.org/resource/standard-deviation>
                  and (<http://semanticscience.org/resource/has-value> value 0.075)))))
          and (seaiceconcentration:hasIceConcentration value 0.8)
+    
+    SubClassOf: 
+        seaiceconcentration:IceWithConcentration
+    
+    
+Class: 9_10ths
+
+    Annotations: 
+        rdfs:comment "Ice concentration of 9 tenths",
+        dc:source <http://www.docstoc.com/docs/124761982/JCOMM-TR24-colour-standard>,
+        rdfs:label "9 tenths"
+    
+    EquivalentTo: 
+        (<http://semanticscience.org/resource/has-attribute> some 
+            (seaiceconcentration:IceConcentration
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/mean>
+                 and (<http://semanticscience.org/resource/has-value> value 0.9)))
+             and (<http://semanticscience.org/resource/has-attribute> some 
+                (<http://semanticscience.org/resource/standard-deviation>
+                 and (<http://semanticscience.org/resource/has-value> value 0.025)))))
+         and (seaiceconcentration:hasIceConcentration value 0.9),
+        hasConcentrationCode value "9"^^xsd:string
     
     SubClassOf: 
         seaiceconcentration:IceWithConcentration
@@ -1132,6 +1132,12 @@ Class: seaiceform:VastFloe
         hasIceFormCode value "6"^^xsd:string
     
     
+Class: seaiceform:PancakeIce
+
+    EquivalentTo: 
+        hasIceFormCode value "0"^^xsd:string
+    
+    
 Class: UnknownDevelopment
 
     Annotations: 
@@ -1144,12 +1150,6 @@ Class: UnknownDevelopment
     
     SubClassOf: 
         seaicedevelopment:IceWithDevelopmentStage
-    
-    
-Class: seaiceform:PancakeIce
-
-    EquivalentTo: 
-        hasIceFormCode value "0"^^xsd:string
     
     
 Class: seaicedevelopment:GrayIce
@@ -1190,6 +1190,9 @@ Class: seaiceform:FastIce
 Individual: physical-quality:area
 
     
+Individual: physical-quality:fraction
+
+    
 Individual: fractionalArea
 
     Types: 
@@ -1199,7 +1202,4 @@ Individual: fractionalArea
      muo:measuresQuality  physical-quality:fraction,
      muo:measuresQuality  physical-quality:area
     
-    
-Individual: physical-quality:fraction
-
     
