@@ -15,7 +15,9 @@ ns.register(gml="http://www.opengis.net/def/dataType/OGC-GML/3.0/")
 ns.register(geo="http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/")
 ns.register(ssiii="http://purl.org/nsidc/ssiii/seaice#")
 ns.register(sio="http://semanticscience.org/resource/")
+ns.register(dcat="http://www.w3c.org/ns/dcat#")
 ns.register(prov="http://www.w3.org/ns/prov#")
+ns.register(esip="http://www.itsc.uah.edu/esip_data#")
 
 gmltype = ns.GML["GMLLiteral"]
 
@@ -33,8 +35,10 @@ def bindPrefixes(graph):
     graph.bind('geo', URIRef("http://www.opengis.net/ont/OGC-GeoSPARQL/1.0/"))
     graph.bind('ssiii', URIRef("http://purl.org/nsidc/ssiii/seaice#"))
     graph.bind('sio',URIRef("http://semanticscience.org/resource/"))
+    graph.bind('dcat',URIRef("http://www.w3c.org/ns/dcat#"))
     graph.bind('prov',URIRef("http://www.w3.org/ns/prov#"))
     graph.bind('dc',URIRef("http://purl.org/dc/terms/"))
+    graph.bind('esip',URIRef("http://www.itsc.uah.edu/esip_data#"))
 
 def Usage():
     print('Usage: vec_tr.py infile outfile [layer]')
@@ -74,9 +78,9 @@ def layerToRDF(layer, graph = None):
     Zone = get_class(graph, ns.EGG['Zone'])
     ZoneComponent = get_class(graph, ns.SSIII['ZoneComponent'])
     Geometry = get_class(graph, ns.GEO['Geometry'])
-    DataGranule = get_class(graph, ns.SIO['data-granule'])
+    SeaIceChart = get_class(graph, ns.EGG['SeaIceChart'])
 
-    layerRDF = DataGranule('http://purl.org/ssiii/layers/'+layerName)
+    layerRDF = SeaIceChart('http://purl.org/ssiii/layers/'+layerName)
     layerRDF.add(ns.DCTERMS['title'],Literal(layerName))
     feature = layer.GetNextFeature()
 
@@ -153,10 +157,12 @@ def downloadAndExtract(url):
 
 def getMetadata(xmlFile, graph, url, layers):
     dataset = graph.resource(URIRef('http://dx.doi.org/10.7265/N51V5BW9'))
-    dataset.set(ns.RDF['type'],ns.SIO['data-set'])
+    dataset.set(ns.RDF['type'],ns.DCAT['Dataset'])
+    dataset.set(ns.RDF['type'],ns.ESIP['DataSet'])
     dataGranule = graph.resource(URIRef(url))
-    dataGranule.set(ns.RDF['type'],ns.SIO['data-granule'])
+    dataGranule.set(ns.RDF['type'],ns.ESIP['DataGranule'])
     dataGranule.set(ns.SIO['is-member-of'],dataset.identifier)
+    dataGranule.set(ns.ESIP['hasDataSet'],dataset.identifier)
     doc = etree.parse(xmlFile)
     abstract = doc.find('idinfo/descript/abstract').text
     dataGranule.set(ns.DCTERMS['abstract'],Literal(abstract))
@@ -165,21 +171,32 @@ def getMetadata(xmlFile, graph, url, layers):
     effectiveDate = doc.find('idinfo/timeperd/timeinfo/sngdate/caldate').text
     effectiveDate = datetime.datetime.strptime(effectiveDate,'%Y%m%d').date()
     dataGranule.set(ns.PROV['generatedAtTime'],Literal(effectiveDate))
+    dataGranule.set(ns.PROV['invalidatedAtTime'],Literal(effectiveDate))
     attribution = doc.find('idinfo/citation/citeinfo/origin').text
     attributionURI = 'http://purl.org/ssiii/source/'+attribution.replace(" ","_").replace("(","").replace(")","")
+    SeaIceCenter = get_class(graph, ns.EGG['SeaIceCenter'])
+    DataCenter = get_class(graph, ns.SIGRID['DataCenter'])
     Organization = get_class(graph, ns.PROV['Organization'])
-    source = Organization(attributionURI)
+    source = SeaIceCenter(attributionURI)
     source.set(ns.RDFS['label'],Literal(attribution))
+    publisher = DataCenter("http://nsidc.org")
+    source.set(ns.RDFS['label'],Literal("National Snow and Ice Data Center (NSIDC)"))
     dataGranule.set(ns.PROV['wasAttributedTo'],source.identifier)
+    dataGranule.set(ns.PROV['wasAttributedTo'],publisher.identifier)
     region = URIRef('http://purl.org/nsidc/cis/Sea-Ice-Chart-Regions#'
                     +url.split('/')[7].replace("_",""))
     dataGranule.set(ns.SIO['is-model-of'],region)
     for layer in layers:
         layer.add(ns.PROV['wasDerivedFrom'],dataGranule.identifier)
+        layer.add(ns.SIO['is-modeled-by'],dataGranule.identifier)
         layer.add(ns.PROV['alternateOf'],dataGranule.identifier)
         dataGranule.add(ns.DCTERMS['title'],layer.value(ns.DCTERMS['title']))
         layer.set(ns.PROV['wasAttributedTo'],source.identifier)
+        layer.set(ns.PROV['wasAttributedTo'],publisher.identifier)
         layer.set(ns.SIO['is-model-of'],region)
+        layer.set(ns.PROV['generatedAtTime'],Literal(effectiveDate))
+        layer.set(ns.PROV['invalidatedAtTime'],Literal(effectiveDate))
+
 
     #for accessionElement in doc.findall('//experiment/accession'):
     #    accession = accessionElement.text.strip()
