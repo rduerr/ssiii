@@ -41,8 +41,8 @@ def bindPrefixes(graph):
     graph.bind('esip',URIRef("http://www.itsc.uah.edu/esip_data#"))
 
 def Usage():
-    print('Usage: vec_tr.py infile outfile [layer]')
-    print('')
+    print('Usage: sigrid3rdf.py infile outfile [layer]')
+    print('Converts SIGRID3 files to RDF based on the SSIII ontologies.')
     sys.exit(1)
 
 def convert(infile, layer_name=None):
