@@ -76,7 +76,7 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ruth Duerr and the SSIII Project Team</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ruth E. Duerr, Jim McCusker, Siri-Jodha Singh Khalsa, Peter Pulsifer, Mark A. Parsons, Peter A. Fox, Deborah L. McGuinness</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
