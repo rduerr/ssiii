@@ -29,7 +29,7 @@ Annotations:
     dc:rights "To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to \"Terminology for the types of ice of land origin found floating in the sea\".  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_ice_sheets>,
     dc:publisher "National Snow and Ice Data Center",
-    dc:creator "Ruth Duerr and the SSIII Project Team",
+    dc:creator "Ruth E. Duerr, Jim McCusker, Siri-Jodha Singh Khalsa, Peter Pulsifer, Mark A. Parsons, Peter A. Fox, Deborah L. McGuinness",
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheet>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs>,
     dc:subject <http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs>,
