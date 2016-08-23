@@ -1,54 +1,56 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://purl.org/wmo/seaice/iceOfLandOrigin#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/wmo/seaice/iceOfLandOrigin#">
-    <Prefix name="daml" IRI="http://www.daml.org/2001/03/daml+oil#"/>
-    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="" IRI="http://w3id.org/wmo/seaice/iceOfLandOrigin#"/>
     <Prefix name="cc" IRI="http://creativecommons.org/ns#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="bfo2" IRI="http://bfo.googlecode.com/svn/trunk/src/ontology/bfo2_all.owl#"/>
-    <Prefix name="" IRI="http://purl.org/wmo/seaice/iceOfLandOrigin#"/>
-    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xhv" IRI="http://www.w3.org/1999/xhtml/vocab#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="xhv:license"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_icebergs</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">February 18, 2013</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Terminology for the types of ice of land origin found floating in the sea&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_glaciers</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">08/23/2016</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">February 18, 2013</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ruth E. Duerr, Jim McCusker, Siri-Jodha Singh Khalsa, Peter Pulsifer, Mark A. Parsons, Peter A. Fox, Deborah L. McGuinness</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">August 23, 2016 - R. Duerr - updated ontologies to no longer use SSIII related purl.org URL&apos;s since there is no way to redirect them now that the purl.org administration interface is down apparently permanently.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
@@ -56,73 +58,119 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A draft document prepared at AARI by Dr Andrey Bushuev (http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf) is used as the source for this ontology. Though this draft is based on the official WMO No. 259 publication, it has not been formally adopted by the WMO. The currently approved nomenclature can be found at http://www.aari.ru/gdsidb/xml/wmo_259.php.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:rights"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">To the extent possible under law, the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Terminology for the types of ice of land origin found floating in the sea&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Terminology for the types of ice of land origin found floating in the sea</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_ice_sheets</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">National Snow and Ice Data Center</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2.0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_ice_sheet</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ruth E. Duerr, Jim McCusker, Siri-Jodha Singh Khalsa, Peter Pulsifer, Mark A. Parsons, Peter A. Fox, Deborah L. McGuinness</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_icebergs</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2.0</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:language"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">english</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice of land origin.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_sea_ice_ice_types</IRI>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">english</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">National Snow and Ice Data Center</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">This ontology describes the types of ice of land origin found floating in the sea.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology describes the types of ice of land origin found floating in the sea.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
         <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#terrestrial_hydrosphere_glaciers_ice_sheets_icebergs</IRI>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Terminology for the types of ice of land origin found floating in the sea</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:subject"/>
-        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#cryosphere_glaciers_ice_sheets_icebergs</IRI>
+        <IRI>http://dataportal.ucar.edu/schemas/gcmd.owl#oceans_sea_ice_icebergs</IRI>
     </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice of land origin.</Literal>
-    </Annotation>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IcebergTonque"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+    </Declaration>
     <Declaration>
         <Class IRI="BergyBit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Glacier"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Iceberg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:source"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="fractionalArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/area"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TabularBerg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IceOfLandOrigin"/>
     </Declaration>
     <Declaration>
         <Class IRI="GlacierBerg"/>
@@ -131,91 +179,13 @@
         <Class IRI="GlacierIce"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Growler"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="IceIsland"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IceOfLandOrigin"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IceShelf"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Iceberg"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IcebergTonque"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TabularBerg"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="fractionalArea"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="muo:measuresQuality"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="muo:preferredUnit"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="dc:date"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:language"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:rights"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:source"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:subject"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="xhv:license"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:decimal"/>
@@ -224,10 +194,37 @@
         <Datatype abbreviatedIRI="xsd:double"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Glacier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="muo:measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:subject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="xhv:license"/>
+    </Declaration>
+    <Declaration>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <Class IRI="Growler"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:publisher"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/fraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IceShelf"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="BergyBit"/>
@@ -272,12 +269,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
         <NamedIndividual IRI="fractionalArea"/>
-        <NamedIndividual abbreviatedIRI="physical-quality:area"/>
+        <NamedIndividual IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/area"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="muo:measuresQuality"/>
         <NamedIndividual IRI="fractionalArea"/>
-        <NamedIndividual abbreviatedIRI="physical-quality:fraction"/>
+        <NamedIndividual IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/fraction"/>
     </ObjectPropertyAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -287,12 +284,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>BergyBit</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A large piece of floating ice of land origin, showing less than 5 m above sea-level and 100-300 m2 in area (10.4.4 Ed.) [Note: it might be better to say no more than 20 metres long, rather than give an area]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A large piece of floating ice of land origin, showing less than 5 m above sea-level and 100-300 m2 in area (10.4.4 Ed.) [Note: it might be better to say no more than 20 metres long, rather than give an area]</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>BergyBit</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Bergy bit</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bergy bit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -302,12 +299,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Glacier</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A mass of ice predominantly of atmospheric origin, usually moving from higher to lower ground. A seaward margin of a glacier that is aground, the rock basement being at or below sea-level, is termed an ice wall. The projecting seaward extension of a glacier, which is usually afloat, is termed a glacier tongue. In the Antarctic, glacier tongues may extend over many tens of kilometers.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A mass of ice predominantly of atmospheric origin, usually moving from higher to lower ground. A seaward margin of a glacier that is aground, the rock basement being at or below sea-level, is termed an ice wall. The projecting seaward extension of a glacier, which is usually afloat, is termed a glacier tongue. In the Antarctic, glacier tongues may extend over many tens of kilometers.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Glacier</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Glacier</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -317,12 +314,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>GlacierBerg</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">An irregularly shaped iceberg</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An irregularly shaped iceberg</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>GlacierBerg</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Glacier berg</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier berg</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -332,12 +329,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>GlacierIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice in, or originating from, a glacier, whether on land or floating on the sea as icebergs, bergy bits or growlers</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice in, or originating from, a glacier, whether on land or floating on the sea as icebergs, bergy bits or growlers</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>GlacierIce</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Glacier ice</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -347,22 +344,27 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Growler</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A smaller piece of ice of land origin than a bergy bit. The color is usually white, but sometimes transparent or blue-green or nearly black, normally occupying an area of about 20 m2. Growlers are distinguished with difficulty when they are surrounded by ice and also in heavy swell. </Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A smaller piece of ice of land origin than a bergy bit. The color is usually white, but sometimes transparent or blue-green or nearly black, normally occupying an area of about 20 m2. Growlers are distinguished with difficulty when they are surrounded by ice and also in heavy swell. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Growler</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Growler</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Growler</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>IceIsland</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A large piece of floating ice protruding about 5 m above sea-level, which has broken away from an Arctic ice shelf, having a thickness of 15-30 m and an area of from a few thousand square meters to 500 km2 or more, and usually characterized by a regularly undulating surface which gives it a ribbed appearance from the air. (10.4.3) [Note: Antarctic use is slightly different and refers to a grounded part of a floating ice sheet which rises significantly higher than its surroundings, eg Butler Island. There are also more substantial features, eg the Lyddan Ice Rise.]</Literal>
+        <IRI>http://www.aari.nw.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf#Section4.6</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceIsland</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A large piece of floating ice protruding about 5 m above sea-level, which has broken away from an Arctic ice shelf, having a thickness of 15-30 m and an area of from a few thousand square meters to 500 km2 or more, and usually characterized by a regularly undulating surface which gives it a ribbed appearance from the air. (10.4.3) [Note: Antarctic use is slightly different and refers to a grounded part of a floating ice sheet which rises significantly higher than its surroundings, eg Butler Island. There are also more substantial features, eg the Lyddan Ice Rise.]</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IceIsland</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice island</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice island</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -372,12 +374,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>IceOfLandOrigin</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice formed on land or in an ice shelf, found floating in water.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice formed on land or in an ice shelf, found floating in water.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IceOfLandOrigin</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice of land origin</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice of land origin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -387,12 +389,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>IceShelf</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A floating ice sheet of considerable thickness showing 2-50 m or more above sea-level, attached to the coast or a glacier. Usually of great horizontal extent and with a level or gently undulating surface. Nourished by annual snow accumulation at the surface and often also by the seaward extension of land glaciers. Limited areas may be aground. The seaward edge is termed an ice front.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A floating ice sheet of considerable thickness showing 2-50 m or more above sea-level, attached to the coast or a glacier. Usually of great horizontal extent and with a level or gently undulating surface. Nourished by annual snow accumulation at the surface and often also by the seaward extension of land glaciers. Limited areas may be aground. The seaward edge is termed an ice front.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IceShelf</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ice shelf</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice shelf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -402,12 +404,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Iceberg</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A massive piece of ice of varying shape, protruding more than 5 m above sea-level, which has broken away from a glacier or an ice shelf, and which may be afloat or aground. Icebergs by their external look may be subdivided into tabular, dome-shaped, sloping and rounded bergs.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A massive piece of ice of varying shape, protruding more than 5 m above sea-level, which has broken away from a glacier or an ice shelf, and which may be afloat or aground. Icebergs by their external look may be subdivided into tabular, dome-shaped, sloping and rounded bergs.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Iceberg</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Iceberg</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Iceberg</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -417,12 +419,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>IcebergTonque</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A major accumulation of icebergs, bergy bits and growlers projecting from the coast, held in place by grounding or joined together by fast ice</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A major accumulation of icebergs, bergy bits and growlers projecting from the coast, held in place by grounding or joined together by fast ice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IcebergTonque</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Iceberg tongue</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Iceberg tongue</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:source"/>
@@ -432,16 +434,16 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>TabularBerg</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Most flat-topped icebergs form by calving from an ice shelf and show horizontal banding (cf. ice island).</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Most flat-topped icebergs form by calving from an ice shelf and show horizontal banding (cf. ice island).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TabularBerg</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Tabular berg</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tabular berg</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
 
