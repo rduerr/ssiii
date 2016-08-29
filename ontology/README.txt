@@ -1,1 +1,1 @@
-The SSIII Project ontologies are located here.  V2 of the ontologies were based on the document ["Sea Ice Nomenclature, Version 1.0 by Dr. A.V. Bushuyev"](http://www.aari.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf)
+The SSIII Project ontologies are located here.  V2 of the ontologies were based on the document ("Sea Ice Nomenclature, Version 1.0 by Dr. A.V. Bushuyev")[http://www.aari.ru/gdsidb/docs/wmo/nomenclature/WMO_Nomenclature_draft_version1-0.pdf].
