@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://w3id.org/wmo/seaice/GlacierIce#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://w3id.org/wmo/seaice/GlacierIce#">
+    <Prefix name="" IRI="http://w3id.org/wmo/seaice/GlacierIce#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">August 29, 2016</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ruth E. Duerr and the SSIII Project Team</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier Ice</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Глетчерный лед</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/1999/xhtml/vocab#license"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://creativecommons.org/publicdomain/zero/1.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hielo que pertenece a un glaciar o se ha formado en un glaciar que se encuentra en tierra o flotando en el mar, en la forma de témpanos, tempanitos o gruñones.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Terminology for the types of ice in, or originating from, a glacier, whether on land or floating on the sea as icebergs, bergy bits or growlers.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glace faisant partie ou provenant d&apos;un glacier, qu&apos;elle soit sur terre ou flottant dans la mer sous la forme d&apos;iceberg, de fragment d&apos;iceberg ou de bourguignon.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.jcomm.info/components/com_oe/oe.php?task=download&amp;id=27226&amp;version=March%202014&amp;lang=1&amp;format=1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Лед, находящийся в леднике, или ледникового происхождения, независимо от того, находится ли он на суше или плавает в море в виде айсбергов, обломков айсбергов или кусков айсбергов.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GLACIERS</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glace de glacier</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hielo de glaciar</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#historyNote"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8/30/2016 R. Duerr   -  Module created as part of the third release of the SSIII ontologies.  This is the first release to include all 4 languages supported by the WMO Expert Team on Sea Ice.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The document &quot;WMO sea ice nomenclature and terminology. WMO. No259. Edition 1970 - 2014&quot; available at http://www.jcomm.info/components/com_oe/oe.php?task=download&amp;id=27226&amp;version=March%202014&amp;lang=1&amp;format=1  is used as the source for this ontology.  
+
+This ontology, one of several from the NSF funded project &quot;The Semantic Sea Ice Interoperability Initiative&quot; (SSIII) describes the types of ice in, or originating from, a glacier, whether on land or floating on the sea as icebergs, bergy bits or growlers.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ronin Institute for Independent Scholarship</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">To the extent possible under law, the Ruth E. Duerr and the SSIII Project Team has waived all copyright and related or neighboring rights to &quot;Glacier Ice&quot;.  The SSIII Project Team expects that users will follow the Polar Information Commons Ethics and Norms of Data Sharing found at http://polarcommons.org/ethics-and-norms-of-data-sharing.php.  This work is published from the United States.</Literal>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/muo/muo#preferredUnit"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GlacierTongue"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Glacier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IceWall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="glacierIce"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IceStream"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/muo/muo#measuresQuality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/1999/xhtml/vocab#license"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Glacier"/>
+        <Class IRI="glacierIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="GlacierTongue"/>
+        <Class IRI="glacierIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="GlacierTongue"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/dc/terms/isPartOf"/>
+            <Class IRI="Glacier"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IceStream"/>
+        <Class IRI="glacierIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IceWall"/>
+        <Class IRI="glacierIce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IceWall"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/dc/terms/isPartOf"/>
+            <Class IRI="Glacier"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Section 10.2.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A mass of snow and ice continuously moving from higher to lower ground or, if afloat, continuously spreading. The principal forms of glacier are: inland ice sheets, ice shelves, ice streams, ice caps, ice piedmonts, cirque glaciers and various types of mountain (valley) glaciers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Masa de nieve y hielo continuamente en movimiento de la parte superior a la inferior del terreno, o si está flotando, continuamente en despliegue. Las formas principales de glaciar son: sábanas de hielo interior, corrientes de hielo, mesetas de hielo, casquete de hielo, hielo de piedmont y glaciares de montaña.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Masse de neige et de glace se déplaçant continuellement d&apos;un niveau continental supérieur à un niveau inférieur ou s&apos;étalant continuellement si elle flotte. Les principales formes de glacier sont: inlandsis, les plateaux de glace, les coulées de glace, les calottes glaciaires, les glaciers de piémont, les cirques glaciaires et les divers types de glaciers de montagne (ou de vallée).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Масса снега и льда, находящаяся в непрерывном движении с более высоких мест к более низким, или, если на плаву, то непрерывно сползающая в сторону моря. Основными формами ледника являются: внутриматериковые ледники, шельфовые ледники, ледяные потоки, ледяные шапки, предгорные ледники, цирковые ледники и различные типы горно-долинных ледников.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glaciar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Glacier</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ледник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Extension d&apos;un glacier en mer, le plus souvent flottante. Dans l&apos;antarctique, les langues de glacier peuvent s&apos;étendre sur plusieurs dizaines de kilomètres</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Extensión de un glaciar proyectada hacia el mar, normalmente a flote. En el Antártico las lenguas de glaciar pueden alcanzar varias decenas de kilómetros.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Projecting seaward extension of a glacier, usually afloat. In the Antarctic, glacier tongues may extend over many tens of kilometers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Выступающее в море продолжение ледника, обычно находящееся на плаву. В Антарктике языки ледников могут простираться в море на несколько десятков километров.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier tongue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Langue de glacier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lengua de glaciar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GlacierTongue</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Язык ледника</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Section 10.2.3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Part of an inland ice sheet in which the ice flows more rapidly and not necessarily in the same direction as the surrounding ice. The margins are sometimes clearly marked by a change in direction of the surface slope but may be indistinct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Parte de una sábana de hielo interior que fluye más rápida y no necesariamente en la misma dirección que el hielo a su alrededor. Sus márgenes están a veces claramente determinadas por un cambio de la dirección en la ladera de la superficie.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Partie d&apos;un inlandsis dans laquelle la glace s&apos;écoule plus rapidement et pas nécessairement dans la même direction que la glace environnante. Les limites en sont parfois nettement marquées par un changement dans la direction de la pente de la surface, mais elles peuvent aussi en être indistinctes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Часть внутриматерикового ледника, в котором лед течет быстрее и не обязательно в том же направлении, что и окружающий лед. Границы ледяного потока иногда ясно обозначены изменением направления поверхностного склона, но могут быть неясными.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Corriente de hielo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Coulée de glace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice stream</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceStream</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ледяной поток</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Section 10.2.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Acantilado de hielo que forma el margen hacia el mar de un glaciar que no está flotando. La base rocosa sobre la que se encuentra esta pared está al nivel del mar o por debajo del mismo (véase 10.3.1).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An ice cliff forming the seaward margin of a glacier which is not afloat. An ice wall is aground, the rock basement being at or below sea-level (cf. ice front).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Paroi de glace formant la bordure aval d&apos;un glacier qui ne flotte pas. Un mur de glace repose sur la terre, le soubassement rocheux pouvant se trouver au niveau ou sous le niveau de la mer (voir falaise de glace).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ледяной утес. Обращенная к морю грань ледника, который не находится на плаву. Ледяная стена скреплена с грунтом, причем скалистое основание либо на уровне моря, либо находится ниже его. (Ср. с ледяным барьером).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice wall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mur de glace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pared de hielo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IceWall</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ледяная стена</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">See Section 10.2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glace faisant partie ou provenant d&apos;un glacier, qu&apos;elle soit sur terre ou flottant dans la mer sous la forme d&apos;iceberg, de fragment d&apos;iceberg ou de bourguignon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hielo que pertenece a un glaciar o se ha formado en un glaciar que se encuentra en tierra o flotando en el mar, en la forma de témpanos, tempanitos o gruñones.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ice in, or originating from, a glacier, whether on land or floating on the sea as icebergs, bergy bits or growlers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Лед, находящийся в леднике, или ледникового происхождения, независимо от того, находится ли он на суше или плавает в море в виде айсбергов, обломков айсбергов или кусков айсбергов.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glace de glacier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glacier Ice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="es" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hielo de glaciar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>glacierIce</IRI>
+        <Literal xml:lang="ru" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Глетчерный лед</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
